@@ -1,15 +1,21 @@
 """
-Continuous listening agent:
-  mic  ->  Whisper (transcribe)  ->  Qwen via Ollama (decide)  ->  MCP tool call
+Persona-aware listening agent:
+  mic  ->  Whisper (transcribe)
+       ->  YOUR fine-tuned Qwen via Ollama (decide using persona's style)
+       ->  MCP tool call (Reminder / Note / Calendar / Alarm)
+       ->  TTS confirmation back to you
 
-The model only triggers a tool when it actually hears the user ask for one
-of the two registered actions. Otherwise the audio chunk is ignored.
+Set PERSONA via env var or constants below. The agent loads:
+  - persona-specific Ollama model (e.g. 'dev-assistant' you registered earlier)
+  - persona's system prompt (read from <persona>_test.jsonl which the trainer
+    saved alongside the model — every test record carries the same prompt)
 
-Run:  python listening_agent.py
+Run:  PERSONA=dev python listening_agent.py
 Stop: Ctrl+C
 """
 
 import asyncio
+import json
 import os
 import subprocess
 import sys
@@ -22,35 +28,52 @@ from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
 # ---------------- Config ----------------
-MODEL_NAME       = "qwen2.5:7b"      # or "qwen2.5:3b" for lighter
-WHISPER_SIZE     = "base"            # tiny / base / small / medium
+PERSONA          = os.environ.get("PERSONA", "dev")
+MODEL_NAME       = os.environ.get("OLLAMA_MODEL", f"{PERSONA}-assistant")
+WHISPER_SIZE     = "base"
 SAMPLE_RATE      = 16_000
 CHUNK_SECONDS    = 4
-SILENCE_THRESH   = 0.008             # rough RMS-ish gate; tune for your mic
-TTS_VOICE        = "Samantha"        # try `say -v ?` in Terminal for the full list
+SILENCE_THRESH   = 0.008
+TTS_VOICE        = "Samantha"
+
 HERE             = os.path.dirname(os.path.abspath(__file__))
-SERVER_SCRIPT    = os.path.join(HERE, "mcp_server.py")
+SERVER_SCRIPT    = os.path.join(HERE, "arjun_mcp_server.py")  # the 4-tool server
+TEST_JSONL       = os.path.join(HERE, f"{PERSONA}_test.jsonl")
+
+
+def load_system_prompt() -> str:
+    """Read the persona's system prompt from the test JSONL the trainer wrote."""
+    if os.path.exists(TEST_JSONL):
+        with open(TEST_JSONL) as f:
+            return json.loads(f.readline())["system"]
+    # Fallback if the test file isn't here.
+    return (
+        f"You are {PERSONA}'s personal assistant. For each spoken line return "
+        'a single JSON object: {"importance":"...","tool":"...","detail":"..."}.'
+    )
 
 
 def speak(text: str) -> None:
-    """Speak `text` aloud through macOS's built-in TTS."""
     if not text:
         return
     subprocess.run(["say", "-v", TTS_VOICE, text], check=False)
 
-SYSTEM_PROMPT = (
-    "You are a voice assistant running on macOS. You have exactly two tools: "
-    "open_calculator and open_weather. "
-    "Call a tool ONLY when the user clearly asks to open the calculator, do math, "
-    "check the weather, forecast, or temperature. "
-    "For anything else (small talk, background chatter, unrelated speech) reply with "
-    "the single word: IGNORE. Do not invent tools. Do not chat."
-)
+
+# Map model's tool names to MCP tool names (they should match — keeping
+# explicit so a future renamed tool doesn't silently fail).
+TOOL_ROUTE = {
+    "create_reminder":       "create_reminder",
+    "add_note":              "add_note",
+    "create_calendar_event": "create_calendar_event",
+    "create_alarm":          "create_alarm",
+}
 
 
 # ---------------- Audio + Whisper ----------------
+print(f"[boot] persona={PERSONA}  ollama_model={MODEL_NAME}", file=sys.stderr)
 print(f"[boot] loading Whisper '{WHISPER_SIZE}' ...", file=sys.stderr)
 asr = whisper.load_model(WHISPER_SIZE)
+SYSTEM_PROMPT = load_system_prompt()
 
 
 def record_chunk() -> np.ndarray:
@@ -71,6 +94,25 @@ def transcribe(audio: np.ndarray) -> str:
     return result.get("text", "").strip()
 
 
+def parse_decision(raw: str):
+    """Pull the first {...} JSON object out of the model's output."""
+    raw = raw.strip()
+    start = raw.find("{")
+    if start < 0:
+        return None
+    depth = 0
+    for i, ch in enumerate(raw[start:], start=start):
+        if ch == "{":   depth += 1
+        elif ch == "}":
+            depth -= 1
+            if depth == 0:
+                try:
+                    return json.loads(raw[start:i + 1])
+                except Exception:
+                    return None
+    return None
+
+
 # ---------------- LLM + MCP loop ----------------
 async def main() -> None:
     server_params = StdioServerParameters(
@@ -81,23 +123,9 @@ async def main() -> None:
     async with stdio_client(server_params) as (read, write):
         async with ClientSession(read, write) as session:
             await session.initialize()
-
             tools_result = await session.list_tools()
-            tools = [
-                {
-                    "type": "function",
-                    "function": {
-                        "name": t.name,
-                        "description": t.description or "",
-                        "parameters": t.inputSchema or {
-                            "type": "object", "properties": {}
-                        },
-                    },
-                }
-                for t in tools_result.tools
-            ]
-            print(f"[boot] MCP tools: {[t['function']['name'] for t in tools]}",
-                  file=sys.stderr)
+            available = {t.name for t in tools_result.tools}
+            print(f"[boot] MCP tools: {sorted(available)}", file=sys.stderr)
             print("[ready] listening. Speak naturally. Ctrl+C to quit.\n",
                   file=sys.stderr)
 
@@ -108,32 +136,53 @@ async def main() -> None:
                     continue
                 print(f"heard: {text}")
 
+                # The fine-tuned model returns a JSON decision object.
                 resp = ollama.chat(
                     model=MODEL_NAME,
                     messages=[
                         {"role": "system", "content": SYSTEM_PROMPT},
-                        {"role": "user",   "content": text},
+                        {"role": "user",   "content": f"You: {text}"},
                     ],
-                    tools=tools,
+                    options={"temperature": 0.0},
                 )
-                msg = resp["message"]
-                tool_calls = msg.get("tool_calls") or []
-
-                if not tool_calls:
-                    # model said IGNORE or just chatted — drop it
+                raw = resp["message"]["content"]
+                decision = parse_decision(raw)
+                if decision is None:
+                    print(f"  (unparseable: {raw!r})")
                     continue
 
-                for tc in tool_calls:
-                    name = tc["function"]["name"]
-                    args = tc["function"].get("arguments") or {}
-                    print(f"  -> MCP call: {name}({args})")
-                    result = await session.call_tool(name, args)
-                    out = "".join(
-                        getattr(c, "text", "") for c in result.content
-                    )
-                    print(f"     result: {out}")
-                    # Voice confirmation back to the user.
-                    speak(out)
+                tool_name = decision.get("tool")
+                if tool_name in (None, "null", ""):
+                    print(f"  importance={decision.get('importance')} tool=none — skipping")
+                    continue
+
+                mcp_name = TOOL_ROUTE.get(tool_name)
+                if mcp_name not in available:
+                    print(f"  unknown tool {tool_name!r} — skipping")
+                    continue
+
+                # Build minimal args for each MCP tool from the model's `detail`.
+                detail = decision.get("detail", "") or ""
+                priority = decision.get("importance", "Medium")
+                args = _args_for(mcp_name, detail, priority)
+                print(f"  -> MCP call: {mcp_name}({args})")
+                result = await session.call_tool(mcp_name, args)
+                out = "".join(getattr(c, "text", "") for c in result.content)
+                print(f"     result: {out}")
+                speak(out)
+
+
+def _args_for(mcp_name: str, detail: str, priority: str) -> dict:
+    """Adapt the model's free-text `detail` into each tool's arg shape."""
+    if mcp_name == "create_reminder":
+        return {"text": detail or "(unspecified)", "when": "later", "priority": priority}
+    if mcp_name == "add_note":
+        return {"category": "Spoken", "content": detail or "(unspecified)", "priority": priority}
+    if mcp_name == "create_calendar_event":
+        return {"title": detail or "Event", "time": "TBD", "priority": priority}
+    if mcp_name == "create_alarm":
+        return {"time": "soon", "message": detail or "Reminder", "priority": priority}
+    return {}
 
 
 if __name__ == "__main__":
