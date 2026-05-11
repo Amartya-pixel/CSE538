@@ -1,0 +1,38 @@
+{
+  "personas": [
+    "arjun",
+    "dev",
+    "margaret",
+    "neel"
+  ],
+  "suffix": "_ctx2",
+  "sft": 779,
+  "test": 190,
+  "by_persona_total_sft_plus_test": {
+    "arjun": 315,
+    "dev": 277,
+    "margaret": 196,
+    "neel": 181
+  },
+  "by_tool_sft_plus_test": {
+    "create_reminder": 200,
+    "add_note": 164,
+    "None": 251,
+    "create_calendar_event": 122,
+    "update_calendar_event": 26,
+    "update_alarm": 15,
+    "update_reminder": 21,
+    "update_note": 30,
+    "delete_calendar_event": 17,
+    "delete_reminder": 33,
+    "delete_alarm": 12,
+    "delete_note": 15,
+    "ask_clarification": 12,
+    "create_alarm": 51
+  },
+  "by_importance_sft_plus_test": {
+    "High": 473,
+    "Medium": 285,
+    "Low": 211
+  }
+}

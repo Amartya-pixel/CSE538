@@ -13,4 +13,3 @@ build/
 .cache/
 .hf_cache/
 .venv-voice/
-results_*/

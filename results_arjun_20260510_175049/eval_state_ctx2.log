@@ -1,0 +1,36 @@
+The tokenizer you are loading from './arjun-state-ctx2-sft-merged' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+Skipping import of cpp extensions due to incompatible torch version. Please upgrade to torch >= 2.11.0 (found 2.10.0+cu128).
+[arjun] loaded 61 test utterances.
+[skip] base ()
+[skip] sft ()
+[skip] ctx_sft ()
+
+[load] ./arjun-state-ctx2-sft-merged
+[eval] dtype=torch.bfloat16
+
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/338 [00:00<01:14,  4.50it/s]
+Loading weights:   4%|▍         | 15/338 [00:00<00:05, 56.52it/s]
+Loading weights:  12%|█▏        | 40/338 [00:00<00:02, 123.11it/s]
+Loading weights:  19%|█▊        | 63/338 [00:00<00:01, 144.68it/s]
+Loading weights:  26%|██▌       | 87/338 [00:00<00:01, 172.63it/s]
+Loading weights:  31%|███▏      | 106/338 [00:00<00:01, 174.79it/s]
+Loading weights:  37%|███▋      | 125/338 [00:00<00:01, 172.92it/s]
+Loading weights:  44%|████▍     | 149/338 [00:01<00:01, 181.28it/s]
+Loading weights:  51%|█████     | 172/338 [00:01<00:00, 194.85it/s]
+Loading weights:  58%|█████▊    | 196/338 [00:01<00:00, 189.79it/s]
+Loading weights:  65%|██████▌   | 220/338 [00:01<00:00, 201.50it/s]
+Loading weights:  72%|███████▏  | 243/338 [00:01<00:00, 200.32it/s]
+Loading weights:  79%|███████▉  | 267/338 [00:01<00:00, 205.62it/s]
+Loading weights:  86%|████████▌ | 291/338 [00:01<00:00, 212.31it/s]
+Loading weights:  93%|█████████▎| 315/338 [00:01<00:00, 211.09it/s]
+Loading weights: 100%|██████████| 338/338 [00:01<00:00, 179.62it/s]
+
+========================================================================================
+model           tool_acc   imp_acc    prec     rec      f1   parse   exact detail_f1
+----------------------------------------------------------------------------------------
+state_ctx_sft      0.492     0.574   0.807   0.979   0.885   1.000   0.377     0.392
+========================================================================================
+  state_ctx_sft: per_tool_f1={'create_reminder': 0.46153846153846156, 'update_reminder': 0.0, 'delete_reminder': 0.6666666666666665, 'add_note': 0.47058823529411764, 'update_note': 0.0, 'delete_note': 0.5, 'create_calendar_event': 0.5454545454545454, 'update_calendar_event': 0.888888888888889, 'delete_calendar_event': 0.33333333333333337, 'create_alarm': 0.0, 'update_alarm': 0.7499999999999999, 'delete_alarm': 0.6666666666666666, 'ask_clarification': 0.0}
+
+Full metrics saved to arjun_eval_results.json

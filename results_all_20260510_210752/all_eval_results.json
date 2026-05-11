@@ -1,0 +1,1299 @@
+{
+  "base_current_test": {
+    "n": 190,
+    "json_parse_rate": 0.9894736842105263,
+    "tool_accuracy": 0.2736842105263158,
+    "importance_accuracy": 0.47368421052631576,
+    "exact_match_accuracy": 0.1631578947368421,
+    "json_exact_match_accuracy": 0.03684210526315789,
+    "detail_exact_match_accuracy": 0.13157894736842105,
+    "detail_presence_accuracy": 0.6263157894736842,
+    "detail_token_f1": 0.27981476442736,
+    "detail_exact_when_tool_correct": 0.15384615384615385,
+    "action_precision": 0.7701149425287356,
+    "action_recall": 0.9436619718309859,
+    "action_f1": 0.8481012658227848,
+    "per_tool_f1": {
+      "create_reminder": 0.375,
+      "update_reminder": 0.3,
+      "delete_reminder": 0.6956521739130435,
+      "add_note": 0.30769230769230765,
+      "update_note": 0.16666666666666666,
+      "delete_note": 0.5,
+      "create_calendar_event": 0.3243243243243243,
+      "update_calendar_event": 0.0,
+      "delete_calendar_event": 0.4444444444444444,
+      "create_alarm": 0.2285714285714286,
+      "update_alarm": 0.5714285714285715,
+      "delete_alarm": 0.5714285714285715,
+      "ask_clarification": 0.0
+    },
+    "tool_confusion_matrix": {
+      "create_reminder": {
+        "create_reminder": 9,
+        "create_alarm": 7,
+        "create_calendar_event": 3,
+        "None": 4,
+        "ask_clarification": 9,
+        "update_note": 1,
+        "add_note": 2,
+        "update_reminder": 1
+      },
+      "update_reminder": {
+        "create_reminder": 1,
+        "update_reminder": 3,
+        "ask_clarification": 1,
+        "create_calendar_event": 1
+      },
+      "delete_reminder": {
+        "delete_reminder": 8,
+        "ask_clarification": 1,
+        "update_reminder": 2,
+        "delete_calendar_event": 1,
+        "delete_alarm": 1,
+        "None": 1
+      },
+      "add_note": {
+        "ask_clarification": 14,
+        "create_alarm": 3,
+        "create_calendar_event": 2,
+        "add_note": 6,
+        "None": 2
+      },
+      "update_note": {
+        "ask_clarification": 2,
+        "add_note": 4,
+        "delete_note": 1,
+        "update_reminder": 1,
+        "update_note": 1
+      },
+      "delete_note": {
+        "ask_clarification": 1,
+        "delete_note": 1
+      },
+      "create_calendar_event": {
+        "ask_clarification": 4,
+        "create_calendar_event": 6,
+        "create_alarm": 7,
+        "update_note": 1,
+        "create_reminder": 1
+      },
+      "update_calendar_event": {
+        "update_reminder": 4,
+        "create_calendar_event": 1,
+        "update_alarm": 1
+      },
+      "delete_calendar_event": {
+        "ask_clarification": 2,
+        "delete_calendar_event": 2,
+        "delete_reminder": 1,
+        "delete_alarm": 1
+      },
+      "create_alarm": {
+        "ask_clarification": 1,
+        "create_alarm": 4,
+        "None": 1
+      },
+      "update_alarm": {
+        "update_alarm": 2,
+        "create_alarm": 2
+      },
+      "delete_alarm": {
+        "delete_alarm": 2,
+        "create_alarm": 1
+      },
+      "ask_clarification": {
+        "update_reminder": 3,
+        "create_reminder": 1
+      },
+      "None": {
+        "ask_clarification": 30,
+        "create_calendar_event": 5,
+        "create_alarm": 5,
+        "None": 8
+      }
+    },
+    "importance_confusion_matrix": {
+      "Low": {
+        "High": 27,
+        "Low": 18
+      },
+      "Medium": {
+        "High": 58,
+        "Low": 9,
+        "Medium": 1
+      },
+      "High": {
+        "High": 71,
+        "Low": 5,
+        "Medium": 1
+      }
+    },
+    "action_vs_no_action_confusion": {
+      "tp": 134,
+      "fp": 40,
+      "fn": 8,
+      "tn": 8,
+      "matrix": {
+        "Action": {
+          "Action": 134,
+          "NoAction": 8
+        },
+        "NoAction": {
+          "Action": 40,
+          "NoAction": 8
+        }
+      }
+    },
+    "per_tool_precision_recall_f1": {
+      "create_reminder": {
+        "precision": 0.75,
+        "recall": 0.25,
+        "f1": 0.375,
+        "support": 36,
+        "tp": 9,
+        "fp": 3,
+        "fn": 27
+      },
+      "update_reminder": {
+        "precision": 0.21428571428571427,
+        "recall": 0.5,
+        "f1": 0.3,
+        "support": 6,
+        "tp": 3,
+        "fp": 11,
+        "fn": 3
+      },
+      "delete_reminder": {
+        "precision": 0.8888888888888888,
+        "recall": 0.5714285714285714,
+        "f1": 0.6956521739130435,
+        "support": 14,
+        "tp": 8,
+        "fp": 1,
+        "fn": 6
+      },
+      "add_note": {
+        "precision": 0.5,
+        "recall": 0.2222222222222222,
+        "f1": 0.30769230769230765,
+        "support": 27,
+        "tp": 6,
+        "fp": 6,
+        "fn": 21
+      },
+      "update_note": {
+        "precision": 0.3333333333333333,
+        "recall": 0.1111111111111111,
+        "f1": 0.16666666666666666,
+        "support": 9,
+        "tp": 1,
+        "fp": 2,
+        "fn": 8
+      },
+      "delete_note": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5,
+        "support": 2,
+        "tp": 1,
+        "fp": 1,
+        "fn": 1
+      },
+      "create_calendar_event": {
+        "precision": 0.3333333333333333,
+        "recall": 0.3157894736842105,
+        "f1": 0.3243243243243243,
+        "support": 19,
+        "tp": 6,
+        "fp": 12,
+        "fn": 13
+      },
+      "update_calendar_event": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6,
+        "tp": 0,
+        "fp": 0,
+        "fn": 6
+      },
+      "delete_calendar_event": {
+        "precision": 0.6666666666666666,
+        "recall": 0.3333333333333333,
+        "f1": 0.4444444444444444,
+        "support": 6,
+        "tp": 2,
+        "fp": 1,
+        "fn": 4
+      },
+      "create_alarm": {
+        "precision": 0.13793103448275862,
+        "recall": 0.6666666666666666,
+        "f1": 0.2285714285714286,
+        "support": 6,
+        "tp": 4,
+        "fp": 25,
+        "fn": 2
+      },
+      "update_alarm": {
+        "precision": 0.6666666666666666,
+        "recall": 0.5,
+        "f1": 0.5714285714285715,
+        "support": 4,
+        "tp": 2,
+        "fp": 1,
+        "fn": 2
+      },
+      "delete_alarm": {
+        "precision": 0.5,
+        "recall": 0.6666666666666666,
+        "f1": 0.5714285714285715,
+        "support": 3,
+        "tp": 2,
+        "fp": 2,
+        "fn": 1
+      },
+      "ask_clarification": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4,
+        "tp": 0,
+        "fp": 65,
+        "fn": 4
+      }
+    },
+    "weak_class_recall": {
+      "create_alarm": {
+        "support": 6,
+        "correct": 4,
+        "recall": 0.6666666666666666
+      },
+      "update_alarm": {
+        "support": 4,
+        "correct": 2,
+        "recall": 0.5
+      },
+      "delete_alarm": {
+        "support": 3,
+        "correct": 2,
+        "recall": 0.6666666666666666
+      },
+      "update_reminder": {
+        "support": 6,
+        "correct": 3,
+        "recall": 0.5
+      },
+      "delete_reminder": {
+        "support": 14,
+        "correct": 8,
+        "recall": 0.5714285714285714
+      },
+      "update_note": {
+        "support": 9,
+        "correct": 1,
+        "recall": 0.1111111111111111
+      },
+      "delete_note": {
+        "support": 2,
+        "correct": 1,
+        "recall": 0.5
+      },
+      "update_calendar_event": {
+        "support": 6,
+        "correct": 0,
+        "recall": 0.0
+      },
+      "delete_calendar_event": {
+        "support": 6,
+        "correct": 2,
+        "recall": 0.3333333333333333
+      },
+      "ask_clarification": {
+        "support": 4,
+        "correct": 0,
+        "recall": 0.0
+      },
+      "Medium": {
+        "support": 68,
+        "correct": 1,
+        "recall": 0.014705882352941176
+      },
+      "None": {
+        "support": 48,
+        "correct": 8,
+        "recall": 0.16666666666666666
+      }
+    }
+  },
+  "sft_current_test": {
+    "n": 190,
+    "json_parse_rate": 0.9947368421052631,
+    "tool_accuracy": 0.6526315789473685,
+    "importance_accuracy": 0.5894736842105263,
+    "exact_match_accuracy": 0.4473684210526316,
+    "json_exact_match_accuracy": 0.16842105263157894,
+    "detail_exact_match_accuracy": 0.22105263157894736,
+    "detail_presence_accuracy": 0.8789473684210526,
+    "detail_token_f1": 0.4819668575318732,
+    "detail_exact_when_tool_correct": 0.3225806451612903,
+    "action_precision": 0.9214285714285714,
+    "action_recall": 0.9084507042253521,
+    "action_f1": 0.9148936170212766,
+    "per_tool_f1": {
+      "create_reminder": 0.6024096385542169,
+      "update_reminder": 0.3636363636363636,
+      "delete_reminder": 0.8148148148148148,
+      "add_note": 0.5306122448979591,
+      "update_note": 0.5,
+      "delete_note": 0.5,
+      "create_calendar_event": 0.7368421052631579,
+      "update_calendar_event": 0.5333333333333333,
+      "delete_calendar_event": 0.7272727272727272,
+      "create_alarm": 0.4444444444444444,
+      "update_alarm": 0.888888888888889,
+      "delete_alarm": 0.8571428571428571,
+      "ask_clarification": 0.28571428571428575
+    },
+    "tool_confusion_matrix": {
+      "create_reminder": {
+        "create_reminder": 25,
+        "None": 6,
+        "add_note": 3,
+        "create_calendar_event": 1,
+        "update_calendar_event": 1
+      },
+      "update_reminder": {
+        "add_note": 1,
+        "update_calendar_event": 2,
+        "update_reminder": 2,
+        "create_reminder": 1
+      },
+      "delete_reminder": {
+        "delete_reminder": 11,
+        "create_reminder": 1,
+        "update_reminder": 1,
+        "delete_calendar_event": 1
+      },
+      "add_note": {
+        "add_note": 13,
+        "None": 4,
+        "create_alarm": 1,
+        "create_calendar_event": 1,
+        "create_reminder": 7,
+        "delete_reminder": 1
+      },
+      "update_note": {
+        "add_note": 3,
+        "None": 1,
+        "update_note": 3,
+        "delete_note": 1,
+        "update_calendar_event": 1
+      },
+      "delete_note": {
+        "delete_reminder": 1,
+        "delete_note": 1
+      },
+      "create_calendar_event": {
+        "create_reminder": 4,
+        "create_calendar_event": 14,
+        "update_reminder": 1
+      },
+      "update_calendar_event": {
+        "update_calendar_event": 4,
+        "create_reminder": 1,
+        "update_alarm": 1
+      },
+      "delete_calendar_event": {
+        "delete_calendar_event": 4,
+        "None": 1,
+        "delete_alarm": 1
+      },
+      "create_alarm": {
+        "None": 1,
+        "create_alarm": 2,
+        "create_reminder": 2,
+        "create_calendar_event": 1
+      },
+      "update_alarm": {
+        "update_alarm": 4
+      },
+      "delete_alarm": {
+        "delete_alarm": 3
+      },
+      "ask_clarification": {
+        "update_calendar_event": 1,
+        "ask_clarification": 1,
+        "create_reminder": 1,
+        "update_reminder": 1
+      },
+      "None": {
+        "None": 37,
+        "create_reminder": 5,
+        "create_calendar_event": 2,
+        "ask_clarification": 2,
+        "add_note": 2
+      }
+    },
+    "importance_confusion_matrix": {
+      "Low": {
+        "Low": 38,
+        "Medium": 5,
+        "High": 2
+      },
+      "Medium": {
+        "Medium": 34,
+        "Low": 19,
+        "High": 15
+      },
+      "High": {
+        "High": 40,
+        "Medium": 30,
+        "Low": 7
+      }
+    },
+    "action_vs_no_action_confusion": {
+      "tp": 129,
+      "fp": 11,
+      "fn": 13,
+      "tn": 37,
+      "matrix": {
+        "Action": {
+          "Action": 129,
+          "NoAction": 13
+        },
+        "NoAction": {
+          "Action": 11,
+          "NoAction": 37
+        }
+      }
+    },
+    "per_tool_precision_recall_f1": {
+      "create_reminder": {
+        "precision": 0.5319148936170213,
+        "recall": 0.6944444444444444,
+        "f1": 0.6024096385542169,
+        "support": 36,
+        "tp": 25,
+        "fp": 22,
+        "fn": 11
+      },
+      "update_reminder": {
+        "precision": 0.4,
+        "recall": 0.3333333333333333,
+        "f1": 0.3636363636363636,
+        "support": 6,
+        "tp": 2,
+        "fp": 3,
+        "fn": 4
+      },
+      "delete_reminder": {
+        "precision": 0.8461538461538461,
+        "recall": 0.7857142857142857,
+        "f1": 0.8148148148148148,
+        "support": 14,
+        "tp": 11,
+        "fp": 2,
+        "fn": 3
+      },
+      "add_note": {
+        "precision": 0.5909090909090909,
+        "recall": 0.48148148148148145,
+        "f1": 0.5306122448979591,
+        "support": 27,
+        "tp": 13,
+        "fp": 9,
+        "fn": 14
+      },
+      "update_note": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "support": 9,
+        "tp": 3,
+        "fp": 0,
+        "fn": 6
+      },
+      "delete_note": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5,
+        "support": 2,
+        "tp": 1,
+        "fp": 1,
+        "fn": 1
+      },
+      "create_calendar_event": {
+        "precision": 0.7368421052631579,
+        "recall": 0.7368421052631579,
+        "f1": 0.7368421052631579,
+        "support": 19,
+        "tp": 14,
+        "fp": 5,
+        "fn": 5
+      },
+      "update_calendar_event": {
+        "precision": 0.4444444444444444,
+        "recall": 0.6666666666666666,
+        "f1": 0.5333333333333333,
+        "support": 6,
+        "tp": 4,
+        "fp": 5,
+        "fn": 2
+      },
+      "delete_calendar_event": {
+        "precision": 0.8,
+        "recall": 0.6666666666666666,
+        "f1": 0.7272727272727272,
+        "support": 6,
+        "tp": 4,
+        "fp": 1,
+        "fn": 2
+      },
+      "create_alarm": {
+        "precision": 0.6666666666666666,
+        "recall": 0.3333333333333333,
+        "f1": 0.4444444444444444,
+        "support": 6,
+        "tp": 2,
+        "fp": 1,
+        "fn": 4
+      },
+      "update_alarm": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889,
+        "support": 4,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0
+      },
+      "delete_alarm": {
+        "precision": 0.75,
+        "recall": 1.0,
+        "f1": 0.8571428571428571,
+        "support": 3,
+        "tp": 3,
+        "fp": 1,
+        "fn": 0
+      },
+      "ask_clarification": {
+        "precision": 0.3333333333333333,
+        "recall": 0.25,
+        "f1": 0.28571428571428575,
+        "support": 4,
+        "tp": 1,
+        "fp": 2,
+        "fn": 3
+      }
+    },
+    "weak_class_recall": {
+      "create_alarm": {
+        "support": 6,
+        "correct": 2,
+        "recall": 0.3333333333333333
+      },
+      "update_alarm": {
+        "support": 4,
+        "correct": 4,
+        "recall": 1.0
+      },
+      "delete_alarm": {
+        "support": 3,
+        "correct": 3,
+        "recall": 1.0
+      },
+      "update_reminder": {
+        "support": 6,
+        "correct": 2,
+        "recall": 0.3333333333333333
+      },
+      "delete_reminder": {
+        "support": 14,
+        "correct": 11,
+        "recall": 0.7857142857142857
+      },
+      "update_note": {
+        "support": 9,
+        "correct": 3,
+        "recall": 0.3333333333333333
+      },
+      "delete_note": {
+        "support": 2,
+        "correct": 1,
+        "recall": 0.5
+      },
+      "update_calendar_event": {
+        "support": 6,
+        "correct": 4,
+        "recall": 0.6666666666666666
+      },
+      "delete_calendar_event": {
+        "support": 6,
+        "correct": 4,
+        "recall": 0.6666666666666666
+      },
+      "ask_clarification": {
+        "support": 4,
+        "correct": 1,
+        "recall": 0.25
+      },
+      "Medium": {
+        "support": 68,
+        "correct": 34,
+        "recall": 0.5
+      },
+      "None": {
+        "support": 48,
+        "correct": 37,
+        "recall": 0.7708333333333334
+      }
+    }
+  },
+  "ctx2_sft_context_test": {
+    "n": 190,
+    "json_parse_rate": 1.0,
+    "tool_accuracy": 0.6368421052631579,
+    "importance_accuracy": 0.6526315789473685,
+    "exact_match_accuracy": 0.4473684210526316,
+    "json_exact_match_accuracy": 0.15789473684210525,
+    "detail_exact_match_accuracy": 0.21052631578947367,
+    "detail_presence_accuracy": 0.8947368421052632,
+    "detail_token_f1": 0.5379733309165441,
+    "detail_exact_when_tool_correct": 0.3140495867768595,
+    "action_precision": 0.9060402684563759,
+    "action_recall": 0.9507042253521126,
+    "action_f1": 0.9278350515463918,
+    "per_tool_f1": {
+      "create_reminder": 0.6024096385542169,
+      "update_reminder": 0.3636363636363636,
+      "delete_reminder": 0.7857142857142857,
+      "add_note": 0.425531914893617,
+      "update_note": 0.631578947368421,
+      "delete_note": 0.5,
+      "create_calendar_event": 0.7222222222222222,
+      "update_calendar_event": 0.7142857142857143,
+      "delete_calendar_event": 0.6666666666666666,
+      "create_alarm": 0.6666666666666666,
+      "update_alarm": 0.8,
+      "delete_alarm": 0.5714285714285715,
+      "ask_clarification": 0.0
+    },
+    "tool_confusion_matrix": {
+      "create_reminder": {
+        "create_reminder": 25,
+        "add_note": 2,
+        "None": 5,
+        "create_calendar_event": 1,
+        "update_note": 2,
+        "create_alarm": 1
+      },
+      "update_reminder": {
+        "add_note": 1,
+        "update_alarm": 1,
+        "update_calendar_event": 1,
+        "update_reminder": 2,
+        "create_reminder": 1
+      },
+      "delete_reminder": {
+        "delete_reminder": 11,
+        "update_reminder": 2,
+        "delete_calendar_event": 1
+      },
+      "add_note": {
+        "create_reminder": 7,
+        "create_alarm": 1,
+        "create_calendar_event": 2,
+        "add_note": 10,
+        "ask_clarification": 2,
+        "update_note": 2,
+        "None": 2,
+        "delete_reminder": 1
+      },
+      "update_note": {
+        "add_note": 2,
+        "update_note": 6,
+        "delete_note": 1
+      },
+      "delete_note": {
+        "delete_reminder": 1,
+        "delete_note": 1
+      },
+      "create_calendar_event": {
+        "create_calendar_event": 13,
+        "create_reminder": 5,
+        "update_calendar_event": 1
+      },
+      "update_calendar_event": {
+        "update_calendar_event": 5,
+        "update_alarm": 1
+      },
+      "delete_calendar_event": {
+        "delete_calendar_event": 4,
+        "delete_reminder": 1,
+        "delete_alarm": 1
+      },
+      "create_alarm": {
+        "create_alarm": 4,
+        "create_reminder": 2
+      },
+      "update_alarm": {
+        "update_alarm": 4
+      },
+      "delete_alarm": {
+        "delete_alarm": 2,
+        "delete_calendar_event": 1
+      },
+      "ask_clarification": {
+        "update_calendar_event": 1,
+        "create_reminder": 2,
+        "update_reminder": 1
+      },
+      "None": {
+        "None": 34,
+        "add_note": 5,
+        "create_reminder": 5,
+        "delete_alarm": 1,
+        "ask_clarification": 2,
+        "create_calendar_event": 1
+      }
+    },
+    "importance_confusion_matrix": {
+      "Low": {
+        "Low": 32,
+        "Medium": 12,
+        "High": 1
+      },
+      "Medium": {
+        "Medium": 37,
+        "Low": 8,
+        "High": 23
+      },
+      "High": {
+        "High": 55,
+        "Medium": 21,
+        "Low": 1
+      }
+    },
+    "action_vs_no_action_confusion": {
+      "tp": 135,
+      "fp": 14,
+      "fn": 7,
+      "tn": 34,
+      "matrix": {
+        "Action": {
+          "Action": 135,
+          "NoAction": 7
+        },
+        "NoAction": {
+          "Action": 14,
+          "NoAction": 34
+        }
+      }
+    },
+    "per_tool_precision_recall_f1": {
+      "create_reminder": {
+        "precision": 0.5319148936170213,
+        "recall": 0.6944444444444444,
+        "f1": 0.6024096385542169,
+        "support": 36,
+        "tp": 25,
+        "fp": 22,
+        "fn": 11
+      },
+      "update_reminder": {
+        "precision": 0.4,
+        "recall": 0.3333333333333333,
+        "f1": 0.3636363636363636,
+        "support": 6,
+        "tp": 2,
+        "fp": 3,
+        "fn": 4
+      },
+      "delete_reminder": {
+        "precision": 0.7857142857142857,
+        "recall": 0.7857142857142857,
+        "f1": 0.7857142857142857,
+        "support": 14,
+        "tp": 11,
+        "fp": 3,
+        "fn": 3
+      },
+      "add_note": {
+        "precision": 0.5,
+        "recall": 0.37037037037037035,
+        "f1": 0.425531914893617,
+        "support": 27,
+        "tp": 10,
+        "fp": 10,
+        "fn": 17
+      },
+      "update_note": {
+        "precision": 0.6,
+        "recall": 0.6666666666666666,
+        "f1": 0.631578947368421,
+        "support": 9,
+        "tp": 6,
+        "fp": 4,
+        "fn": 3
+      },
+      "delete_note": {
+        "precision": 0.5,
+        "recall": 0.5,
+        "f1": 0.5,
+        "support": 2,
+        "tp": 1,
+        "fp": 1,
+        "fn": 1
+      },
+      "create_calendar_event": {
+        "precision": 0.7647058823529411,
+        "recall": 0.6842105263157895,
+        "f1": 0.7222222222222222,
+        "support": 19,
+        "tp": 13,
+        "fp": 4,
+        "fn": 6
+      },
+      "update_calendar_event": {
+        "precision": 0.625,
+        "recall": 0.8333333333333334,
+        "f1": 0.7142857142857143,
+        "support": 6,
+        "tp": 5,
+        "fp": 3,
+        "fn": 1
+      },
+      "delete_calendar_event": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "support": 6,
+        "tp": 4,
+        "fp": 2,
+        "fn": 2
+      },
+      "create_alarm": {
+        "precision": 0.6666666666666666,
+        "recall": 0.6666666666666666,
+        "f1": 0.6666666666666666,
+        "support": 6,
+        "tp": 4,
+        "fp": 2,
+        "fn": 2
+      },
+      "update_alarm": {
+        "precision": 0.6666666666666666,
+        "recall": 1.0,
+        "f1": 0.8,
+        "support": 4,
+        "tp": 4,
+        "fp": 2,
+        "fn": 0
+      },
+      "delete_alarm": {
+        "precision": 0.5,
+        "recall": 0.6666666666666666,
+        "f1": 0.5714285714285715,
+        "support": 3,
+        "tp": 2,
+        "fp": 2,
+        "fn": 1
+      },
+      "ask_clarification": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4,
+        "tp": 0,
+        "fp": 4,
+        "fn": 4
+      }
+    },
+    "weak_class_recall": {
+      "create_alarm": {
+        "support": 6,
+        "correct": 4,
+        "recall": 0.6666666666666666
+      },
+      "update_alarm": {
+        "support": 4,
+        "correct": 4,
+        "recall": 1.0
+      },
+      "delete_alarm": {
+        "support": 3,
+        "correct": 2,
+        "recall": 0.6666666666666666
+      },
+      "update_reminder": {
+        "support": 6,
+        "correct": 2,
+        "recall": 0.3333333333333333
+      },
+      "delete_reminder": {
+        "support": 14,
+        "correct": 11,
+        "recall": 0.7857142857142857
+      },
+      "update_note": {
+        "support": 9,
+        "correct": 6,
+        "recall": 0.6666666666666666
+      },
+      "delete_note": {
+        "support": 2,
+        "correct": 1,
+        "recall": 0.5
+      },
+      "update_calendar_event": {
+        "support": 6,
+        "correct": 5,
+        "recall": 0.8333333333333334
+      },
+      "delete_calendar_event": {
+        "support": 6,
+        "correct": 4,
+        "recall": 0.6666666666666666
+      },
+      "ask_clarification": {
+        "support": 4,
+        "correct": 0,
+        "recall": 0.0
+      },
+      "Medium": {
+        "support": 68,
+        "correct": 37,
+        "recall": 0.5441176470588235
+      },
+      "None": {
+        "support": 48,
+        "correct": 34,
+        "recall": 0.7083333333333334
+      }
+    }
+  },
+  "state_ctx2_sft_context_test": {
+    "n": 190,
+    "json_parse_rate": 0.9842105263157894,
+    "tool_accuracy": 0.6368421052631579,
+    "importance_accuracy": 0.6894736842105263,
+    "exact_match_accuracy": 0.4789473684210526,
+    "json_exact_match_accuracy": 0.17894736842105263,
+    "detail_exact_match_accuracy": 0.19473684210526315,
+    "detail_presence_accuracy": 0.8947368421052632,
+    "detail_token_f1": 0.4997966377402585,
+    "detail_exact_when_tool_correct": 0.2892561983471074,
+    "action_precision": 0.9006622516556292,
+    "action_recall": 0.9577464788732394,
+    "action_f1": 0.9283276450511946,
+    "per_tool_f1": {
+      "create_reminder": 0.5185185185185186,
+      "update_reminder": 0.5,
+      "delete_reminder": 0.8148148148148148,
+      "add_note": 0.6557377049180328,
+      "update_note": 0.46153846153846156,
+      "delete_note": 0.4,
+      "create_calendar_event": 0.6111111111111113,
+      "update_calendar_event": 0.625,
+      "delete_calendar_event": 0.6,
+      "create_alarm": 0.5714285714285715,
+      "update_alarm": 0.888888888888889,
+      "delete_alarm": 0.6666666666666666,
+      "ask_clarification": 0.0
+    },
+    "tool_confusion_matrix": {
+      "create_reminder": {
+        "create_reminder": 21,
+        "create_alarm": 1,
+        "add_note": 7,
+        "None": 3,
+        "create_calendar_event": 3,
+        "update_calendar_event": 1
+      },
+      "update_reminder": {
+        "add_note": 1,
+        "update_alarm": 1,
+        "update_calendar_event": 1,
+        "update_reminder": 2,
+        "update_note": 1
+      },
+      "delete_reminder": {
+        "delete_reminder": 11,
+        "delete_note": 1,
+        "create_reminder": 1,
+        "delete_calendar_event": 1
+      },
+      "add_note": {
+        "add_note": 20,
+        "create_reminder": 5,
+        "create_calendar_event": 1,
+        "None": 1
+      },
+      "update_note": {
+        "add_note": 3,
+        "update_note": 3,
+        "delete_note": 1,
+        "None": 1,
+        "delete_alarm": 1
+      },
+      "delete_note": {
+        "delete_reminder": 1,
+        "delete_note": 1
+      },
+      "create_calendar_event": {
+        "create_calendar_event": 11,
+        "create_reminder": 6,
+        "None": 1,
+        "update_calendar_event": 1
+      },
+      "update_calendar_event": {
+        "update_calendar_event": 5,
+        "create_alarm": 1
+      },
+      "delete_calendar_event": {
+        "create_alarm": 1,
+        "delete_calendar_event": 3,
+        "delete_reminder": 1,
+        "delete_alarm": 1
+      },
+      "create_alarm": {
+        "create_reminder": 2,
+        "create_alarm": 4
+      },
+      "update_alarm": {
+        "update_alarm": 4
+      },
+      "delete_alarm": {
+        "delete_alarm": 3
+      },
+      "ask_clarification": {
+        "update_calendar_event": 2,
+        "create_reminder": 2
+      },
+      "None": {
+        "None": 33,
+        "create_alarm": 1,
+        "add_note": 3,
+        "create_reminder": 8,
+        "create_calendar_event": 2,
+        "delete_alarm": 1
+      }
+    },
+    "importance_confusion_matrix": {
+      "Low": {
+        "Low": 38,
+        "High": 2,
+        "Medium": 5
+      },
+      "Medium": {
+        "Medium": 42,
+        "Low": 12,
+        "High": 14
+      },
+      "High": {
+        "High": 51,
+        "Medium": 23,
+        "Low": 3
+      }
+    },
+    "action_vs_no_action_confusion": {
+      "tp": 136,
+      "fp": 15,
+      "fn": 6,
+      "tn": 33,
+      "matrix": {
+        "Action": {
+          "Action": 136,
+          "NoAction": 6
+        },
+        "NoAction": {
+          "Action": 15,
+          "NoAction": 33
+        }
+      }
+    },
+    "per_tool_precision_recall_f1": {
+      "create_reminder": {
+        "precision": 0.4666666666666667,
+        "recall": 0.5833333333333334,
+        "f1": 0.5185185185185186,
+        "support": 36,
+        "tp": 21,
+        "fp": 24,
+        "fn": 15
+      },
+      "update_reminder": {
+        "precision": 1.0,
+        "recall": 0.3333333333333333,
+        "f1": 0.5,
+        "support": 6,
+        "tp": 2,
+        "fp": 0,
+        "fn": 4
+      },
+      "delete_reminder": {
+        "precision": 0.8461538461538461,
+        "recall": 0.7857142857142857,
+        "f1": 0.8148148148148148,
+        "support": 14,
+        "tp": 11,
+        "fp": 2,
+        "fn": 3
+      },
+      "add_note": {
+        "precision": 0.5882352941176471,
+        "recall": 0.7407407407407407,
+        "f1": 0.6557377049180328,
+        "support": 27,
+        "tp": 20,
+        "fp": 14,
+        "fn": 7
+      },
+      "update_note": {
+        "precision": 0.75,
+        "recall": 0.3333333333333333,
+        "f1": 0.46153846153846156,
+        "support": 9,
+        "tp": 3,
+        "fp": 1,
+        "fn": 6
+      },
+      "delete_note": {
+        "precision": 0.3333333333333333,
+        "recall": 0.5,
+        "f1": 0.4,
+        "support": 2,
+        "tp": 1,
+        "fp": 2,
+        "fn": 1
+      },
+      "create_calendar_event": {
+        "precision": 0.6470588235294118,
+        "recall": 0.5789473684210527,
+        "f1": 0.6111111111111113,
+        "support": 19,
+        "tp": 11,
+        "fp": 6,
+        "fn": 8
+      },
+      "update_calendar_event": {
+        "precision": 0.5,
+        "recall": 0.8333333333333334,
+        "f1": 0.625,
+        "support": 6,
+        "tp": 5,
+        "fp": 5,
+        "fn": 1
+      },
+      "delete_calendar_event": {
+        "precision": 0.75,
+        "recall": 0.5,
+        "f1": 0.6,
+        "support": 6,
+        "tp": 3,
+        "fp": 1,
+        "fn": 3
+      },
+      "create_alarm": {
+        "precision": 0.5,
+        "recall": 0.6666666666666666,
+        "f1": 0.5714285714285715,
+        "support": 6,
+        "tp": 4,
+        "fp": 4,
+        "fn": 2
+      },
+      "update_alarm": {
+        "precision": 0.8,
+        "recall": 1.0,
+        "f1": 0.888888888888889,
+        "support": 4,
+        "tp": 4,
+        "fp": 1,
+        "fn": 0
+      },
+      "delete_alarm": {
+        "precision": 0.5,
+        "recall": 1.0,
+        "f1": 0.6666666666666666,
+        "support": 3,
+        "tp": 3,
+        "fp": 3,
+        "fn": 0
+      },
+      "ask_clarification": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 4,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4
+      }
+    },
+    "weak_class_recall": {
+      "create_alarm": {
+        "support": 6,
+        "correct": 4,
+        "recall": 0.6666666666666666
+      },
+      "update_alarm": {
+        "support": 4,
+        "correct": 4,
+        "recall": 1.0
+      },
+      "delete_alarm": {
+        "support": 3,
+        "correct": 3,
+        "recall": 1.0
+      },
+      "update_reminder": {
+        "support": 6,
+        "correct": 2,
+        "recall": 0.3333333333333333
+      },
+      "delete_reminder": {
+        "support": 14,
+        "correct": 11,
+        "recall": 0.7857142857142857
+      },
+      "update_note": {
+        "support": 9,
+        "correct": 3,
+        "recall": 0.3333333333333333
+      },
+      "delete_note": {
+        "support": 2,
+        "correct": 1,
+        "recall": 0.5
+      },
+      "update_calendar_event": {
+        "support": 6,
+        "correct": 5,
+        "recall": 0.8333333333333334
+      },
+      "delete_calendar_event": {
+        "support": 6,
+        "correct": 3,
+        "recall": 0.5
+      },
+      "ask_clarification": {
+        "support": 4,
+        "correct": 0,
+        "recall": 0.0
+      },
+      "Medium": {
+        "support": 68,
+        "correct": 42,
+        "recall": 0.6176470588235294
+      },
+      "None": {
+        "support": 48,
+        "correct": 33,
+        "recall": 0.6875
+      }
+    }
+  }
+}

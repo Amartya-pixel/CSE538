@@ -1,0 +1,36 @@
+The tokenizer you are loading from './all-state-ctx2-sft-merged' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+Skipping import of cpp extensions due to incompatible torch version. Please upgrade to torch >= 2.11.0 (found 2.10.0+cu128).
+[all] loaded 190 test utterances.
+[skip] base ()
+[skip] sft ()
+[skip] ctx_sft ()
+
+[load] ./all-state-ctx2-sft-merged
+[eval] dtype=torch.bfloat16
+
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/338 [00:00<01:19,  4.24it/s]
+Loading weights:   5%|▍         | 16/338 [00:00<00:05, 57.71it/s]
+Loading weights:  12%|█▏        | 41/338 [00:00<00:02, 119.05it/s]
+Loading weights:  19%|█▉        | 64/338 [00:00<00:01, 144.94it/s]
+Loading weights:  26%|██▌       | 88/338 [00:00<00:01, 159.48it/s]
+Loading weights:  33%|███▎      | 111/338 [00:00<00:01, 171.59it/s]
+Loading weights:  40%|███▉      | 135/338 [00:00<00:01, 183.31it/s]
+Loading weights:  47%|████▋     | 160/338 [00:01<00:00, 200.80it/s]
+Loading weights:  54%|█████▍    | 183/338 [00:01<00:00, 200.72it/s]
+Loading weights:  61%|██████    | 207/338 [00:01<00:00, 200.98it/s]
+Loading weights:  68%|██████▊   | 231/338 [00:01<00:00, 208.67it/s]
+Loading weights:  75%|███████▌  | 255/338 [00:01<00:00, 199.38it/s]
+Loading weights:  83%|████████▎ | 280/338 [00:01<00:00, 195.97it/s]
+Loading weights:  90%|█████████ | 305/338 [00:01<00:00, 202.88it/s]
+Loading weights:  97%|█████████▋| 328/338 [00:01<00:00, 209.38it/s]
+Loading weights: 100%|██████████| 338/338 [00:01<00:00, 179.91it/s]
+
+========================================================================================
+model           tool_acc   imp_acc    prec     rec      f1   parse   exact detail_f1
+----------------------------------------------------------------------------------------
+state_ctx_sft      0.637     0.689   0.901   0.958   0.928   0.984   0.479     0.500
+========================================================================================
+  state_ctx_sft: per_tool_f1={'create_reminder': 0.5185185185185186, 'update_reminder': 0.5, 'delete_reminder': 0.8148148148148148, 'add_note': 0.6557377049180328, 'update_note': 0.46153846153846156, 'delete_note': 0.4, 'create_calendar_event': 0.6111111111111113, 'update_calendar_event': 0.625, 'delete_calendar_event': 0.6, 'create_alarm': 0.5714285714285715, 'update_alarm': 0.888888888888889, 'delete_alarm': 0.6666666666666666, 'ask_clarification': 0.0}
+
+Full metrics saved to all_eval_results.json

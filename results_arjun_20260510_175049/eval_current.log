@@ -1,0 +1,53 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Skipping import of cpp extensions due to incompatible torch version. Please upgrade to torch >= 2.11.0 (found 2.10.0+cu128).
+[arjun] loaded 61 test utterances.
+
+[load] Qwen/Qwen2.5-1.5B-Instruct
+[eval] dtype=torch.bfloat16
+
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]
+Loading weights:   1%|▏         | 5/338 [00:00<00:07, 47.01it/s]
+Loading weights:  16%|█▌        | 53/338 [00:00<00:00, 291.29it/s]
+Loading weights:  30%|██▉       | 101/338 [00:00<00:00, 375.43it/s]
+Loading weights:  44%|████▍     | 148/338 [00:00<00:00, 410.33it/s]
+Loading weights:  58%|█████▊    | 197/338 [00:00<00:00, 436.39it/s]
+Loading weights:  72%|███████▏  | 243/338 [00:00<00:00, 441.31it/s]
+Loading weights:  86%|████████▋ | 292/338 [00:00<00:00, 455.31it/s]
+Loading weights: 100%|██████████| 338/338 [00:00<00:00, 424.87it/s]
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+The tokenizer you are loading from './arjun-sft-merged' with an incorrect regex pattern: https://huggingface.co/mistralai/Mistral-Small-3.1-24B-Instruct-2503/discussions/84#69121093e8b480e709447d5e. This will lead to incorrect tokenization. You should set the `fix_mistral_regex=True` flag when loading this tokenizer to fix this issue.
+
+[load] ./arjun-sft-merged
+[eval] dtype=torch.bfloat16
+
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/338 [00:00<01:20,  4.21it/s]
+Loading weights:   5%|▍         | 16/338 [00:00<00:05, 58.66it/s]
+Loading weights:  12%|█▏        | 39/338 [00:00<00:02, 113.69it/s]
+Loading weights:  19%|█▊        | 63/338 [00:00<00:01, 153.10it/s]
+Loading weights:  25%|██▍       | 83/338 [00:00<00:01, 167.54it/s]
+Loading weights:  30%|███       | 102/338 [00:00<00:01, 166.72it/s]
+Loading weights:  37%|███▋      | 124/338 [00:00<00:01, 177.84it/s]
+Loading weights:  43%|████▎     | 147/338 [00:00<00:00, 191.98it/s]
+Loading weights:  49%|████▉     | 167/338 [00:01<00:00, 191.13it/s]
+Loading weights:  55%|█████▌    | 187/338 [00:01<00:00, 185.52it/s]
+Loading weights:  61%|██████    | 207/338 [00:01<00:00, 184.63it/s]
+Loading weights:  68%|██████▊   | 231/338 [00:01<00:00, 184.30it/s]
+Loading weights:  76%|███████▌  | 256/338 [00:01<00:00, 200.10it/s]
+Loading weights:  83%|████████▎ | 280/338 [00:01<00:00, 200.53it/s]
+Loading weights:  89%|████████▉ | 302/338 [00:01<00:00, 203.93it/s]
+Loading weights:  96%|█████████▌| 323/338 [00:01<00:00, 204.72it/s]
+Loading weights: 100%|██████████| 338/338 [00:01<00:00, 175.68it/s]
+[skip] ctx_sft ()
+[skip] state_ctx_sft ()
+
+========================================================================================
+model           tool_acc   imp_acc    prec     rec      f1   parse   exact detail_f1
+----------------------------------------------------------------------------------------
+base               0.279     0.475   0.804   0.957   0.874   1.000   0.148     0.228
+sft                0.262     0.262   0.800   0.170   0.281   0.262   0.213     0.231
+========================================================================================
+  base: per_tool_f1={'create_reminder': 0.2, 'update_reminder': 0.28571428571428575, 'delete_reminder': 0.75, 'add_note': 0.5, 'update_note': 0.0, 'delete_note': 0.6666666666666666, 'create_calendar_event': 0.36363636363636365, 'update_calendar_event': 0.0, 'delete_calendar_event': 0.33333333333333337, 'create_alarm': 0.0, 'update_alarm': 0.4, 'delete_alarm': 0.5, 'ask_clarification': 0.0}
+  sft: per_tool_f1={'create_reminder': 0.28571428571428575, 'update_reminder': 0.0, 'delete_reminder': 0.3333333333333333, 'add_note': 0.2, 'update_note': 0.0, 'delete_note': 0.0, 'create_calendar_event': 0.0, 'update_calendar_event': 0.0, 'delete_calendar_event': 0.0, 'create_alarm': 0.0, 'update_alarm': 0.0, 'delete_alarm': 0.0, 'ask_clarification': 0.0}
+
+Full metrics saved to arjun_eval_results.json
