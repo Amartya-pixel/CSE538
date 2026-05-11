@@ -95,12 +95,9 @@ all_state_ctx2_stats.json
 The project currently uses a 4-conversation holdout:
 
 ```text
-held out conversations: 9, 10, 16, 17
 training conversations: 14 per persona
 test conversations: 4 per persona
 ```
-
-Conversation 18 stays in training because it contains weak-class examples such as update, delete, alarm, no-action, and clarification.
 
 ## Generate JSONL/Stat Files Locally For Colab Option A
 
