@@ -71,6 +71,13 @@ def _parse_when(detail: str) -> dt.datetime:
     return base
 
 
+def _first_nonempty(*values: str) -> str:
+    for value in values:
+        if value:
+            return value
+    return ""
+
+
 # ---------- MCP tools ------------------------------------------------------
 @mcp.tool()
 def create_reminder(text: str, when: str = "later",
@@ -90,6 +97,54 @@ def create_reminder(text: str, when: str = "later",
     if not ok:
         return f"Failed to add reminder: {msg}"
     return f"Reminder added: {text}"
+
+
+@mcp.tool()
+def update_reminder(target: str, new_text: str = "", new_when: str = "",
+                    priority: str = "Medium") -> str:
+    """Edit the first reminder whose title contains the target text."""
+    target_e = _esc(target)
+    new_text_e = _esc(new_text or target)
+    date_clause = ""
+    if new_when:
+        date_clause = f', remind me date:date "{_applescript_date(_parse_when(new_when))}"'
+    script = f'''
+        tell application "Reminders"
+            repeat with r in reminders
+                if name of r contains "{target_e}" then
+                    set name of r to "{new_text_e} (priority: {priority})"
+                    {f"set remind me date of r to date \"{_applescript_date(_parse_when(new_when))}\"" if new_when else ""}
+                    return "updated"
+                end if
+            end repeat
+            return "not found"
+        end tell
+    '''
+    ok, msg = _osa(script)
+    if not ok:
+        return f"Failed to update reminder: {msg}"
+    return f"Reminder update result for {target}: {msg}"
+
+
+@mcp.tool()
+def delete_reminder(target: str, reason: str = "") -> str:
+    """Delete the first reminder whose title contains the target text."""
+    target_e = _esc(target)
+    script = f'''
+        tell application "Reminders"
+            repeat with r in reminders
+                if name of r contains "{target_e}" then
+                    delete r
+                    return "deleted"
+                end if
+            end repeat
+            return "not found"
+        end tell
+    '''
+    ok, msg = _osa(script)
+    if not ok:
+        return f"Failed to delete reminder: {msg}"
+    return f"Reminder delete result for {target}: {msg}"
 
 
 @mcp.tool()
@@ -122,6 +177,71 @@ def create_calendar_event(title: str, time: str = "tomorrow 10am",
 
 
 @mcp.tool()
+def update_calendar_event(target: str, new_title: str = "",
+                          new_time: str = "", new_location: str = "",
+                          description: str = "",
+                          priority: str = "Medium") -> str:
+    """Edit the first future calendar event whose summary contains target."""
+    target_e = _esc(target)
+    title_e = _esc(new_title)
+    loc_e = _esc(new_location)
+    desc_e = _esc(description or f"priority: {priority}")
+    date_lines = ""
+    if new_time:
+        start = _parse_when(new_time)
+        end = start + dt.timedelta(hours=1)
+        date_lines = (
+            f'set start date of ev to date "{_applescript_date(start)}"\n'
+            f'                    set end date of ev to date "{_applescript_date(end)}"'
+        )
+    script = f'''
+        tell application "Calendar"
+            set cutoff to current date
+            repeat with cal in calendars
+                repeat with ev in (events of cal whose start date is greater than cutoff)
+                    if summary of ev contains "{target_e}" then
+                        {f'set summary of ev to "{title_e}"' if new_title else ""}
+                        {date_lines}
+                        {f'set location of ev to "{loc_e}"' if new_location else ""}
+                        {f'set description of ev to "{desc_e}"' if description else ""}
+                        return "updated"
+                    end if
+                end repeat
+            end repeat
+            return "not found"
+        end tell
+    '''
+    ok, msg = _osa(script)
+    if not ok:
+        return f"Failed to update calendar event: {msg}"
+    return f"Calendar update result for {target}: {msg}"
+
+
+@mcp.tool()
+def delete_calendar_event(target: str, reason: str = "") -> str:
+    """Delete the first future calendar event whose summary contains target."""
+    target_e = _esc(target)
+    script = f'''
+        tell application "Calendar"
+            set cutoff to current date
+            repeat with cal in calendars
+                repeat with ev in (events of cal whose start date is greater than cutoff)
+                    if summary of ev contains "{target_e}" then
+                        delete ev
+                        return "deleted"
+                    end if
+                end repeat
+            end repeat
+            return "not found"
+        end tell
+    '''
+    ok, msg = _osa(script)
+    if not ok:
+        return f"Failed to delete calendar event: {msg}"
+    return f"Calendar delete result for {target}: {msg}"
+
+
+@mcp.tool()
 def create_alarm(time: str = "in 1 hour", message: str = "Reminder",
                  priority: str = "High") -> str:
     """Set an urgent prompt at a specific moment.
@@ -144,6 +264,54 @@ def create_alarm(time: str = "in 1 hour", message: str = "Reminder",
 
 
 @mcp.tool()
+def update_alarm(target: str, new_time: str = "", new_message: str = "",
+                 priority: str = "High") -> str:
+    """Edit an alarm implemented as a Reminders reminder with an alert time."""
+    target_e = _esc(target)
+    new_message_e = _esc(f"[ALARM] {new_message or target}")
+    date_line = ""
+    if new_time:
+        date_line = f'set remind me date of r to date "{_applescript_date(_parse_when(new_time))}"'
+    script = f'''
+        tell application "Reminders"
+            repeat with r in reminders
+                if name of r contains "{target_e}" then
+                    set name of r to "{new_message_e}"
+                    {date_line}
+                    return "updated"
+                end if
+            end repeat
+            return "not found"
+        end tell
+    '''
+    ok, msg = _osa(script)
+    if not ok:
+        return f"Failed to update alarm: {msg}"
+    return f"Alarm update result for {target}: {msg}"
+
+
+@mcp.tool()
+def delete_alarm(target: str, reason: str = "") -> str:
+    """Delete an alarm implemented as a Reminders reminder."""
+    target_e = _esc(target)
+    script = f'''
+        tell application "Reminders"
+            repeat with r in reminders
+                if name of r contains "{target_e}" then
+                    delete r
+                    return "deleted"
+                end if
+            end repeat
+            return "not found"
+        end tell
+    '''
+    ok, msg = _osa(script)
+    if not ok:
+        return f"Failed to delete alarm: {msg}"
+    return f"Alarm delete result for {target}: {msg}"
+
+
+@mcp.tool()
 def add_note(category: str, content: str,
              priority: str = "Medium") -> str:
     """Save reference material to macOS Notes.app under a topical title."""
@@ -158,6 +326,52 @@ def add_note(category: str, content: str,
     if not ok:
         return f"Failed to add note: {msg}"
     return f"Note saved under {category}: {content[:60]}"
+
+
+@mcp.tool()
+def update_note(target: str, new_content: str = "",
+                category: str = "", priority: str = "Medium") -> str:
+    """Edit the first note whose name contains target."""
+    target_e = _esc(target)
+    title_e = _esc(f"[{category or 'Updated'}] {target}"[:80])
+    body_e = _esc(f"{new_content}\n\nPriority: {priority}\nCategory: {category}")
+    script = f'''
+        tell application "Notes"
+            repeat with n in notes
+                if name of n contains "{target_e}" then
+                    {f'set name of n to "{title_e}"' if category else ""}
+                    set body of n to "{body_e}"
+                    return "updated"
+                end if
+            end repeat
+            return "not found"
+        end tell
+    '''
+    ok, msg = _osa(script)
+    if not ok:
+        return f"Failed to update note: {msg}"
+    return f"Note update result for {target}: {msg}"
+
+
+@mcp.tool()
+def delete_note(target: str, reason: str = "") -> str:
+    """Delete the first note whose name contains target."""
+    target_e = _esc(target)
+    script = f'''
+        tell application "Notes"
+            repeat with n in notes
+                if name of n contains "{target_e}" then
+                    delete n
+                    return "deleted"
+                end if
+            end repeat
+            return "not found"
+        end tell
+    '''
+    ok, msg = _osa(script)
+    if not ok:
+        return f"Failed to delete note: {msg}"
+    return f"Note delete result for {target}: {msg}"
 
 
 if __name__ == "__main__":

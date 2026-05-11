@@ -1,0 +1,2033 @@
+{
+  "source_file": "neel_neuroscience_10_conversations_evolving_tool_calls_labeled.docx",
+  "title": "Neuroscience PhD Student: 10 Conversations with Evolving Tool Call Summaries",
+  "assumptions": [
+    "Neel is a neuroscience PhD student who is ambitious, analytical, and deadline-aware.",
+    "He values deep work, so calendar events are used for reserved work blocks rather than generic reminders.",
+    "He is collaborative but sometimes overcommits, so reminders help him follow through on emails, forms, and coordination.",
+    "He is health-conscious but inconsistent under stress, so self-care and logistics only get tool calls when they are specific and actionable."
+  ],
+  "tool_rules": "Tools follow this distinction: Reminder = don\u2019t forget; Reminder update/delete = change or remove an existing reminder; Calendar event = reserve time; Calendar event update/delete = change or cancel an existing calendar block; Alarm = urgent prompt at a specific moment; Alarm update/delete = change or remove an urgent prompt; Notes = reference material; Notes update/delete = change or remove saved reference material.",
+  "conversations": [
+    {
+      "number": 1,
+      "title": "Neel and his advisor",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Advisor",
+          "utterance": "Morning, Neel. Have you looked at the sleep-deprivation pilot data closely enough to decide whether we keep the third condition?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 2,
+          "speaker": "Neel",
+          "utterance": "Yes. The signal is cleaner in conditions one and two. The third condition adds noise and makes the sample size problem worse.",
+          "importance": "High",
+          "tool": "Notes \u2014 pilot data interpretation"
+        },
+        {
+          "index": 3,
+          "speaker": "Advisor",
+          "utterance": "That matches my impression. Can you send me a one-page summary before lab meeting tomorrow?",
+          "importance": "High",
+          "tool": "Reminder \u2014 send one-page summary before tomorrow\u2019s lab meeting"
+        },
+        {
+          "index": 4,
+          "speaker": "Neel",
+          "utterance": "Yes. I want to block a focused hour this afternoon to write it cleanly.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 focused writing block this afternoon"
+        },
+        {
+          "index": 5,
+          "speaker": "Advisor",
+          "utterance": "Good. Include the effect size plot, not just the p-values.",
+          "importance": "High",
+          "tool": "Notes \u2014 include effect size plot in summary"
+        },
+        {
+          "index": 6,
+          "speaker": "Neel",
+          "utterance": "Will do. I also think we should say explicitly that the pilot was underpowered.",
+          "importance": "High",
+          "tool": "Notes \u2014 mention pilot is underpowered"
+        },
+        {
+          "index": 7,
+          "speaker": "Advisor",
+          "utterance": "Agreed. Better to be honest now than defensive later.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 8,
+          "speaker": "Advisor",
+          "utterance": "Also, are you still on track to run participants on Thursday?",
+          "importance": "High",
+          "tool": "Reminder \u2014 confirm Thursday participant run readiness"
+        },
+        {
+          "index": 9,
+          "speaker": "Neel",
+          "utterance": "Mostly. I still need to finish the EEG battery check and reprint the consent forms.",
+          "importance": "High",
+          "tool": "Reminder \u2014 finish EEG battery check and reprint consent forms"
+        },
+        {
+          "index": 10,
+          "speaker": "Advisor",
+          "utterance": "Please do both today. If something slips, Thursday becomes messy.",
+          "importance": "High",
+          "tool": "Reminder \u2014 finish setup tasks today"
+        },
+        {
+          "index": 11,
+          "speaker": "Neel",
+          "utterance": "Understood. I\u2019ll finish those before dinner.",
+          "importance": "High",
+          "tool": "Alarm \u2014 5:00 PM setup cutoff"
+        },
+        {
+          "index": 12,
+          "speaker": "Advisor",
+          "utterance": "Great. Send me the summary and a short note on whether we drop condition three.",
+          "importance": "High",
+          "tool": "Reminder \u2014 send recommendation on dropping condition three"
+        },
+        {
+          "index": 13,
+          "speaker": "Neel",
+          "utterance": "Got it. Summary, recommendation, battery check, consent forms.",
+          "importance": "High",
+          "tool": "Notes \u2014 consolidated advisor action list"
+        },
+        {
+          "index": 14,
+          "speaker": "Advisor",
+          "utterance": "Perfect. Thanks.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Focused writing block for pilot summary | Time: Today, 3:00\u20134:00 PM | Location: Office or lab desk | Description: Write one-page summary of sleep-deprivation pilot data for lab meeting. | Priority: High"
+        ],
+        "reminders": [
+          "Send one-page pilot summary before tomorrow\u2019s lab meeting | Priority: High",
+          "Confirm Thursday participant run readiness | Priority: High",
+          "Finish EEG battery check | Priority: High",
+          "Reprint consent forms | Priority: High",
+          "Finish setup tasks today | Priority: High",
+          "Send recommendation on dropping condition three | Priority: High"
+        ],
+        "alarms": [
+          "5:00 PM \u2014 stop and make sure setup tasks are done | Priority: High"
+        ],
+        "notes": [
+          "Pilot study decisions",
+          "Pilot data interpretation: conditions one and two are cleaner; condition three adds noise.",
+          "Include effect size plot in the summary, not just p-values.",
+          "State explicitly that the pilot was underpowered.",
+          "Consolidated advisor action list: summary, recommendation, battery check, consent forms."
+        ]
+      }
+    },
+    {
+      "number": 2,
+      "title": "Neel and his labmate",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Labmate",
+          "utterance": "Hey, are you using the EEG room tomorrow afternoon?",
+          "importance": "High",
+          "tool": "Calendar event \u2014 possible EEG room use tomorrow afternoon"
+        },
+        {
+          "index": 2,
+          "speaker": "Neel",
+          "utterance": "I need it for participant prep around 1:30, but not the whole afternoon.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 EEG room prep tomorrow 1:30 PM"
+        },
+        {
+          "index": 3,
+          "speaker": "Labmate",
+          "utterance": "Could you release the 3 to 5 slot if you\u2019re done? I\u2019m trying to squeeze in a training session.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 release room booking if done early"
+        },
+        {
+          "index": 4,
+          "speaker": "Neel",
+          "utterance": "Yes, that\u2019s fine. I\u2019ll know by around 2:30.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 update labmate by 2:30"
+        },
+        {
+          "index": 5,
+          "speaker": "Labmate",
+          "utterance": "Thanks. Also, we\u2019re almost out of saline gel.",
+          "importance": "High",
+          "tool": "Notes \u2014 supplies running low"
+        },
+        {
+          "index": 6,
+          "speaker": "Neel",
+          "utterance": "Seriously? That explains why the storage box looked sad this morning.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 7,
+          "speaker": "Labmate",
+          "utterance": "Can you add it to the next order sheet? You were updating the spreadsheet anyway.",
+          "importance": "High",
+          "tool": "Reminder \u2014 add saline gel to order sheet"
+        },
+        {
+          "index": 8,
+          "speaker": "Neel",
+          "utterance": "Yep, I\u2019ll add gel, electrode wipes, and spare caps so we do not repeat this next week.",
+          "importance": "High",
+          "tool": "Notes \u2014 order sheet items"
+        },
+        {
+          "index": 9,
+          "speaker": "Labmate",
+          "utterance": "Bless you. Future us appreciates present you.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 10,
+          "speaker": "Neel",
+          "utterance": "Future me is already annoyed with present me, but okay.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 11,
+          "speaker": "Labmate",
+          "utterance": "One more thing \u2014 journal club is Friday and you said you might present the memory consolidation paper.",
+          "importance": "High",
+          "tool": "Reminder \u2014 confirm journal club presentation"
+        },
+        {
+          "index": 12,
+          "speaker": "Neel",
+          "utterance": "Right. I should decide tonight so I can actually read it properly.",
+          "importance": "High",
+          "tool": "Reminder \u2014 decide on Friday journal club paper tonight"
+        },
+        {
+          "index": 13,
+          "speaker": "Labmate",
+          "utterance": "If you present, I can cover the methods section with you tomorrow morning.",
+          "importance": "Medium",
+          "tool": "Calendar event \u2014 optional methods prep tomorrow morning"
+        },
+        {
+          "index": 14,
+          "speaker": "Neel",
+          "utterance": "That would help. Let me confirm tonight after I look at the figures.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 text labmate after reviewing figures"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Focused writing block for pilot summary | Time: Today, 3:00\u20134:00 PM | Location: Office or lab desk | Description: Write one-page summary of sleep-deprivation pilot data for lab meeting. | Priority: High",
+          "EEG room participant prep | Time: Tomorrow, 1:30\u20132:30 PM | Location: EEG room | Description: Prepare room and participant setup before run. | Priority: High",
+          "Optional journal club methods prep with labmate | Time: Tomorrow, 10:00\u201310:30 AM | Location: Lab common area | Description: Prep methods section together if Neel decides to present. | Priority: Medium"
+        ],
+        "reminders": [
+          "Send one-page pilot summary before tomorrow\u2019s lab meeting | Priority: High",
+          "Confirm Thursday participant run readiness | Priority: High",
+          "Finish EEG battery check | Priority: High",
+          "Reprint consent forms | Priority: High",
+          "Finish setup tasks today | Priority: High",
+          "Send recommendation on dropping condition three | Priority: High",
+          "Release EEG room booking if done early | Priority: Medium",
+          "Update labmate by 2:30 about room availability | Priority: Medium",
+          "Add saline gel to order sheet | Priority: High",
+          "Confirm journal club presentation | Priority: High",
+          "Decide on Friday journal club paper tonight | Priority: High",
+          "Text labmate after reviewing paper figures | Priority: Medium"
+        ],
+        "alarms": [
+          "5:00 PM \u2014 stop and make sure setup tasks are done | Priority: High"
+        ],
+        "notes": [
+          "Pilot study decisions",
+          "Pilot data interpretation: conditions one and two are cleaner; condition three adds noise.",
+          "Include effect size plot in the summary, not just p-values.",
+          "State explicitly that the pilot was underpowered.",
+          "Consolidated advisor action list: summary, recommendation, battery check, consent forms.",
+          "Lab operations and supplies",
+          "Supplies running low in EEG lab.",
+          "Add saline gel, electrode wipes, and spare caps to the next order sheet."
+        ]
+      }
+    },
+    {
+      "number": 3,
+      "title": "Neel and a collaborator",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Collaborator",
+          "utterance": "Hi Neel, I finally looked at Figure 3. The story is good, but the labeling is doing you no favors.",
+          "importance": "High",
+          "tool": "Notes \u2014 Figure 3 story is good but labeling is unclear"
+        },
+        {
+          "index": 2,
+          "speaker": "Neel",
+          "utterance": "That is the most polite possible way to say my figure is ugly.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 3,
+          "speaker": "Collaborator",
+          "utterance": "Ugly is fixable. Confusing is the bigger problem.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 4,
+          "speaker": "Neel",
+          "utterance": "Fair. Which part was hardest to read?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 5,
+          "speaker": "Collaborator",
+          "utterance": "The axis labels and the panel titles. Also, the legend assumes readers already know the task design.",
+          "importance": "High",
+          "tool": "Notes \u2014 figure revision feedback"
+        },
+        {
+          "index": 6,
+          "speaker": "Neel",
+          "utterance": "Okay, so I need clearer axes, better panel names, and a legend that restates the task.",
+          "importance": "High",
+          "tool": "Notes \u2014 figure revision checklist"
+        },
+        {
+          "index": 7,
+          "speaker": "Collaborator",
+          "utterance": "Exactly. Can you send me a revised version by Monday noon?",
+          "importance": "High",
+          "tool": "Reminder \u2014 send revised Figure 3 by Monday noon"
+        },
+        {
+          "index": 8,
+          "speaker": "Neel",
+          "utterance": "Yes. I should reserve time this weekend because weekday brain is already booked solid.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 weekend figure revision block"
+        },
+        {
+          "index": 9,
+          "speaker": "Collaborator",
+          "utterance": "Good plan. Also, the supplementary methods still mention the old exclusion threshold.",
+          "importance": "High",
+          "tool": "Reminder \u2014 update supplementary methods exclusion threshold"
+        },
+        {
+          "index": 10,
+          "speaker": "Neel",
+          "utterance": "Ah, good catch. That would have been embarrassing in circulation.",
+          "importance": "High",
+          "tool": "Notes \u2014 methods text uses old exclusion threshold"
+        },
+        {
+          "index": 11,
+          "speaker": "Collaborator",
+          "utterance": "It happens. Better now than after the draft goes wider.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 12,
+          "speaker": "Neel",
+          "utterance": "I\u2019ll revise the figure, fix the methods, and send both together Monday.",
+          "importance": "High",
+          "tool": "Notes \u2014 manuscript revision plan"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Focused writing block for pilot summary | Time: Today, 3:00\u20134:00 PM | Location: Office or lab desk | Description: Write one-page summary of sleep-deprivation pilot data for lab meeting. | Priority: High",
+          "EEG room participant prep | Time: Tomorrow, 1:30\u20132:30 PM | Location: EEG room | Description: Prepare room and participant setup before run. | Priority: High",
+          "Optional journal club methods prep with labmate | Time: Tomorrow, 10:00\u201310:30 AM | Location: Lab common area | Description: Prep methods section together if Neel decides to present. | Priority: Medium",
+          "Revise manuscript figure and methods | Time: Saturday, 11:00 AM\u20131:00 PM | Location: Home desk or campus office | Description: Revise Figure 3 and update supplementary methods before Monday deadline. | Priority: High"
+        ],
+        "reminders": [
+          "Send one-page pilot summary before tomorrow\u2019s lab meeting | Priority: High",
+          "Confirm Thursday participant run readiness | Priority: High",
+          "Finish EEG battery check | Priority: High",
+          "Reprint consent forms | Priority: High",
+          "Finish setup tasks today | Priority: High",
+          "Send recommendation on dropping condition three | Priority: High",
+          "Release EEG room booking if done early | Priority: Medium",
+          "Update labmate by 2:30 about room availability | Priority: Medium",
+          "Add saline gel to order sheet | Priority: High",
+          "Confirm journal club presentation | Priority: High",
+          "Decide on Friday journal club paper tonight | Priority: High",
+          "Text labmate after reviewing paper figures | Priority: Medium",
+          "Send revised Figure 3 by Monday noon | Priority: High",
+          "Update supplementary methods exclusion threshold | Priority: High"
+        ],
+        "alarms": [
+          "5:00 PM \u2014 stop and make sure setup tasks are done | Priority: High"
+        ],
+        "notes": [
+          "Pilot study decisions",
+          "Pilot data interpretation: conditions one and two are cleaner; condition three adds noise.",
+          "Include effect size plot in the summary, not just p-values.",
+          "State explicitly that the pilot was underpowered.",
+          "Consolidated advisor action list: summary, recommendation, battery check, consent forms.",
+          "Lab operations and supplies",
+          "Supplies running low in EEG lab.",
+          "Add saline gel, electrode wipes, and spare caps to the next order sheet.",
+          "Manuscript revisions",
+          "Figure revision feedback: axis labels and panel titles are unclear; legend should restate the task design.",
+          "Figure revision checklist: clearer axes, better panel names, legend with task reminder.",
+          "Supplementary methods still mention the old exclusion threshold.",
+          "Manuscript revision plan: revise figure, fix methods, send both together Monday."
+        ]
+      }
+    },
+    {
+      "number": 4,
+      "title": "Neel and his landlord",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Landlord",
+          "utterance": "Hi Neel, maintenance can come tomorrow about the kitchen leak. Does 8:30 AM work?",
+          "importance": "High",
+          "tool": "Calendar event \u2014 plumber visit tomorrow 8:30 AM at apartment"
+        },
+        {
+          "index": 2,
+          "speaker": "Neel",
+          "utterance": "Yes, I can be there, but I need them to be on time because I have to leave for campus after that.",
+          "importance": "High",
+          "tool": "Reminder \u2014 be home for plumber tomorrow morning"
+        },
+        {
+          "index": 3,
+          "speaker": "Landlord",
+          "utterance": "I\u2019ll tell them to call you when they\u2019re 15 minutes away.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 4,
+          "speaker": "Neel",
+          "utterance": "Thanks. The leak under the sink is worse after I run hot water, in case that helps.",
+          "importance": "High",
+          "tool": "Notes \u2014 kitchen leak details"
+        },
+        {
+          "index": 5,
+          "speaker": "Landlord",
+          "utterance": "That does help. Please clear the cabinet tonight so they can get in there quickly.",
+          "importance": "High",
+          "tool": "Reminder \u2014 clear sink cabinet tonight"
+        },
+        {
+          "index": 6,
+          "speaker": "Neel",
+          "utterance": "Will do. I\u2019ll move everything out after dinner.",
+          "importance": "High",
+          "tool": "Reminder \u2014 clear cabinet after dinner"
+        },
+        {
+          "index": 7,
+          "speaker": "Landlord",
+          "utterance": "If they need a follow-up visit, I\u2019ll message you separately.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 8,
+          "speaker": "Neel",
+          "utterance": "Okay. I\u2019d really like to get it fixed this week because the smell is getting annoying.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 resident priority: fix leak this week"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Focused writing block for pilot summary | Time: Today, 3:00\u20134:00 PM | Location: Office or lab desk | Description: Write one-page summary of sleep-deprivation pilot data for lab meeting. | Priority: High",
+          "EEG room participant prep | Time: Tomorrow, 1:30\u20132:30 PM | Location: EEG room | Description: Prepare room and participant setup before run. | Priority: High",
+          "Optional journal club methods prep with labmate | Time: Tomorrow, 10:00\u201310:30 AM | Location: Lab common area | Description: Prep methods section together if Neel decides to present. | Priority: Medium",
+          "Revise manuscript figure and methods | Time: Saturday, 11:00 AM\u20131:00 PM | Location: Home desk or campus office | Description: Revise Figure 3 and update supplementary methods before Monday deadline. | Priority: High",
+          "Plumber visit for kitchen leak | Time: Tomorrow, 8:30\u20139:00 AM | Location: Apartment | Description: Be present for maintenance visit about kitchen sink leak. | Priority: High"
+        ],
+        "reminders": [
+          "Send one-page pilot summary before tomorrow\u2019s lab meeting | Priority: High",
+          "Confirm Thursday participant run readiness | Priority: High",
+          "Finish EEG battery check | Priority: High",
+          "Reprint consent forms | Priority: High",
+          "Finish setup tasks today | Priority: High",
+          "Send recommendation on dropping condition three | Priority: High",
+          "Release EEG room booking if done early | Priority: Medium",
+          "Update labmate by 2:30 about room availability | Priority: Medium",
+          "Add saline gel to order sheet | Priority: High",
+          "Confirm journal club presentation | Priority: High",
+          "Decide on Friday journal club paper tonight | Priority: High",
+          "Text labmate after reviewing paper figures | Priority: Medium",
+          "Send revised Figure 3 by Monday noon | Priority: High",
+          "Update supplementary methods exclusion threshold | Priority: High",
+          "Be home for plumber tomorrow morning | Priority: High",
+          "Clear sink cabinet tonight | Priority: High",
+          "Clear cabinet after dinner | Priority: Medium"
+        ],
+        "alarms": [
+          "5:00 PM \u2014 stop and make sure setup tasks are done | Priority: High"
+        ],
+        "notes": [
+          "Pilot study decisions",
+          "Pilot data interpretation: conditions one and two are cleaner; condition three adds noise.",
+          "Include effect size plot in the summary, not just p-values.",
+          "State explicitly that the pilot was underpowered.",
+          "Consolidated advisor action list: summary, recommendation, battery check, consent forms.",
+          "Lab operations and supplies",
+          "Supplies running low in EEG lab.",
+          "Add saline gel, electrode wipes, and spare caps to the next order sheet.",
+          "Manuscript revisions",
+          "Figure revision feedback: axis labels and panel titles are unclear; legend should restate the task design.",
+          "Figure revision checklist: clearer axes, better panel names, legend with task reminder.",
+          "Supplementary methods still mention the old exclusion threshold.",
+          "Manuscript revision plan: revise figure, fix methods, send both together Monday.",
+          "Apartment maintenance",
+          "Kitchen leak is worse after running hot water.",
+          "Neel wants the leak fixed this week because of the smell."
+        ]
+      }
+    },
+    {
+      "number": 5,
+      "title": "Neel and his mother",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Mother",
+          "utterance": "Did you eat anything decent today or are you pretending coffee is a food again?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 2,
+          "speaker": "Neel",
+          "utterance": "I had yogurt, then lab happened, then time disappeared.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 3,
+          "speaker": "Mother",
+          "utterance": "That means no. You sound tired.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 4,
+          "speaker": "Neel",
+          "utterance": "I am tired, but it\u2019s manageable. I just have a crowded week.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 5,
+          "speaker": "Mother",
+          "utterance": "Then please at least call your grandmother on Sunday. She keeps asking how your research is going.",
+          "importance": "High",
+          "tool": "Reminder \u2014 call grandmother Sunday"
+        },
+        {
+          "index": 6,
+          "speaker": "Neel",
+          "utterance": "Okay, I can do that Sunday afternoon.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 call grandmother Sunday afternoon"
+        },
+        {
+          "index": 7,
+          "speaker": "Mother",
+          "utterance": "And book a haircut. The last photo your sister sent looked like you were being raised by the lab.",
+          "importance": "Low",
+          "tool": "Reminder \u2014 book haircut"
+        },
+        {
+          "index": 8,
+          "speaker": "Neel",
+          "utterance": "That is slander, but also fair.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 9,
+          "speaker": "Mother",
+          "utterance": "I\u2019m serious. You always postpone small things until they become ridiculous.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 10,
+          "speaker": "Neel",
+          "utterance": "Fine. Haircut and grandmother call go on the list.",
+          "importance": "High",
+          "tool": "Notes \u2014 personal upkeep tasks"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Focused writing block for pilot summary | Time: Today, 3:00\u20134:00 PM | Location: Office or lab desk | Description: Write one-page summary of sleep-deprivation pilot data for lab meeting. | Priority: High",
+          "EEG room participant prep | Time: Tomorrow, 1:30\u20132:30 PM | Location: EEG room | Description: Prepare room and participant setup before run. | Priority: High",
+          "Optional journal club methods prep with labmate | Time: Tomorrow, 10:00\u201310:30 AM | Location: Lab common area | Description: Prep methods section together if Neel decides to present. | Priority: Medium",
+          "Revise manuscript figure and methods | Time: Saturday, 11:00 AM\u20131:00 PM | Location: Home desk or campus office | Description: Revise Figure 3 and update supplementary methods before Monday deadline. | Priority: High",
+          "Plumber visit for kitchen leak | Time: Tomorrow, 8:30\u20139:00 AM | Location: Apartment | Description: Be present for maintenance visit about kitchen sink leak. | Priority: High",
+          "Call grandmother | Time: Sunday, 3:00\u20133:30 PM | Location: Anywhere quiet | Description: Call grandmother and give a quick research update. | Priority: High"
+        ],
+        "reminders": [
+          "Send one-page pilot summary before tomorrow\u2019s lab meeting | Priority: High",
+          "Confirm Thursday participant run readiness | Priority: High",
+          "Finish EEG battery check | Priority: High",
+          "Reprint consent forms | Priority: High",
+          "Finish setup tasks today | Priority: High",
+          "Send recommendation on dropping condition three | Priority: High",
+          "Release EEG room booking if done early | Priority: Medium",
+          "Update labmate by 2:30 about room availability | Priority: Medium",
+          "Add saline gel to order sheet | Priority: High",
+          "Confirm journal club presentation | Priority: High",
+          "Decide on Friday journal club paper tonight | Priority: High",
+          "Text labmate after reviewing paper figures | Priority: Medium",
+          "Send revised Figure 3 by Monday noon | Priority: High",
+          "Update supplementary methods exclusion threshold | Priority: High",
+          "Be home for plumber tomorrow morning | Priority: High",
+          "Clear sink cabinet tonight | Priority: High",
+          "Clear cabinet after dinner | Priority: Medium",
+          "Call grandmother Sunday | Priority: High",
+          "Book haircut | Priority: Low"
+        ],
+        "alarms": [
+          "5:00 PM \u2014 stop and make sure setup tasks are done | Priority: High"
+        ],
+        "notes": [
+          "Pilot study decisions",
+          "Pilot data interpretation: conditions one and two are cleaner; condition three adds noise.",
+          "Include effect size plot in the summary, not just p-values.",
+          "State explicitly that the pilot was underpowered.",
+          "Consolidated advisor action list: summary, recommendation, battery check, consent forms.",
+          "Lab operations and supplies",
+          "Supplies running low in EEG lab.",
+          "Add saline gel, electrode wipes, and spare caps to the next order sheet.",
+          "Manuscript revisions",
+          "Figure revision feedback: axis labels and panel titles are unclear; legend should restate the task design.",
+          "Figure revision checklist: clearer axes, better panel names, legend with task reminder.",
+          "Supplementary methods still mention the old exclusion threshold.",
+          "Manuscript revision plan: revise figure, fix methods, send both together Monday.",
+          "Apartment maintenance",
+          "Kitchen leak is worse after running hot water.",
+          "Neel wants the leak fixed this week because of the smell.",
+          "Personal life and upkeep",
+          "Personal upkeep tasks: haircut and family call."
+        ]
+      }
+    },
+    {
+      "number": 6,
+      "title": "Neel and a friend",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Friend",
+          "utterance": "A few of us are doing dinner Friday after journal club. Are you coming or are you ghosting us for MATLAB again?",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 decide on Friday dinner plans"
+        },
+        {
+          "index": 2,
+          "speaker": "Neel",
+          "utterance": "If journal club doesn\u2019t run too late, I\u2019m in.",
+          "importance": "Medium",
+          "tool": "Calendar event \u2014 tentative dinner Friday after journal club"
+        },
+        {
+          "index": 3,
+          "speaker": "Friend",
+          "utterance": "Good. Also, Rahul\u2019s birthday is next week and we\u2019re splitting a gift.",
+          "importance": "High",
+          "tool": "Reminder \u2014 send share for Rahul\u2019s birthday gift"
+        },
+        {
+          "index": 4,
+          "speaker": "Neel",
+          "utterance": "Thanks for reminding me. What\u2019s the damage?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 5,
+          "speaker": "Friend",
+          "utterance": "Twenty dollars each. I\u2019m collecting by Sunday night.",
+          "importance": "High",
+          "tool": "Reminder \u2014 send $20 by Sunday night"
+        },
+        {
+          "index": 6,
+          "speaker": "Neel",
+          "utterance": "Easy. Ping me the Venmo link because I will absolutely forget otherwise.",
+          "importance": "High",
+          "tool": "Reminder \u2014 pay when link arrives"
+        },
+        {
+          "index": 7,
+          "speaker": "Friend",
+          "utterance": "Knew it.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 8,
+          "speaker": "Neel",
+          "utterance": "My memory budget is currently funded entirely by external scaffolding.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Focused writing block for pilot summary | Time: Today, 3:00\u20134:00 PM | Location: Office or lab desk | Description: Write one-page summary of sleep-deprivation pilot data for lab meeting. | Priority: High",
+          "EEG room participant prep | Time: Tomorrow, 1:30\u20132:30 PM | Location: EEG room | Description: Prepare room and participant setup before run. | Priority: High",
+          "Optional journal club methods prep with labmate | Time: Tomorrow, 10:00\u201310:30 AM | Location: Lab common area | Description: Prep methods section together if Neel decides to present. | Priority: Medium",
+          "Revise manuscript figure and methods | Time: Saturday, 11:00 AM\u20131:00 PM | Location: Home desk or campus office | Description: Revise Figure 3 and update supplementary methods before Monday deadline. | Priority: High",
+          "Plumber visit for kitchen leak | Time: Tomorrow, 8:30\u20139:00 AM | Location: Apartment | Description: Be present for maintenance visit about kitchen sink leak. | Priority: High",
+          "Call grandmother | Time: Sunday, 3:00\u20133:30 PM | Location: Anywhere quiet | Description: Call grandmother and give a quick research update. | Priority: High",
+          "Tentative dinner with friends after journal club | Time: Friday, 6:30\u20138:00 PM | Location: Near campus | Description: Dinner after journal club if schedule allows. | Priority: Medium"
+        ],
+        "reminders": [
+          "Send one-page pilot summary before tomorrow\u2019s lab meeting | Priority: High",
+          "Confirm Thursday participant run readiness | Priority: High",
+          "Finish EEG battery check | Priority: High",
+          "Reprint consent forms | Priority: High",
+          "Finish setup tasks today | Priority: High",
+          "Send recommendation on dropping condition three | Priority: High",
+          "Release EEG room booking if done early | Priority: Medium",
+          "Update labmate by 2:30 about room availability | Priority: Medium",
+          "Add saline gel to order sheet | Priority: High",
+          "Confirm journal club presentation | Priority: High",
+          "Decide on Friday journal club paper tonight | Priority: High",
+          "Text labmate after reviewing paper figures | Priority: Medium",
+          "Send revised Figure 3 by Monday noon | Priority: High",
+          "Update supplementary methods exclusion threshold | Priority: High",
+          "Be home for plumber tomorrow morning | Priority: High",
+          "Clear sink cabinet tonight | Priority: High",
+          "Clear cabinet after dinner | Priority: Medium",
+          "Call grandmother Sunday | Priority: High",
+          "Book haircut | Priority: Low",
+          "Decide on Friday dinner plans | Priority: Medium",
+          "Send share for Rahul\u2019s birthday gift | Priority: Medium",
+          "Send $20 by Sunday night | Priority: High",
+          "Pay when the Venmo link arrives | Priority: High"
+        ],
+        "alarms": [
+          "5:00 PM \u2014 stop and make sure setup tasks are done | Priority: High"
+        ],
+        "notes": [
+          "Pilot study decisions",
+          "Pilot data interpretation: conditions one and two are cleaner; condition three adds noise.",
+          "Include effect size plot in the summary, not just p-values.",
+          "State explicitly that the pilot was underpowered.",
+          "Consolidated advisor action list: summary, recommendation, battery check, consent forms.",
+          "Lab operations and supplies",
+          "Supplies running low in EEG lab.",
+          "Add saline gel, electrode wipes, and spare caps to the next order sheet.",
+          "Manuscript revisions",
+          "Figure revision feedback: axis labels and panel titles are unclear; legend should restate the task design.",
+          "Figure revision checklist: clearer axes, better panel names, legend with task reminder.",
+          "Supplementary methods still mention the old exclusion threshold.",
+          "Manuscript revision plan: revise figure, fix methods, send both together Monday.",
+          "Apartment maintenance",
+          "Kitchen leak is worse after running hot water.",
+          "Neel wants the leak fixed this week because of the smell.",
+          "Personal life and upkeep",
+          "Personal upkeep tasks: haircut and family call.",
+          "Social commitments",
+          "Friends may do dinner after journal club on Friday.",
+          "Rahul's birthday gift split is $20 each."
+        ]
+      }
+    },
+    {
+      "number": 7,
+      "title": "Neel and department admin",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Admin",
+          "utterance": "Hi Neel, this is a reminder that your human-subjects refresher training expires next month.",
+          "importance": "High",
+          "tool": "Reminder \u2014 complete human-subjects refresher training"
+        },
+        {
+          "index": 2,
+          "speaker": "Neel",
+          "utterance": "Thanks. Is there a hard deadline before it affects participant scheduling?",
+          "importance": "High",
+          "tool": "Notes \u2014 payroll deadline may affect participant scheduling"
+        },
+        {
+          "index": 3,
+          "speaker": "Admin",
+          "utterance": "Yes. If it lapses, you should not run participants until it is renewed.",
+          "importance": "High",
+          "tool": "Notes \u2014 training lapse blocks participant work"
+        },
+        {
+          "index": 4,
+          "speaker": "Neel",
+          "utterance": "Then I should do it this week before I forget and ruin my own schedule.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 complete refresher training this week"
+        },
+        {
+          "index": 5,
+          "speaker": "Admin",
+          "utterance": "That would be wise. Also, payroll says your direct deposit form is missing the updated bank attachment.",
+          "importance": "High",
+          "tool": "Reminder \u2014 upload updated bank attachment for payroll"
+        },
+        {
+          "index": 6,
+          "speaker": "Neel",
+          "utterance": "Seriously? I submitted the form, but maybe not the attachment.",
+          "importance": "High",
+          "tool": "Reminder \u2014 check and upload missing payroll attachment"
+        },
+        {
+          "index": 7,
+          "speaker": "Admin",
+          "utterance": "Please check today. It is easier to fix before the next stipend cycle closes.",
+          "importance": "High",
+          "tool": "Reminder \u2014 check payroll portal today"
+        },
+        {
+          "index": 8,
+          "speaker": "Neel",
+          "utterance": "Okay. Training and payroll both go on the front page of my brain now.",
+          "importance": "High",
+          "tool": "Notes \u2014 admin priority items"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Focused writing block for pilot summary | Time: Today, 3:00\u20134:00 PM | Location: Office or lab desk | Description: Write one-page summary of sleep-deprivation pilot data for lab meeting. | Priority: High",
+          "EEG room participant prep | Time: Tomorrow, 1:30\u20132:30 PM | Location: EEG room | Description: Prepare room and participant setup before run. | Priority: High",
+          "Optional journal club methods prep with labmate | Time: Tomorrow, 10:00\u201310:30 AM | Location: Lab common area | Description: Prep methods section together if Neel decides to present. | Priority: Medium",
+          "Revise manuscript figure and methods | Time: Saturday, 11:00 AM\u20131:00 PM | Location: Home desk or campus office | Description: Revise Figure 3 and update supplementary methods before Monday deadline. | Priority: High",
+          "Plumber visit for kitchen leak | Time: Tomorrow, 8:30\u20139:00 AM | Location: Apartment | Description: Be present for maintenance visit about kitchen sink leak. | Priority: High",
+          "Call grandmother | Time: Sunday, 3:00\u20133:30 PM | Location: Anywhere quiet | Description: Call grandmother and give a quick research update. | Priority: High",
+          "Tentative dinner with friends after journal club | Time: Friday, 6:30\u20138:00 PM | Location: Near campus | Description: Dinner after journal club if schedule allows. | Priority: Medium",
+          "Complete human-subjects refresher training | Time: Thursday, 4:00\u20135:00 PM | Location: Online | Description: Finish required training before expiration interrupts participant scheduling. | Priority: High"
+        ],
+        "reminders": [
+          "Send one-page pilot summary before tomorrow\u2019s lab meeting | Priority: High",
+          "Confirm Thursday participant run readiness | Priority: High",
+          "Finish EEG battery check | Priority: High",
+          "Reprint consent forms | Priority: High",
+          "Finish setup tasks today | Priority: High",
+          "Send recommendation on dropping condition three | Priority: High",
+          "Release EEG room booking if done early | Priority: Medium",
+          "Update labmate by 2:30 about room availability | Priority: Medium",
+          "Add saline gel to order sheet | Priority: High",
+          "Confirm journal club presentation | Priority: High",
+          "Decide on Friday journal club paper tonight | Priority: High",
+          "Text labmate after reviewing paper figures | Priority: Medium",
+          "Send revised Figure 3 by Monday noon | Priority: High",
+          "Update supplementary methods exclusion threshold | Priority: High",
+          "Be home for plumber tomorrow morning | Priority: High",
+          "Clear sink cabinet tonight | Priority: High",
+          "Clear cabinet after dinner | Priority: Medium",
+          "Call grandmother Sunday | Priority: High",
+          "Book haircut | Priority: Low",
+          "Decide on Friday dinner plans | Priority: Medium",
+          "Send share for Rahul\u2019s birthday gift | Priority: Medium",
+          "Send $20 by Sunday night | Priority: High",
+          "Pay when the Venmo link arrives | Priority: High",
+          "Complete human-subjects refresher training | Priority: High",
+          "Upload updated bank attachment for payroll | Priority: High",
+          "Check payroll portal today | Priority: High"
+        ],
+        "alarms": [
+          "5:00 PM \u2014 stop and make sure setup tasks are done | Priority: High"
+        ],
+        "notes": [
+          "Pilot study decisions",
+          "Pilot data interpretation: conditions one and two are cleaner; condition three adds noise.",
+          "Include effect size plot in the summary, not just p-values.",
+          "State explicitly that the pilot was underpowered.",
+          "Consolidated advisor action list: summary, recommendation, battery check, consent forms.",
+          "Lab operations and supplies",
+          "Supplies running low in EEG lab.",
+          "Add saline gel, electrode wipes, and spare caps to the next order sheet.",
+          "Manuscript revisions",
+          "Figure revision feedback: axis labels and panel titles are unclear; legend should restate the task design.",
+          "Figure revision checklist: clearer axes, better panel names, legend with task reminder.",
+          "Supplementary methods still mention the old exclusion threshold.",
+          "Manuscript revision plan: revise figure, fix methods, send both together Monday.",
+          "Apartment maintenance",
+          "Kitchen leak is worse after running hot water.",
+          "Neel wants the leak fixed this week because of the smell.",
+          "Personal life and upkeep",
+          "Personal upkeep tasks: haircut and family call.",
+          "Social commitments",
+          "Friends may do dinner after journal club on Friday.",
+          "Rahul's birthday gift split is $20 each.",
+          "Administrative deadlines",
+          "Human-subjects refresher training lapses next month.",
+          "If training lapses, Neel should not run participants until renewed.",
+          "Admin priority items: training renewal and payroll attachment."
+        ]
+      }
+    },
+    {
+      "number": 8,
+      "title": "Neel and a colleague",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Colleague",
+          "utterance": "Are you definitely presenting at journal club tomorrow, or should I be ready to fill the slot?",
+          "importance": "High",
+          "tool": "Reminder \u2014 confirm tomorrow\u2019s journal club presenter"
+        },
+        {
+          "index": 2,
+          "speaker": "Neel",
+          "utterance": "I\u2019m doing it. I finally read the paper properly last night.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 journal club presentation tomorrow"
+        },
+        {
+          "index": 3,
+          "speaker": "Colleague",
+          "utterance": "Nice. What\u2019s your angle?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 4,
+          "speaker": "Neel",
+          "utterance": "I want to focus on the causal claim versus what the data actually supports.",
+          "importance": "High",
+          "tool": "Notes \u2014 journal club framing"
+        },
+        {
+          "index": 5,
+          "speaker": "Colleague",
+          "utterance": "That\u2019ll make it interesting. Are you making slides or just annotated notes?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 6,
+          "speaker": "Neel",
+          "utterance": "Three slides max. If I let myself make more, I\u2019ll disappear for hours.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 prep three journal club slides tonight"
+        },
+        {
+          "index": 7,
+          "speaker": "Colleague",
+          "utterance": "Relatable. Do you want me to look at them before tomorrow morning?",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 send draft slides to colleague for quick review"
+        },
+        {
+          "index": 8,
+          "speaker": "Neel",
+          "utterance": "Yes, but only if I finish by 10. After that I should go to sleep like a functional organism.",
+          "importance": "High",
+          "tool": "Alarm \u2014 10:00 PM stop editing slides"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Focused writing block for pilot summary | Time: Today, 3:00\u20134:00 PM | Location: Office or lab desk | Description: Write one-page summary of sleep-deprivation pilot data for lab meeting. | Priority: High",
+          "EEG room participant prep | Time: Tomorrow, 1:30\u20132:30 PM | Location: EEG room | Description: Prepare room and participant setup before run. | Priority: High",
+          "Optional journal club methods prep with labmate | Time: Tomorrow, 10:00\u201310:30 AM | Location: Lab common area | Description: Prep methods section together if Neel decides to present. | Priority: Medium",
+          "Revise manuscript figure and methods | Time: Saturday, 11:00 AM\u20131:00 PM | Location: Home desk or campus office | Description: Revise Figure 3 and update supplementary methods before Monday deadline. | Priority: High",
+          "Plumber visit for kitchen leak | Time: Tomorrow, 8:30\u20139:00 AM | Location: Apartment | Description: Be present for maintenance visit about kitchen sink leak. | Priority: High",
+          "Call grandmother | Time: Sunday, 3:00\u20133:30 PM | Location: Anywhere quiet | Description: Call grandmother and give a quick research update. | Priority: High",
+          "Tentative dinner with friends after journal club | Time: Friday, 6:30\u20138:00 PM | Location: Near campus | Description: Dinner after journal club if schedule allows. | Priority: Medium",
+          "Complete human-subjects refresher training | Time: Thursday, 4:00\u20135:00 PM | Location: Online | Description: Finish required training before expiration interrupts participant scheduling. | Priority: High",
+          "Journal club presentation | Time: Tomorrow, 12:00\u20131:00 PM | Location: Department seminar room | Description: Present paper and discuss causal claim versus evidentiary limits. | Priority: High",
+          "Prep journal club slides | Time: Tonight, 8:30\u20139:45 PM | Location: Home desk | Description: Prepare three concise slides for journal club. | Priority: High"
+        ],
+        "reminders": [
+          "Send one-page pilot summary before tomorrow\u2019s lab meeting | Priority: High",
+          "Confirm Thursday participant run readiness | Priority: High",
+          "Finish EEG battery check | Priority: High",
+          "Reprint consent forms | Priority: High",
+          "Finish setup tasks today | Priority: High",
+          "Send recommendation on dropping condition three | Priority: High",
+          "Release EEG room booking if done early | Priority: Medium",
+          "Update labmate by 2:30 about room availability | Priority: Medium",
+          "Add saline gel to order sheet | Priority: High",
+          "Confirm journal club presentation | Priority: High",
+          "Decide on Friday journal club paper tonight | Priority: High",
+          "Text labmate after reviewing paper figures | Priority: Medium",
+          "Send revised Figure 3 by Monday noon | Priority: High",
+          "Update supplementary methods exclusion threshold | Priority: High",
+          "Be home for plumber tomorrow morning | Priority: High",
+          "Clear sink cabinet tonight | Priority: High",
+          "Clear cabinet after dinner | Priority: Medium",
+          "Call grandmother Sunday | Priority: High",
+          "Book haircut | Priority: Low",
+          "Decide on Friday dinner plans | Priority: Medium",
+          "Send share for Rahul\u2019s birthday gift | Priority: Medium",
+          "Send $20 by Sunday night | Priority: High",
+          "Pay when the Venmo link arrives | Priority: High",
+          "Complete human-subjects refresher training | Priority: High",
+          "Upload updated bank attachment for payroll | Priority: High",
+          "Check payroll portal today | Priority: High",
+          "Confirm tomorrow\u2019s journal club presenter | Priority: High",
+          "Send draft slides to colleague for quick review | Priority: Medium"
+        ],
+        "alarms": [
+          "5:00 PM \u2014 stop and make sure setup tasks are done | Priority: High",
+          "10:00 PM \u2014 stop editing slides and go to sleep | Priority: High"
+        ],
+        "notes": [
+          "Pilot study decisions",
+          "Pilot data interpretation: conditions one and two are cleaner; condition three adds noise.",
+          "Include effect size plot in the summary, not just p-values.",
+          "State explicitly that the pilot was underpowered.",
+          "Consolidated advisor action list: summary, recommendation, battery check, consent forms.",
+          "Lab operations and supplies",
+          "Supplies running low in EEG lab.",
+          "Add saline gel, electrode wipes, and spare caps to the next order sheet.",
+          "Manuscript revisions",
+          "Figure revision feedback: axis labels and panel titles are unclear; legend should restate the task design.",
+          "Figure revision checklist: clearer axes, better panel names, legend with task reminder.",
+          "Supplementary methods still mention the old exclusion threshold.",
+          "Manuscript revision plan: revise figure, fix methods, send both together Monday.",
+          "Apartment maintenance",
+          "Kitchen leak is worse after running hot water.",
+          "Neel wants the leak fixed this week because of the smell.",
+          "Personal life and upkeep",
+          "Personal upkeep tasks: haircut and family call.",
+          "Social commitments",
+          "Friends may do dinner after journal club on Friday.",
+          "Rahul's birthday gift split is $20 each.",
+          "Administrative deadlines",
+          "Human-subjects refresher training lapses next month.",
+          "If training lapses, Neel should not run participants until renewed.",
+          "Admin priority items: training renewal and payroll attachment.",
+          "Journal club prep",
+          "Framing: focus on the causal claim versus what the data actually supports.",
+          "Limit to three slides to avoid over-prepping."
+        ]
+      }
+    },
+    {
+      "number": 9,
+      "title": "Neel and his brother",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Brother",
+          "utterance": "Dad said you might come home next month if your schedule opens up. Is that real or just optimistic family fiction?",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 decide whether next month home visit is feasible"
+        },
+        {
+          "index": 2,
+          "speaker": "Neel",
+          "utterance": "It might be real if I finish data collection on time.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 3,
+          "speaker": "Brother",
+          "utterance": "If you do come, tell us early. Mom will make plans around it.",
+          "importance": "High",
+          "tool": "Reminder \u2014 update family early about travel decision"
+        },
+        {
+          "index": 4,
+          "speaker": "Neel",
+          "utterance": "Fair. I should look at my calendar after next week\u2019s participant run.",
+          "importance": "High",
+          "tool": "Reminder \u2014 check travel feasibility after participant run"
+        },
+        {
+          "index": 5,
+          "speaker": "Brother",
+          "utterance": "Also, send me that paper you mentioned about memory replay. I actually want to read it.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 send memory replay paper to brother"
+        },
+        {
+          "index": 6,
+          "speaker": "Neel",
+          "utterance": "Now I definitely have to choose a version that doesn\u2019t scare away civilians.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Focused writing block for pilot summary | Time: Today, 3:00\u20134:00 PM | Location: Office or lab desk | Description: Write one-page summary of sleep-deprivation pilot data for lab meeting. | Priority: High",
+          "EEG room participant prep | Time: Tomorrow, 1:30\u20132:30 PM | Location: EEG room | Description: Prepare room and participant setup before run. | Priority: High",
+          "Optional journal club methods prep with labmate | Time: Tomorrow, 10:00\u201310:30 AM | Location: Lab common area | Description: Prep methods section together if Neel decides to present. | Priority: Medium",
+          "Revise manuscript figure and methods | Time: Saturday, 11:00 AM\u20131:00 PM | Location: Home desk or campus office | Description: Revise Figure 3 and update supplementary methods before Monday deadline. | Priority: High",
+          "Plumber visit for kitchen leak | Time: Tomorrow, 8:30\u20139:00 AM | Location: Apartment | Description: Be present for maintenance visit about kitchen sink leak. | Priority: High",
+          "Call grandmother | Time: Sunday, 3:00\u20133:30 PM | Location: Anywhere quiet | Description: Call grandmother and give a quick research update. | Priority: High",
+          "Tentative dinner with friends after journal club | Time: Friday, 6:30\u20138:00 PM | Location: Near campus | Description: Dinner after journal club if schedule allows. | Priority: Medium",
+          "Complete human-subjects refresher training | Time: Thursday, 4:00\u20135:00 PM | Location: Online | Description: Finish required training before expiration interrupts participant scheduling. | Priority: High",
+          "Journal club presentation | Time: Tomorrow, 12:00\u20131:00 PM | Location: Department seminar room | Description: Present paper and discuss causal claim versus evidentiary limits. | Priority: High",
+          "Prep journal club slides | Time: Tonight, 8:30\u20139:45 PM | Location: Home desk | Description: Prepare three concise slides for journal club. | Priority: High"
+        ],
+        "reminders": [
+          "Send one-page pilot summary before tomorrow\u2019s lab meeting | Priority: High",
+          "Confirm Thursday participant run readiness | Priority: High",
+          "Finish EEG battery check | Priority: High",
+          "Reprint consent forms | Priority: High",
+          "Finish setup tasks today | Priority: High",
+          "Send recommendation on dropping condition three | Priority: High",
+          "Release EEG room booking if done early | Priority: Medium",
+          "Update labmate by 2:30 about room availability | Priority: Medium",
+          "Add saline gel to order sheet | Priority: High",
+          "Confirm journal club presentation | Priority: High",
+          "Decide on Friday journal club paper tonight | Priority: High",
+          "Text labmate after reviewing paper figures | Priority: Medium",
+          "Send revised Figure 3 by Monday noon | Priority: High",
+          "Update supplementary methods exclusion threshold | Priority: High",
+          "Be home for plumber tomorrow morning | Priority: High",
+          "Clear sink cabinet tonight | Priority: High",
+          "Clear cabinet after dinner | Priority: Medium",
+          "Call grandmother Sunday | Priority: High",
+          "Book haircut | Priority: Low",
+          "Decide on Friday dinner plans | Priority: Medium",
+          "Send share for Rahul\u2019s birthday gift | Priority: Medium",
+          "Send $20 by Sunday night | Priority: High",
+          "Pay when the Venmo link arrives | Priority: High",
+          "Complete human-subjects refresher training | Priority: High",
+          "Upload updated bank attachment for payroll | Priority: High",
+          "Check payroll portal today | Priority: High",
+          "Confirm tomorrow\u2019s journal club presenter | Priority: High",
+          "Send draft slides to colleague for quick review | Priority: Medium",
+          "Decide whether next month home visit is feasible | Priority: Medium",
+          "Update family early about travel decision | Priority: High",
+          "Check travel feasibility after participant run | Priority: High",
+          "Send memory replay paper to brother | Priority: Medium"
+        ],
+        "alarms": [
+          "5:00 PM \u2014 stop and make sure setup tasks are done | Priority: High",
+          "10:00 PM \u2014 stop editing slides and go to sleep | Priority: High"
+        ],
+        "notes": [
+          "Pilot study decisions",
+          "Pilot data interpretation: conditions one and two are cleaner; condition three adds noise.",
+          "Include effect size plot in the summary, not just p-values.",
+          "State explicitly that the pilot was underpowered.",
+          "Consolidated advisor action list: summary, recommendation, battery check, consent forms.",
+          "Lab operations and supplies",
+          "Supplies running low in EEG lab.",
+          "Add saline gel, electrode wipes, and spare caps to the next order sheet.",
+          "Manuscript revisions",
+          "Figure revision feedback: axis labels and panel titles are unclear; legend should restate the task design.",
+          "Figure revision checklist: clearer axes, better panel names, legend with task reminder.",
+          "Supplementary methods still mention the old exclusion threshold.",
+          "Manuscript revision plan: revise figure, fix methods, send both together Monday.",
+          "Apartment maintenance",
+          "Kitchen leak is worse after running hot water.",
+          "Neel wants the leak fixed this week because of the smell.",
+          "Personal life and upkeep",
+          "Personal upkeep tasks: haircut and family call.",
+          "Social commitments",
+          "Friends may do dinner after journal club on Friday.",
+          "Rahul's birthday gift split is $20 each.",
+          "Administrative deadlines",
+          "Human-subjects refresher training lapses next month.",
+          "If training lapses, Neel should not run participants until renewed.",
+          "Admin priority items: training renewal and payroll attachment.",
+          "Journal club prep",
+          "Framing: focus on the causal claim versus what the data actually supports.",
+          "Limit to three slides to avoid over-prepping.",
+          "Family travel",
+          "Possible home visit next month depends on finishing data collection on time."
+        ]
+      }
+    },
+    {
+      "number": 10,
+      "title": "Neel and his advisor follow-up",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Advisor",
+          "utterance": "I read the one-page summary. Nice job. I think we should drop condition three from the pilot.",
+          "importance": "High",
+          "tool": "Notes \u2014 advisor decision to drop condition three"
+        },
+        {
+          "index": 2,
+          "speaker": "Neel",
+          "utterance": "Good. That simplifies recruitment and analysis.",
+          "importance": "High",
+          "tool": "Notes \u2014 simplification after dropping condition three"
+        },
+        {
+          "index": 3,
+          "speaker": "Advisor",
+          "utterance": "Exactly. Update the protocol sheet before Thursday so the team is not using mixed versions.",
+          "importance": "High",
+          "tool": "Reminder \u2014 update protocol sheet before Thursday"
+        },
+        {
+          "index": 4,
+          "speaker": "Neel",
+          "utterance": "I\u2019ll do that tomorrow morning before I come in.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 protocol sheet update tomorrow morning"
+        },
+        {
+          "index": 5,
+          "speaker": "Advisor",
+          "utterance": "Also, let\u2019s meet next Tuesday to map the full experiment timeline.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 advisor meeting next Tuesday"
+        },
+        {
+          "index": 6,
+          "speaker": "Neel",
+          "utterance": "That would help a lot. I need a better view of where data collection, analysis, and manuscript prep all collide.",
+          "importance": "High",
+          "tool": "Notes \u2014 need integrated experiment timeline"
+        },
+        {
+          "index": 7,
+          "speaker": "Advisor",
+          "utterance": "Bring a draft timeline and your best guess for recruitment pace.",
+          "importance": "High",
+          "tool": "Reminder \u2014 draft experiment timeline for Tuesday meeting"
+        },
+        {
+          "index": 8,
+          "speaker": "Neel",
+          "utterance": "Understood. I\u2019ll bring a realistic version, not a fantasy version.",
+          "importance": "High",
+          "tool": "Notes \u2014 prepare realistic recruitment pace estimate"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Focused writing block for pilot summary | Time: Today, 3:00\u20134:00 PM | Location: Office or lab desk | Description: Write one-page summary of sleep-deprivation pilot data for lab meeting. | Priority: High",
+          "EEG room participant prep | Time: Tomorrow, 1:30\u20132:30 PM | Location: EEG room | Description: Prepare room and participant setup before run. | Priority: High",
+          "Optional journal club methods prep with labmate | Time: Tomorrow, 10:00\u201310:30 AM | Location: Lab common area | Description: Prep methods section together if Neel decides to present. | Priority: Medium",
+          "Revise manuscript figure and methods | Time: Saturday, 11:00 AM\u20131:00 PM | Location: Home desk or campus office | Description: Revise Figure 3 and update supplementary methods before Monday deadline. | Priority: High",
+          "Plumber visit for kitchen leak | Time: Tomorrow, 8:30\u20139:00 AM | Location: Apartment | Description: Be present for maintenance visit about kitchen sink leak. | Priority: High",
+          "Call grandmother | Time: Sunday, 3:00\u20133:30 PM | Location: Anywhere quiet | Description: Call grandmother and give a quick research update. | Priority: High",
+          "Tentative dinner with friends after journal club | Time: Friday, 6:30\u20138:00 PM | Location: Near campus | Description: Dinner after journal club if schedule allows. | Priority: Medium",
+          "Complete human-subjects refresher training | Time: Thursday, 4:00\u20135:00 PM | Location: Online | Description: Finish required training before expiration interrupts participant scheduling. | Priority: High",
+          "Journal club presentation | Time: Tomorrow, 12:00\u20131:00 PM | Location: Department seminar room | Description: Present paper and discuss causal claim versus evidentiary limits. | Priority: High",
+          "Prep journal club slides | Time: Tonight, 8:30\u20139:45 PM | Location: Home desk | Description: Prepare three concise slides for journal club. | Priority: High",
+          "Update protocol sheet | Time: Tomorrow, 9:00\u20139:30 AM | Location: Office or lab desk | Description: Update protocol sheet so the team uses the new pilot design without condition three. | Priority: High",
+          "Advisor meeting on full experiment timeline | Time: Next Tuesday, 2:00\u20132:45 PM | Location: Advisor office | Description: Map full experiment timeline, recruitment pace, analysis, and manuscript prep. | Priority: High"
+        ],
+        "reminders": [
+          "Send one-page pilot summary before tomorrow\u2019s lab meeting | Priority: High",
+          "Confirm Thursday participant run readiness | Priority: High",
+          "Finish EEG battery check | Priority: High",
+          "Reprint consent forms | Priority: High",
+          "Finish setup tasks today | Priority: High",
+          "Send recommendation on dropping condition three | Priority: High",
+          "Release EEG room booking if done early | Priority: Medium",
+          "Update labmate by 2:30 about room availability | Priority: Medium",
+          "Add saline gel to order sheet | Priority: High",
+          "Confirm journal club presentation | Priority: High",
+          "Decide on Friday journal club paper tonight | Priority: High",
+          "Text labmate after reviewing paper figures | Priority: Medium",
+          "Send revised Figure 3 by Monday noon | Priority: High",
+          "Update supplementary methods exclusion threshold | Priority: High",
+          "Be home for plumber tomorrow morning | Priority: High",
+          "Clear sink cabinet tonight | Priority: High",
+          "Clear cabinet after dinner | Priority: Medium",
+          "Call grandmother Sunday | Priority: High",
+          "Book haircut | Priority: Low",
+          "Decide on Friday dinner plans | Priority: Medium",
+          "Send share for Rahul\u2019s birthday gift | Priority: Medium",
+          "Send $20 by Sunday night | Priority: High",
+          "Pay when the Venmo link arrives | Priority: High",
+          "Complete human-subjects refresher training | Priority: High",
+          "Upload updated bank attachment for payroll | Priority: High",
+          "Check payroll portal today | Priority: High",
+          "Confirm tomorrow\u2019s journal club presenter | Priority: High",
+          "Send draft slides to colleague for quick review | Priority: Medium",
+          "Decide whether next month home visit is feasible | Priority: Medium",
+          "Update family early about travel decision | Priority: High",
+          "Check travel feasibility after participant run | Priority: High",
+          "Send memory replay paper to brother | Priority: Medium",
+          "Update protocol sheet before Thursday | Priority: High",
+          "Draft experiment timeline for Tuesday meeting | Priority: High"
+        ],
+        "alarms": [
+          "5:00 PM \u2014 stop and make sure setup tasks are done | Priority: High",
+          "10:00 PM \u2014 stop editing slides and go to sleep | Priority: High"
+        ],
+        "notes": [
+          "Pilot study decisions",
+          "Pilot data interpretation: conditions one and two are cleaner; condition three adds noise.",
+          "Include effect size plot in the summary, not just p-values.",
+          "State explicitly that the pilot was underpowered.",
+          "Consolidated advisor action list: summary, recommendation, battery check, consent forms.",
+          "Advisor decision: drop condition three from the pilot.",
+          "Dropping condition three simplifies recruitment and analysis.",
+          "Lab operations and supplies",
+          "Supplies running low in EEG lab.",
+          "Add saline gel, electrode wipes, and spare caps to the next order sheet.",
+          "Manuscript revisions",
+          "Figure revision feedback: axis labels and panel titles are unclear; legend should restate the task design.",
+          "Figure revision checklist: clearer axes, better panel names, legend with task reminder.",
+          "Supplementary methods still mention the old exclusion threshold.",
+          "Manuscript revision plan: revise figure, fix methods, send both together Monday.",
+          "Apartment maintenance",
+          "Kitchen leak is worse after running hot water.",
+          "Neel wants the leak fixed this week because of the smell.",
+          "Personal life and upkeep",
+          "Personal upkeep tasks: haircut and family call.",
+          "Social commitments",
+          "Friends may do dinner after journal club on Friday.",
+          "Rahul's birthday gift split is $20 each.",
+          "Administrative deadlines",
+          "Human-subjects refresher training lapses next month.",
+          "If training lapses, Neel should not run participants until renewed.",
+          "Admin priority items: training renewal and payroll attachment.",
+          "Journal club prep",
+          "Framing: focus on the causal claim versus what the data actually supports.",
+          "Limit to three slides to avoid over-prepping.",
+          "Family travel",
+          "Possible home visit next month depends on finishing data collection on time.",
+          "Experiment planning",
+          "Neel needs an integrated view of data collection, analysis, and manuscript prep.",
+          "Prepare a realistic recruitment pace estimate for the advisor meeting."
+        ]
+      }
+    },
+    {
+      "number": 11,
+      "title": "Neel Revises Lab And Manuscript Plans",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Advisor",
+          "utterance": "Move the recruitment planning block from Tuesday morning to Tuesday at 2. I need the morning for committee work.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 move recruitment planning block from Tuesday morning to Tuesday 2 PM"
+        },
+        {
+          "index": 2,
+          "speaker": "Neel",
+          "utterance": "Okay, update the calendar block. Afternoon is probably better for realistic sample-size math anyway.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 update recruitment planning to Tuesday afternoon"
+        },
+        {
+          "index": 3,
+          "speaker": "Labmate",
+          "utterance": "The EEG room is free until 5:30 now, not 5.",
+          "importance": "Medium",
+          "tool": "Calendar event update \u2014 extend EEG room block to 5:30"
+        },
+        {
+          "index": 4,
+          "speaker": "Neel",
+          "utterance": "Extend it, and change the setup alarm from 4:45 to 5:15.",
+          "importance": "High",
+          "tool": "Alarm update \u2014 change EEG setup alarm from 4:45 to 5:15"
+        },
+        {
+          "index": 5,
+          "speaker": "Collaborator",
+          "utterance": "For Figure 3, update the note: panel C should show confidence intervals, not standard error.",
+          "importance": "High",
+          "tool": "Notes update \u2014 Figure 3 panel C should show confidence intervals instead of standard error"
+        },
+        {
+          "index": 6,
+          "speaker": "Neel",
+          "utterance": "Add that to the revision checklist before I accidentally produce another beautiful wrong plot.",
+          "importance": "High",
+          "tool": "Notes update \u2014 add confidence intervals to Figure 3 revision checklist"
+        },
+        {
+          "index": 7,
+          "speaker": "Department Admin",
+          "utterance": "Your payroll attachment deadline moved up to noon tomorrow.",
+          "importance": "High",
+          "tool": "Reminder update \u2014 change payroll attachment deadline to noon tomorrow"
+        },
+        {
+          "index": 8,
+          "speaker": "Neel",
+          "utterance": "Move the reminder earlier and set an 11:30 alarm. Admin portals are where optimism goes to die.",
+          "importance": "High",
+          "tool": "Alarm update \u2014 set payroll attachment alarm for 11:30 tomorrow"
+        },
+        {
+          "index": 9,
+          "speaker": "Labmate",
+          "utterance": "Maybe journal club dinner moves later, but no one has committed.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 10,
+          "speaker": "Neel",
+          "utterance": "Then no update yet. Vague dinner energy does not deserve calendar access.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Updated recruitment planning block to Tuesday 2 PM.",
+          "Extended EEG room block to 5:30 PM."
+        ],
+        "reminders": [
+          "Updated payroll attachment deadline to noon tomorrow."
+        ],
+        "alarms": [
+          "Updated EEG setup alarm to 5:15 PM.",
+          "Set payroll attachment alarm for 11:30 AM tomorrow."
+        ],
+        "notes": [
+          "Updated Figure 3 revision checklist: panel C should show confidence intervals, not standard error."
+        ]
+      }
+    },
+    {
+      "number": 12,
+      "title": "Neel Removes Stale Research Tasks",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Advisor",
+          "utterance": "We are dropping condition three entirely, so cancel the analysis block for it.",
+          "importance": "High",
+          "tool": "Calendar event delete \u2014 cancel condition three analysis block"
+        },
+        {
+          "index": 2,
+          "speaker": "Neel",
+          "utterance": "Delete that block. I would like one fewer statistically doomed hour on the calendar.",
+          "importance": "High",
+          "tool": "Calendar event delete \u2014 delete condition three analysis block"
+        },
+        {
+          "index": 3,
+          "speaker": "Advisor",
+          "utterance": "Also remove the reminder to recruit extra participants for condition three.",
+          "importance": "High",
+          "tool": "Reminder delete \u2014 remove condition three recruitment reminder"
+        },
+        {
+          "index": 4,
+          "speaker": "Neel",
+          "utterance": "Delete it, but keep the note explaining why we dropped the condition.",
+          "importance": "High",
+          "tool": "Reminder delete \u2014 delete condition three recruitment reminder but keep rationale note"
+        },
+        {
+          "index": 5,
+          "speaker": "Collaborator",
+          "utterance": "The old exclusion-threshold note should go away now that the supplement is fixed.",
+          "importance": "Medium",
+          "tool": "Notes delete \u2014 remove old exclusion-threshold note"
+        },
+        {
+          "index": 6,
+          "speaker": "Neel",
+          "utterance": "Delete the stale note. It has already caused enough methods-section haunting.",
+          "importance": "Medium",
+          "tool": "Notes delete \u2014 delete stale supplementary methods exclusion note"
+        },
+        {
+          "index": 7,
+          "speaker": "Labmate",
+          "utterance": "Tomorrow's participant canceled, so you can delete the 5 PM setup alarm.",
+          "importance": "Medium",
+          "tool": "Alarm delete \u2014 delete 5 PM setup alarm for canceled participant"
+        },
+        {
+          "index": 8,
+          "speaker": "Neel",
+          "utterance": "Remove it. No participant, no electrode-prep panic.",
+          "importance": "Medium",
+          "tool": "Alarm delete \u2014 remove electrode setup alarm for canceled participant"
+        },
+        {
+          "index": 9,
+          "speaker": "Labmate",
+          "utterance": "Should we delete the supply note too?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 10,
+          "speaker": "Neel",
+          "utterance": "No, keep the supply note. Saline gel does not become less empty because a participant canceled.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 keep EEG supply note despite participant cancellation"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Deleted condition three analysis block."
+        ],
+        "reminders": [
+          "Deleted condition three recruitment reminder."
+        ],
+        "alarms": [
+          "Deleted 5 PM setup alarm for canceled participant."
+        ],
+        "notes": [
+          "Deleted old exclusion-threshold note.",
+          "Kept EEG supply note despite participant cancellation."
+        ]
+      }
+    },
+    {
+      "number": 13,
+      "title": "Neel Lab Scheduling Boundaries",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Labmate",
+          "utterance": "The EEG room is confirmed for Thursday 3 to 5.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 EEG room Thursday 3-5 PM"
+        },
+        {
+          "index": 2,
+          "speaker": "Neel",
+          "utterance": "Block it. A confirmed room is a calendar event, not a hopeful thought.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 reserve confirmed EEG room block"
+        },
+        {
+          "index": 3,
+          "speaker": "Labmate",
+          "utterance": "Set a 2:30 alarm to prep caps before the participant arrives.",
+          "importance": "High",
+          "tool": "Alarm \u2014 prep EEG caps Thursday 2:30 PM"
+        },
+        {
+          "index": 4,
+          "speaker": "Neel",
+          "utterance": "Yes, because electrode setup expands to fill all available panic.",
+          "importance": "High",
+          "tool": "Alarm \u2014 EEG setup prompt before participant"
+        },
+        {
+          "index": 5,
+          "speaker": "Labmate",
+          "utterance": "Maybe we can also use Friday if recruitment goes well.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 6,
+          "speaker": "Neel",
+          "utterance": "Maybe Friday gets no tool until a participant exists.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 7,
+          "speaker": "Labmate",
+          "utterance": "Add saline gel and spare caps to the supply note.",
+          "importance": "Medium",
+          "tool": "Notes update \u2014 add saline gel and spare caps to supply note"
+        },
+        {
+          "index": 8,
+          "speaker": "Neel",
+          "utterance": "Update it. Running out of gel is not a scientific limitation I want to publish.",
+          "importance": "Medium",
+          "tool": "Notes update \u2014 update EEG supply note"
+        },
+        {
+          "index": 9,
+          "speaker": "Labmate",
+          "utterance": "Remind me to send you the participant confirmation tonight.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 get participant confirmation tonight"
+        },
+        {
+          "index": 10,
+          "speaker": "Neel",
+          "utterance": "Add that. If I do not see confirmation, I should not assume the schedule is real.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 verify participant confirmation tonight"
+        }
+      ],
+      "cumulative_tool_summary": {}
+    },
+    {
+      "number": 14,
+      "title": "Neel Manuscript Revision Edits",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Collaborator",
+          "utterance": "Figure 3 revision block moved from Monday morning to Monday 2 PM.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 move Figure 3 revision block to Monday 2 PM"
+        },
+        {
+          "index": 2,
+          "speaker": "Neel",
+          "utterance": "Update the block. Morning Neel belongs to participants, apparently.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 update manuscript revision block to Monday afternoon"
+        },
+        {
+          "index": 3,
+          "speaker": "Collaborator",
+          "utterance": "Delete the old note about standard error bars. We are using confidence intervals.",
+          "importance": "Medium",
+          "tool": "Notes delete \u2014 remove old standard-error-bar note"
+        },
+        {
+          "index": 4,
+          "speaker": "Neel",
+          "utterance": "Delete it, but keep the confidence interval note. I only need one version of statistical guilt.",
+          "importance": "Medium",
+          "tool": "Notes delete \u2014 delete stale standard error note"
+        },
+        {
+          "index": 5,
+          "speaker": "Collaborator",
+          "utterance": "Remind yourself to send the revised figure by Monday evening.",
+          "importance": "High",
+          "tool": "Reminder \u2014 send revised Figure 3 by Monday evening"
+        },
+        {
+          "index": 6,
+          "speaker": "Neel",
+          "utterance": "Set that reminder and a 6 PM alarm if I have not sent it.",
+          "importance": "High",
+          "tool": "Alarm \u2014 final Figure 3 send prompt Monday 6 PM"
+        },
+        {
+          "index": 7,
+          "speaker": "Collaborator",
+          "utterance": "Maybe the legend also changes after advisor comments.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 8,
+          "speaker": "Neel",
+          "utterance": "No update until the advisor actually comments.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 9,
+          "speaker": "Collaborator",
+          "utterance": "Add a note that panel titles should name the task condition.",
+          "importance": "High",
+          "tool": "Notes update \u2014 panel titles should name task condition"
+        },
+        {
+          "index": 10,
+          "speaker": "Neel",
+          "utterance": "Add it to the checklist. That one is real.",
+          "importance": "High",
+          "tool": "Notes update \u2014 add task-condition panel titles to revision checklist"
+        }
+      ],
+      "cumulative_tool_summary": {}
+    },
+    {
+      "number": 15,
+      "title": "Neel Admin And Deadline Cleanup",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Department Admin",
+          "utterance": "The human-subjects refresher deadline moved up to Friday.",
+          "importance": "High",
+          "tool": "Reminder update \u2014 move human-subjects refresher deadline to Friday"
+        },
+        {
+          "index": 2,
+          "speaker": "Neel",
+          "utterance": "Update that reminder and set a Thursday 8 PM alarm. I cannot let admin block participant runs.",
+          "importance": "High",
+          "tool": "Alarm \u2014 complete refresher training Thursday 8 PM"
+        },
+        {
+          "index": 3,
+          "speaker": "Department Admin",
+          "utterance": "Your payroll attachment uploaded successfully, so you can delete that reminder.",
+          "importance": "High",
+          "tool": "Reminder delete \u2014 remove payroll attachment reminder"
+        },
+        {
+          "index": 4,
+          "speaker": "Neel",
+          "utterance": "Delete it. I would like one fewer portal haunting.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 delete payroll attachment reminder"
+        },
+        {
+          "index": 5,
+          "speaker": "Department Admin",
+          "utterance": "The old bank attachment note is obsolete too.",
+          "importance": "Medium",
+          "tool": "Notes delete \u2014 remove old bank attachment note"
+        },
+        {
+          "index": 6,
+          "speaker": "Neel",
+          "utterance": "Delete the stale note, but keep the payroll confirmation email.",
+          "importance": "Medium",
+          "tool": "Notes delete \u2014 delete old bank attachment note"
+        },
+        {
+          "index": 7,
+          "speaker": "Department Admin",
+          "utterance": "Maybe another form arrives next month.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 8,
+          "speaker": "Neel",
+          "utterance": "Future bureaucracy is not a current tool call.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 9,
+          "speaker": "Department Admin",
+          "utterance": "Calendar hold for compliance office hours Friday at 10?",
+          "importance": "Medium",
+          "tool": "Calendar event \u2014 compliance office hours Friday 10 AM"
+        },
+        {
+          "index": 10,
+          "speaker": "Neel",
+          "utterance": "Yes, block it as backup in case the refresher site misbehaves.",
+          "importance": "Medium",
+          "tool": "Calendar event \u2014 backup compliance office hours Friday 10 AM"
+        }
+      ],
+      "cumulative_tool_summary": {}
+    },
+    {
+      "number": 16,
+      "title": "Neel Family And Research Balance",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Brother",
+          "utterance": "Can you send me that memory replay paper tonight?",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 send memory replay paper tonight"
+        },
+        {
+          "index": 2,
+          "speaker": "Neel",
+          "utterance": "Yes, remind me after journal club. Otherwise it will disappear behind methods revisions.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 send paper after journal club"
+        },
+        {
+          "index": 3,
+          "speaker": "Brother",
+          "utterance": "Actually send the newer review, not the old paper.",
+          "importance": "Medium",
+          "tool": "Reminder update \u2014 send newer memory replay review instead of old paper"
+        },
+        {
+          "index": 4,
+          "speaker": "Neel",
+          "utterance": "Update the reminder. Same brother, better citation.",
+          "importance": "Medium",
+          "tool": "Reminder update \u2014 update paper reminder to newer review"
+        },
+        {
+          "index": 5,
+          "speaker": "Brother",
+          "utterance": "Are you visiting next month?",
+          "importance": "Medium",
+          "tool": "Notes \u2014 possible home visit next month depends on data collection"
+        },
+        {
+          "index": 6,
+          "speaker": "Neel",
+          "utterance": "Maybe. I need the participant schedule first.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 7,
+          "speaker": "Brother",
+          "utterance": "If you know by Sunday, tell Mom early.",
+          "importance": "High",
+          "tool": "Reminder \u2014 update family by Sunday about travel decision"
+        },
+        {
+          "index": 8,
+          "speaker": "Neel",
+          "utterance": "Add that. Family logistics should not be a surprise variable.",
+          "importance": "High",
+          "tool": "Reminder \u2014 tell family travel decision by Sunday"
+        },
+        {
+          "index": 9,
+          "speaker": "Brother",
+          "utterance": "Should I put a visit on the calendar?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 10,
+          "speaker": "Neel",
+          "utterance": "Not yet. No dates, no calendar event.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {}
+    },
+    {
+      "number": 17,
+      "title": "Neel Canceled Participant And Protocol Updates",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Research Coordinator",
+          "utterance": "Tomorrow\u2019s participant canceled, so delete the EEG room block.",
+          "importance": "High",
+          "tool": "Calendar event delete \u2014 delete tomorrow EEG room block"
+        },
+        {
+          "index": 2,
+          "speaker": "Neel",
+          "utterance": "Delete it and remove the setup alarm. No participant, no cap-prep drama.",
+          "importance": "High",
+          "tool": "Alarm delete \u2014 remove setup alarm for canceled participant"
+        },
+        {
+          "index": 3,
+          "speaker": "Research Coordinator",
+          "utterance": "Keep the protocol note though; the consent wording still changed.",
+          "importance": "High",
+          "tool": "Notes update \u2014 keep updated consent wording in protocol note"
+        },
+        {
+          "index": 4,
+          "speaker": "Neel",
+          "utterance": "Update the protocol note, do not delete it. The canceled run does not cancel IRB reality.",
+          "importance": "High",
+          "tool": "Notes update \u2014 update protocol note with consent wording"
+        },
+        {
+          "index": 5,
+          "speaker": "Research Coordinator",
+          "utterance": "Delete the reminder to print consent forms for tomorrow.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 delete consent-form printing reminder for canceled participant"
+        },
+        {
+          "index": 6,
+          "speaker": "Neel",
+          "utterance": "Delete it. Printing forms for no one is how labs become paper museums.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 remove tomorrow consent forms reminder"
+        },
+        {
+          "index": 7,
+          "speaker": "Research Coordinator",
+          "utterance": "Maybe the participant reschedules for next week.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 8,
+          "speaker": "Neel",
+          "utterance": "Maybe next week is not a calendar event yet.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 9,
+          "speaker": "Research Coordinator",
+          "utterance": "Set a reminder to follow up if they do not reply by Friday.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 follow up with participant if no reply by Friday"
+        },
+        {
+          "index": 10,
+          "speaker": "Neel",
+          "utterance": "Yes, that is specific enough to survive.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 participant follow-up by Friday"
+        },
+        {
+          "speaker": "Research Coordinator",
+          "utterance": "Can you update the participant reminder to the new time?",
+          "importance": "High",
+          "tool": "Clarification - Ask which participant reminder and the exact new time before updating it."
+        }
+      ],
+      "cumulative_tool_summary": {}
+    },
+    {
+      "number": 18,
+      "title": "Neel Stateful Lab Scheduling And Protocol Notes",
+      "context": {
+        "why_this_fits": "Neel needs precise state for lab blocks, protocol notes, administrative reminders, and ambiguous research schedule edits."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Research Coordinator",
+          "utterance": "EEG room is booked for Monday 2 to 4 for participant N17.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 EEG room Monday 2-4 for participant N17"
+        },
+        {
+          "index": 2,
+          "speaker": "Neel",
+          "utterance": "Block it and remind me Sunday night to print the consent packet.",
+          "importance": "High",
+          "tool": "Reminder \u2014 print consent packet Sunday night"
+        },
+        {
+          "index": 3,
+          "speaker": "Research Coordinator",
+          "utterance": "Set a 1:15 alarm Monday for cap setup.",
+          "importance": "High",
+          "tool": "Alarm \u2014 cap setup Monday 1:15 PM"
+        },
+        {
+          "index": 4,
+          "speaker": "Neel",
+          "utterance": "Note that N17 needs the shorter fatigue questionnaire.",
+          "importance": "High",
+          "tool": "Notes \u2014 participant N17 needs shorter fatigue questionnaire"
+        },
+        {
+          "index": 5,
+          "speaker": "Research Coordinator",
+          "utterance": "N17 moved to Monday 3 to 5.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 move EEG room for N17 to Monday 3-5"
+        },
+        {
+          "index": 6,
+          "speaker": "Neel",
+          "utterance": "Update the room block and move the consent reminder to Monday morning.",
+          "importance": "High",
+          "tool": "Reminder update \u2014 move consent packet reminder to Monday morning"
+        },
+        {
+          "index": 7,
+          "speaker": "Research Coordinator",
+          "utterance": "Then make the cap setup alarm 2:15.",
+          "importance": "High",
+          "tool": "Alarm update \u2014 move cap setup alarm to Monday 2:15 PM"
+        },
+        {
+          "index": 8,
+          "speaker": "Neel",
+          "utterance": "Update the note: add that N17 prefers breaks after block two.",
+          "importance": "High",
+          "tool": "Notes update \u2014 add N17 break preference after block two"
+        },
+        {
+          "index": 9,
+          "speaker": "Research Coordinator",
+          "utterance": "The old IRB upload reminder is obsolete.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 remove old IRB upload reminder"
+        },
+        {
+          "index": 10,
+          "speaker": "Neel",
+          "utterance": "Delete it, and cancel the practice room block if the pilot is off.",
+          "importance": "Medium",
+          "tool": "Calendar event delete \u2014 cancel practice room block if pilot is off"
+        },
+        {
+          "index": 11,
+          "speaker": "Research Coordinator",
+          "utterance": "There is also an old alarm for a canceled participant setup.",
+          "importance": "Medium",
+          "tool": "Alarm delete \u2014 remove old canceled participant setup alarm"
+        },
+        {
+          "index": 12,
+          "speaker": "Neel",
+          "utterance": "Delete the note about the outdated electrode map too.",
+          "importance": "Medium",
+          "tool": "Notes delete \u2014 remove outdated electrode map note"
+        },
+        {
+          "index": 13,
+          "speaker": "Research Coordinator",
+          "utterance": "Move that to Wednesday.",
+          "importance": "Low",
+          "tool": "Clarification \u2014 ask which item should move to Wednesday"
+        },
+        {
+          "index": 14,
+          "speaker": "Neel",
+          "utterance": "Ask which item. In lab-speak, that could be a room, reminder, alarm, or existential crisis.",
+          "importance": "Low",
+          "tool": "Clarification \u2014 ask which item to move before updating"
+        }
+      ]
+    }
+  ],
+  "paragraph_count": 1242
+}

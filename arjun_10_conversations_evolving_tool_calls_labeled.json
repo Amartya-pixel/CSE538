@@ -1,0 +1,3214 @@
+{
+  "source_file": "arjun_10_conversations_evolving_tool_calls_labeled.docx",
+  "title": "Arjun \u2014 10 Daily-Life Conversations with Evolving Tool Calls",
+  "assumptions": [
+    "Focused: he likes clean plans, protected time blocks, and clear follow-through.",
+    "Sporty: performance, recovery, consistency, and injury prevention matter to him.",
+    "Playful: his tone is light and teasing, especially with friends and family.",
+    "Practical with tools: he uses calendar events for real time blocks, reminders for future actions, alarms for urgent timing, and notes as grouped reference material.",
+    "Deadline-sensitive: once a commitment has a time, a deadline, or a clear consequence, it becomes more important to him."
+  ],
+  "tool_rules": "Tool distinctions used throughout: Reminder = don\u2019t forget; Reminder update/delete = change or remove an existing reminder; Calendar event = reserve time; Calendar event update/delete = change or cancel an existing calendar block; Alarm = urgent prompt at a specific moment; Alarm update/delete = change or remove an urgent prompt; Notes = reference material; Notes update/delete = change or remove saved reference material.",
+  "conversations": [
+    {
+      "number": 1,
+      "title": "Badminton Buddy After Work",
+      "context": {
+        "why_this_fits": "Arjun is playful and competitive with close friends, but he still turns sports talk into concrete actions when it affects performance or recovery."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Arjun",
+          "utterance": "Yo, survived the code review marathon?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 2,
+          "speaker": "Buddy",
+          "utterance": "Barely. That last comment thread almost ended me. You done for the day?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 3,
+          "speaker": "Arjun",
+          "utterance": "Yeah, just wrapped up. Brain is cooked, but I still have enough energy to destroy you on court.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 4,
+          "speaker": "Buddy",
+          "utterance": "Big words for someone who lost three straight smashes yesterday.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 5,
+          "speaker": "Arjun",
+          "utterance": "Fake news. My timing was off because I skipped lunch.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 6,
+          "speaker": "Buddy",
+          "utterance": "Excuses already. Same plan for tomorrow after work?",
+          "importance": "High",
+          "tool": "Calendar event \u2014 badminton plan starts here"
+        },
+        {
+          "index": 7,
+          "speaker": "Arjun",
+          "utterance": "Yep. Let\u2019s do 6:30 at the usual gym.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 fix time/location for badminton"
+        },
+        {
+          "index": 8,
+          "speaker": "Buddy",
+          "utterance": "Nice. We should actually practice footwork this time instead of just playing games.",
+          "importance": "High",
+          "tool": "Notes \u2014 practice focus: footwork drills"
+        },
+        {
+          "index": 9,
+          "speaker": "Arjun",
+          "utterance": "Agreed. Footwork first, then smashes, then one practice match.",
+          "importance": "High",
+          "tool": "Notes \u2014 practice plan: smashes + practice match"
+        },
+        {
+          "index": 10,
+          "speaker": "Buddy",
+          "utterance": "Add backhand defense too. You keep giving me easy points there.",
+          "importance": "High",
+          "tool": "Notes \u2014 practice focus: backhand defense"
+        },
+        {
+          "index": 11,
+          "speaker": "Arjun",
+          "utterance": "Fair. Also, aren\u2019t registrations open for that Sunnyvale tournament next month?",
+          "importance": "High",
+          "tool": "Reminder \u2014 check tournament registration"
+        },
+        {
+          "index": 12,
+          "speaker": "Buddy",
+          "utterance": "Yeah, I saw that this morning. Deadline is Friday, I think.",
+          "importance": "High",
+          "tool": "Reminder \u2014 tournament deadline awareness"
+        },
+        {
+          "index": 13,
+          "speaker": "Arjun",
+          "utterance": "Then remind me not to forget. We should both register tonight if possible.",
+          "importance": "High",
+          "tool": "Reminder \u2014 register tonight"
+        },
+        {
+          "index": 14,
+          "speaker": "Buddy",
+          "utterance": "Do it before you start doom-scrolling reels after dinner.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 15,
+          "speaker": "Arjun",
+          "utterance": "Also I need new grips. Mine\u2019s basically peeling off.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 shopping list: grips"
+        },
+        {
+          "index": 16,
+          "speaker": "Buddy",
+          "utterance": "I need shuttlecocks too. We finished the last tube yesterday.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 shopping list: shuttlecocks"
+        },
+        {
+          "index": 17,
+          "speaker": "Arjun",
+          "utterance": "Cool. I\u2019ll stop by the sports store or order online tonight.",
+          "importance": "High",
+          "tool": "Reminder \u2014 buy/order gear tonight"
+        },
+        {
+          "index": 18,
+          "speaker": "Buddy",
+          "utterance": "Maybe grab an ankle brace too. You said your right ankle felt weird last game.",
+          "importance": "High",
+          "tool": "Notes \u2014 shopping list: ankle brace"
+        },
+        {
+          "index": 19,
+          "speaker": "Arjun",
+          "utterance": "True. It\u2019s not bad, just don\u2019t want it getting worse.",
+          "importance": "High",
+          "tool": "Notes \u2014 health note: monitor right ankle"
+        },
+        {
+          "index": 20,
+          "speaker": "Buddy",
+          "utterance": "Then warm up properly tomorrow. No more showing up and immediately trying jump smashes.",
+          "importance": "High",
+          "tool": "Reminder \u2014 warm up before practice"
+        },
+        {
+          "index": 21,
+          "speaker": "Arjun",
+          "utterance": "That\u2019s called confidence, my friend.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 22,
+          "speaker": "Buddy",
+          "utterance": "That\u2019s called future physio bills.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 23,
+          "speaker": "Buddy",
+          "utterance": "Also we should get food after\u2014protein, not bubble tea and fries this time.",
+          "importance": "High",
+          "tool": "Reminder \u2014 protein-heavy meal after badminton"
+        },
+        {
+          "index": 24,
+          "speaker": "Arjun",
+          "utterance": "Fine, but I\u2019m still getting something sweet. Discipline has limits.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 25,
+          "speaker": "Buddy",
+          "utterance": "Send me when you register, or I\u2019ll assume you chickened out.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 send registration confirmation to buddy"
+        },
+        {
+          "index": 26,
+          "speaker": "Arjun",
+          "utterance": "Rude. Send me the tournament link again.",
+          "importance": "High",
+          "tool": "Reminder \u2014 get tournament link"
+        },
+        {
+          "index": 27,
+          "speaker": "Buddy",
+          "utterance": "Sending now. Don\u2019t ghost it.",
+          "importance": "High",
+          "tool": "Alarm \u2014 nudge to complete registration after link arrives"
+        },
+        {
+          "index": 28,
+          "speaker": "Arjun",
+          "utterance": "Done. See you tomorrow\u2014come ready to lose.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Badminton practice \u2014 Time: Tomorrow, 6:30 PM\u20138:00 PM; Location: Usual gym; Description: Practice session with Arjun\u2019s badminton buddy: drills first, then a practice match.; Priority: High."
+        ],
+        "reminders": [
+          "Open the Sunnyvale tournament link from buddy and check the registration page. \u2014 When: Tonight; Priority: Medium.",
+          "Register for the Sunnyvale tournament. \u2014 When: Tonight; Priority: High.",
+          "Buy or order badminton gear. \u2014 When: Tonight; Priority: Medium.",
+          "Do a proper warm-up before badminton. \u2014 When: Tomorrow before 6:30 PM practice; Priority: High.",
+          "Get a protein-heavy meal after badminton. \u2014 When: Right after tomorrow\u2019s practice; Priority: Medium.",
+          "Do not forget the ankle brace for badminton. \u2014 When: Tomorrow before leaving for the gym; Priority: High."
+        ],
+        "alarms": [
+          "Tonight, 9:00 PM \u2014 Urgent nudge to finish the Sunnyvale tournament registration.; Priority: High."
+        ],
+        "notes": [
+          "Fitness & Badminton",
+          "Practice focus: footwork drills. Priority: High.",
+          "Practice focus: smashes. Priority: Medium.",
+          "Practice focus: backhand defense. Priority: High.",
+          "Practice format: one serious practice match after drills. Priority: Medium.",
+          "Health & Recovery",
+          "Monitor the right ankle; avoid letting a minor issue become a bigger one. Priority: High.",
+          "Shopping Lists",
+          "Badminton overgrips/grips. Priority: Medium.",
+          "Shuttlecocks. Priority: Medium.",
+          "Ankle brace. Priority: High."
+        ]
+      }
+    },
+    {
+      "number": 2,
+      "title": "Manager After Work",
+      "context": {
+        "why_this_fits": "Arjun is focused and responsive at work: he turns ambiguous manager requests into time blocks, delivery deadlines, and structured prep notes."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Manager",
+          "utterance": "Hey Arjun, got a minute? Wanted to check where things stand on the launch metrics doc.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 2,
+          "speaker": "Arjun",
+          "utterance": "Yep, just wrapped up for the day. The main sections are done, but I still need to tighten the risk summary and clean up a few charts.",
+          "importance": "High",
+          "tool": "Notes \u2014 work doc status: risk summary + charts"
+        },
+        {
+          "index": 3,
+          "speaker": "Manager",
+          "utterance": "Do you think it\u2019ll be ready before tomorrow\u2019s review?",
+          "importance": "High",
+          "tool": "Reminder \u2014 prep for tomorrow\u2019s review"
+        },
+        {
+          "index": 4,
+          "speaker": "Arjun",
+          "utterance": "Yes. I want to do one focused pass tonight and one quick read tomorrow morning.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 focused pass tonight + quick read tomorrow morning"
+        },
+        {
+          "index": 5,
+          "speaker": "Manager",
+          "utterance": "Good. The biggest thing I need is a sharper explanation of why week-over-week engagement dipped.",
+          "importance": "High",
+          "tool": "Notes \u2014 improve explanation for engagement dip"
+        },
+        {
+          "index": 6,
+          "speaker": "Arjun",
+          "utterance": "Got it. I think part of it was lower weekend traffic, but I\u2019ll back that with numbers, not vibes.",
+          "importance": "High",
+          "tool": "Notes \u2014 validate weekend-traffic explanation with metrics"
+        },
+        {
+          "index": 7,
+          "speaker": "Manager",
+          "utterance": "Perfect. Also add one slide on what we\u2019re doing next, not just what happened.",
+          "importance": "High",
+          "tool": "Notes \u2014 add next-steps slide"
+        },
+        {
+          "index": 8,
+          "speaker": "Arjun",
+          "utterance": "Yep, I can add follow-ups on onboarding friction and notification timing.",
+          "importance": "High",
+          "tool": "Notes \u2014 next steps: onboarding friction + notification timing"
+        },
+        {
+          "index": 9,
+          "speaker": "Manager",
+          "utterance": "Great. Can you send me the updated version by 9:30 tomorrow?",
+          "importance": "High",
+          "tool": "Reminder \u2014 send updated doc by 9:30 AM tomorrow"
+        },
+        {
+          "index": 10,
+          "speaker": "Arjun",
+          "utterance": "Yes. If I finish early, I\u2019ll send it tonight.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 send tonight if finished early"
+        },
+        {
+          "index": 11,
+          "speaker": "Manager",
+          "utterance": "Are you okay to present the experiment results section yourself?",
+          "importance": "High",
+          "tool": "Reminder \u2014 prepare to present experiment results"
+        },
+        {
+          "index": 12,
+          "speaker": "Arjun",
+          "utterance": "Definitely. I\u2019d actually prefer that since I know where the weirdness in the data is.",
+          "importance": "High",
+          "tool": "Notes \u2014 Arjun presents experiment results"
+        },
+        {
+          "index": 13,
+          "speaker": "Manager",
+          "utterance": "Keep it crisp though\u2014probably five minutes max.",
+          "importance": "High",
+          "tool": "Reminder \u2014 keep experiment results section to five minutes"
+        },
+        {
+          "index": 14,
+          "speaker": "Arjun",
+          "utterance": "Understood. I\u2019ll keep it tight: what changed, why it changed, what we do next.",
+          "importance": "High",
+          "tool": "Notes \u2014 presentation structure"
+        },
+        {
+          "index": 15,
+          "speaker": "Manager",
+          "utterance": "One more thing\u2014can you also DM Priya after you send me the doc? She\u2019ll need the latest numbers for her notes.",
+          "importance": "High",
+          "tool": "Reminder \u2014 DM Priya after sending doc"
+        },
+        {
+          "index": 16,
+          "speaker": "Arjun",
+          "utterance": "Yes, I\u2019ll send it to her right after.",
+          "importance": "High",
+          "tool": "Reminder \u2014 DM Priya right after sending updated doc"
+        },
+        {
+          "index": 17,
+          "speaker": "Manager",
+          "utterance": "And please don\u2019t overpolish the design. Content matters more here.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 prioritize content over design polish"
+        },
+        {
+          "index": 18,
+          "speaker": "Arjun",
+          "utterance": "That is excellent news for someone who was about to waste twenty minutes aligning boxes.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 19,
+          "speaker": "Manager",
+          "utterance": "I know you too well already.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 20,
+          "speaker": "Arjun",
+          "utterance": "Fair. I\u2019ll spend the time on the risk summary instead.",
+          "importance": "High",
+          "tool": "Reminder \u2014 finish risk summary"
+        },
+        {
+          "index": 21,
+          "speaker": "Manager",
+          "utterance": "Good call. That section is where people will push hardest.",
+          "importance": "High",
+          "tool": "Notes \u2014 risk summary likely gets hardest questions"
+        },
+        {
+          "index": 22,
+          "speaker": "Arjun",
+          "utterance": "Makes sense. I\u2019ll prep a couple of backup points in case they ask about attribution confidence.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 prepare backup points on attribution confidence"
+        },
+        {
+          "index": 23,
+          "speaker": "Manager",
+          "utterance": "Great idea. That\u2019ll make the review smoother.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 24,
+          "speaker": "Arjun",
+          "utterance": "Plan is: finish edits tonight, quick read tomorrow morning, send by 9:30, ping Priya, then review.",
+          "importance": "High",
+          "tool": "Reminder \u2014 execute review-day plan: finish edits, quick read, send by 9:30, ping Priya"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Badminton practice \u2014 Time: Tomorrow, 6:30 PM\u20138:00 PM; Location: Usual gym; Description: Practice session with Arjun\u2019s badminton buddy: drills first, then a practice match.; Priority: High.",
+          "Focused pass on launch metrics doc \u2014 Time: Tonight, 8:00 PM\u20139:00 PM; Location: Home desk; Description: Protected work block to finish edits, tighten charts, and improve the risk summary.; Priority: Very High.",
+          "Quick read of launch metrics doc \u2014 Time: Tomorrow, 8:30 AM\u20139:00 AM; Location: Home desk or office; Description: Short final read before sending the updated document.; Priority: High."
+        ],
+        "reminders": [
+          "Open the Sunnyvale tournament link from buddy and check the registration page. \u2014 When: Tonight; Priority: Medium.",
+          "Register for the Sunnyvale tournament. \u2014 When: Tonight; Priority: High.",
+          "Buy or order badminton gear. \u2014 When: Tonight; Priority: Medium.",
+          "Do a proper warm-up before badminton. \u2014 When: Tomorrow before 6:30 PM practice; Priority: High.",
+          "Get a protein-heavy meal after badminton. \u2014 When: Right after tomorrow\u2019s practice; Priority: Medium.",
+          "Do not forget the ankle brace for badminton. \u2014 When: Tomorrow before leaving for the gym; Priority: High.",
+          "Prepare for the launch review meeting. \u2014 When: Before tomorrow morning\u2019s review; Priority: High.",
+          "Finish and sharpen the risk summary in the doc. \u2014 When: During tonight\u2019s focused work block; Priority: Very High.",
+          "Send the updated launch metrics doc to the manager. \u2014 When: By 9:30 AM tomorrow; Priority: Very High.",
+          "DM Priya the latest numbers after sending the doc. \u2014 When: Immediately after sending the doc tomorrow morning; Priority: High.",
+          "Prepare talking points for the experiment results section. \u2014 When: Before tomorrow\u2019s review; Priority: High.",
+          "Keep the experiment results section to five minutes. \u2014 When: During the review; Priority: Medium."
+        ],
+        "alarms": [
+          "Tonight, 9:00 PM \u2014 Urgent nudge to finish the Sunnyvale tournament registration.; Priority: High.",
+          "Tomorrow, 9:00 AM \u2014 Final prompt to send the launch metrics doc before the 9:30 deadline.; Priority: Very High."
+        ],
+        "notes": [
+          "Fitness & Badminton",
+          "Practice focus: footwork drills. Priority: High.",
+          "Practice focus: smashes. Priority: Medium.",
+          "Practice focus: backhand defense. Priority: High.",
+          "Practice format: one serious practice match after drills. Priority: Medium.",
+          "Health & Recovery",
+          "Monitor the right ankle; avoid letting a minor issue become a bigger one. Priority: High.",
+          "Shopping Lists",
+          "Badminton overgrips/grips. Priority: Medium.",
+          "Shuttlecocks. Priority: Medium.",
+          "Ankle brace. Priority: High.",
+          "Work \u2014 Launch Review",
+          "Current doc status: main sections done; risk summary and some charts still need work. Priority: High.",
+          "Add a better explanation for the week-over-week engagement dip. Priority: High.",
+          "Validate the weekend-traffic explanation with actual metrics. Priority: High.",
+          "Add a slide on what the team is doing next. Priority: High.",
+          "Potential next steps: onboarding friction and notification timing. Priority: Medium.",
+          "Arjun will present the experiment results section. Priority: High.",
+          "Presentation structure: what changed, why it changed, and what to do next. Priority: High.",
+          "Prioritize content over slide-design polish. Priority: Medium.",
+          "The risk summary is likely to get the hardest questions. Priority: High.",
+          "Prepare backup points on attribution confidence. Priority: Medium."
+        ]
+      }
+    },
+    {
+      "number": 3,
+      "title": "Personal Trainer",
+      "context": {
+        "why_this_fits": "Arjun is sporty and goal-oriented, so he accepts structured coaching when it clearly connects to performance, recovery, and consistency."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Trainer",
+          "utterance": "Morning, Arjun. Before we add speed, tell me how the ankle felt after badminton.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 2,
+          "speaker": "Arjun",
+          "utterance": "Mostly okay. Tight at the start, better after I got moving.",
+          "importance": "High",
+          "tool": "Notes \u2014 ankle status update"
+        },
+        {
+          "index": 3,
+          "speaker": "Trainer",
+          "utterance": "That tells me you need more prep, not more heroics.",
+          "importance": "High",
+          "tool": "Notes \u2014 training principle: more prep, less heroics"
+        },
+        {
+          "index": 4,
+          "speaker": "Arjun",
+          "utterance": "Painful truth, but fair.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 5,
+          "speaker": "Trainer",
+          "utterance": "What\u2019s the real goal right now?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 6,
+          "speaker": "Arjun",
+          "utterance": "I want to get to six miles under sixty minutes without feeling wrecked the next day.",
+          "importance": "High",
+          "tool": "Notes \u2014 running goal: 6 miles under 60 minutes"
+        },
+        {
+          "index": 7,
+          "speaker": "Trainer",
+          "utterance": "Good. Then we build durability first: ankle mobility, single-leg control, glute strength, and core.",
+          "importance": "High",
+          "tool": "Notes \u2014 training focus: mobility, single-leg control, glutes, core"
+        },
+        {
+          "index": 8,
+          "speaker": "Arjun",
+          "utterance": "So basically all the unglamorous stuff.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 9,
+          "speaker": "Trainer",
+          "utterance": "Exactly the stuff that keeps sporty people sporty.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 durability work keeps sporty people sporty"
+        },
+        {
+          "index": 10,
+          "speaker": "Arjun",
+          "utterance": "Rude and correct.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 11,
+          "speaker": "Trainer",
+          "utterance": "Can you do one dedicated strength session a week with me?",
+          "importance": "High",
+          "tool": "Calendar event \u2014 recurring strength session with trainer"
+        },
+        {
+          "index": 12,
+          "speaker": "Arjun",
+          "utterance": "Yes. Wednesday morning works best before work.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 Wednesday morning works"
+        },
+        {
+          "index": 13,
+          "speaker": "Trainer",
+          "utterance": "Let\u2019s lock Wednesday at seven. Then I want one short mobility reset on Sunday evening at home.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 Sunday mobility reset"
+        },
+        {
+          "index": 14,
+          "speaker": "Arjun",
+          "utterance": "That I can do.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 confirm Sunday mobility reset"
+        },
+        {
+          "index": 15,
+          "speaker": "Trainer",
+          "utterance": "Also start stretching calves and ankles at night. Five to eight minutes, not an hour-long spiritual journey.",
+          "importance": "High",
+          "tool": "Reminder \u2014 nightly calf and ankle stretching"
+        },
+        {
+          "index": 16,
+          "speaker": "Arjun",
+          "utterance": "Love that you know my tendency to overcomplicate things.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 17,
+          "speaker": "Trainer",
+          "utterance": "And log meals for the next three days. I want to see whether you\u2019re under-fueling on training days.",
+          "importance": "High",
+          "tool": "Reminder \u2014 log meals for three days"
+        },
+        {
+          "index": 18,
+          "speaker": "Arjun",
+          "utterance": "Okay. I already know the answer is sometimes yes.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 Arjun may under-fuel on some training days"
+        },
+        {
+          "index": 19,
+          "speaker": "Trainer",
+          "utterance": "Pack your shoes and bottle the night before. Early sessions fail because people make them negotiable.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 pack shoes and bottle the night before"
+        },
+        {
+          "index": 20,
+          "speaker": "Arjun",
+          "utterance": "That sounds annoyingly accurate.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 21,
+          "speaker": "Trainer",
+          "utterance": "One more thing: get some protein within forty-five minutes after hard sessions.",
+          "importance": "High",
+          "tool": "Reminder \u2014 get protein within 45 minutes after hard sessions"
+        },
+        {
+          "index": 22,
+          "speaker": "Arjun",
+          "utterance": "So my post-badminton sweet treat can stay, but it needs better company.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 sweet treat is okay if paired with protein"
+        },
+        {
+          "index": 23,
+          "speaker": "Trainer",
+          "utterance": "Exactly. Add protein, don\u2019t pretend sugar is recovery.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 recovery principle: add protein, do not count sugar as recovery"
+        },
+        {
+          "index": 24,
+          "speaker": "Arjun",
+          "utterance": "You have a gift for ruining convenient myths.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Badminton practice \u2014 Time: Tomorrow, 6:30 PM\u20138:00 PM; Location: Usual gym; Description: Practice session with Arjun\u2019s badminton buddy: drills first, then a practice match.; Priority: High.",
+          "Focused pass on launch metrics doc \u2014 Time: Tonight, 8:00 PM\u20139:00 PM; Location: Home desk; Description: Protected work block to finish edits, tighten charts, and improve the risk summary.; Priority: Very High.",
+          "Quick read of launch metrics doc \u2014 Time: Tomorrow, 8:30 AM\u20139:00 AM; Location: Home desk or office; Description: Short final read before sending the updated document.; Priority: High.",
+          "Strength session with trainer \u2014 Time: Wednesday, 7:00 AM\u20138:00 AM; Location: FitLab Gym; Description: Trainer-led strength session focused on durability, control, and injury prevention.; Priority: High.",
+          "Mobility reset \u2014 Time: Sunday, 5:00 PM\u20135:30 PM; Location: Home; Description: Short mobility and recovery block for ankles, calves, and hips.; Priority: Medium."
+        ],
+        "reminders": [
+          "Open the Sunnyvale tournament link from buddy and check the registration page. \u2014 When: Tonight; Priority: Medium.",
+          "Register for the Sunnyvale tournament. \u2014 When: Tonight; Priority: High.",
+          "Buy or order badminton gear. \u2014 When: Tonight; Priority: Medium.",
+          "Do a proper warm-up before badminton. \u2014 When: Tomorrow before 6:30 PM practice; Priority: High.",
+          "Get a protein-heavy meal after badminton. \u2014 When: Right after tomorrow\u2019s practice; Priority: Medium.",
+          "Do not forget the ankle brace for badminton. \u2014 When: Tomorrow before leaving for the gym; Priority: High.",
+          "Prepare for the launch review meeting. \u2014 When: Before tomorrow morning\u2019s review; Priority: High.",
+          "Finish and sharpen the risk summary in the doc. \u2014 When: During tonight\u2019s focused work block; Priority: Very High.",
+          "Send the updated launch metrics doc to the manager. \u2014 When: By 9:30 AM tomorrow; Priority: Very High.",
+          "DM Priya the latest numbers after sending the doc. \u2014 When: Immediately after sending the doc tomorrow morning; Priority: High.",
+          "Prepare talking points for the experiment results section. \u2014 When: Before tomorrow\u2019s review; Priority: High.",
+          "Keep the experiment results section to five minutes. \u2014 When: During the review; Priority: Medium.",
+          "Stretch calves and ankles at night. \u2014 When: Nightly; Priority: High.",
+          "Log meals for the next three days. \u2014 When: Starting today for three days; Priority: Medium.",
+          "Pack shoes and water bottle the night before the Wednesday training session. \u2014 When: Tuesday night; Priority: Medium."
+        ],
+        "alarms": [
+          "Tonight, 9:00 PM \u2014 Urgent nudge to finish the Sunnyvale tournament registration.; Priority: High.",
+          "Tomorrow, 9:00 AM \u2014 Final prompt to send the launch metrics doc before the 9:30 deadline.; Priority: Very High.",
+          "Wednesday, 6:15 AM \u2014 Wake up in time for the 7:00 AM trainer session.; Priority: High."
+        ],
+        "notes": [
+          "Fitness & Badminton",
+          "Practice focus: footwork drills. Priority: High.",
+          "Practice focus: smashes. Priority: Medium.",
+          "Practice focus: backhand defense. Priority: High.",
+          "Practice format: one serious practice match after drills. Priority: Medium.",
+          "Running goal: six miles under sixty minutes without rough next-day recovery. Priority: High.",
+          "Trainer focus: ankle mobility, single-leg control, glute strength, and core. Priority: High.",
+          "Health & Recovery",
+          "Monitor the right ankle; avoid letting a minor issue become a bigger one. Priority: High.",
+          "Get protein within about forty-five minutes after hard sessions. Priority: Medium.",
+          "Shopping Lists",
+          "Badminton overgrips/grips. Priority: Medium.",
+          "Shuttlecocks. Priority: Medium.",
+          "Ankle brace. Priority: High.",
+          "Work \u2014 Launch Review",
+          "Current doc status: main sections done; risk summary and some charts still need work. Priority: High.",
+          "Add a better explanation for the week-over-week engagement dip. Priority: High.",
+          "Validate the weekend-traffic explanation with actual metrics. Priority: High.",
+          "Add a slide on what the team is doing next. Priority: High.",
+          "Potential next steps: onboarding friction and notification timing. Priority: Medium.",
+          "Arjun will present the experiment results section. Priority: High.",
+          "Presentation structure: what changed, why it changed, and what to do next. Priority: High.",
+          "Prioritize content over slide-design polish. Priority: Medium.",
+          "The risk summary is likely to get the hardest questions. Priority: High.",
+          "Prepare backup points on attribution confidence. Priority: Medium."
+        ]
+      }
+    },
+    {
+      "number": 4,
+      "title": "Neighbor",
+      "context": {
+        "why_this_fits": "Arjun is friendly and active, so a neighbor\u2019s logistical update becomes either a lightweight reminder or, if it aligns with fitness, a real calendar event."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Neighbor",
+          "utterance": "Hey Arjun, you around? I grabbed one of your packages from the lobby so it wouldn\u2019t sit there all night.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 2,
+          "speaker": "Arjun",
+          "utterance": "You just saved that package from becoming building decor. Thanks.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 3,
+          "speaker": "Neighbor",
+          "utterance": "No problem. It\u2019s with me upstairs.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 package is with neighbor upstairs"
+        },
+        {
+          "index": 4,
+          "speaker": "Arjun",
+          "utterance": "I\u2019ll swing by tonight and pick it up.",
+          "importance": "High",
+          "tool": "Reminder \u2014 pick up package tonight"
+        },
+        {
+          "index": 5,
+          "speaker": "Neighbor",
+          "utterance": "Also, trash pickup is pushed a day because of the holiday, so everyone\u2019s taking it out Wednesday night instead.",
+          "importance": "High",
+          "tool": "Reminder \u2014 trash goes out Wednesday night this week"
+        },
+        {
+          "index": 6,
+          "speaker": "Arjun",
+          "utterance": "Good catch. I would\u2019ve absolutely done it on the wrong day.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 7,
+          "speaker": "Neighbor",
+          "utterance": "And a few of us are doing the community run on Saturday morning if you want in.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 possible community run Saturday morning"
+        },
+        {
+          "index": 8,
+          "speaker": "Arjun",
+          "utterance": "What time?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 9,
+          "speaker": "Neighbor",
+          "utterance": "Eight. Easy pace. Cedar Park loop, then coffee after.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 community run details: Saturday 8 AM, Cedar Park loop, coffee after"
+        },
+        {
+          "index": 10,
+          "speaker": "Arjun",
+          "utterance": "That actually sounds solid.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 11,
+          "speaker": "Neighbor",
+          "utterance": "You seem like the type who says something is easy and then makes it a race.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 12,
+          "speaker": "Arjun",
+          "utterance": "Unfair profiling. Mostly accurate, but unfair.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 13,
+          "speaker": "Neighbor",
+          "utterance": "So should I count you in?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 14,
+          "speaker": "Arjun",
+          "utterance": "Yeah, count me in. A relaxed run and coffee feels earned.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 community run Saturday morning"
+        },
+        {
+          "index": 15,
+          "speaker": "Neighbor",
+          "utterance": "Nice. I\u2019ll text the group that you\u2019re joining.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 16,
+          "speaker": "Arjun",
+          "utterance": "Perfect. And I\u2019ll grab the package tonight before I forget.",
+          "importance": "High",
+          "tool": "Reminder \u2014 pick up package tonight before forgetting"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Badminton practice \u2014 Time: Tomorrow, 6:30 PM\u20138:00 PM; Location: Usual gym; Description: Practice session with Arjun\u2019s badminton buddy: drills first, then a practice match.; Priority: High.",
+          "Focused pass on launch metrics doc \u2014 Time: Tonight, 8:00 PM\u20139:00 PM; Location: Home desk; Description: Protected work block to finish edits, tighten charts, and improve the risk summary.; Priority: Very High.",
+          "Quick read of launch metrics doc \u2014 Time: Tomorrow, 8:30 AM\u20139:00 AM; Location: Home desk or office; Description: Short final read before sending the updated document.; Priority: High.",
+          "Strength session with trainer \u2014 Time: Wednesday, 7:00 AM\u20138:00 AM; Location: FitLab Gym; Description: Trainer-led strength session focused on durability, control, and injury prevention.; Priority: High.",
+          "Mobility reset \u2014 Time: Sunday, 5:00 PM\u20135:30 PM; Location: Home; Description: Short mobility and recovery block for ankles, calves, and hips.; Priority: Medium.",
+          "Community run \u2014 Time: Saturday, 8:00 AM\u20139:00 AM; Location: Cedar Park loop; Description: Easy neighborhood run followed by coffee.; Priority: Medium."
+        ],
+        "reminders": [
+          "Open the Sunnyvale tournament link from buddy and check the registration page. \u2014 When: Tonight; Priority: Medium.",
+          "Register for the Sunnyvale tournament. \u2014 When: Tonight; Priority: High.",
+          "Buy or order badminton gear. \u2014 When: Tonight; Priority: Medium.",
+          "Do a proper warm-up before badminton. \u2014 When: Tomorrow before 6:30 PM practice; Priority: High.",
+          "Get a protein-heavy meal after badminton. \u2014 When: Right after tomorrow\u2019s practice; Priority: Medium.",
+          "Do not forget the ankle brace for badminton. \u2014 When: Tomorrow before leaving for the gym; Priority: High.",
+          "Prepare for the launch review meeting. \u2014 When: Before tomorrow morning\u2019s review; Priority: High.",
+          "Finish and sharpen the risk summary in the doc. \u2014 When: During tonight\u2019s focused work block; Priority: Very High.",
+          "Send the updated launch metrics doc to the manager. \u2014 When: By 9:30 AM tomorrow; Priority: Very High.",
+          "DM Priya the latest numbers after sending the doc. \u2014 When: Immediately after sending the doc tomorrow morning; Priority: High.",
+          "Prepare talking points for the experiment results section. \u2014 When: Before tomorrow\u2019s review; Priority: High.",
+          "Keep the experiment results section to five minutes. \u2014 When: During the review; Priority: Medium.",
+          "Stretch calves and ankles at night. \u2014 When: Nightly; Priority: High.",
+          "Log meals for the next three days. \u2014 When: Starting today for three days; Priority: Medium.",
+          "Pack shoes and water bottle the night before the Wednesday training session. \u2014 When: Tuesday night; Priority: Medium.",
+          "Pick up the package from the neighbor. \u2014 When: Tonight; Priority: Medium.",
+          "Take the trash out on Wednesday night because pickup is delayed for the holiday. \u2014 When: Wednesday night; Priority: Low."
+        ],
+        "alarms": [
+          "Tonight, 9:00 PM \u2014 Urgent nudge to finish the Sunnyvale tournament registration.; Priority: High.",
+          "Tomorrow, 9:00 AM \u2014 Final prompt to send the launch metrics doc before the 9:30 deadline.; Priority: Very High.",
+          "Wednesday, 6:15 AM \u2014 Wake up in time for the 7:00 AM trainer session.; Priority: High."
+        ],
+        "notes": [
+          "Fitness & Badminton",
+          "Practice focus: footwork drills. Priority: High.",
+          "Practice focus: smashes. Priority: Medium.",
+          "Practice focus: backhand defense. Priority: High.",
+          "Practice format: one serious practice match after drills. Priority: Medium.",
+          "Running goal: six miles under sixty minutes without rough next-day recovery. Priority: High.",
+          "Trainer focus: ankle mobility, single-leg control, glute strength, and core. Priority: High.",
+          "Health & Recovery",
+          "Monitor the right ankle; avoid letting a minor issue become a bigger one. Priority: High.",
+          "Get protein within about forty-five minutes after hard sessions. Priority: Medium.",
+          "Shopping Lists",
+          "Badminton overgrips/grips. Priority: Medium.",
+          "Shuttlecocks. Priority: Medium.",
+          "Ankle brace. Priority: High.",
+          "Work \u2014 Launch Review",
+          "Current doc status: main sections done; risk summary and some charts still need work. Priority: High.",
+          "Add a better explanation for the week-over-week engagement dip. Priority: High.",
+          "Validate the weekend-traffic explanation with actual metrics. Priority: High.",
+          "Add a slide on what the team is doing next. Priority: High.",
+          "Potential next steps: onboarding friction and notification timing. Priority: Medium.",
+          "Arjun will present the experiment results section. Priority: High.",
+          "Presentation structure: what changed, why it changed, and what to do next. Priority: High.",
+          "Prioritize content over slide-design polish. Priority: Medium.",
+          "The risk summary is likely to get the hardest questions. Priority: High.",
+          "Prepare backup points on attribution confidence. Priority: Medium.",
+          "Home & Neighborhood",
+          "Neighborhood community run group meets at Cedar Park and usually grabs coffee after. Priority: Low."
+        ]
+      }
+    },
+    {
+      "number": 5,
+      "title": "Mom",
+      "context": {
+        "why_this_fits": "Arjun cares about family but can get absorbed in work and training, so family commitments need clean time slots and lightweight social reminders."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Mom",
+          "utterance": "Did you eat properly today or are you doing your usual research-lab lunch disaster?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 2,
+          "speaker": "Arjun",
+          "utterance": "I ate. Not proudly, but technically yes.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 3,
+          "speaker": "Mom",
+          "utterance": "That answer inspires zero confidence.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 4,
+          "speaker": "Arjun",
+          "utterance": "Fair. I\u2019ll do better tomorrow.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 eat properly tomorrow"
+        },
+        {
+          "index": 5,
+          "speaker": "Mom",
+          "utterance": "Good. Also, are we still doing the family video call on Sunday?",
+          "importance": "High",
+          "tool": "Calendar event \u2014 family video call Sunday evening"
+        },
+        {
+          "index": 6,
+          "speaker": "Arjun",
+          "utterance": "Yes, Sunday evening works for me.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 family video call Sunday evening works"
+        },
+        {
+          "index": 7,
+          "speaker": "Mom",
+          "utterance": "Let\u2019s do eight your time, then your uncle and aunt can join too.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 set family call for Sunday at 8 PM"
+        },
+        {
+          "index": 8,
+          "speaker": "Arjun",
+          "utterance": "Okay, I\u2019ll keep that slot free.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 keep Sunday 8 PM free for family call"
+        },
+        {
+          "index": 9,
+          "speaker": "Mom",
+          "utterance": "And call your cousin on Monday. It\u2019s his birthday. Don\u2019t send one dry message and vanish.",
+          "importance": "High",
+          "tool": "Reminder \u2014 call cousin on Monday for birthday"
+        },
+        {
+          "index": 10,
+          "speaker": "Arjun",
+          "utterance": "Wow. No faith in my emotional range.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 11,
+          "speaker": "Mom",
+          "utterance": "You are affectionate, but efficiently.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 12,
+          "speaker": "Arjun",
+          "utterance": "That is alarmingly accurate.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 13,
+          "speaker": "Mom",
+          "utterance": "Also send me some photos when you play this weekend. I want to see this tournament-life version of you.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 send badminton/tournament photos to Mom this weekend"
+        },
+        {
+          "index": 14,
+          "speaker": "Arjun",
+          "utterance": "I\u2019m not sure there\u2019s a glamorous version, but I\u2019ll send some.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 send badminton photos to Mom"
+        },
+        {
+          "index": 15,
+          "speaker": "Mom",
+          "utterance": "Good. And don\u2019t skip meals just because you are busy.",
+          "importance": "High",
+          "tool": "Reminder \u2014 do not skip meals when busy"
+        },
+        {
+          "index": 16,
+          "speaker": "Arjun",
+          "utterance": "Yes, ma\u2019am. I hear the judgment and the love equally.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Badminton practice \u2014 Time: Tomorrow, 6:30 PM\u20138:00 PM; Location: Usual gym; Description: Practice session with Arjun\u2019s badminton buddy: drills first, then a practice match.; Priority: High.",
+          "Focused pass on launch metrics doc \u2014 Time: Tonight, 8:00 PM\u20139:00 PM; Location: Home desk; Description: Protected work block to finish edits, tighten charts, and improve the risk summary.; Priority: Very High.",
+          "Quick read of launch metrics doc \u2014 Time: Tomorrow, 8:30 AM\u20139:00 AM; Location: Home desk or office; Description: Short final read before sending the updated document.; Priority: High.",
+          "Strength session with trainer \u2014 Time: Wednesday, 7:00 AM\u20138:00 AM; Location: FitLab Gym; Description: Trainer-led strength session focused on durability, control, and injury prevention.; Priority: High.",
+          "Mobility reset \u2014 Time: Sunday, 5:00 PM\u20135:30 PM; Location: Home; Description: Short mobility and recovery block for ankles, calves, and hips.; Priority: Medium.",
+          "Community run \u2014 Time: Saturday, 8:00 AM\u20139:00 AM; Location: Cedar Park loop; Description: Easy neighborhood run followed by coffee.; Priority: Medium.",
+          "Family video call \u2014 Time: Sunday, 8:00 PM\u20138:45 PM; Location: Home; Description: Weekly family video call with parents and extended family members joining.; Priority: High."
+        ],
+        "reminders": [
+          "Open the Sunnyvale tournament link from buddy and check the registration page. \u2014 When: Tonight; Priority: Medium.",
+          "Register for the Sunnyvale tournament. \u2014 When: Tonight; Priority: High.",
+          "Buy or order badminton gear. \u2014 When: Tonight; Priority: Medium.",
+          "Do a proper warm-up before badminton. \u2014 When: Tomorrow before 6:30 PM practice; Priority: High.",
+          "Get a protein-heavy meal after badminton. \u2014 When: Right after tomorrow\u2019s practice; Priority: Medium.",
+          "Do not forget the ankle brace for badminton. \u2014 When: Tomorrow before leaving for the gym; Priority: High.",
+          "Prepare for the launch review meeting. \u2014 When: Before tomorrow morning\u2019s review; Priority: High.",
+          "Finish and sharpen the risk summary in the doc. \u2014 When: During tonight\u2019s focused work block; Priority: Very High.",
+          "Send the updated launch metrics doc to the manager. \u2014 When: By 9:30 AM tomorrow; Priority: Very High.",
+          "DM Priya the latest numbers after sending the doc. \u2014 When: Immediately after sending the doc tomorrow morning; Priority: High.",
+          "Prepare talking points for the experiment results section. \u2014 When: Before tomorrow\u2019s review; Priority: High.",
+          "Keep the experiment results section to five minutes. \u2014 When: During the review; Priority: Medium.",
+          "Stretch calves and ankles at night. \u2014 When: Nightly; Priority: High.",
+          "Log meals for the next three days. \u2014 When: Starting today for three days; Priority: Medium.",
+          "Pack shoes and water bottle the night before the Wednesday training session. \u2014 When: Tuesday night; Priority: Medium.",
+          "Pick up the package from the neighbor. \u2014 When: Tonight; Priority: Medium.",
+          "Take the trash out on Wednesday night because pickup is delayed for the holiday. \u2014 When: Wednesday night; Priority: Low.",
+          "Call cousin for his birthday. \u2014 When: Monday evening; Priority: Medium.",
+          "Send badminton photos to Mom. \u2014 When: After the weekend badminton session; Priority: Low."
+        ],
+        "alarms": [
+          "Tonight, 9:00 PM \u2014 Urgent nudge to finish the Sunnyvale tournament registration.; Priority: High.",
+          "Tomorrow, 9:00 AM \u2014 Final prompt to send the launch metrics doc before the 9:30 deadline.; Priority: Very High.",
+          "Wednesday, 6:15 AM \u2014 Wake up in time for the 7:00 AM trainer session.; Priority: High."
+        ],
+        "notes": [
+          "Fitness & Badminton",
+          "Practice focus: footwork drills. Priority: High.",
+          "Practice focus: smashes. Priority: Medium.",
+          "Practice focus: backhand defense. Priority: High.",
+          "Practice format: one serious practice match after drills. Priority: Medium.",
+          "Running goal: six miles under sixty minutes without rough next-day recovery. Priority: High.",
+          "Trainer focus: ankle mobility, single-leg control, glute strength, and core. Priority: High.",
+          "Health & Recovery",
+          "Monitor the right ankle; avoid letting a minor issue become a bigger one. Priority: High.",
+          "Get protein within about forty-five minutes after hard sessions. Priority: Medium.",
+          "Shopping Lists",
+          "Badminton overgrips/grips. Priority: Medium.",
+          "Shuttlecocks. Priority: Medium.",
+          "Ankle brace. Priority: High.",
+          "Work \u2014 Launch Review",
+          "Current doc status: main sections done; risk summary and some charts still need work. Priority: High.",
+          "Add a better explanation for the week-over-week engagement dip. Priority: High.",
+          "Validate the weekend-traffic explanation with actual metrics. Priority: High.",
+          "Add a slide on what the team is doing next. Priority: High.",
+          "Potential next steps: onboarding friction and notification timing. Priority: Medium.",
+          "Arjun will present the experiment results section. Priority: High.",
+          "Presentation structure: what changed, why it changed, and what to do next. Priority: High.",
+          "Prioritize content over slide-design polish. Priority: Medium.",
+          "The risk summary is likely to get the hardest questions. Priority: High.",
+          "Prepare backup points on attribution confidence. Priority: Medium.",
+          "Home & Neighborhood",
+          "Neighborhood community run group meets at Cedar Park and usually grabs coffee after. Priority: Low.",
+          "Family & Social",
+          "Family video calls work best for Arjun on Sunday evenings. Priority: Medium."
+        ]
+      }
+    },
+    {
+      "number": 6,
+      "title": "Sister",
+      "context": {
+        "why_this_fits": "Arjun is focused and helpful with close family, so he converts vague \u201ccan you help me?\u201d requests into a review block, a deadline, and a follow-up list."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Sister",
+          "utterance": "Are you free this week to look at my resume?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 2,
+          "speaker": "Arjun",
+          "utterance": "Yes. What\u2019s the deadline pressure level: calm, annoying, or catastrophic?",
+          "importance": "Medium",
+          "tool": "Notes \u2014 sister needs deadline pressure clarified for resume help"
+        },
+        {
+          "index": 3,
+          "speaker": "Sister",
+          "utterance": "Annoying and rising. I want to apply before the recruiting event this weekend.",
+          "importance": "High",
+          "tool": "Reminder \u2014 help sister before recruiting event this weekend"
+        },
+        {
+          "index": 4,
+          "speaker": "Arjun",
+          "utterance": "Okay, then let\u2019s not leave it to chaos.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 resume help should not be left to the last minute"
+        },
+        {
+          "index": 5,
+          "speaker": "Sister",
+          "utterance": "Can you review the bullets and help me make them sound less generic?",
+          "importance": "High",
+          "tool": "Notes \u2014 sister needs help with project bullets and leadership"
+        },
+        {
+          "index": 6,
+          "speaker": "Arjun",
+          "utterance": "Yes. Send me the current version tonight.",
+          "importance": "High",
+          "tool": "Reminder \u2014 ask sister to send resume tonight"
+        },
+        {
+          "index": 7,
+          "speaker": "Sister",
+          "utterance": "Done. I especially need help with project bullets and leadership stuff.",
+          "importance": "High",
+          "tool": "Notes \u2014 sister specifically needs help with project bullets and leadership"
+        },
+        {
+          "index": 8,
+          "speaker": "Arjun",
+          "utterance": "That\u2019s fixable. We should do a short call so I can ask what you actually did instead of guessing from vague verbs.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 short resume review call needed"
+        },
+        {
+          "index": 9,
+          "speaker": "Sister",
+          "utterance": "Friday evening?",
+          "importance": "High",
+          "tool": "Calendar event \u2014 proposed resume call Friday evening"
+        },
+        {
+          "index": 10,
+          "speaker": "Arjun",
+          "utterance": "Works for me. 7:30?",
+          "importance": "High",
+          "tool": "Calendar event \u2014 Friday 7:30 PM resume call"
+        },
+        {
+          "index": 11,
+          "speaker": "Sister",
+          "utterance": "Perfect.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 12,
+          "speaker": "Arjun",
+          "utterance": "I\u2019ll review it before then and mark the places where I need more detail.",
+          "importance": "High",
+          "tool": "Notes \u2014 review resume beforehand and mark where more detail is needed"
+        },
+        {
+          "index": 13,
+          "speaker": "Sister",
+          "utterance": "Can you also send me a few internship links? You usually find better ones than I do.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 send internship links after reviewing resume"
+        },
+        {
+          "index": 14,
+          "speaker": "Arjun",
+          "utterance": "Yes, but that\u2019s because I am fueled by search tabs and unnecessary optimization.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 15,
+          "speaker": "Sister",
+          "utterance": "Exactly why I\u2019m outsourcing this to you.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 16,
+          "speaker": "Arjun",
+          "utterance": "Reasonable. Send resume tonight, call Friday, links after that.",
+          "importance": "High",
+          "tool": "Notes \u2014 plan: resume tonight, Friday call, links after"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Badminton practice \u2014 Time: Tomorrow, 6:30 PM\u20138:00 PM; Location: Usual gym; Description: Practice session with Arjun\u2019s badminton buddy: drills first, then a practice match.; Priority: High.",
+          "Focused pass on launch metrics doc \u2014 Time: Tonight, 8:00 PM\u20139:00 PM; Location: Home desk; Description: Protected work block to finish edits, tighten charts, and improve the risk summary.; Priority: Very High.",
+          "Quick read of launch metrics doc \u2014 Time: Tomorrow, 8:30 AM\u20139:00 AM; Location: Home desk or office; Description: Short final read before sending the updated document.; Priority: High.",
+          "Strength session with trainer \u2014 Time: Wednesday, 7:00 AM\u20138:00 AM; Location: FitLab Gym; Description: Trainer-led strength session focused on durability, control, and injury prevention.; Priority: High.",
+          "Mobility reset \u2014 Time: Sunday, 5:00 PM\u20135:30 PM; Location: Home; Description: Short mobility and recovery block for ankles, calves, and hips.; Priority: Medium.",
+          "Community run \u2014 Time: Saturday, 8:00 AM\u20139:00 AM; Location: Cedar Park loop; Description: Easy neighborhood run followed by coffee.; Priority: Medium.",
+          "Family video call \u2014 Time: Sunday, 8:00 PM\u20138:45 PM; Location: Home; Description: Weekly family video call with parents and extended family members joining.; Priority: High.",
+          "Resume review call with sister \u2014 Time: Friday, 7:30 PM\u20138:00 PM; Location: Phone or video call from home; Description: Short call to review resume bullets and make applications stronger before the recruiting event.; Priority: High."
+        ],
+        "reminders": [
+          "Open the Sunnyvale tournament link from buddy and check the registration page. \u2014 When: Tonight; Priority: Medium.",
+          "Register for the Sunnyvale tournament. \u2014 When: Tonight; Priority: High.",
+          "Buy or order badminton gear. \u2014 When: Tonight; Priority: Medium.",
+          "Do a proper warm-up before badminton. \u2014 When: Tomorrow before 6:30 PM practice; Priority: High.",
+          "Get a protein-heavy meal after badminton. \u2014 When: Right after tomorrow\u2019s practice; Priority: Medium.",
+          "Do not forget the ankle brace for badminton. \u2014 When: Tomorrow before leaving for the gym; Priority: High.",
+          "Prepare for the launch review meeting. \u2014 When: Before tomorrow morning\u2019s review; Priority: High.",
+          "Finish and sharpen the risk summary in the doc. \u2014 When: During tonight\u2019s focused work block; Priority: Very High.",
+          "Send the updated launch metrics doc to the manager. \u2014 When: By 9:30 AM tomorrow; Priority: Very High.",
+          "DM Priya the latest numbers after sending the doc. \u2014 When: Immediately after sending the doc tomorrow morning; Priority: High.",
+          "Prepare talking points for the experiment results section. \u2014 When: Before tomorrow\u2019s review; Priority: High.",
+          "Keep the experiment results section to five minutes. \u2014 When: During the review; Priority: Medium.",
+          "Stretch calves and ankles at night. \u2014 When: Nightly; Priority: High.",
+          "Log meals for the next three days. \u2014 When: Starting today for three days; Priority: Medium.",
+          "Pack shoes and water bottle the night before the Wednesday training session. \u2014 When: Tuesday night; Priority: Medium.",
+          "Pick up the package from the neighbor. \u2014 When: Tonight; Priority: Medium.",
+          "Take the trash out on Wednesday night because pickup is delayed for the holiday. \u2014 When: Wednesday night; Priority: Low.",
+          "Call cousin for his birthday. \u2014 When: Monday evening; Priority: Medium.",
+          "Send badminton photos to Mom. \u2014 When: After the weekend badminton session; Priority: Low.",
+          "Review sister\u2019s resume before the Friday call. \u2014 When: Before Friday evening; Priority: High.",
+          "Send sister a few internship links after the resume review. \u2014 When: After the Friday call; Priority: Medium."
+        ],
+        "alarms": [
+          "Tonight, 9:00 PM \u2014 Urgent nudge to finish the Sunnyvale tournament registration.; Priority: High.",
+          "Tomorrow, 9:00 AM \u2014 Final prompt to send the launch metrics doc before the 9:30 deadline.; Priority: Very High.",
+          "Wednesday, 6:15 AM \u2014 Wake up in time for the 7:00 AM trainer session.; Priority: High.",
+          "Friday, 7:20 PM \u2014 Prompt for the 7:30 PM resume review call with sister.; Priority: Medium."
+        ],
+        "notes": [
+          "Fitness & Badminton",
+          "Practice focus: footwork drills. Priority: High.",
+          "Practice focus: smashes. Priority: Medium.",
+          "Practice focus: backhand defense. Priority: High.",
+          "Practice format: one serious practice match after drills. Priority: Medium.",
+          "Running goal: six miles under sixty minutes without rough next-day recovery. Priority: High.",
+          "Trainer focus: ankle mobility, single-leg control, glute strength, and core. Priority: High.",
+          "Health & Recovery",
+          "Monitor the right ankle; avoid letting a minor issue become a bigger one. Priority: High.",
+          "Get protein within about forty-five minutes after hard sessions. Priority: Medium.",
+          "Shopping Lists",
+          "Badminton overgrips/grips. Priority: Medium.",
+          "Shuttlecocks. Priority: Medium.",
+          "Ankle brace. Priority: High.",
+          "Work \u2014 Launch Review",
+          "Current doc status: main sections done; risk summary and some charts still need work. Priority: High.",
+          "Add a better explanation for the week-over-week engagement dip. Priority: High.",
+          "Validate the weekend-traffic explanation with actual metrics. Priority: High.",
+          "Add a slide on what the team is doing next. Priority: High.",
+          "Potential next steps: onboarding friction and notification timing. Priority: Medium.",
+          "Arjun will present the experiment results section. Priority: High.",
+          "Presentation structure: what changed, why it changed, and what to do next. Priority: High.",
+          "Prioritize content over slide-design polish. Priority: Medium.",
+          "The risk summary is likely to get the hardest questions. Priority: High.",
+          "Prepare backup points on attribution confidence. Priority: Medium.",
+          "Home & Neighborhood",
+          "Neighborhood community run group meets at Cedar Park and usually grabs coffee after. Priority: Low.",
+          "Family & Social",
+          "Family video calls work best for Arjun on Sunday evenings. Priority: Medium.",
+          "Sister wants help improving project bullets and leadership bullets on her resume. Priority: Medium."
+        ]
+      }
+    },
+    {
+      "number": 7,
+      "title": "Roommate",
+      "context": {
+        "why_this_fits": "Arjun is functional at home but not naturally detail-driven there, so apartment logistics become reminders while any visit window becomes a calendar commitment."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Roommate",
+          "utterance": "Hey, quick apartment sync\u2014did you already pay the utilities or should I request you on Splitwise?",
+          "importance": "High",
+          "tool": "Reminder \u2014 pay utilities after roommate requests on Splitwise"
+        },
+        {
+          "index": 2,
+          "speaker": "Arjun",
+          "utterance": "Request me. I saw it and then immediately got distracted by work.",
+          "importance": "High",
+          "tool": "Reminder \u2014 pay utilities after Splitwise request"
+        },
+        {
+          "index": 3,
+          "speaker": "Roommate",
+          "utterance": "Classic. Also we\u2019re low on eggs, yogurt, rice, and dish soap.",
+          "importance": "High",
+          "tool": "Notes \u2014 grocery list items for apartment"
+        },
+        {
+          "index": 4,
+          "speaker": "Arjun",
+          "utterance": "That is an aggressively practical list.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 5,
+          "speaker": "Roommate",
+          "utterance": "I live with a man who can explain attention weights but forgets dish soap.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 6,
+          "speaker": "Arjun",
+          "utterance": "Uncalled for. Accurate, but uncalled for.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 7,
+          "speaker": "Roommate",
+          "utterance": "Also, the plumber is coming Monday evening to look at the kitchen sink.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 plumber visit Monday evening"
+        },
+        {
+          "index": 8,
+          "speaker": "Arjun",
+          "utterance": "What time?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 9,
+          "speaker": "Roommate",
+          "utterance": "Seven to eight.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 plumber window 7\u20138 PM Monday"
+        },
+        {
+          "index": 10,
+          "speaker": "Arjun",
+          "utterance": "Okay, I\u2019ll be home by then.",
+          "importance": "High",
+          "tool": "Reminder \u2014 be home for plumber visit"
+        },
+        {
+          "index": 11,
+          "speaker": "Roommate",
+          "utterance": "Can you clear the shoes and that mystery Amazon box from the hallway before they come?",
+          "importance": "High",
+          "tool": "Reminder \u2014 clear hallway shoes and Amazon box before plumber arrives"
+        },
+        {
+          "index": 12,
+          "speaker": "Arjun",
+          "utterance": "Yes. The box is not mysterious. It\u2019s just strategically unopened.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 clear hallway box before plumber arrives"
+        },
+        {
+          "index": 13,
+          "speaker": "Roommate",
+          "utterance": "Beautiful spin. And do you want to grab the groceries Sunday afternoon?",
+          "importance": "High",
+          "tool": "Calendar event \u2014 groceries Sunday afternoon"
+        },
+        {
+          "index": 14,
+          "speaker": "Arjun",
+          "utterance": "Yes, that works better than scrambling midweek.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 confirm groceries Sunday afternoon"
+        },
+        {
+          "index": 15,
+          "speaker": "Roommate",
+          "utterance": "Perfect. Then I\u2019ll put the list in the shared note.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 groceries will be tracked in shared note"
+        },
+        {
+          "index": 16,
+          "speaker": "Arjun",
+          "utterance": "Do that. I\u2019m much more responsible when the task is already written down somewhere.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Badminton practice \u2014 Time: Tomorrow, 6:30 PM\u20138:00 PM; Location: Usual gym; Description: Practice session with Arjun\u2019s badminton buddy: drills first, then a practice match.; Priority: High.",
+          "Focused pass on launch metrics doc \u2014 Time: Tonight, 8:00 PM\u20139:00 PM; Location: Home desk; Description: Protected work block to finish edits, tighten charts, and improve the risk summary.; Priority: Very High.",
+          "Quick read of launch metrics doc \u2014 Time: Tomorrow, 8:30 AM\u20139:00 AM; Location: Home desk or office; Description: Short final read before sending the updated document.; Priority: High.",
+          "Strength session with trainer \u2014 Time: Wednesday, 7:00 AM\u20138:00 AM; Location: FitLab Gym; Description: Trainer-led strength session focused on durability, control, and injury prevention.; Priority: High.",
+          "Mobility reset \u2014 Time: Sunday, 5:00 PM\u20135:30 PM; Location: Home; Description: Short mobility and recovery block for ankles, calves, and hips.; Priority: Medium.",
+          "Community run \u2014 Time: Saturday, 8:00 AM\u20139:00 AM; Location: Cedar Park loop; Description: Easy neighborhood run followed by coffee.; Priority: Medium.",
+          "Family video call \u2014 Time: Sunday, 8:00 PM\u20138:45 PM; Location: Home; Description: Weekly family video call with parents and extended family members joining.; Priority: High.",
+          "Resume review call with sister \u2014 Time: Friday, 7:30 PM\u20138:00 PM; Location: Phone or video call from home; Description: Short call to review resume bullets and make applications stronger before the recruiting event.; Priority: High.",
+          "Plumber visit \u2014 Time: Monday, 7:00 PM\u20138:00 PM; Location: Apartment; Description: Be home for the plumber\u2019s visit to check the kitchen sink.; Priority: High."
+        ],
+        "reminders": [
+          "Open the Sunnyvale tournament link from buddy and check the registration page. \u2014 When: Tonight; Priority: Medium.",
+          "Register for the Sunnyvale tournament. \u2014 When: Tonight; Priority: High.",
+          "Buy or order badminton gear. \u2014 When: Tonight; Priority: Medium.",
+          "Do a proper warm-up before badminton. \u2014 When: Tomorrow before 6:30 PM practice; Priority: High.",
+          "Get a protein-heavy meal after badminton. \u2014 When: Right after tomorrow\u2019s practice; Priority: Medium.",
+          "Do not forget the ankle brace for badminton. \u2014 When: Tomorrow before leaving for the gym; Priority: High.",
+          "Prepare for the launch review meeting. \u2014 When: Before tomorrow morning\u2019s review; Priority: High.",
+          "Finish and sharpen the risk summary in the doc. \u2014 When: During tonight\u2019s focused work block; Priority: Very High.",
+          "Send the updated launch metrics doc to the manager. \u2014 When: By 9:30 AM tomorrow; Priority: Very High.",
+          "DM Priya the latest numbers after sending the doc. \u2014 When: Immediately after sending the doc tomorrow morning; Priority: High.",
+          "Prepare talking points for the experiment results section. \u2014 When: Before tomorrow\u2019s review; Priority: High.",
+          "Keep the experiment results section to five minutes. \u2014 When: During the review; Priority: Medium.",
+          "Stretch calves and ankles at night. \u2014 When: Nightly; Priority: High.",
+          "Log meals for the next three days. \u2014 When: Starting today for three days; Priority: Medium.",
+          "Pack shoes and water bottle the night before the Wednesday training session. \u2014 When: Tuesday night; Priority: Medium.",
+          "Pick up the package from the neighbor. \u2014 When: Tonight; Priority: Medium.",
+          "Take the trash out on Wednesday night because pickup is delayed for the holiday. \u2014 When: Wednesday night; Priority: Low.",
+          "Call cousin for his birthday. \u2014 When: Monday evening; Priority: Medium.",
+          "Send badminton photos to Mom. \u2014 When: After the weekend badminton session; Priority: Low.",
+          "Review sister\u2019s resume before the Friday call. \u2014 When: Before Friday evening; Priority: High.",
+          "Send sister a few internship links after the resume review. \u2014 When: After the Friday call; Priority: Medium.",
+          "Pay the utilities after the Splitwise request arrives. \u2014 When: By Friday; Priority: High.",
+          "Buy shared groceries. \u2014 When: Sunday afternoon; Priority: Medium.",
+          "Clear shoes and the box from the hallway before the plumber arrives. \u2014 When: Monday before 7:00 PM; Priority: Low."
+        ],
+        "alarms": [
+          "Tonight, 9:00 PM \u2014 Urgent nudge to finish the Sunnyvale tournament registration.; Priority: High.",
+          "Tomorrow, 9:00 AM \u2014 Final prompt to send the launch metrics doc before the 9:30 deadline.; Priority: Very High.",
+          "Wednesday, 6:15 AM \u2014 Wake up in time for the 7:00 AM trainer session.; Priority: High.",
+          "Friday, 7:20 PM \u2014 Prompt for the 7:30 PM resume review call with sister.; Priority: Medium."
+        ],
+        "notes": [
+          "Fitness & Badminton",
+          "Practice focus: footwork drills. Priority: High.",
+          "Practice focus: smashes. Priority: Medium.",
+          "Practice focus: backhand defense. Priority: High.",
+          "Practice format: one serious practice match after drills. Priority: Medium.",
+          "Running goal: six miles under sixty minutes without rough next-day recovery. Priority: High.",
+          "Trainer focus: ankle mobility, single-leg control, glute strength, and core. Priority: High.",
+          "Health & Recovery",
+          "Monitor the right ankle; avoid letting a minor issue become a bigger one. Priority: High.",
+          "Get protein within about forty-five minutes after hard sessions. Priority: Medium.",
+          "Shopping Lists",
+          "Badminton overgrips/grips. Priority: Medium.",
+          "Shuttlecocks. Priority: Medium.",
+          "Ankle brace. Priority: High.",
+          "Work \u2014 Launch Review",
+          "Current doc status: main sections done; risk summary and some charts still need work. Priority: High.",
+          "Add a better explanation for the week-over-week engagement dip. Priority: High.",
+          "Validate the weekend-traffic explanation with actual metrics. Priority: High.",
+          "Add a slide on what the team is doing next. Priority: High.",
+          "Potential next steps: onboarding friction and notification timing. Priority: Medium.",
+          "Arjun will present the experiment results section. Priority: High.",
+          "Presentation structure: what changed, why it changed, and what to do next. Priority: High.",
+          "Prioritize content over slide-design polish. Priority: Medium.",
+          "The risk summary is likely to get the hardest questions. Priority: High.",
+          "Prepare backup points on attribution confidence. Priority: Medium.",
+          "Home & Neighborhood",
+          "Neighborhood community run group meets at Cedar Park and usually grabs coffee after. Priority: Low.",
+          "Shared grocery restock: eggs, yogurt, rice, and dish soap. Priority: Medium.",
+          "Family & Social",
+          "Family video calls work best for Arjun on Sunday evenings. Priority: Medium.",
+          "Sister wants help improving project bullets and leadership bullets on her resume. Priority: Medium."
+        ]
+      }
+    },
+    {
+      "number": 8,
+      "title": "Dad",
+      "context": {
+        "why_this_fits": "Arjun responds well to blunt but practical nudges, especially when they connect maintenance tasks to athletic performance and long-term consistency."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Dad",
+          "utterance": "How are things? You sound busy every time we talk.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 2,
+          "speaker": "Arjun",
+          "utterance": "Busy is correct, but the good kind. Work, training, and trying not to become a goblin in the middle of all of it.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 3,
+          "speaker": "Dad",
+          "utterance": "Then do one sensible thing this week and book your dental cleaning.",
+          "importance": "High",
+          "tool": "Reminder \u2014 book dental cleaning this week"
+        },
+        {
+          "index": 4,
+          "speaker": "Arjun",
+          "utterance": "That was suspiciously specific.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 5,
+          "speaker": "Dad",
+          "utterance": "Because you postpone boring maintenance until it becomes dramatic.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 Arjun postpones boring maintenance until it becomes urgent"
+        },
+        {
+          "index": 6,
+          "speaker": "Arjun",
+          "utterance": "That is a personal attack wrapped in fatherly wisdom.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 7,
+          "speaker": "Dad",
+          "utterance": "Exactly. Also your running shoes looked worn in that photo you sent.",
+          "importance": "High",
+          "tool": "Reminder \u2014 replace worn running shoes soon"
+        },
+        {
+          "index": 8,
+          "speaker": "Arjun",
+          "utterance": "The cushioning is not elite anymore, I\u2019ll admit.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 running shoes are worn / cushioning reduced"
+        },
+        {
+          "index": 9,
+          "speaker": "Dad",
+          "utterance": "Then replace them before you turn a small issue into knee pain.",
+          "importance": "High",
+          "tool": "Reminder \u2014 replace shoes before knee pain develops"
+        },
+        {
+          "index": 10,
+          "speaker": "Arjun",
+          "utterance": "Okay. Dental cleaning this week, shoes soon.",
+          "importance": "High",
+          "tool": "Notes \u2014 action list: dental cleaning + shoes"
+        },
+        {
+          "index": 11,
+          "speaker": "Dad",
+          "utterance": "Not \u201csoon.\u201d Put it on the list like you put everything else on a list.",
+          "importance": "High",
+          "tool": "Reminder \u2014 do not leave shoe replacement vague"
+        },
+        {
+          "index": 12,
+          "speaker": "Arjun",
+          "utterance": "You have learned my systems too well.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 13,
+          "speaker": "Dad",
+          "utterance": "I raised you. Of course I know the loopholes.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 14,
+          "speaker": "Arjun",
+          "utterance": "Fair. I\u2019ll handle both.",
+          "importance": "High",
+          "tool": "Reminder \u2014 handle dental cleaning and running shoe replacement"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Badminton practice \u2014 Time: Tomorrow, 6:30 PM\u20138:00 PM; Location: Usual gym; Description: Practice session with Arjun\u2019s badminton buddy: drills first, then a practice match.; Priority: High.",
+          "Focused pass on launch metrics doc \u2014 Time: Tonight, 8:00 PM\u20139:00 PM; Location: Home desk; Description: Protected work block to finish edits, tighten charts, and improve the risk summary.; Priority: Very High.",
+          "Quick read of launch metrics doc \u2014 Time: Tomorrow, 8:30 AM\u20139:00 AM; Location: Home desk or office; Description: Short final read before sending the updated document.; Priority: High.",
+          "Strength session with trainer \u2014 Time: Wednesday, 7:00 AM\u20138:00 AM; Location: FitLab Gym; Description: Trainer-led strength session focused on durability, control, and injury prevention.; Priority: High.",
+          "Mobility reset \u2014 Time: Sunday, 5:00 PM\u20135:30 PM; Location: Home; Description: Short mobility and recovery block for ankles, calves, and hips.; Priority: Medium.",
+          "Community run \u2014 Time: Saturday, 8:00 AM\u20139:00 AM; Location: Cedar Park loop; Description: Easy neighborhood run followed by coffee.; Priority: Medium.",
+          "Family video call \u2014 Time: Sunday, 8:00 PM\u20138:45 PM; Location: Home; Description: Weekly family video call with parents and extended family members joining.; Priority: High.",
+          "Resume review call with sister \u2014 Time: Friday, 7:30 PM\u20138:00 PM; Location: Phone or video call from home; Description: Short call to review resume bullets and make applications stronger before the recruiting event.; Priority: High.",
+          "Plumber visit \u2014 Time: Monday, 7:00 PM\u20138:00 PM; Location: Apartment; Description: Be home for the plumber\u2019s visit to check the kitchen sink.; Priority: High."
+        ],
+        "reminders": [
+          "Open the Sunnyvale tournament link from buddy and check the registration page. \u2014 When: Tonight; Priority: Medium.",
+          "Register for the Sunnyvale tournament. \u2014 When: Tonight; Priority: High.",
+          "Buy or order badminton gear. \u2014 When: Tonight; Priority: Medium.",
+          "Do a proper warm-up before badminton. \u2014 When: Tomorrow before 6:30 PM practice; Priority: High.",
+          "Get a protein-heavy meal after badminton. \u2014 When: Right after tomorrow\u2019s practice; Priority: Medium.",
+          "Do not forget the ankle brace for badminton. \u2014 When: Tomorrow before leaving for the gym; Priority: High.",
+          "Prepare for the launch review meeting. \u2014 When: Before tomorrow morning\u2019s review; Priority: High.",
+          "Finish and sharpen the risk summary in the doc. \u2014 When: During tonight\u2019s focused work block; Priority: Very High.",
+          "Send the updated launch metrics doc to the manager. \u2014 When: By 9:30 AM tomorrow; Priority: Very High.",
+          "DM Priya the latest numbers after sending the doc. \u2014 When: Immediately after sending the doc tomorrow morning; Priority: High.",
+          "Prepare talking points for the experiment results section. \u2014 When: Before tomorrow\u2019s review; Priority: High.",
+          "Keep the experiment results section to five minutes. \u2014 When: During the review; Priority: Medium.",
+          "Stretch calves and ankles at night. \u2014 When: Nightly; Priority: High.",
+          "Log meals for the next three days. \u2014 When: Starting today for three days; Priority: Medium.",
+          "Pack shoes and water bottle the night before the Wednesday training session. \u2014 When: Tuesday night; Priority: Medium.",
+          "Pick up the package from the neighbor. \u2014 When: Tonight; Priority: Medium.",
+          "Take the trash out on Wednesday night because pickup is delayed for the holiday. \u2014 When: Wednesday night; Priority: Low.",
+          "Call cousin for his birthday. \u2014 When: Monday evening; Priority: Medium.",
+          "Send badminton photos to Mom. \u2014 When: After the weekend badminton session; Priority: Low.",
+          "Review sister\u2019s resume before the Friday call. \u2014 When: Before Friday evening; Priority: High.",
+          "Send sister a few internship links after the resume review. \u2014 When: After the Friday call; Priority: Medium.",
+          "Pay the utilities after the Splitwise request arrives. \u2014 When: By Friday; Priority: High.",
+          "Buy shared groceries. \u2014 When: Sunday afternoon; Priority: Medium.",
+          "Clear shoes and the box from the hallway before the plumber arrives. \u2014 When: Monday before 7:00 PM; Priority: Low.",
+          "Book a dental cleaning this week. \u2014 When: This week; Priority: Medium.",
+          "Replace the worn running shoes before training starts feeling worse. \u2014 When: This week; Priority: Medium."
+        ],
+        "alarms": [
+          "Tonight, 9:00 PM \u2014 Urgent nudge to finish the Sunnyvale tournament registration.; Priority: High.",
+          "Tomorrow, 9:00 AM \u2014 Final prompt to send the launch metrics doc before the 9:30 deadline.; Priority: Very High.",
+          "Wednesday, 6:15 AM \u2014 Wake up in time for the 7:00 AM trainer session.; Priority: High.",
+          "Friday, 7:20 PM \u2014 Prompt for the 7:30 PM resume review call with sister.; Priority: Medium."
+        ],
+        "notes": [
+          "Fitness & Badminton",
+          "Practice focus: footwork drills. Priority: High.",
+          "Practice focus: smashes. Priority: Medium.",
+          "Practice focus: backhand defense. Priority: High.",
+          "Practice format: one serious practice match after drills. Priority: Medium.",
+          "Running goal: six miles under sixty minutes without rough next-day recovery. Priority: High.",
+          "Trainer focus: ankle mobility, single-leg control, glute strength, and core. Priority: High.",
+          "Health & Recovery",
+          "Monitor the right ankle; avoid letting a minor issue become a bigger one. Priority: High.",
+          "Get protein within about forty-five minutes after hard sessions. Priority: Medium.",
+          "Running shoes are getting worn; replace them before they start affecting knees or recovery. Priority: Medium.",
+          "Shopping Lists",
+          "Badminton overgrips/grips. Priority: Medium.",
+          "Shuttlecocks. Priority: Medium.",
+          "Ankle brace. Priority: High.",
+          "Work \u2014 Launch Review",
+          "Current doc status: main sections done; risk summary and some charts still need work. Priority: High.",
+          "Add a better explanation for the week-over-week engagement dip. Priority: High.",
+          "Validate the weekend-traffic explanation with actual metrics. Priority: High.",
+          "Add a slide on what the team is doing next. Priority: High.",
+          "Potential next steps: onboarding friction and notification timing. Priority: Medium.",
+          "Arjun will present the experiment results section. Priority: High.",
+          "Presentation structure: what changed, why it changed, and what to do next. Priority: High.",
+          "Prioritize content over slide-design polish. Priority: Medium.",
+          "The risk summary is likely to get the hardest questions. Priority: High.",
+          "Prepare backup points on attribution confidence. Priority: Medium.",
+          "Home & Neighborhood",
+          "Neighborhood community run group meets at Cedar Park and usually grabs coffee after. Priority: Low.",
+          "Shared grocery restock: eggs, yogurt, rice, and dish soap. Priority: Medium.",
+          "Family & Social",
+          "Family video calls work best for Arjun on Sunday evenings. Priority: Medium.",
+          "Sister wants help improving project bullets and leadership bullets on her resume. Priority: Medium.",
+          "Health & Appointments",
+          "Arjun tends to delay boring maintenance tasks unless they are scheduled explicitly. Priority: Low."
+        ]
+      }
+    },
+    {
+      "number": 9,
+      "title": "Building Manager",
+      "context": {
+        "why_this_fits": "Arjun is focused but deadline-driven, so administrative tasks become stronger once there is a firm cutoff and a clean preparation block."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Building Manager",
+          "utterance": "Hi Arjun, this is a reminder that lease renewal paperwork is due Wednesday by five.",
+          "importance": "High",
+          "tool": "Reminder \u2014 lease renewal paperwork due Wednesday by 5 PM"
+        },
+        {
+          "index": 2,
+          "speaker": "Arjun",
+          "utterance": "Thanks for the heads-up. Is it all through the portal this year?",
+          "importance": "Medium",
+          "tool": "Notes \u2014 lease renewal may be handled through portal"
+        },
+        {
+          "index": 3,
+          "speaker": "Building Manager",
+          "utterance": "Yes. You just need the signed renewal form and updated renter\u2019s insurance proof.",
+          "importance": "High",
+          "tool": "Reminder \u2014 gather renter\u2019s insurance proof and signed renewal form"
+        },
+        {
+          "index": 4,
+          "speaker": "Arjun",
+          "utterance": "Got it. If I upload both before Wednesday afternoon, I\u2019m good?",
+          "importance": "High",
+          "tool": "Reminder \u2014 upload lease form and insurance proof before Wednesday afternoon"
+        },
+        {
+          "index": 5,
+          "speaker": "Building Manager",
+          "utterance": "Yes, that\u2019s perfect.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 uploading before Wednesday afternoon satisfies lease requirement"
+        },
+        {
+          "index": 6,
+          "speaker": "Arjun",
+          "utterance": "Okay, I\u2019ll handle it before then.",
+          "importance": "High",
+          "tool": "Reminder \u2014 handle renewal before Wednesday afternoon"
+        },
+        {
+          "index": 7,
+          "speaker": "Building Manager",
+          "utterance": "Please don\u2019t wait until the last hour. The portal gets busy when everyone uploads at once.",
+          "importance": "High",
+          "tool": "Notes \u2014 avoid last-hour portal upload crunch"
+        },
+        {
+          "index": 8,
+          "speaker": "Arjun",
+          "utterance": "That sounds like a warning based on experience.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 9,
+          "speaker": "Building Manager",
+          "utterance": "Very much so.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 10,
+          "speaker": "Arjun",
+          "utterance": "Fair. I\u2019ll review everything Tuesday night instead.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 review lease renewal paperwork Tuesday night"
+        },
+        {
+          "index": 11,
+          "speaker": "Building Manager",
+          "utterance": "That would be ideal.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 12,
+          "speaker": "Arjun",
+          "utterance": "Thanks. Better to do it once properly than stress at 4:58.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Badminton practice \u2014 Time: Tomorrow, 6:30 PM\u20138:00 PM; Location: Usual gym; Description: Practice session with Arjun\u2019s badminton buddy: drills first, then a practice match.; Priority: High.",
+          "Focused pass on launch metrics doc \u2014 Time: Tonight, 8:00 PM\u20139:00 PM; Location: Home desk; Description: Protected work block to finish edits, tighten charts, and improve the risk summary.; Priority: Very High.",
+          "Quick read of launch metrics doc \u2014 Time: Tomorrow, 8:30 AM\u20139:00 AM; Location: Home desk or office; Description: Short final read before sending the updated document.; Priority: High.",
+          "Strength session with trainer \u2014 Time: Wednesday, 7:00 AM\u20138:00 AM; Location: FitLab Gym; Description: Trainer-led strength session focused on durability, control, and injury prevention.; Priority: High.",
+          "Mobility reset \u2014 Time: Sunday, 5:00 PM\u20135:30 PM; Location: Home; Description: Short mobility and recovery block for ankles, calves, and hips.; Priority: Medium.",
+          "Community run \u2014 Time: Saturday, 8:00 AM\u20139:00 AM; Location: Cedar Park loop; Description: Easy neighborhood run followed by coffee.; Priority: Medium.",
+          "Family video call \u2014 Time: Sunday, 8:00 PM\u20138:45 PM; Location: Home; Description: Weekly family video call with parents and extended family members joining.; Priority: High.",
+          "Resume review call with sister \u2014 Time: Friday, 7:30 PM\u20138:00 PM; Location: Phone or video call from home; Description: Short call to review resume bullets and make applications stronger before the recruiting event.; Priority: High.",
+          "Plumber visit \u2014 Time: Monday, 7:00 PM\u20138:00 PM; Location: Apartment; Description: Be home for the plumber\u2019s visit to check the kitchen sink.; Priority: High.",
+          "Lease renewal review and upload block \u2014 Time: Tuesday, 8:00 PM\u20138:30 PM; Location: Home; Description: Review the renewal form, gather documents, and upload everything to the portal ahead of the deadline.; Priority: High."
+        ],
+        "reminders": [
+          "Open the Sunnyvale tournament link from buddy and check the registration page. \u2014 When: Tonight; Priority: Medium.",
+          "Register for the Sunnyvale tournament. \u2014 When: Tonight; Priority: High.",
+          "Buy or order badminton gear. \u2014 When: Tonight; Priority: Medium.",
+          "Do a proper warm-up before badminton. \u2014 When: Tomorrow before 6:30 PM practice; Priority: High.",
+          "Get a protein-heavy meal after badminton. \u2014 When: Right after tomorrow\u2019s practice; Priority: Medium.",
+          "Do not forget the ankle brace for badminton. \u2014 When: Tomorrow before leaving for the gym; Priority: High.",
+          "Prepare for the launch review meeting. \u2014 When: Before tomorrow morning\u2019s review; Priority: High.",
+          "Finish and sharpen the risk summary in the doc. \u2014 When: During tonight\u2019s focused work block; Priority: Very High.",
+          "Send the updated launch metrics doc to the manager. \u2014 When: By 9:30 AM tomorrow; Priority: Very High.",
+          "DM Priya the latest numbers after sending the doc. \u2014 When: Immediately after sending the doc tomorrow morning; Priority: High.",
+          "Prepare talking points for the experiment results section. \u2014 When: Before tomorrow\u2019s review; Priority: High.",
+          "Keep the experiment results section to five minutes. \u2014 When: During the review; Priority: Medium.",
+          "Stretch calves and ankles at night. \u2014 When: Nightly; Priority: High.",
+          "Log meals for the next three days. \u2014 When: Starting today for three days; Priority: Medium.",
+          "Pack shoes and water bottle the night before the Wednesday training session. \u2014 When: Tuesday night; Priority: Medium.",
+          "Pick up the package from the neighbor. \u2014 When: Tonight; Priority: Medium.",
+          "Take the trash out on Wednesday night because pickup is delayed for the holiday. \u2014 When: Wednesday night; Priority: Low.",
+          "Call cousin for his birthday. \u2014 When: Monday evening; Priority: Medium.",
+          "Send badminton photos to Mom. \u2014 When: After the weekend badminton session; Priority: Low.",
+          "Review sister\u2019s resume before the Friday call. \u2014 When: Before Friday evening; Priority: High.",
+          "Send sister a few internship links after the resume review. \u2014 When: After the Friday call; Priority: Medium.",
+          "Pay the utilities after the Splitwise request arrives. \u2014 When: By Friday; Priority: High.",
+          "Buy shared groceries. \u2014 When: Sunday afternoon; Priority: Medium.",
+          "Clear shoes and the box from the hallway before the plumber arrives. \u2014 When: Monday before 7:00 PM; Priority: Low.",
+          "Book a dental cleaning this week. \u2014 When: This week; Priority: Medium.",
+          "Replace the worn running shoes before training starts feeling worse. \u2014 When: This week; Priority: Medium.",
+          "Upload updated renter\u2019s insurance proof to the lease portal. \u2014 When: By Wednesday, 5:00 PM; Priority: High.",
+          "Sign and submit the lease renewal form. \u2014 When: By Wednesday, 5:00 PM; Priority: Very High."
+        ],
+        "alarms": [
+          "Tonight, 9:00 PM \u2014 Urgent nudge to finish the Sunnyvale tournament registration.; Priority: High.",
+          "Tomorrow, 9:00 AM \u2014 Final prompt to send the launch metrics doc before the 9:30 deadline.; Priority: Very High.",
+          "Wednesday, 6:15 AM \u2014 Wake up in time for the 7:00 AM trainer session.; Priority: High.",
+          "Friday, 7:20 PM \u2014 Prompt for the 7:30 PM resume review call with sister.; Priority: Medium.",
+          "Wednesday, 4:00 PM \u2014 Final prompt to make sure the lease renewal paperwork is fully uploaded before the 5:00 PM deadline.; Priority: High."
+        ],
+        "notes": [
+          "Fitness & Badminton",
+          "Practice focus: footwork drills. Priority: High.",
+          "Practice focus: smashes. Priority: Medium.",
+          "Practice focus: backhand defense. Priority: High.",
+          "Practice format: one serious practice match after drills. Priority: Medium.",
+          "Running goal: six miles under sixty minutes without rough next-day recovery. Priority: High.",
+          "Trainer focus: ankle mobility, single-leg control, glute strength, and core. Priority: High.",
+          "Health & Recovery",
+          "Monitor the right ankle; avoid letting a minor issue become a bigger one. Priority: High.",
+          "Get protein within about forty-five minutes after hard sessions. Priority: Medium.",
+          "Running shoes are getting worn; replace them before they start affecting knees or recovery. Priority: Medium.",
+          "Shopping Lists",
+          "Badminton overgrips/grips. Priority: Medium.",
+          "Shuttlecocks. Priority: Medium.",
+          "Ankle brace. Priority: High.",
+          "Work \u2014 Launch Review",
+          "Current doc status: main sections done; risk summary and some charts still need work. Priority: High.",
+          "Add a better explanation for the week-over-week engagement dip. Priority: High.",
+          "Validate the weekend-traffic explanation with actual metrics. Priority: High.",
+          "Add a slide on what the team is doing next. Priority: High.",
+          "Potential next steps: onboarding friction and notification timing. Priority: Medium.",
+          "Arjun will present the experiment results section. Priority: High.",
+          "Presentation structure: what changed, why it changed, and what to do next. Priority: High.",
+          "Prioritize content over slide-design polish. Priority: Medium.",
+          "The risk summary is likely to get the hardest questions. Priority: High.",
+          "Prepare backup points on attribution confidence. Priority: Medium.",
+          "Home & Neighborhood",
+          "Neighborhood community run group meets at Cedar Park and usually grabs coffee after. Priority: Low.",
+          "Shared grocery restock: eggs, yogurt, rice, and dish soap. Priority: Medium.",
+          "Lease renewal requires the signed form and updated renter\u2019s insurance proof. Priority: High.",
+          "Family & Social",
+          "Family video calls work best for Arjun on Sunday evenings. Priority: Medium.",
+          "Sister wants help improving project bullets and leadership bullets on her resume. Priority: Medium.",
+          "Health & Appointments",
+          "Arjun tends to delay boring maintenance tasks unless they are scheduled explicitly. Priority: Low."
+        ]
+      }
+    },
+    {
+      "number": 10,
+      "title": "Dental Scheduler",
+      "context": {
+        "why_this_fits": "Arjun prefers afternoon appointments that do not disrupt work blocks, and once something is booked he benefits from a simple pre-appointment checklist."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Receptionist",
+          "utterance": "BrightSmile Dental, how can I help you?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 2,
+          "speaker": "Arjun",
+          "utterance": "Hi, I want to book a cleaning. Preferably later in the afternoon if possible.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 start dental appointment scheduling"
+        },
+        {
+          "index": 3,
+          "speaker": "Receptionist",
+          "utterance": "We have Thursday at 3:00 PM or next Tuesday at 11:00 AM.",
+          "importance": "High",
+          "tool": "Notes \u2014 dental appointment options: Thursday 3 PM or next Tuesday 11 AM"
+        },
+        {
+          "index": 4,
+          "speaker": "Arjun",
+          "utterance": "Thursday at three works better.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 dental cleaning Thursday 3:00 PM"
+        },
+        {
+          "index": 5,
+          "speaker": "Receptionist",
+          "utterance": "Great. Have you been here before?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 6,
+          "speaker": "Arjun",
+          "utterance": "No, first time.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 7,
+          "speaker": "Receptionist",
+          "utterance": "Then please arrive ten minutes early and complete the intake forms online the night before.",
+          "importance": "High",
+          "tool": "Reminder \u2014 complete intake forms night before and arrive 10 minutes early"
+        },
+        {
+          "index": 8,
+          "speaker": "Arjun",
+          "utterance": "Okay, I can do that.",
+          "importance": "High",
+          "tool": "Reminder \u2014 complete dental intake forms and arrive early"
+        },
+        {
+          "index": 9,
+          "speaker": "Receptionist",
+          "utterance": "Bring your insurance card as well.",
+          "importance": "High",
+          "tool": "Reminder \u2014 bring insurance card to dental appointment"
+        },
+        {
+          "index": 10,
+          "speaker": "Arjun",
+          "utterance": "Noted.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 bring insurance card to dental appointment"
+        },
+        {
+          "index": 11,
+          "speaker": "Receptionist",
+          "utterance": "Do you have any urgent pain or is this a routine cleaning?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 12,
+          "speaker": "Arjun",
+          "utterance": "Routine cleaning. Mild sensitivity sometimes, but nothing dramatic.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 mild sensitivity to mention at dental visit"
+        },
+        {
+          "index": 13,
+          "speaker": "Receptionist",
+          "utterance": "I\u2019ll add that to the notes.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 dental office recorded mild sensitivity"
+        },
+        {
+          "index": 14,
+          "speaker": "Arjun",
+          "utterance": "Perfect. Thanks for finding an afternoon slot.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 15,
+          "speaker": "Receptionist",
+          "utterance": "You\u2019re all set for Thursday at 3:00 PM.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 dental cleaning confirmed Thursday 3 PM"
+        },
+        {
+          "index": 16,
+          "speaker": "Arjun",
+          "utterance": "Great. Appreciate it.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Badminton practice \u2014 Time: Tomorrow, 6:30 PM\u20138:00 PM; Location: Usual gym; Description: Practice session with Arjun\u2019s badminton buddy: drills first, then a practice match.; Priority: High.",
+          "Focused pass on launch metrics doc \u2014 Time: Tonight, 8:00 PM\u20139:00 PM; Location: Home desk; Description: Protected work block to finish edits, tighten charts, and improve the risk summary.; Priority: Very High.",
+          "Quick read of launch metrics doc \u2014 Time: Tomorrow, 8:30 AM\u20139:00 AM; Location: Home desk or office; Description: Short final read before sending the updated document.; Priority: High.",
+          "Strength session with trainer \u2014 Time: Wednesday, 7:00 AM\u20138:00 AM; Location: FitLab Gym; Description: Trainer-led strength session focused on durability, control, and injury prevention.; Priority: High.",
+          "Mobility reset \u2014 Time: Sunday, 5:00 PM\u20135:30 PM; Location: Home; Description: Short mobility and recovery block for ankles, calves, and hips.; Priority: Medium.",
+          "Community run \u2014 Time: Saturday, 8:00 AM\u20139:00 AM; Location: Cedar Park loop; Description: Easy neighborhood run followed by coffee.; Priority: Medium.",
+          "Family video call \u2014 Time: Sunday, 8:00 PM\u20138:45 PM; Location: Home; Description: Weekly family video call with parents and extended family members joining.; Priority: High.",
+          "Resume review call with sister \u2014 Time: Friday, 7:30 PM\u20138:00 PM; Location: Phone or video call from home; Description: Short call to review resume bullets and make applications stronger before the recruiting event.; Priority: High.",
+          "Plumber visit \u2014 Time: Monday, 7:00 PM\u20138:00 PM; Location: Apartment; Description: Be home for the plumber\u2019s visit to check the kitchen sink.; Priority: High.",
+          "Lease renewal review and upload block \u2014 Time: Tuesday, 8:00 PM\u20138:30 PM; Location: Home; Description: Review the renewal form, gather documents, and upload everything to the portal ahead of the deadline.; Priority: High.",
+          "Dental cleaning \u2014 Time: Thursday, 3:00 PM\u20134:00 PM; Location: BrightSmile Dental; Description: Routine dental cleaning; arrive a little early for the first visit.; Priority: High."
+        ],
+        "reminders": [
+          "Open the Sunnyvale tournament link from buddy and check the registration page. \u2014 When: Tonight; Priority: Medium.",
+          "Register for the Sunnyvale tournament. \u2014 When: Tonight; Priority: High.",
+          "Buy or order badminton gear. \u2014 When: Tonight; Priority: Medium.",
+          "Do a proper warm-up before badminton. \u2014 When: Tomorrow before 6:30 PM practice; Priority: High.",
+          "Get a protein-heavy meal after badminton. \u2014 When: Right after tomorrow\u2019s practice; Priority: Medium.",
+          "Do not forget the ankle brace for badminton. \u2014 When: Tomorrow before leaving for the gym; Priority: High.",
+          "Prepare for the launch review meeting. \u2014 When: Before tomorrow morning\u2019s review; Priority: High.",
+          "Finish and sharpen the risk summary in the doc. \u2014 When: During tonight\u2019s focused work block; Priority: Very High.",
+          "Send the updated launch metrics doc to the manager. \u2014 When: By 9:30 AM tomorrow; Priority: Very High.",
+          "DM Priya the latest numbers after sending the doc. \u2014 When: Immediately after sending the doc tomorrow morning; Priority: High.",
+          "Prepare talking points for the experiment results section. \u2014 When: Before tomorrow\u2019s review; Priority: High.",
+          "Keep the experiment results section to five minutes. \u2014 When: During the review; Priority: Medium.",
+          "Stretch calves and ankles at night. \u2014 When: Nightly; Priority: High.",
+          "Log meals for the next three days. \u2014 When: Starting today for three days; Priority: Medium.",
+          "Pack shoes and water bottle the night before the Wednesday training session. \u2014 When: Tuesday night; Priority: Medium.",
+          "Pick up the package from the neighbor. \u2014 When: Tonight; Priority: Medium.",
+          "Take the trash out on Wednesday night because pickup is delayed for the holiday. \u2014 When: Wednesday night; Priority: Low.",
+          "Call cousin for his birthday. \u2014 When: Monday evening; Priority: Medium.",
+          "Send badminton photos to Mom. \u2014 When: After the weekend badminton session; Priority: Low.",
+          "Review sister\u2019s resume before the Friday call. \u2014 When: Before Friday evening; Priority: High.",
+          "Send sister a few internship links after the resume review. \u2014 When: After the Friday call; Priority: Medium.",
+          "Pay the utilities after the Splitwise request arrives. \u2014 When: By Friday; Priority: High.",
+          "Buy shared groceries. \u2014 When: Sunday afternoon; Priority: Medium.",
+          "Clear shoes and the box from the hallway before the plumber arrives. \u2014 When: Monday before 7:00 PM; Priority: Low.",
+          "Replace the worn running shoes before training starts feeling worse. \u2014 When: This week; Priority: Medium.",
+          "Upload updated renter\u2019s insurance proof to the lease portal. \u2014 When: By Wednesday, 5:00 PM; Priority: High.",
+          "Sign and submit the lease renewal form. \u2014 When: By Wednesday, 5:00 PM; Priority: Very High.",
+          "Fill out the online dental intake forms. \u2014 When: Wednesday night; Priority: Medium.",
+          "Bring the insurance card to the dental appointment. \u2014 When: Thursday before leaving; Priority: Medium."
+        ],
+        "alarms": [
+          "Tonight, 9:00 PM \u2014 Urgent nudge to finish the Sunnyvale tournament registration.; Priority: High.",
+          "Tomorrow, 9:00 AM \u2014 Final prompt to send the launch metrics doc before the 9:30 deadline.; Priority: Very High.",
+          "Wednesday, 6:15 AM \u2014 Wake up in time for the 7:00 AM trainer session.; Priority: High.",
+          "Friday, 7:20 PM \u2014 Prompt for the 7:30 PM resume review call with sister.; Priority: Medium.",
+          "Wednesday, 4:00 PM \u2014 Final prompt to make sure the lease renewal paperwork is fully uploaded before the 5:00 PM deadline.; Priority: High.",
+          "Thursday, 2:15 PM \u2014 Leave on time for the 3:00 PM dental appointment and arrive early.; Priority: High."
+        ],
+        "notes": [
+          "Fitness & Badminton",
+          "Practice focus: footwork drills. Priority: High.",
+          "Practice focus: smashes. Priority: Medium.",
+          "Practice focus: backhand defense. Priority: High.",
+          "Practice format: one serious practice match after drills. Priority: Medium.",
+          "Running goal: six miles under sixty minutes without rough next-day recovery. Priority: High.",
+          "Trainer focus: ankle mobility, single-leg control, glute strength, and core. Priority: High.",
+          "Health & Recovery",
+          "Monitor the right ankle; avoid letting a minor issue become a bigger one. Priority: High.",
+          "Get protein within about forty-five minutes after hard sessions. Priority: Medium.",
+          "Running shoes are getting worn; replace them before they start affecting knees or recovery. Priority: Medium.",
+          "Shopping Lists",
+          "Badminton overgrips/grips. Priority: Medium.",
+          "Shuttlecocks. Priority: Medium.",
+          "Ankle brace. Priority: High.",
+          "Work \u2014 Launch Review",
+          "Current doc status: main sections done; risk summary and some charts still need work. Priority: High.",
+          "Add a better explanation for the week-over-week engagement dip. Priority: High.",
+          "Validate the weekend-traffic explanation with actual metrics. Priority: High.",
+          "Add a slide on what the team is doing next. Priority: High.",
+          "Potential next steps: onboarding friction and notification timing. Priority: Medium.",
+          "Arjun will present the experiment results section. Priority: High.",
+          "Presentation structure: what changed, why it changed, and what to do next. Priority: High.",
+          "Prioritize content over slide-design polish. Priority: Medium.",
+          "The risk summary is likely to get the hardest questions. Priority: High.",
+          "Prepare backup points on attribution confidence. Priority: Medium.",
+          "Home & Neighborhood",
+          "Neighborhood community run group meets at Cedar Park and usually grabs coffee after. Priority: Low.",
+          "Shared grocery restock: eggs, yogurt, rice, and dish soap. Priority: Medium.",
+          "Lease renewal requires the signed form and updated renter\u2019s insurance proof. Priority: High.",
+          "Family & Social",
+          "Family video calls work best for Arjun on Sunday evenings. Priority: Medium.",
+          "Sister wants help improving project bullets and leadership bullets on her resume. Priority: Medium.",
+          "Health & Appointments",
+          "Arjun tends to delay boring maintenance tasks unless they are scheduled explicitly. Priority: Low.",
+          "Dental cleaning booked for Thursday afternoon; routine visit with mild sensitivity noted. Priority: High."
+        ]
+      }
+    },
+    {
+      "number": 11,
+      "title": "Badminton Tournament Registration Push",
+      "context": {
+        "why_this_fits": "Arjun treats sports commitments seriously once there is a deadline or a concrete time, but his friends still tease him into follow-through."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Buddy",
+          "utterance": "Tournament registration opens at noon today, and the good slots usually vanish fast.",
+          "importance": "High",
+          "tool": "Alarm \u2014 registration opens at noon today"
+        },
+        {
+          "index": 2,
+          "speaker": "Arjun",
+          "utterance": "Set an alarm for 11:55 so I am at the laptop instead of pretending I have infinite time.",
+          "importance": "High",
+          "tool": "Alarm \u2014 be at laptop at 11:55 before tournament registration opens"
+        },
+        {
+          "index": 3,
+          "speaker": "Buddy",
+          "utterance": "I will send the payment link right after. Pay it immediately or the doubles spot is gone.",
+          "importance": "High",
+          "tool": "Alarm \u2014 pay tournament fee immediately after payment link arrives"
+        },
+        {
+          "index": 4,
+          "speaker": "Arjun",
+          "utterance": "My future self is unreliable around lunch, so yes, make that aggressively punctual.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 Arjun needs a punctual nudge around lunch for registration follow-through"
+        },
+        {
+          "index": 5,
+          "speaker": "Buddy",
+          "utterance": "Also, mixed doubles check-in starts at 8:30 on Saturday.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 mixed doubles check-in Saturday 8:30 AM"
+        },
+        {
+          "index": 6,
+          "speaker": "Arjun",
+          "utterance": "Block 8:15 to 9 for check-in and warmup so I do not sprint in like a disaster movie.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 tournament check-in and warmup Saturday 8:15-9:00 AM"
+        },
+        {
+          "index": 7,
+          "speaker": "Buddy",
+          "utterance": "We should hit for forty minutes Friday evening, just footwork and serves.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 footwork and serve practice Friday evening"
+        },
+        {
+          "index": 8,
+          "speaker": "Arjun",
+          "utterance": "Friday at 6:30 works. No heroic nonsense, just clean reps.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 badminton practice Friday 6:30 PM"
+        },
+        {
+          "index": 9,
+          "speaker": "Buddy",
+          "utterance": "Bring the spare overgrip and that ankle brace you always remember six minutes too late.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 bring spare overgrip and ankle brace"
+        },
+        {
+          "index": 10,
+          "speaker": "Arjun",
+          "utterance": "The ankle brace slander is documented and, unfortunately, evidence-based.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 11,
+          "speaker": "Buddy",
+          "utterance": "If registration is still open tonight, we can deal with it after practice.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 registration may still be open tonight as backup"
+        },
+        {
+          "index": 12,
+          "speaker": "Arjun",
+          "utterance": "Nope, that sentence is how chaos enters the room. Alarm at noon, done.",
+          "importance": "High",
+          "tool": "Alarm \u2014 final noon prompt for tournament registration"
+        },
+        {
+          "index": 13,
+          "speaker": "Buddy",
+          "utterance": "We should play sometime next week too if schedules behave.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 14,
+          "speaker": "Arjun",
+          "utterance": "Sometime is not a calendar event, but I admire the optimism.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 15,
+          "speaker": "Buddy",
+          "utterance": "Hydrate before practice. Your third-game footwork gets very philosophical.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 hydrate before badminton practice"
+        },
+        {
+          "index": 16,
+          "speaker": "Arjun",
+          "utterance": "Medium priority insult accepted.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Mixed doubles check-in \u2014 Time: Saturday, 8:30 AM; Location: Tournament venue; Description: Check in before the badminton event.; Priority: High.",
+          "Tournament check-in and warmup block \u2014 Time: Saturday, 8:15 AM-9:00 AM; Location: Tournament venue; Description: Arrive early, check in, and warm up without rushing.; Priority: High.",
+          "Footwork and serve practice \u2014 Time: Friday evening; Location: Usual gym; Description: Focused tune-up before tournament weekend.; Priority: High.",
+          "Badminton practice \u2014 Time: Friday, 6:30 PM; Location: Usual gym; Description: Clean reps, footwork, and serves.; Priority: High."
+        ],
+        "reminders": [
+          "Bring spare overgrip and ankle brace. \u2014 When: Before Friday practice; Priority: Medium.",
+          "Hydrate before badminton practice. \u2014 When: Before Friday practice; Priority: Medium."
+        ],
+        "alarms": [
+          "Today, 12:00 PM \u2014 Registration opens for the badminton tournament.; Priority: High.",
+          "Today, 11:55 AM \u2014 Be at the laptop before tournament registration opens.; Priority: High.",
+          "When payment link arrives \u2014 Pay tournament fee immediately.; Priority: High.",
+          "Today, 12:00 PM \u2014 Final prompt to complete tournament registration.; Priority: High."
+        ],
+        "notes": [
+          "Arjun needs punctual nudges around lunch for registration follow-through. Priority: Medium.",
+          "Tournament registration may still be open tonight as a backup, but noon registration is preferred. Priority: Medium."
+        ]
+      }
+    },
+    {
+      "number": 12,
+      "title": "Training Week And Recovery Planning",
+      "context": {
+        "why_this_fits": "Arjun cares about consistency and injury prevention, so training plans become actionable when they create time blocks or urgent prompts."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Trainer",
+          "utterance": "For next week, I want one strength session, one easy run, and one mobility reset.",
+          "importance": "High",
+          "tool": "Notes \u2014 next week training structure: strength, easy run, mobility reset"
+        },
+        {
+          "index": 2,
+          "speaker": "Arjun",
+          "utterance": "That sounds like the responsible version of me. Slightly suspicious, but useful.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 3,
+          "speaker": "Trainer",
+          "utterance": "Strength Wednesday at 7 AM still works?",
+          "importance": "High",
+          "tool": "Calendar event \u2014 strength session Wednesday 7 AM"
+        },
+        {
+          "index": 4,
+          "speaker": "Arjun",
+          "utterance": "Yes, block Wednesday 7 to 8 for strength.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 strength training Wednesday 7-8 AM"
+        },
+        {
+          "index": 5,
+          "speaker": "Trainer",
+          "utterance": "Set an alarm for 6:15. If you wake up at 6:40, the warmup becomes fiction.",
+          "importance": "High",
+          "tool": "Alarm \u2014 wake at 6:15 for Wednesday strength session"
+        },
+        {
+          "index": 6,
+          "speaker": "Arjun",
+          "utterance": "Painful but mathematically correct.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 7,
+          "speaker": "Trainer",
+          "utterance": "Easy run Thursday after work, twenty-five minutes only.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 easy run Thursday after work"
+        },
+        {
+          "index": 8,
+          "speaker": "Arjun",
+          "utterance": "Thursday 6 works. I will keep it easy and not chase imaginary glory.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 easy run Thursday 6 PM"
+        },
+        {
+          "index": 9,
+          "speaker": "Trainer",
+          "utterance": "Pack shoes and a bottle Tuesday night, not Wednesday when you are bargaining with the snooze button.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 pack shoes and bottle Tuesday night"
+        },
+        {
+          "index": 10,
+          "speaker": "Arjun",
+          "utterance": "My snooze button and I have a toxic mentorship arrangement.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 11,
+          "speaker": "Trainer",
+          "utterance": "If the ankle feels sharp, stop. If it feels mildly stiff, note it and warm up longer.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 ankle rule: stop for sharp pain, warm up longer for mild stiffness"
+        },
+        {
+          "index": 12,
+          "speaker": "Arjun",
+          "utterance": "Got it. Sharp pain is not character development.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 do not push through sharp ankle pain"
+        },
+        {
+          "index": 13,
+          "speaker": "Trainer",
+          "utterance": "Mobility reset Sunday at 5 PM. Calves, hips, ankles.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 mobility reset Sunday 5 PM"
+        },
+        {
+          "index": 14,
+          "speaker": "Arjun",
+          "utterance": "Block it. Future ankles deserve representation.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 Sunday mobility reset for calves, hips, ankles"
+        },
+        {
+          "index": 15,
+          "speaker": "Trainer",
+          "utterance": "Set a 4:50 alarm so you do not start cooking right before mobility.",
+          "importance": "High",
+          "tool": "Alarm \u2014 start mobility reset at 4:50 Sunday"
+        },
+        {
+          "index": 16,
+          "speaker": "Arjun",
+          "utterance": "That is exactly the kind of boring trap I fall into.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 Arjun tends to let routine chores crowd out mobility work"
+        },
+        {
+          "index": 17,
+          "speaker": "Trainer",
+          "utterance": "We should think about adding tempo runs eventually.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 18,
+          "speaker": "Arjun",
+          "utterance": "Eventually is where ambitious plans go to nap.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Strength session \u2014 Time: Wednesday, 7:00 AM-8:00 AM; Location: Gym; Description: Weekly strength training with trainer.; Priority: High.",
+          "Easy run \u2014 Time: Thursday after work; Location: TBD; Description: Twenty-five minute easy run only.; Priority: High.",
+          "Easy run \u2014 Time: Thursday, 6:00 PM; Location: TBD; Description: Keep it easy and controlled.; Priority: High.",
+          "Mobility reset \u2014 Time: Sunday, 5:00 PM; Location: Home; Description: Calves, hips, and ankles.; Priority: High."
+        ],
+        "reminders": [
+          "Pack shoes and bottle Tuesday night. \u2014 When: Tuesday night; Priority: Medium."
+        ],
+        "alarms": [
+          "Wednesday, 6:15 AM \u2014 Wake up for the 7:00 AM strength session.; Priority: High.",
+          "Sunday, 4:50 PM \u2014 Start preparing for the 5:00 PM mobility reset.; Priority: High."
+        ],
+        "notes": [
+          "Next week training structure: strength session, easy run, and mobility reset. Priority: High.",
+          "Ankle rule: stop for sharp pain; warm up longer for mild stiffness. Priority: Medium.",
+          "Do not push through sharp ankle pain. Priority: Medium.",
+          "Arjun tends to let routine chores crowd out mobility work. Priority: Medium."
+        ]
+      }
+    },
+    {
+      "number": 13,
+      "title": "Work Deadline And Family Scheduling",
+      "context": {
+        "why_this_fits": "Arjun becomes highly tool-oriented when work deadlines, family expectations, and explicit times collide."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Manager",
+          "utterance": "Can you send the revised experiment summary by 9:30 tomorrow morning?",
+          "importance": "High",
+          "tool": "Reminder \u2014 send revised experiment summary by 9:30 tomorrow morning"
+        },
+        {
+          "index": 2,
+          "speaker": "Arjun",
+          "utterance": "Yes. I will do a clean pass tonight and a quick sanity read in the morning.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 clean pass tonight and quick sanity read tomorrow morning"
+        },
+        {
+          "index": 3,
+          "speaker": "Manager",
+          "utterance": "Block tonight from 8 to 9 if that helps. The risk section is the part people will inspect.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 revise experiment summary tonight 8-9 PM"
+        },
+        {
+          "index": 4,
+          "speaker": "Arjun",
+          "utterance": "I will protect that hour. The risk section can have my full nervous attention.",
+          "importance": "High",
+          "tool": "Notes \u2014 risk section needs focused attention"
+        },
+        {
+          "index": 5,
+          "speaker": "Manager",
+          "utterance": "Set a 9:00 AM alarm to send it. Not 9:28, please.",
+          "importance": "High",
+          "tool": "Alarm \u2014 send revised experiment summary at 9:00 AM tomorrow"
+        },
+        {
+          "index": 6,
+          "speaker": "Arjun",
+          "utterance": "Deeply rude, fully valid.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 7,
+          "speaker": "Manager",
+          "utterance": "Also, keep the attribution caveat. It is useful, just do not over-explain it.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 keep attribution caveat without over-explaining"
+        },
+        {
+          "index": 8,
+          "speaker": "Arjun",
+          "utterance": "Caveat stays, essay leaves. Beautiful.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 shorten attribution caveat"
+        },
+        {
+          "index": 9,
+          "speaker": "Mom",
+          "utterance": "Are we still doing the family call Sunday evening?",
+          "importance": "High",
+          "tool": "Calendar event \u2014 family call Sunday evening"
+        },
+        {
+          "index": 10,
+          "speaker": "Arjun",
+          "utterance": "Yes. Eight my time still works.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 family call Sunday 8 PM"
+        },
+        {
+          "index": 11,
+          "speaker": "Mom",
+          "utterance": "Set an alarm at 7:50, because last time you joined after everyone had already discussed snacks.",
+          "importance": "Medium",
+          "tool": "Alarm \u2014 join family call at 7:50 Sunday"
+        },
+        {
+          "index": 12,
+          "speaker": "Arjun",
+          "utterance": "I refuse to miss snack discourse twice.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 13,
+          "speaker": "Mom",
+          "utterance": "Send me one photo from badminton this weekend if you remember.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 send Mom a badminton photo this weekend"
+        },
+        {
+          "index": 14,
+          "speaker": "Arjun",
+          "utterance": "If I look athletic and not haunted by cardio, I will send proof.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 15,
+          "speaker": "Sister",
+          "utterance": "Can we do a resume check Tuesday at 7:30?",
+          "importance": "High",
+          "tool": "Calendar event \u2014 resume check with sister Tuesday 7:30 PM"
+        },
+        {
+          "index": 16,
+          "speaker": "Arjun",
+          "utterance": "Yes, block thirty minutes. I will bring my merciful editor energy.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 thirty-minute resume edit Tuesday 7:30 PM"
+        },
+        {
+          "index": 17,
+          "speaker": "Sister",
+          "utterance": "Also send me those internship links after, but it is not urgent.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 send internship links after resume check"
+        },
+        {
+          "index": 18,
+          "speaker": "Arjun",
+          "utterance": "Not urgent, still real. That is how tasks survive around here.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 internship links are non-urgent but still useful"
+        },
+        {
+          "index": 19,
+          "speaker": "Sister",
+          "utterance": "Maybe we can talk sometime next month about grad school too.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 20,
+          "speaker": "Arjun",
+          "utterance": "Sometime next month is spiritually meaningful and operationally useless.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Revised experiment summary work block \u2014 Time: Tonight, 8:00 PM-9:00 PM; Location: Home desk; Description: Clean pass on revised experiment summary with attention to risk section.; Priority: High.",
+          "Family call \u2014 Time: Sunday evening; Location: Video call; Description: Weekly family call.; Priority: High.",
+          "Family call \u2014 Time: Sunday, 8:00 PM; Location: Video call; Description: Join family call on time.; Priority: High.",
+          "Resume check with sister \u2014 Time: Tuesday, 7:30 PM; Location: Phone or video call; Description: Review resume for thirty minutes.; Priority: High."
+        ],
+        "reminders": [
+          "Send revised experiment summary by 9:30 tomorrow morning. \u2014 When: Tomorrow by 9:30 AM; Priority: High.",
+          "Send Mom a badminton photo. \u2014 When: This weekend; Priority: Medium.",
+          "Send internship links after resume check. \u2014 When: After Tuesday resume check; Priority: Medium."
+        ],
+        "alarms": [
+          "Tomorrow, 9:00 AM \u2014 Send the revised experiment summary before the 9:30 deadline.; Priority: High.",
+          "Sunday, 7:50 PM \u2014 Join family call before 8:00 PM.; Priority: Medium."
+        ],
+        "notes": [
+          "Risk section needs focused attention in the experiment summary. Priority: High.",
+          "Keep attribution caveat without over-explaining it. Priority: Medium.",
+          "Shorten attribution caveat. Priority: Medium.",
+          "Internship links are non-urgent but still useful. Priority: Medium."
+        ]
+      }
+    },
+    {
+      "number": 14,
+      "title": "Lease Portal And Appointment Timing",
+      "context": {
+        "why_this_fits": "Arjun needs sharp prompts when boring logistics have hard cutoffs, especially because he otherwise delays maintenance tasks."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Building Manager",
+          "utterance": "The lease portal closes at 5 PM Wednesday, and it will not accept late uploads.",
+          "importance": "High",
+          "tool": "Alarm \u2014 lease portal closes Wednesday 5 PM"
+        },
+        {
+          "index": 2,
+          "speaker": "Arjun",
+          "utterance": "Set a 4 PM alarm Wednesday so I am not discovering adulthood at 4:57.",
+          "importance": "High",
+          "tool": "Alarm \u2014 upload lease paperwork Wednesday at 4 PM"
+        },
+        {
+          "index": 3,
+          "speaker": "Building Manager",
+          "utterance": "You need the signed renewal form and updated renter's insurance proof.",
+          "importance": "High",
+          "tool": "Notes \u2014 lease upload requires signed renewal form and renter's insurance proof"
+        },
+        {
+          "index": 4,
+          "speaker": "Arjun",
+          "utterance": "I will gather those Tuesday night after dinner.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 gather lease documents Tuesday night after dinner"
+        },
+        {
+          "index": 5,
+          "speaker": "Building Manager",
+          "utterance": "A reminder is fine for gathering, but the upload cutoff needs an actual alarm.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 gathering documents is reminder-level, upload cutoff is alarm-level"
+        },
+        {
+          "index": 6,
+          "speaker": "Arjun",
+          "utterance": "That distinction is annoyingly useful.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 7,
+          "speaker": "Receptionist",
+          "utterance": "Your physical therapy intake is Friday at 2:30, and we ask new patients to arrive fifteen minutes early.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 physical therapy intake Friday 2:30 PM"
+        },
+        {
+          "index": 8,
+          "speaker": "Arjun",
+          "utterance": "Put the appointment on the calendar and set a 1:55 alarm to leave.",
+          "importance": "High",
+          "tool": "Alarm \u2014 leave for physical therapy intake Friday at 1:55 PM"
+        },
+        {
+          "index": 9,
+          "speaker": "Receptionist",
+          "utterance": "Bring your insurance card and wear clothes you can move in.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 bring insurance card and wear movement-friendly clothes"
+        },
+        {
+          "index": 10,
+          "speaker": "Arjun",
+          "utterance": "Noted. Jeans are not invited to this medical subplot.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 wear movement-friendly clothes to physical therapy intake"
+        },
+        {
+          "index": 11,
+          "speaker": "Receptionist",
+          "utterance": "If you are more than ten minutes late, we may need to reschedule.",
+          "importance": "High",
+          "tool": "Alarm \u2014 avoid being late to physical therapy intake"
+        },
+        {
+          "index": 12,
+          "speaker": "Arjun",
+          "utterance": "Then the 1:55 alarm is non-negotiable.",
+          "importance": "High",
+          "tool": "Alarm \u2014 non-negotiable 1:55 PM departure for physical therapy"
+        },
+        {
+          "index": 13,
+          "speaker": "Building Manager",
+          "utterance": "You can review the lease whenever this week if nothing changes.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 14,
+          "speaker": "Arjun",
+          "utterance": "Whenever this week is how paperwork learns to hide.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 15,
+          "speaker": "Building Manager",
+          "utterance": "Tuesday night is probably enough time if you actually sit down for it.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 Tuesday night should be enough for lease review if protected"
+        },
+        {
+          "index": 16,
+          "speaker": "Arjun",
+          "utterance": "Fine, Tuesday night gets protected time and Wednesday gets the loud nudge.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 protected lease review Tuesday night"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Gather lease documents \u2014 Time: Tuesday night after dinner; Location: Home; Description: Collect signed renewal form and renter's insurance proof.; Priority: High.",
+          "Physical therapy intake \u2014 Time: Friday, 2:30 PM; Location: Clinic; Description: New patient intake; arrive fifteen minutes early.; Priority: High.",
+          "Protected lease review \u2014 Time: Tuesday night; Location: Home; Description: Review paperwork before Wednesday upload cutoff.; Priority: High."
+        ],
+        "reminders": [
+          "Bring insurance card and wear movement-friendly clothes. \u2014 When: Before Friday physical therapy intake; Priority: Medium."
+        ],
+        "alarms": [
+          "Wednesday, 5:00 PM \u2014 Lease portal closes.; Priority: High.",
+          "Wednesday, 4:00 PM \u2014 Upload lease paperwork before the cutoff.; Priority: High.",
+          "Friday, 1:55 PM \u2014 Leave for physical therapy intake.; Priority: High.",
+          "Friday, before appointment \u2014 Avoid being late to physical therapy intake.; Priority: High.",
+          "Friday, 1:55 PM \u2014 Non-negotiable departure alarm for physical therapy.; Priority: High."
+        ],
+        "notes": [
+          "Lease upload requires signed renewal form and renter's insurance proof. Priority: High.",
+          "Gathering documents is reminder-level, upload cutoff is alarm-level. Priority: Medium.",
+          "Wear movement-friendly clothes to physical therapy intake. Priority: Medium.",
+          "Tuesday night should be enough for lease review if protected. Priority: Medium."
+        ]
+      }
+    },
+    {
+      "number": 15,
+      "title": "Travel Day And Match Prep",
+      "context": {
+        "why_this_fits": "Arjun's sports planning turns into alarms when arrival timing, equipment, and match preparation have immediate consequences."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Buddy",
+          "utterance": "The shuttle to the venue leaves from the gym at 7:20 Saturday morning.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 shuttle to tournament venue Saturday 7:20 AM"
+        },
+        {
+          "index": 2,
+          "speaker": "Arjun",
+          "utterance": "Set a 6:35 alarm so I can eat, pack, and not conduct my morning like a crime scene.",
+          "importance": "High",
+          "tool": "Alarm \u2014 wake at 6:35 Saturday for tournament travel"
+        },
+        {
+          "index": 3,
+          "speaker": "Buddy",
+          "utterance": "And a 7:05 alarm to leave your apartment. You always underestimate shoes.",
+          "importance": "High",
+          "tool": "Alarm \u2014 leave apartment at 7:05 Saturday"
+        },
+        {
+          "index": 4,
+          "speaker": "Arjun",
+          "utterance": "Shoes are a complex distributed system, apparently.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 5,
+          "speaker": "Buddy",
+          "utterance": "Pack the brace, towel, two shirts, and electrolyte tabs Friday night.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 pack brace, towel, two shirts, and electrolyte tabs Friday night"
+        },
+        {
+          "index": 6,
+          "speaker": "Arjun",
+          "utterance": "That is a note and a reminder, because future me respects neither memory nor laundry.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 tournament packing list: brace, towel, two shirts, electrolyte tabs"
+        },
+        {
+          "index": 7,
+          "speaker": "Buddy",
+          "utterance": "Warmup court is available from 8:10 to 8:25.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 warmup court Saturday 8:10-8:25 AM"
+        },
+        {
+          "index": 8,
+          "speaker": "Arjun",
+          "utterance": "Put that on the calendar. Fifteen focused minutes beats twenty minutes of wandering.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 focused tournament warmup Saturday 8:10-8:25 AM"
+        },
+        {
+          "index": 9,
+          "speaker": "Buddy",
+          "utterance": "If we are not checked in by 8:35, they can move us to the waitlist.",
+          "importance": "High",
+          "tool": "Alarm \u2014 complete tournament check-in before 8:35"
+        },
+        {
+          "index": 10,
+          "speaker": "Arjun",
+          "utterance": "Set an 8:25 alarm for final check-in. I enjoy stakes, not administrative defeat.",
+          "importance": "High",
+          "tool": "Alarm \u2014 final tournament check-in at 8:25"
+        },
+        {
+          "index": 11,
+          "speaker": "Buddy",
+          "utterance": "We should maybe practice sometime Friday if work chills out.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 12,
+          "speaker": "Arjun",
+          "utterance": "Maybe plus sometime equals no tool call, but charming energy.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 13,
+          "speaker": "Buddy",
+          "utterance": "Actually, court three is booked for us Friday 6 to 6:45.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 court three practice Friday 6-6:45 PM"
+        },
+        {
+          "index": 14,
+          "speaker": "Arjun",
+          "utterance": "There it is. A real time block has entered the chat.",
+          "importance": "High",
+          "tool": "Notes \u2014 concrete time blocks should become calendar events"
+        },
+        {
+          "index": 15,
+          "speaker": "Buddy",
+          "utterance": "Eat something with protein after, not just the nearest sweet thing.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 eat protein after Friday practice"
+        },
+        {
+          "index": 16,
+          "speaker": "Arjun",
+          "utterance": "My recovery dessert coalition is under review.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 recovery sweets need protein alongside them"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Shuttle to tournament venue \u2014 Time: Saturday, 7:20 AM; Location: Gym; Description: Meet shuttle to tournament venue.; Priority: High.",
+          "Warmup court \u2014 Time: Saturday, 8:10 AM-8:25 AM; Location: Tournament venue; Description: Focused warmup court slot.; Priority: High.",
+          "Court three practice \u2014 Time: Friday, 6:00 PM-6:45 PM; Location: Court three; Description: Final practice before tournament.; Priority: High."
+        ],
+        "reminders": [
+          "Pack brace, towel, two shirts, and electrolyte tabs. \u2014 When: Friday night; Priority: Medium.",
+          "Eat protein after Friday practice. \u2014 When: After Friday practice; Priority: Medium."
+        ],
+        "alarms": [
+          "Saturday, 6:35 AM \u2014 Wake up for tournament travel.; Priority: High.",
+          "Saturday, 7:05 AM \u2014 Leave apartment for shuttle.; Priority: High.",
+          "Saturday, before 8:35 AM \u2014 Complete tournament check-in before waitlist risk.; Priority: High.",
+          "Saturday, 8:25 AM \u2014 Final tournament check-in prompt.; Priority: High."
+        ],
+        "notes": [
+          "Tournament packing list: brace, towel, two shirts, and electrolyte tabs. Priority: Medium.",
+          "Concrete time blocks should become calendar events. Priority: High.",
+          "Recovery sweets need protein alongside them. Priority: Medium."
+        ]
+      }
+    },
+    {
+      "number": 16,
+      "title": "Changing Existing Plans",
+      "context": {
+        "why_this_fits": "Arjun often refines plans after better timing information arrives, so the assistant should edit existing items rather than creating duplicates."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Buddy",
+          "utterance": "Tiny schedule chaos: Friday practice is court four now, not court three.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 change Friday practice from court three to court four"
+        },
+        {
+          "index": 2,
+          "speaker": "Arjun",
+          "utterance": "Update the practice event. Same time, new court, fewer chances for me to wander confidently into the wrong place.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 update Friday practice location to court four"
+        },
+        {
+          "index": 3,
+          "speaker": "Buddy",
+          "utterance": "Also the tournament shuttle moved from 7:20 to 7:10.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 move tournament shuttle from 7:20 to 7:10 Saturday"
+        },
+        {
+          "index": 4,
+          "speaker": "Arjun",
+          "utterance": "Then update my 7:05 leave alarm to 6:55. I refuse to lose to bus logistics.",
+          "importance": "High",
+          "tool": "Alarm update \u2014 change leave-apartment alarm from 7:05 to 6:55 Saturday"
+        },
+        {
+          "index": 5,
+          "speaker": "Trainer",
+          "utterance": "For Wednesday strength, bring the mini band too. Add it to the packing reminder.",
+          "importance": "Medium",
+          "tool": "Reminder update \u2014 add mini band to Wednesday strength packing reminder"
+        },
+        {
+          "index": 6,
+          "speaker": "Arjun",
+          "utterance": "Shoes, bottle, mini band. The bag is becoming a tiny gym with handles.",
+          "importance": "Medium",
+          "tool": "Notes update \u2014 update training packing list with shoes, bottle, and mini band"
+        },
+        {
+          "index": 7,
+          "speaker": "Manager",
+          "utterance": "The review moved to 10 instead of 9:30, but I still want the doc by 9:15.",
+          "importance": "High",
+          "tool": "Reminder update \u2014 change updated-doc send deadline from 9:30 to 9:15 tomorrow"
+        },
+        {
+          "index": 8,
+          "speaker": "Arjun",
+          "utterance": "Update the alarm to 8:55 so I send it before the deadline brain fog starts.",
+          "importance": "High",
+          "tool": "Alarm update \u2014 change send-doc alarm to 8:55 tomorrow"
+        },
+        {
+          "index": 9,
+          "speaker": "Mom",
+          "utterance": "Family call is still Sunday, but your uncle can only join at 8:30 now.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 move family call from 8:00 to 8:30 Sunday"
+        },
+        {
+          "index": 10,
+          "speaker": "Arjun",
+          "utterance": "Move the family call to 8:30 and keep the 7:50 alarm from judging me too early.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 update family call to Sunday 8:30 PM"
+        },
+        {
+          "index": 11,
+          "speaker": "Mom",
+          "utterance": "Then make the call alarm 8:20, not 7:50.",
+          "importance": "Medium",
+          "tool": "Alarm update \u2014 change family call alarm from 7:50 to 8:20 Sunday"
+        },
+        {
+          "index": 12,
+          "speaker": "Arjun",
+          "utterance": "Fair. My punctuality anxiety can sleep for thirty extra minutes.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 13,
+          "speaker": "Sister",
+          "utterance": "I added a new project to the resume. Update your notes so we talk about that first.",
+          "importance": "Medium",
+          "tool": "Notes update \u2014 add sister's new resume project as first review topic"
+        },
+        {
+          "index": 14,
+          "speaker": "Arjun",
+          "utterance": "New project first, leadership bullets second. That order actually makes sense.",
+          "importance": "Medium",
+          "tool": "Notes update \u2014 reorder resume review notes: new project first, leadership second"
+        },
+        {
+          "index": 15,
+          "speaker": "Buddy",
+          "utterance": "Maybe we should change practice again if Friday gets weird.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 16,
+          "speaker": "Arjun",
+          "utterance": "Maybe is not an update. It is a weather pattern wearing a sentence costume.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Updated Friday practice location to court four. Priority: High.",
+          "Moved tournament shuttle from 7:20 AM to 7:10 AM Saturday. Priority: High.",
+          "Moved family call from 8:00 PM to 8:30 PM Sunday. Priority: High."
+        ],
+        "reminders": [
+          "Updated Wednesday strength packing reminder to include mini band. Priority: Medium.",
+          "Updated document send deadline from 9:30 AM to 9:15 AM tomorrow. Priority: High."
+        ],
+        "alarms": [
+          "Changed leave-apartment alarm from 7:05 AM to 6:55 AM Saturday. Priority: High.",
+          "Changed send-doc alarm to 8:55 AM tomorrow. Priority: High.",
+          "Changed family call alarm from 7:50 PM to 8:20 PM Sunday. Priority: Medium."
+        ],
+        "notes": [
+          "Updated training packing list with shoes, bottle, and mini band. Priority: Medium.",
+          "Added sister's new resume project as first review topic. Priority: Medium.",
+          "Reordered resume review notes: new project first, leadership second. Priority: Medium."
+        ]
+      }
+    },
+    {
+      "number": 17,
+      "title": "Canceling Obsolete Items",
+      "context": {
+        "why_this_fits": "Arjun should remove old tool items when plans are canceled or replaced, especially to avoid duplicate reminders and stale calendar blocks."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Buddy",
+          "utterance": "Bad news: Friday practice is canceled. Court maintenance, because apparently even floors need recovery days.",
+          "importance": "High",
+          "tool": "Calendar event delete \u2014 cancel Friday badminton practice"
+        },
+        {
+          "index": 2,
+          "speaker": "Arjun",
+          "utterance": "Delete the practice event so I do not heroically arrive to a closed court.",
+          "importance": "High",
+          "tool": "Calendar event delete \u2014 delete Friday practice event"
+        },
+        {
+          "index": 3,
+          "speaker": "Buddy",
+          "utterance": "Also delete the protein-after-practice reminder. No practice, no righteous yogurt.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 remove protein reminder for canceled Friday practice"
+        },
+        {
+          "index": 4,
+          "speaker": "Arjun",
+          "utterance": "Tragic, but yes. Remove the recovery reminder for that practice.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 delete recovery reminder for canceled Friday practice"
+        },
+        {
+          "index": 5,
+          "speaker": "Trainer",
+          "utterance": "Sunday mobility is canceled because I want you fully resting after the tournament.",
+          "importance": "High",
+          "tool": "Calendar event delete \u2014 cancel Sunday mobility reset"
+        },
+        {
+          "index": 6,
+          "speaker": "Arjun",
+          "utterance": "Then delete the 4:50 mobility alarm too. It has lost its tiny job.",
+          "importance": "High",
+          "tool": "Alarm delete \u2014 remove 4:50 Sunday mobility alarm"
+        },
+        {
+          "index": 7,
+          "speaker": "Manager",
+          "utterance": "We are dropping the attribution caveat from the review. It is confusing more than helping.",
+          "importance": "Medium",
+          "tool": "Notes delete \u2014 remove attribution caveat note from review prep"
+        },
+        {
+          "index": 8,
+          "speaker": "Arjun",
+          "utterance": "Delete that note. I will not mourn a caveat that was trying to become a paragraph.",
+          "importance": "Medium",
+          "tool": "Notes delete \u2014 delete attribution caveat note"
+        },
+        {
+          "index": 9,
+          "speaker": "Sister",
+          "utterance": "Recruiting event got postponed, so you do not need to send the internship links this week.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 remove internship links reminder for this week"
+        },
+        {
+          "index": 10,
+          "speaker": "Arjun",
+          "utterance": "Delete that reminder for now. We can resurrect the search-tab monster later.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 delete internship links reminder for now"
+        },
+        {
+          "index": 11,
+          "speaker": "Mom",
+          "utterance": "Family call is canceled this Sunday because everyone is traveling.",
+          "importance": "High",
+          "tool": "Calendar event delete \u2014 cancel Sunday family call"
+        },
+        {
+          "index": 12,
+          "speaker": "Arjun",
+          "utterance": "Delete the family call and the alarm. My calendar gets one peaceful square back.",
+          "importance": "High",
+          "tool": "Calendar event delete \u2014 delete Sunday family call"
+        },
+        {
+          "index": 13,
+          "speaker": "Mom",
+          "utterance": "And remove the call alarm too.",
+          "importance": "Medium",
+          "tool": "Alarm delete \u2014 remove Sunday family call alarm"
+        },
+        {
+          "index": 14,
+          "speaker": "Arjun",
+          "utterance": "Done. No phantom punctuality today.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 15,
+          "speaker": "Buddy",
+          "utterance": "Maybe keep the tournament packing note though. We will need it eventually.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 keep tournament packing note for future use"
+        },
+        {
+          "index": 16,
+          "speaker": "Arjun",
+          "utterance": "Right, do not delete useful future reference just because today got weird.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 keep future-use notes even when today's plan changes"
+        },
+        {
+          "speaker": "Buddy",
+          "utterance": "Actually, can you move the practice thing to then?",
+          "importance": "Medium",
+          "tool": "Clarification - Ask which practice item and exact new time before editing the saved schedule."
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Deleted Friday badminton practice. Priority: High.",
+          "Deleted Sunday mobility reset. Priority: High.",
+          "Deleted Sunday family call. Priority: High."
+        ],
+        "reminders": [
+          "Deleted protein reminder for canceled Friday practice. Priority: Medium.",
+          "Deleted internship links reminder for this week. Priority: Medium."
+        ],
+        "alarms": [
+          "Deleted 4:50 PM Sunday mobility alarm. Priority: High.",
+          "Deleted Sunday family call alarm. Priority: Medium."
+        ],
+        "notes": [
+          "Deleted attribution caveat note from review prep. Priority: Medium.",
+          "Kept tournament packing note for future use. Priority: Medium.",
+          "Keep future-use notes even when today's plan changes. Priority: Medium."
+        ]
+      }
+    },
+    {
+      "number": 18,
+      "title": "Arjun Stateful Tool Cleanup And Ambiguity",
+      "context": {
+        "why_this_fits": "Arjun handles practical plan changes with playful clarity; this conversation covers stateful create/update/delete decisions and ambiguous references."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Buddy",
+          "utterance": "Let us lock badminton for Tuesday at 6:30 at the usual gym.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 badminton Tuesday 6:30 usual gym"
+        },
+        {
+          "index": 2,
+          "speaker": "Arjun",
+          "utterance": "Block it, and remind me Monday night to restring the racket before I pretend frayed strings are a strategy.",
+          "importance": "High",
+          "tool": "Reminder \u2014 restring racket Monday night"
+        },
+        {
+          "index": 3,
+          "speaker": "Buddy",
+          "utterance": "Also set an alarm at 5:45 Tuesday so you actually leave on time.",
+          "importance": "High",
+          "tool": "Alarm \u2014 leave for badminton Tuesday 5:45 PM"
+        },
+        {
+          "index": 4,
+          "speaker": "Arjun",
+          "utterance": "Good call. Note that I should do footwork first, then backhand defense.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 badminton practice plan: footwork then backhand defense"
+        },
+        {
+          "index": 5,
+          "speaker": "Buddy",
+          "utterance": "Court changed to court five, same time.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 change badminton Tuesday to court five"
+        },
+        {
+          "index": 6,
+          "speaker": "Arjun",
+          "utterance": "Update the event, and move the restring reminder to Sunday evening instead.",
+          "importance": "High",
+          "tool": "Reminder update \u2014 move racket restring reminder to Sunday evening"
+        },
+        {
+          "index": 7,
+          "speaker": "Buddy",
+          "utterance": "Actually I can pick you up, so make the leave alarm 5:55.",
+          "importance": "High",
+          "tool": "Alarm update \u2014 change badminton leave alarm to 5:55 PM"
+        },
+        {
+          "index": 8,
+          "speaker": "Arjun",
+          "utterance": "Update the note too: add serve returns after backhand defense.",
+          "importance": "Medium",
+          "tool": "Notes update \u2014 add serve returns to badminton practice plan"
+        },
+        {
+          "index": 9,
+          "speaker": "Buddy",
+          "utterance": "Tournament got canceled, so no need for the registration reminder.",
+          "importance": "High",
+          "tool": "Reminder delete \u2014 remove tournament registration reminder"
+        },
+        {
+          "index": 10,
+          "speaker": "Arjun",
+          "utterance": "Delete that, and delete the Tuesday badminton block if the gym confirms maintenance.",
+          "importance": "High",
+          "tool": "Calendar event delete \u2014 delete Tuesday badminton block if gym maintenance confirmed"
+        },
+        {
+          "index": 11,
+          "speaker": "Buddy",
+          "utterance": "The wake-up alarm for the old tournament is still on your phone.",
+          "importance": "High",
+          "tool": "Alarm delete \u2014 remove old tournament wake-up alarm"
+        },
+        {
+          "index": 12,
+          "speaker": "Arjun",
+          "utterance": "Remove the old note about shuttle pickup too; it is useless now.",
+          "importance": "Low",
+          "tool": "Notes delete \u2014 remove old shuttle pickup note"
+        },
+        {
+          "index": 13,
+          "speaker": "Buddy",
+          "utterance": "Move that thing to Thursday.",
+          "importance": "Low",
+          "tool": "Clarification \u2014 ask which item should move to Thursday"
+        },
+        {
+          "index": 14,
+          "speaker": "Arjun",
+          "utterance": "Yeah, too vague. Ask me which thing before touching my calendar like a chaos intern.",
+          "importance": "Low",
+          "tool": "Clarification \u2014 ask which item to move before editing calendar"
+        }
+      ]
+    }
+  ],
+  "paragraph_count": 1671
+}

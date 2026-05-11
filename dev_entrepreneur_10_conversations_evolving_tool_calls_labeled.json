@@ -1,0 +1,2975 @@
+{
+  "source_file": "dev_entrepreneur_10_conversations_evolving_tool_calls_labeled.docx",
+  "title": "Entrepreneur Persona: 10 Conversations with Evolving Tool Call Summaries",
+  "assumptions": [
+    "Assumed personality traits: ambitious, fast-moving, relationship-driven, practical, sometimes overloaded. These shape priorities in the tool summaries."
+  ],
+  "tool_rules": "Person: Dev Malhotra \u2014 founder of a growing services-and-product startup. Tool rules followed throughout: Reminder = don\u2019t forget; Reminder update/delete = change or remove an existing reminder; Calendar event = reserve time; Calendar event update/delete = change or cancel an existing calendar block; Alarm = urgent prompt at a specific moment; Alarm update/delete = change or remove an urgent prompt; Notes = reference material; Notes update/delete = change or remove saved reference material.",
+  "conversations": [
+    {
+      "number": 1,
+      "title": "Dev and his assistant",
+      "context": {
+        "counterpart": "Assistant",
+        "setting": "Office morning check-in"
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Assistant",
+          "utterance": "Morning, Dev. You have the Patel proposal, the 11:30 hiring interview, and dinner with the Mehtas tonight.",
+          "importance": "High",
+          "tool": "Notes - day agenda snapshot"
+        },
+        {
+          "index": 2,
+          "speaker": "Dev",
+          "utterance": "Good catch. Move the interview by thirty minutes if Nina can still make it, and keep the Patel proposal as the first deep-work block.",
+          "importance": "High",
+          "tool": "Calendar event - reserve deep-work block for Patel proposal"
+        },
+        {
+          "index": 3,
+          "speaker": "Assistant",
+          "utterance": "I can shift the interview to noon. Do you want me to protect 9:00 to 10:30 for the proposal?",
+          "importance": "High",
+          "tool": "Calendar event - protect 9:00-10:30 for Patel proposal"
+        },
+        {
+          "index": 4,
+          "speaker": "Dev",
+          "utterance": "Yes, block it. No internal pings unless the warehouse issue gets worse.",
+          "importance": "High",
+          "tool": "Calendar event - deep-work block 9:00-10:30 AM"
+        },
+        {
+          "index": 5,
+          "speaker": "Assistant",
+          "utterance": "Noted. Also, finance says the vendor advance for packaging goes out only if you approve it today.",
+          "importance": "High",
+          "tool": "Reminder - approve packaging vendor advance"
+        },
+        {
+          "index": 6,
+          "speaker": "Dev",
+          "utterance": "Set that up for right after the Patel draft. I don't want it slipping again.",
+          "importance": "High",
+          "tool": "Reminder - approve vendor advance after proposal block"
+        },
+        {
+          "index": 7,
+          "speaker": "Assistant",
+          "utterance": "Should I put a ten-minute buffer before your client call at 2:00?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 8,
+          "speaker": "Dev",
+          "utterance": "Yes. I need breathing room before clients. Otherwise I walk in still arguing with spreadsheets.",
+          "importance": "Medium",
+          "tool": "Calendar event - pre-client buffer at 1:50 PM"
+        },
+        {
+          "index": 9,
+          "speaker": "Assistant",
+          "utterance": "The Mehtas asked whether dinner is still at Cedar House or moved to their place.",
+          "importance": "High",
+          "tool": "Reminder - confirm dinner location with Mehtas"
+        },
+        {
+          "index": 10,
+          "speaker": "Dev",
+          "utterance": "Please confirm. If it is at their place, I need to grab flowers on the way.",
+          "importance": "High",
+          "tool": "Reminder - buy flowers if dinner is at Mehtas' home"
+        },
+        {
+          "index": 11,
+          "speaker": "Assistant",
+          "utterance": "Your mother also texted asking if you'll call her this evening before dinner.",
+          "importance": "Medium",
+          "tool": "Reminder - call mom before dinner"
+        },
+        {
+          "index": 12,
+          "speaker": "Dev",
+          "utterance": "Yes, thirty minutes before I leave. If I don\u2019t set that, I\u2019ll remember while parking outside the restaurant.",
+          "importance": "High",
+          "tool": "Alarm - 6:00 PM call mom before leaving"
+        },
+        {
+          "index": 13,
+          "speaker": "Assistant",
+          "utterance": "One more thing: the sales dashboard still has last week\u2019s numbers in the investor folder.",
+          "importance": "High",
+          "tool": "Reminder - update investor folder with latest sales dashboard"
+        },
+        {
+          "index": 14,
+          "speaker": "Dev",
+          "utterance": "That one matters. Add it to today, but after the proposal and the client call.",
+          "importance": "High",
+          "tool": "Reminder - update investor folder this afternoon"
+        },
+        {
+          "index": 15,
+          "speaker": "Assistant",
+          "utterance": "Do you want a running note with today\u2019s priorities in order?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 16,
+          "speaker": "Dev",
+          "utterance": "Yes. Proposal, vendor advance, client call, investor folder, family call, dinner. Put it in one place so I stop keeping it in my head.",
+          "importance": "High",
+          "tool": "Notes - prioritized task list"
+        },
+        {
+          "index": 17,
+          "speaker": "Assistant",
+          "utterance": "Done. For the interview, do you want the candidate packet printed or just on the iPad?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 18,
+          "speaker": "Dev",
+          "utterance": "Just the iPad. I\u2019m not pretending to be organized enough for paper packets.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 19,
+          "speaker": "Assistant",
+          "utterance": "Your driver window to make dinner on time is 6:30 departure if traffic behaves.",
+          "importance": "Medium",
+          "tool": "Calendar event - departure hold at 6:30 PM"
+        },
+        {
+          "index": 20,
+          "speaker": "Dev",
+          "utterance": "Then add a leave-by marker. Missing client deadlines is bad, but being late to family friends is worse.",
+          "importance": "High",
+          "tool": "Alarm - 6:20 PM leave for dinner"
+        },
+        {
+          "index": 21,
+          "speaker": "Assistant",
+          "utterance": "Understood. Anything else for today?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 22,
+          "speaker": "Dev",
+          "utterance": "Yes. Protect the morning. If someone wants fifteen minutes, tell them I\u2019m already spending it becoming profitable.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 23,
+          "speaker": "Assistant",
+          "utterance": "That is not how I\u2019ll phrase it, but message received.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 24,
+          "speaker": "Dev",
+          "utterance": "You have my full approval to make it sound like I\u2019m nicer than I am.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Today, 9:00-10:30 AM | Office / Desk | Deep-work block for Patel proposal | Priority: High",
+          "Today, 12:00-12:45 PM | Office conference room / video | Hiring interview shifted by 30 minutes | Priority: Medium",
+          "Today, 1:50-2:00 PM | Office | Quiet buffer before 2:00 PM client call | Priority: Medium",
+          "Today, 6:30 PM | Office to Cedar House/Mehta home | Leave for dinner with the Mehtas | Priority: High"
+        ],
+        "reminders": [
+          "Approve packaging vendor advance after proposal block | Priority: High",
+          "Confirm dinner location with the Mehtas | Priority: High",
+          "Buy flowers if dinner is at the Mehtas' home | Priority: Medium",
+          "Call mom before dinner | Priority: Medium",
+          "Update investor folder with latest sales dashboard this afternoon | Priority: High"
+        ],
+        "alarms": [
+          "Today, 6:00 PM | Call mom before leaving for dinner | Priority: Medium",
+          "Today, 6:20 PM | Leave for dinner on time | Priority: High"
+        ],
+        "notes": [
+          "Day Priorities",
+          "Proposal -> vendor advance -> client call -> investor folder -> mom call -> dinner",
+          "Operations & Finance",
+          "Packaging vendor advance waiting for Dev approval",
+          "Relationships",
+          "Dinner with the Mehtas may require flowers if hosted at their home"
+        ]
+      }
+    },
+    {
+      "number": 2,
+      "title": "Dev and a major client",
+      "context": {
+        "counterpart": "Client",
+        "setting": "Afternoon proposal call"
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Client (Patel)",
+          "utterance": "Dev, the proposal looks strong, but I need a clearer rollout timeline before I can take it to my CEO.",
+          "importance": "High",
+          "tool": "Notes - Patel needs clearer rollout timeline before CEO review"
+        },
+        {
+          "index": 2,
+          "speaker": "Dev",
+          "utterance": "Fair. I gave you the shape; now let me make it board-safe. Which part feels fuzzy: kickoff, migration, or success metrics?",
+          "importance": "High",
+          "tool": "Notes - clarify rollout timeline needs"
+        },
+        {
+          "index": 3,
+          "speaker": "Client",
+          "utterance": "Kickoff and migration. The numbers are fine, but the change-management piece feels thin.",
+          "importance": "High",
+          "tool": "Notes - strengthen kickoff and migration plan"
+        },
+        {
+          "index": 4,
+          "speaker": "Dev",
+          "utterance": "Then I\u2019ll add a phased rollout with owner names, weekly checkpoints, and a training schedule.",
+          "importance": "High",
+          "tool": "Reminder - send revised phased rollout section"
+        },
+        {
+          "index": 5,
+          "speaker": "Client",
+          "utterance": "Good. Also, our COO hates surprises. If implementation slips, I need an escalation path in writing.",
+          "importance": "High",
+          "tool": "Notes - include escalation path in proposal"
+        },
+        {
+          "index": 6,
+          "speaker": "Dev",
+          "utterance": "Done. I\u2019d rather over-communicate than be 'innovative' in the wrong places.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 7,
+          "speaker": "Client",
+          "utterance": "Can you get the revision back by tomorrow noon?",
+          "importance": "High",
+          "tool": "Reminder - deliver revised Patel proposal by tomorrow noon"
+        },
+        {
+          "index": 8,
+          "speaker": "Dev",
+          "utterance": "Yes, but I want your operations lead on a 20-minute call first so I\u2019m not guessing the workflow.",
+          "importance": "High",
+          "tool": "Calendar event - schedule ops discovery call with Patel team"
+        },
+        {
+          "index": 9,
+          "speaker": "Client",
+          "utterance": "I can get Priyanka from ops tomorrow at 9:15. Does that work?",
+          "importance": "High",
+          "tool": "Calendar event - Priyanka ops call tomorrow 9:15 AM"
+        },
+        {
+          "index": 10,
+          "speaker": "Dev",
+          "utterance": "Perfect. Send her in. I\u2019ll come with the revised timeline live and tighten it in the room.",
+          "importance": "High",
+          "tool": "Reminder - bring revised rollout timeline to Patel room"
+        },
+        {
+          "index": 11,
+          "speaker": "Client",
+          "utterance": "One more thing: legal asked whether your team stores any customer data during onboarding.",
+          "importance": "High",
+          "tool": "Reminder - send legal/data-handling clarification to Patel"
+        },
+        {
+          "index": 12,
+          "speaker": "Dev",
+          "utterance": "We store temporary implementation artifacts, not production customer data. I\u2019ll send a written note so legal gets a clean answer.",
+          "importance": "High",
+          "tool": "Notes - legal clarification on temporary implementation artifacts"
+        },
+        {
+          "index": 13,
+          "speaker": "Client",
+          "utterance": "That will help. They\u2019re not blocking, just nervous.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 14,
+          "speaker": "Dev",
+          "utterance": "Nervous legal is manageable. Silent legal is what gives me hives.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 15,
+          "speaker": "Client",
+          "utterance": "If tomorrow goes well, I want pricing options for a six-month and twelve-month term.",
+          "importance": "High",
+          "tool": "Reminder - prepare 6-month and 12-month pricing options"
+        },
+        {
+          "index": 16,
+          "speaker": "Dev",
+          "utterance": "I\u2019ll have both. I may also show a phased entry option so finance can say yes without pretending to love risk.",
+          "importance": "High",
+          "tool": "Notes - consider phased entry pricing option"
+        },
+        {
+          "index": 17,
+          "speaker": "Client",
+          "utterance": "Please do. Their first instinct is always caution.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 18,
+          "speaker": "Dev",
+          "utterance": "Understood. I\u2019ll optimize for 'easy to approve' instead of 'most elegant slide deck ever made.'",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 19,
+          "speaker": "Client",
+          "utterance": "Appreciated. Send the updated deck and the short legal note separately.",
+          "importance": "High",
+          "tool": "Reminder - send updated deck and separate legal note"
+        },
+        {
+          "index": 20,
+          "speaker": "Dev",
+          "utterance": "Yes. You\u2019ll have the note today and the revised deck tomorrow after the ops call.",
+          "importance": "High",
+          "tool": "Reminder - send legal note today"
+        },
+        {
+          "index": 21,
+          "speaker": "Client",
+          "utterance": "Great. If you land this cleanly, I can advocate for moving fast internally.",
+          "importance": "High",
+          "tool": "Notes - clean Patel rollout may accelerate internal approval"
+        },
+        {
+          "index": 22,
+          "speaker": "Dev",
+          "utterance": "That\u2019s exactly what I\u2019m trying to earn.",
+          "importance": "Medium",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Today, 9:00-10:30 AM | Office / Desk | Deep-work block for Patel proposal | Priority: High",
+          "Today, 12:00-12:45 PM | Office conference room / video | Hiring interview shifted by 30 minutes | Priority: Medium",
+          "Today, 1:50-2:00 PM | Office | Quiet buffer before 2:00 PM client call | Priority: Medium",
+          "Today, 6:30 PM | Office to Cedar House/Mehta home | Leave for dinner with the Mehtas | Priority: High",
+          "Tomorrow, 9:15-9:35 AM | Video call with Patel ops team | Discovery call with Priyanka to tighten rollout timeline | Priority: High"
+        ],
+        "reminders": [
+          "Approve packaging vendor advance after proposal block | Priority: High",
+          "Confirm dinner location with the Mehtas | Priority: High",
+          "Buy flowers if dinner is at the Mehtas' home | Priority: Medium",
+          "Call mom before dinner | Priority: Medium",
+          "Update investor folder with latest sales dashboard this afternoon | Priority: High",
+          "Deliver revised Patel proposal by tomorrow noon | Priority: Very High",
+          "Send Patel legal/data-handling clarification note today | Priority: High",
+          "Prepare 6-month and 12-month pricing options for Patel | Priority: High",
+          "Send updated Patel deck after ops call tomorrow | Priority: Very High"
+        ],
+        "alarms": [
+          "Today, 6:00 PM | Call mom before leaving for dinner | Priority: Medium",
+          "Today, 6:20 PM | Leave for dinner on time | Priority: High"
+        ],
+        "notes": [
+          "Day Priorities",
+          "Proposal -> vendor advance -> client call -> investor folder -> mom call -> dinner",
+          "Operations & Finance",
+          "Packaging vendor advance waiting for Dev approval",
+          "Relationships",
+          "Dinner with the Mehtas may require flowers if hosted at their home",
+          "Patel Deal",
+          "Clarify rollout timeline: kickoff, migration, success metrics",
+          "Add phased rollout with owner names, weekly checkpoints, and training schedule",
+          "Include written escalation path for implementation slips",
+          "Legal note: temporary implementation artifacts only; no production customer data",
+          "Consider phased entry pricing option for easier internal approval"
+        ]
+      }
+    },
+    {
+      "number": 3,
+      "title": "Dev and a team lead",
+      "context": {
+        "counterpart": "Employee / Team Lead",
+        "setting": "Operations escalation"
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Team Lead (Maya)",
+          "utterance": "Dev, the warehouse issue is not catastrophic, but we\u2019re burning hours every day because returns are being tagged manually.",
+          "importance": "High",
+          "tool": "Notes - manual returns tagging is burning warehouse hours"
+        },
+        {
+          "index": 2,
+          "speaker": "Dev",
+          "utterance": "That is exactly the kind of 'not catastrophic' problem that quietly murders margin. What\u2019s the fastest fix?",
+          "importance": "High",
+          "tool": "Notes - returns tagging issue hurting margin"
+        },
+        {
+          "index": 3,
+          "speaker": "Maya",
+          "utterance": "We can automate 80% of it if engineering gives us one parser and ops standardizes the intake form.",
+          "importance": "High",
+          "tool": "Reminder - align engineering and ops on returns automation"
+        },
+        {
+          "index": 4,
+          "speaker": "Dev",
+          "utterance": "Good. Put both leads in a room tomorrow. Forty minutes, no slides, just owners and deadlines.",
+          "importance": "High",
+          "tool": "Calendar event - returns automation meeting"
+        },
+        {
+          "index": 5,
+          "speaker": "Maya",
+          "utterance": "I can do that. Do you want a temporary workaround for this week too?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 6,
+          "speaker": "Dev",
+          "utterance": "Yes. Permanent fix later is great; bleeding less this week is also great.",
+          "importance": "High",
+          "tool": "Reminder - approve temporary workaround plan"
+        },
+        {
+          "index": 7,
+          "speaker": "Maya",
+          "utterance": "Then I\u2019ll have ops switch to the shorter intake template by tomorrow morning.",
+          "importance": "High",
+          "tool": "Reminder - confirm shorter intake template goes live tomorrow"
+        },
+        {
+          "index": 8,
+          "speaker": "Dev",
+          "utterance": "Perfect. Track errors before and after so we know if we actually improved anything.",
+          "importance": "High",
+          "tool": "Notes - measure error rate before/after template change"
+        },
+        {
+          "index": 9,
+          "speaker": "Maya",
+          "utterance": "Engineering asked whether this outranks the referral dashboard task.",
+          "importance": "High",
+          "tool": "Notes - returns automation priority compared with referral dashboard"
+        },
+        {
+          "index": 10,
+          "speaker": "Dev",
+          "utterance": "For this week, yes. Revenue is sexy; operational drag is expensive. We fix the drag first.",
+          "importance": "High",
+          "tool": "Notes - returns automation outranks referral dashboard this week"
+        },
+        {
+          "index": 11,
+          "speaker": "Maya",
+          "utterance": "That helps. I\u2019ll reset their priority board.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 12,
+          "speaker": "Dev",
+          "utterance": "Also, send me the lost-hours estimate. I want the number because people move faster when pain has a spreadsheet.",
+          "importance": "High",
+          "tool": "Reminder - Maya to send lost-hours estimate"
+        },
+        {
+          "index": 13,
+          "speaker": "Maya",
+          "utterance": "Can do by end of day.",
+          "importance": "High",
+          "tool": "Reminder - review lost-hours estimate EOD"
+        },
+        {
+          "index": 14,
+          "speaker": "Dev",
+          "utterance": "Good. If the estimate is ugly enough, I\u2019ll approve contractor help for the parser.",
+          "importance": "High",
+          "tool": "Reminder - decide on contractor help after estimate"
+        },
+        {
+          "index": 15,
+          "speaker": "Maya",
+          "utterance": "One caution: ops is tired. They\u2019ll do the change, but morale is thinner than it looks.",
+          "importance": "High",
+          "tool": "Notes - ops morale is strained"
+        },
+        {
+          "index": 16,
+          "speaker": "Dev",
+          "utterance": "Then I need to show up in person tomorrow, not just appear as a Slack notification with opinions.",
+          "importance": "High",
+          "tool": "Calendar event - floor walk with ops tomorrow"
+        },
+        {
+          "index": 17,
+          "speaker": "Maya",
+          "utterance": "That would help a lot. Even fifteen minutes of visible support changes the tone.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 18,
+          "speaker": "Dev",
+          "utterance": "Done. And remind me to thank Jenna specifically. She\u2019s been patching this manually for two weeks.",
+          "importance": "High",
+          "tool": "Reminder - thank Jenna for manual returns patching"
+        },
+        {
+          "index": 19,
+          "speaker": "Maya",
+          "utterance": "Will do. Anything else?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 20,
+          "speaker": "Dev",
+          "utterance": "Yes. Send me a one-paragraph brief tonight so I can speak clearly tomorrow without improvising nonsense.",
+          "importance": "High",
+          "tool": "Reminder - get one-paragraph warehouse brief tonight"
+        },
+        {
+          "index": 21,
+          "speaker": "Maya",
+          "utterance": "I\u2019ll send it by 8:00.",
+          "importance": "High",
+          "tool": "Alarm - 8:15 PM check for Maya warehouse brief"
+        },
+        {
+          "index": 22,
+          "speaker": "Dev",
+          "utterance": "Perfect. Let\u2019s turn this from a hidden leak into a solved problem.",
+          "importance": "Medium",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Today, 9:00-10:30 AM | Office / Desk | Deep-work block for Patel proposal | Priority: High",
+          "Today, 12:00-12:45 PM | Office conference room / video | Hiring interview shifted by 30 minutes | Priority: Medium",
+          "Today, 1:50-2:00 PM | Office | Quiet buffer before 2:00 PM client call | Priority: Medium",
+          "Today, 6:30 PM | Office to Cedar House/Mehta home | Leave for dinner with the Mehtas | Priority: High",
+          "Tomorrow, 9:15-9:35 AM | Video call with Patel ops team | Discovery call with Priyanka to tighten rollout timeline | Priority: High",
+          "Tomorrow, 11:00-11:40 AM | Ops room / hybrid | Engineering + ops meeting on returns automation with owners and deadlines | Priority: High",
+          "Tomorrow, 11:45 AM-12:00 PM | Warehouse / ops floor | Dev visible support check-in with ops team | Priority: High"
+        ],
+        "reminders": [
+          "Approve packaging vendor advance after proposal block | Priority: High",
+          "Confirm dinner location with the Mehtas | Priority: High",
+          "Buy flowers if dinner is at the Mehtas' home | Priority: Medium",
+          "Call mom before dinner | Priority: Medium",
+          "Update investor folder with latest sales dashboard this afternoon | Priority: High",
+          "Deliver revised Patel proposal by tomorrow noon | Priority: Very High",
+          "Send Patel legal/data-handling clarification note today | Priority: High",
+          "Prepare 6-month and 12-month pricing options for Patel | Priority: High",
+          "Send updated Patel deck after ops call tomorrow | Priority: Very High",
+          "Align engineering and ops on returns automation | Priority: High",
+          "Approve temporary workaround plan for this week | Priority: High",
+          "Confirm shorter intake template goes live tomorrow morning | Priority: High",
+          "Review lost-hours estimate from Maya by end of day | Priority: High",
+          "Decide on contractor help for parser after estimate | Priority: Medium",
+          "Thank Jenna for manual returns patching | Priority: Medium",
+          "Get one-paragraph warehouse brief tonight | Priority: High"
+        ],
+        "alarms": [
+          "Today, 6:00 PM | Call mom before leaving for dinner | Priority: Medium",
+          "Today, 6:20 PM | Leave for dinner on time | Priority: High",
+          "Today, 8:15 PM | Check for Maya's warehouse brief | Priority: High"
+        ],
+        "notes": [
+          "Day Priorities",
+          "Proposal -> vendor advance -> client call -> investor folder -> mom call -> dinner",
+          "Operations & Finance",
+          "Packaging vendor advance waiting for Dev approval",
+          "Relationships",
+          "Dinner with the Mehtas may require flowers if hosted at their home",
+          "Patel Deal",
+          "Clarify rollout timeline: kickoff, migration, success metrics",
+          "Add phased rollout with owner names, weekly checkpoints, and training schedule",
+          "Include written escalation path for implementation slips",
+          "Legal note: temporary implementation artifacts only; no production customer data",
+          "Consider phased entry pricing option for easier internal approval",
+          "Operations",
+          "Returns tagging issue is creating silent margin drag",
+          "Automation path: parser from engineering + standardized ops intake form",
+          "Track error rate before/after template change",
+          "Returns automation outranks referral dashboard this week",
+          "Ops morale is strained; in-person support matters"
+        ]
+      }
+    },
+    {
+      "number": 4,
+      "title": "Dev and his spouse",
+      "context": {
+        "counterpart": "Spouse",
+        "setting": "Evening family logistics"
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Spouse (Anika)",
+          "utterance": "Before you disappear into founder mode tonight, are you still coming to Aarav\u2019s school showcase on Friday?",
+          "importance": "High",
+          "tool": "Reminder - attend Aarav's school showcase Friday"
+        },
+        {
+          "index": 2,
+          "speaker": "Dev",
+          "utterance": "Yes. That one is locked. What time do I need to be human and seated?",
+          "importance": "High",
+          "tool": "Calendar event - Aarav school showcase"
+        },
+        {
+          "index": 3,
+          "speaker": "Anika",
+          "utterance": "6:45 arrival, starts at 7:00. And please don't walk in taking a call.",
+          "importance": "High",
+          "tool": "Alarm - leave for school showcase on time"
+        },
+        {
+          "index": 4,
+          "speaker": "Dev",
+          "utterance": "Cruel but fair. Block the evening. Nothing work-related after 6:00 unless the building is literally on fire.",
+          "importance": "High",
+          "tool": "Calendar event - family block Friday evening"
+        },
+        {
+          "index": 5,
+          "speaker": "Anika",
+          "utterance": "Good. Also, your father\u2019s checkup is Monday. He told me he 'doesn't need reminders,' which means he absolutely does.",
+          "importance": "High",
+          "tool": "Reminder - call dad Sunday to confirm Monday checkup"
+        },
+        {
+          "index": 6,
+          "speaker": "Dev",
+          "utterance": "Add a Sunday call with him. If I say 'don\u2019t forget' without calling, I\u2019m just outsourcing guilt to the universe.",
+          "importance": "High",
+          "tool": "Calendar event - Sunday call with dad"
+        },
+        {
+          "index": 7,
+          "speaker": "Anika",
+          "utterance": "Your sister also asked if we\u2019re hosting lunch next weekend or meeting out.",
+          "importance": "Medium",
+          "tool": "Reminder - reply to sister about next weekend lunch"
+        },
+        {
+          "index": 8,
+          "speaker": "Dev",
+          "utterance": "Let\u2019s host if the week is calm, but remind me midweek to decide. I don't want to promise hospitality from inside spreadsheet hell.",
+          "importance": "Medium",
+          "tool": "Reminder - decide midweek on hosting family lunch"
+        },
+        {
+          "index": 9,
+          "speaker": "Anika",
+          "utterance": "Can you also order the replacement filter for the kitchen tap? You\u2019ve been saying 'tomorrow' for ten tomorrows.",
+          "importance": "Medium",
+          "tool": "Reminder - order kitchen tap filter"
+        },
+        {
+          "index": 10,
+          "speaker": "Dev",
+          "utterance": "That is slander supported by evidence. Yes, remind me tonight.",
+          "importance": "Medium",
+          "tool": "Alarm - 9:30 PM order kitchen tap filter"
+        },
+        {
+          "index": 11,
+          "speaker": "Anika",
+          "utterance": "And one nice thing: Aarav wants you to hear his lines tomorrow evening because he thinks you give the most dramatic feedback.",
+          "importance": "High",
+          "tool": "Calendar event - hear Aarav practice lines tomorrow evening"
+        },
+        {
+          "index": 12,
+          "speaker": "Dev",
+          "utterance": "That child has correctly identified my core competency.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 13,
+          "speaker": "Anika",
+          "utterance": "So you\u2019ll be home by 7:15?",
+          "importance": "High",
+          "tool": "Calendar event - home by 7:15 tomorrow"
+        },
+        {
+          "index": 14,
+          "speaker": "Dev",
+          "utterance": "Yes. If I\u2019m late, you have permission to text me just the word 'monologue' in all caps.",
+          "importance": "High",
+          "tool": "Alarm - 6:45 PM wrap up and head home tomorrow"
+        },
+        {
+          "index": 15,
+          "speaker": "Anika",
+          "utterance": "Done. Also please bring milk if you're passing the store tonight.",
+          "importance": "Low",
+          "tool": "Reminder - buy milk tonight"
+        },
+        {
+          "index": 16,
+          "speaker": "Dev",
+          "utterance": "That is a small task with a high chance of failure unless it becomes a reminder.",
+          "importance": "Low",
+          "tool": "Reminder - buy milk tonight"
+        },
+        {
+          "index": 17,
+          "speaker": "Anika",
+          "utterance": "Exactly. I know the man I married.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 18,
+          "speaker": "Dev",
+          "utterance": "Efficient, loving, and externally memory-assisted.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 19,
+          "speaker": "Anika",
+          "utterance": "Heavy emphasis on the last one.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 20,
+          "speaker": "Dev",
+          "utterance": "Fair. Send me the school address again so I don\u2019t heroically drive to the wrong gate.",
+          "importance": "Medium",
+          "tool": "Notes - school logistics"
+        },
+        {
+          "index": 21,
+          "speaker": "Anika",
+          "utterance": "Sending now. Save it this time.",
+          "importance": "Medium",
+          "tool": "Notes - save school address and entry gate"
+        },
+        {
+          "index": 22,
+          "speaker": "Dev",
+          "utterance": "I will, because public embarrassment is a powerful productivity system.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Today, 9:00-10:30 AM | Office / Desk | Deep-work block for Patel proposal | Priority: High",
+          "Today, 12:00-12:45 PM | Office conference room / video | Hiring interview shifted by 30 minutes | Priority: Medium",
+          "Today, 1:50-2:00 PM | Office | Quiet buffer before 2:00 PM client call | Priority: Medium",
+          "Today, 6:30 PM | Office to Cedar House/Mehta home | Leave for dinner with the Mehtas | Priority: High",
+          "Tomorrow, 9:15-9:35 AM | Video call with Patel ops team | Discovery call with Priyanka to tighten rollout timeline | Priority: High",
+          "Tomorrow, 11:00-11:40 AM | Ops room / hybrid | Engineering + ops meeting on returns automation with owners and deadlines | Priority: High",
+          "Tomorrow, 11:45 AM-12:00 PM | Warehouse / ops floor | Dev visible support check-in with ops team | Priority: High",
+          "Friday, 6:45-8:00 PM | Aarav's school auditorium | Attend Aarav's school showcase | Priority: Very High",
+          "Friday, 6:00-8:30 PM | Family / school | No work block before and during Aarav's showcase | Priority: Very High",
+          "Sunday, 5:00-5:20 PM | Phone call | Call dad to confirm Monday checkup | Priority: High",
+          "Tomorrow, 7:15-7:35 PM | Home | Listen to Aarav practice his showcase lines | Priority: High"
+        ],
+        "reminders": [
+          "Approve packaging vendor advance after proposal block | Priority: High",
+          "Confirm dinner location with the Mehtas | Priority: High",
+          "Buy flowers if dinner is at the Mehtas' home | Priority: Medium",
+          "Call mom before dinner | Priority: Medium",
+          "Update investor folder with latest sales dashboard this afternoon | Priority: High",
+          "Deliver revised Patel proposal by tomorrow noon | Priority: Very High",
+          "Send Patel legal/data-handling clarification note today | Priority: High",
+          "Prepare 6-month and 12-month pricing options for Patel | Priority: High",
+          "Send updated Patel deck after ops call tomorrow | Priority: Very High",
+          "Align engineering and ops on returns automation | Priority: High",
+          "Approve temporary workaround plan for this week | Priority: High",
+          "Confirm shorter intake template goes live tomorrow morning | Priority: High",
+          "Review lost-hours estimate from Maya by end of day | Priority: High",
+          "Decide on contractor help for parser after estimate | Priority: Medium",
+          "Thank Jenna for manual returns patching | Priority: Medium",
+          "Get one-paragraph warehouse brief tonight | Priority: High",
+          "Attend Aarav's school showcase Friday | Priority: Very High",
+          "Reply to sister about next weekend lunch | Priority: Medium",
+          "Decide midweek whether to host family lunch | Priority: Medium",
+          "Order replacement filter for kitchen tap | Priority: Medium",
+          "Buy milk tonight | Priority: Low"
+        ],
+        "alarms": [
+          "Today, 6:00 PM | Call mom before leaving for dinner | Priority: Medium",
+          "Today, 6:20 PM | Leave for dinner on time | Priority: High",
+          "Today, 8:15 PM | Check for Maya's warehouse brief | Priority: High",
+          "Friday, 6:15 PM | Leave for Aarav's school showcase on time | Priority: Very High",
+          "Today, 9:30 PM | Order kitchen tap filter | Priority: Medium",
+          "Tomorrow, 6:45 PM | Wrap up and head home for Aarav's practice | Priority: High"
+        ],
+        "notes": [
+          "Day Priorities",
+          "Proposal -> vendor advance -> client call -> investor folder -> mom call -> dinner",
+          "Operations & Finance",
+          "Packaging vendor advance waiting for Dev approval",
+          "Relationships",
+          "Dinner with the Mehtas may require flowers if hosted at their home",
+          "Patel Deal",
+          "Clarify rollout timeline: kickoff, migration, success metrics",
+          "Add phased rollout with owner names, weekly checkpoints, and training schedule",
+          "Include written escalation path for implementation slips",
+          "Legal note: temporary implementation artifacts only; no production customer data",
+          "Consider phased entry pricing option for easier internal approval",
+          "Operations",
+          "Returns tagging issue is creating silent margin drag",
+          "Automation path: parser from engineering + standardized ops intake form",
+          "Track error rate before/after template change",
+          "Returns automation outranks referral dashboard this week",
+          "Ops morale is strained; in-person support matters",
+          "Family Logistics",
+          "School showcase address and correct entry gate saved",
+          "Friday evening protected for Aarav"
+        ]
+      }
+    },
+    {
+      "number": 5,
+      "title": "Dev and an investor",
+      "context": {
+        "counterpart": "Investor",
+        "setting": "Strategy call"
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Investor",
+          "utterance": "Dev, your topline is moving, but I want a cleaner story on retention before our Monday check-in.",
+          "importance": "High",
+          "tool": "Notes - investor wants cleaner retention story before Monday check-in"
+        },
+        {
+          "index": 2,
+          "speaker": "Dev",
+          "utterance": "Understood. The business is healthier than the current narrative makes it sound, which is a fixable problem.",
+          "importance": "High",
+          "tool": "Notes - investor wants cleaner retention story"
+        },
+        {
+          "index": 3,
+          "speaker": "Investor",
+          "utterance": "Then fix the narrative. Show me cohort behavior, not just aggregate revenue.",
+          "importance": "High",
+          "tool": "Reminder - prepare cohort retention view for investor"
+        },
+        {
+          "index": 4,
+          "speaker": "Dev",
+          "utterance": "Yes. I\u2019ll bring three cohorts, expansion revenue, and the reasons churn concentrated where it did.",
+          "importance": "High",
+          "tool": "Notes - include three cohorts, expansion revenue, churn concentration"
+        },
+        {
+          "index": 5,
+          "speaker": "Investor",
+          "utterance": "Good. Also, stop giving me ten ideas in one breath. Pick the two that matter most for the next quarter.",
+          "importance": "High",
+          "tool": "Notes - narrow next-quarter story to two priorities"
+        },
+        {
+          "index": 6,
+          "speaker": "Dev",
+          "utterance": "That is fair and rude, which usually means correct.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 7,
+          "speaker": "Investor",
+          "utterance": "What are the two priorities, then?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 8,
+          "speaker": "Dev",
+          "utterance": "Operational consistency and enterprise conversion. One keeps the floor strong, the other raises the ceiling.",
+          "importance": "High",
+          "tool": "Notes - two priorities: operational consistency and enterprise conversion"
+        },
+        {
+          "index": 9,
+          "speaker": "Investor",
+          "utterance": "Better. Put that in the deck exactly that plainly.",
+          "importance": "High",
+          "tool": "Reminder - simplify Monday investor deck language"
+        },
+        {
+          "index": 10,
+          "speaker": "Dev",
+          "utterance": "Will do. I also want to show the warehouse fix as margin recovery, not random internal housekeeping.",
+          "importance": "High",
+          "tool": "Notes - frame warehouse fix as margin recovery"
+        },
+        {
+          "index": 11,
+          "speaker": "Investor",
+          "utterance": "Yes. Investors love discipline when it prints money.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 12,
+          "speaker": "Dev",
+          "utterance": "As do founders, though we pretend otherwise for branding.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 13,
+          "speaker": "Investor",
+          "utterance": "Can you send me the updated deck Sunday night so I can annotate before Monday?",
+          "importance": "High",
+          "tool": "Reminder - send updated investor deck Sunday night"
+        },
+        {
+          "index": 14,
+          "speaker": "Dev",
+          "utterance": "Yes. I\u2019ll send it by 8:30 Sunday.",
+          "importance": "High",
+          "tool": "Alarm - Sunday 8:00 PM final deck send check"
+        },
+        {
+          "index": 15,
+          "speaker": "Investor",
+          "utterance": "And please add one slide on hiring: what you need, what you don\u2019t, and where you\u2019re still resisting headcount.",
+          "importance": "High",
+          "tool": "Reminder - add hiring slide to investor deck"
+        },
+        {
+          "index": 16,
+          "speaker": "Dev",
+          "utterance": "That\u2019s useful. Otherwise I\u2019ll sound like a man who wants help in theory and payroll in nobody\u2019s spreadsheet.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 17,
+          "speaker": "Investor",
+          "utterance": "Exactly. Show restraint where it matters.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 18,
+          "speaker": "Dev",
+          "utterance": "Got it. Cohorts, two priorities, margin recovery, hiring discipline. Cleaner, fewer words, more signal.",
+          "importance": "High",
+          "tool": "Notes - investor deck summary structure"
+        },
+        {
+          "index": 19,
+          "speaker": "Investor",
+          "utterance": "Perfect. Monday will go fine if Sunday is disciplined.",
+          "importance": "High",
+          "tool": "Reminder - keep Sunday investor prep disciplined"
+        },
+        {
+          "index": 20,
+          "speaker": "Dev",
+          "utterance": "That sentence should be on the wall in every founder\u2019s house.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Today, 9:00-10:30 AM | Office / Desk | Deep-work block for Patel proposal | Priority: High",
+          "Today, 12:00-12:45 PM | Office conference room / video | Hiring interview shifted by 30 minutes | Priority: Medium",
+          "Today, 1:50-2:00 PM | Office | Quiet buffer before 2:00 PM client call | Priority: Medium",
+          "Today, 6:30 PM | Office to Cedar House/Mehta home | Leave for dinner with the Mehtas | Priority: High",
+          "Tomorrow, 9:15-9:35 AM | Video call with Patel ops team | Discovery call with Priyanka to tighten rollout timeline | Priority: High",
+          "Tomorrow, 11:00-11:40 AM | Ops room / hybrid | Engineering + ops meeting on returns automation with owners and deadlines | Priority: High",
+          "Tomorrow, 11:45 AM-12:00 PM | Warehouse / ops floor | Dev visible support check-in with ops team | Priority: High",
+          "Friday, 6:45-8:00 PM | Aarav's school auditorium | Attend Aarav's school showcase | Priority: Very High",
+          "Friday, 6:00-8:30 PM | Family / school | No work block before and during Aarav's showcase | Priority: Very High",
+          "Sunday, 5:00-5:20 PM | Phone call | Call dad to confirm Monday checkup | Priority: High",
+          "Tomorrow, 7:15-7:35 PM | Home | Listen to Aarav practice his showcase lines | Priority: High"
+        ],
+        "reminders": [
+          "Approve packaging vendor advance after proposal block | Priority: High",
+          "Confirm dinner location with the Mehtas | Priority: High",
+          "Buy flowers if dinner is at the Mehtas' home | Priority: Medium",
+          "Call mom before dinner | Priority: Medium",
+          "Update investor folder with latest sales dashboard this afternoon | Priority: High",
+          "Deliver revised Patel proposal by tomorrow noon | Priority: Very High",
+          "Send Patel legal/data-handling clarification note today | Priority: High",
+          "Prepare 6-month and 12-month pricing options for Patel | Priority: High",
+          "Send updated Patel deck after ops call tomorrow | Priority: Very High",
+          "Align engineering and ops on returns automation | Priority: High",
+          "Approve temporary workaround plan for this week | Priority: High",
+          "Confirm shorter intake template goes live tomorrow morning | Priority: High",
+          "Review lost-hours estimate from Maya by end of day | Priority: High",
+          "Decide on contractor help for parser after estimate | Priority: Medium",
+          "Thank Jenna for manual returns patching | Priority: Medium",
+          "Get one-paragraph warehouse brief tonight | Priority: High",
+          "Attend Aarav's school showcase Friday | Priority: Very High",
+          "Reply to sister about next weekend lunch | Priority: Medium",
+          "Decide midweek whether to host family lunch | Priority: Medium",
+          "Order replacement filter for kitchen tap | Priority: Medium",
+          "Buy milk tonight | Priority: Low",
+          "Prepare cohort retention view for Monday investor check-in | Priority: Very High",
+          "Simplify Monday investor deck language to the two core priorities | Priority: High",
+          "Send updated investor deck Sunday night | Priority: Very High",
+          "Add hiring slide to investor deck | Priority: High"
+        ],
+        "alarms": [
+          "Today, 6:00 PM | Call mom before leaving for dinner | Priority: Medium",
+          "Today, 6:20 PM | Leave for dinner on time | Priority: High",
+          "Today, 8:15 PM | Check for Maya's warehouse brief | Priority: High",
+          "Friday, 6:15 PM | Leave for Aarav's school showcase on time | Priority: Very High",
+          "Today, 9:30 PM | Order kitchen tap filter | Priority: Medium",
+          "Tomorrow, 6:45 PM | Wrap up and head home for Aarav's practice | Priority: High",
+          "Sunday, 8:00 PM | Final check before sending investor deck by 8:30 PM | Priority: Very High"
+        ],
+        "notes": [
+          "Day Priorities",
+          "Proposal -> vendor advance -> client call -> investor folder -> mom call -> dinner",
+          "Operations & Finance",
+          "Packaging vendor advance waiting for Dev approval",
+          "Relationships",
+          "Dinner with the Mehtas may require flowers if hosted at their home",
+          "Patel Deal",
+          "Clarify rollout timeline: kickoff, migration, success metrics",
+          "Add phased rollout with owner names, weekly checkpoints, and training schedule",
+          "Include written escalation path for implementation slips",
+          "Legal note: temporary implementation artifacts only; no production customer data",
+          "Consider phased entry pricing option for easier internal approval",
+          "Operations",
+          "Returns tagging issue is creating silent margin drag",
+          "Automation path: parser from engineering + standardized ops intake form",
+          "Track error rate before/after template change",
+          "Returns automation outranks referral dashboard this week",
+          "Ops morale is strained; in-person support matters",
+          "Family Logistics",
+          "School showcase address and correct entry gate saved",
+          "Friday evening protected for Aarav",
+          "Investor Prep",
+          "Investor wants a cleaner retention story using cohorts, not just aggregate revenue",
+          "Deck should show three cohorts, expansion revenue, and where churn concentrated",
+          "Two next-quarter priorities: operational consistency and enterprise conversion",
+          "Frame warehouse fix as margin recovery",
+          "Add hiring discipline slide: needed roles, unnecessary roles, where headcount is being resisted"
+        ]
+      }
+    },
+    {
+      "number": 6,
+      "title": "Dev and a close friend",
+      "context": {
+        "counterpart": "Friend",
+        "setting": "Weekend reset plan"
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Friend (Kabir)",
+          "utterance": "Brother, are you actually coming on the Sunday morning ride or is this another inspirational maybe?",
+          "importance": "Medium",
+          "tool": "Reminder - decide and confirm Sunday ride"
+        },
+        {
+          "index": 2,
+          "speaker": "Dev",
+          "utterance": "I\u2019m coming unless the investor deck eats my soul the night before.",
+          "importance": "Medium",
+          "tool": "Calendar event - tentative Sunday ride"
+        },
+        {
+          "index": 3,
+          "speaker": "Kabir",
+          "utterance": "Then make it real. We roll at 7:00 from Riverside Cafe.",
+          "importance": "Medium",
+          "tool": "Calendar event - Sunday ride 7:00 AM Riverside Cafe"
+        },
+        {
+          "index": 4,
+          "speaker": "Dev",
+          "utterance": "Fine. Put it down. If I don\u2019t leave the week with one thing that isn\u2019t work, I become deeply annoying.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 5,
+          "speaker": "Kabir",
+          "utterance": "You\u2019re already there, but exercise does soften the edges.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 6,
+          "speaker": "Dev",
+          "utterance": "This is why I keep you around.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 7,
+          "speaker": "Kabir",
+          "utterance": "Also, you said you wanted introductions to two agency founders who solved outbound way better than you.",
+          "importance": "High",
+          "tool": "Reminder - follow up on agency founder introductions"
+        },
+        {
+          "index": 8,
+          "speaker": "Dev",
+          "utterance": "Yes, that actually matters. Make the intro next week when I\u2019m not sprinting into Monday.",
+          "importance": "High",
+          "tool": "Reminder - ask Kabir for intros next week"
+        },
+        {
+          "index": 9,
+          "speaker": "Kabir",
+          "utterance": "Done. One is in B2B SaaS, one in staffing. Both are annoyingly efficient.",
+          "importance": "High",
+          "tool": "Notes - agency founder intro contexts"
+        },
+        {
+          "index": 10,
+          "speaker": "Dev",
+          "utterance": "Perfect. I don\u2019t need inspiration; I need what they measured and what they killed.",
+          "importance": "High",
+          "tool": "Notes - ask founders about metrics and what they stopped doing"
+        },
+        {
+          "index": 11,
+          "speaker": "Kabir",
+          "utterance": "Good. And if you come Sunday, no phone for the first hour.",
+          "importance": "Medium",
+          "tool": "Alarm - phone away at start of Sunday ride"
+        },
+        {
+          "index": 12,
+          "speaker": "Dev",
+          "utterance": "Aggressive boundary. Probably correct.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 13,
+          "speaker": "Kabir",
+          "utterance": "You said it, not me.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 14,
+          "speaker": "Dev",
+          "utterance": "Fine. Set me an alarm called 'you are not that important for 60 minutes.'",
+          "importance": "Medium",
+          "tool": "Alarm - no phone first hour of Sunday ride"
+        },
+        {
+          "index": 15,
+          "speaker": "Kabir",
+          "utterance": "That is the healthiest thing you\u2019ve said this month.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 16,
+          "speaker": "Dev",
+          "utterance": "Let\u2019s not get carried away. Also, coffee after?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 17,
+          "speaker": "Kabir",
+          "utterance": "Obviously. Otherwise it\u2019s just cardio with trust issues.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 18,
+          "speaker": "Dev",
+          "utterance": "Beautiful. I\u2019m in.",
+          "importance": "Medium",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Today, 9:00-10:30 AM | Office / Desk | Deep-work block for Patel proposal | Priority: High",
+          "Today, 12:00-12:45 PM | Office conference room / video | Hiring interview shifted by 30 minutes | Priority: Medium",
+          "Today, 1:50-2:00 PM | Office | Quiet buffer before 2:00 PM client call | Priority: Medium",
+          "Today, 6:30 PM | Office to Cedar House/Mehta home | Leave for dinner with the Mehtas | Priority: High",
+          "Tomorrow, 9:15-9:35 AM | Video call with Patel ops team | Discovery call with Priyanka to tighten rollout timeline | Priority: High",
+          "Tomorrow, 11:00-11:40 AM | Ops room / hybrid | Engineering + ops meeting on returns automation with owners and deadlines | Priority: High",
+          "Tomorrow, 11:45 AM-12:00 PM | Warehouse / ops floor | Dev visible support check-in with ops team | Priority: High",
+          "Friday, 6:45-8:00 PM | Aarav's school auditorium | Attend Aarav's school showcase | Priority: Very High",
+          "Friday, 6:00-8:30 PM | Family / school | No work block before and during Aarav's showcase | Priority: Very High",
+          "Sunday, 5:00-5:20 PM | Phone call | Call dad to confirm Monday checkup | Priority: High",
+          "Tomorrow, 7:15-7:35 PM | Home | Listen to Aarav practice his showcase lines | Priority: High",
+          "Sunday, 7:00-9:00 AM | Riverside Cafe start point | Cycling ride with Kabir and coffee after | Priority: Medium"
+        ],
+        "reminders": [
+          "Approve packaging vendor advance after proposal block | Priority: High",
+          "Confirm dinner location with the Mehtas | Priority: High",
+          "Buy flowers if dinner is at the Mehtas' home | Priority: Medium",
+          "Call mom before dinner | Priority: Medium",
+          "Update investor folder with latest sales dashboard this afternoon | Priority: High",
+          "Deliver revised Patel proposal by tomorrow noon | Priority: Very High",
+          "Send Patel legal/data-handling clarification note today | Priority: High",
+          "Prepare 6-month and 12-month pricing options for Patel | Priority: High",
+          "Send updated Patel deck after ops call tomorrow | Priority: Very High",
+          "Align engineering and ops on returns automation | Priority: High",
+          "Approve temporary workaround plan for this week | Priority: High",
+          "Confirm shorter intake template goes live tomorrow morning | Priority: High",
+          "Review lost-hours estimate from Maya by end of day | Priority: High",
+          "Decide on contractor help for parser after estimate | Priority: Medium",
+          "Thank Jenna for manual returns patching | Priority: Medium",
+          "Get one-paragraph warehouse brief tonight | Priority: High",
+          "Attend Aarav's school showcase Friday | Priority: Very High",
+          "Reply to sister about next weekend lunch | Priority: Medium",
+          "Decide midweek whether to host family lunch | Priority: Medium",
+          "Order replacement filter for kitchen tap | Priority: Medium",
+          "Buy milk tonight | Priority: Low",
+          "Prepare cohort retention view for Monday investor check-in | Priority: Very High",
+          "Simplify Monday investor deck language to the two core priorities | Priority: High",
+          "Send updated investor deck Sunday night | Priority: Very High",
+          "Add hiring slide to investor deck | Priority: High",
+          "Confirm and show up for Sunday morning ride | Priority: Medium",
+          "Follow up next week on agency founder introductions from Kabir | Priority: Medium"
+        ],
+        "alarms": [
+          "Today, 6:00 PM | Call mom before leaving for dinner | Priority: Medium",
+          "Today, 6:20 PM | Leave for dinner on time | Priority: High",
+          "Today, 8:15 PM | Check for Maya's warehouse brief | Priority: High",
+          "Friday, 6:15 PM | Leave for Aarav's school showcase on time | Priority: Very High",
+          "Today, 9:30 PM | Order kitchen tap filter | Priority: Medium",
+          "Tomorrow, 6:45 PM | Wrap up and head home for Aarav's practice | Priority: High",
+          "Sunday, 8:00 PM | Final check before sending investor deck by 8:30 PM | Priority: Very High",
+          "Sunday, 7:00 AM | No phone for the first hour of the ride | Priority: Medium"
+        ],
+        "notes": [
+          "Day Priorities",
+          "Proposal -> vendor advance -> client call -> investor folder -> mom call -> dinner",
+          "Operations & Finance",
+          "Packaging vendor advance waiting for Dev approval",
+          "Relationships",
+          "Dinner with the Mehtas may require flowers if hosted at their home",
+          "Patel Deal",
+          "Clarify rollout timeline: kickoff, migration, success metrics",
+          "Add phased rollout with owner names, weekly checkpoints, and training schedule",
+          "Include written escalation path for implementation slips",
+          "Legal note: temporary implementation artifacts only; no production customer data",
+          "Consider phased entry pricing option for easier internal approval",
+          "Operations",
+          "Returns tagging issue is creating silent margin drag",
+          "Automation path: parser from engineering + standardized ops intake form",
+          "Track error rate before/after template change",
+          "Returns automation outranks referral dashboard this week",
+          "Ops morale is strained; in-person support matters",
+          "Family Logistics",
+          "School showcase address and correct entry gate saved",
+          "Friday evening protected for Aarav",
+          "Investor Prep",
+          "Investor wants a cleaner retention story using cohorts, not just aggregate revenue",
+          "Deck should show three cohorts, expansion revenue, and where churn concentrated",
+          "Two next-quarter priorities: operational consistency and enterprise conversion",
+          "Frame warehouse fix as margin recovery",
+          "Add hiring discipline slide: needed roles, unnecessary roles, where headcount is being resisted",
+          "Growth Learning",
+          "Kabir can introduce two agency founders who solved outbound efficiently",
+          "Ask about metrics they watched and what they stopped doing"
+        ]
+      }
+    },
+    {
+      "number": 7,
+      "title": "Dev and a supplier",
+      "context": {
+        "counterpart": "Supplier",
+        "setting": "Packaging terms call"
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Supplier",
+          "utterance": "Dev, we can hold your current packaging rate for one more quarter, but only if volumes stay within the band we discussed.",
+          "importance": "High",
+          "tool": "Notes - packaging rate hold depends on volume band"
+        },
+        {
+          "index": 2,
+          "speaker": "Dev",
+          "utterance": "That helps. What\u2019s the exact upper threshold before pricing resets?",
+          "importance": "High",
+          "tool": "Notes - confirm exact packaging volume threshold"
+        },
+        {
+          "index": 3,
+          "speaker": "Supplier",
+          "utterance": "Eighty-five thousand units across the quarter. Above that, we reprice materials.",
+          "importance": "High",
+          "tool": "Notes - threshold is 85,000 units/quarter"
+        },
+        {
+          "index": 4,
+          "speaker": "Dev",
+          "utterance": "Okay. Send that in writing. My finance team trusts documents more than charm.",
+          "importance": "High",
+          "tool": "Reminder - get written packaging threshold terms"
+        },
+        {
+          "index": 5,
+          "speaker": "Supplier",
+          "utterance": "Will do. Also, your last artwork approval came in late, and it compressed our production window.",
+          "importance": "High",
+          "tool": "Notes - late artwork approvals are compressing production"
+        },
+        {
+          "index": 6,
+          "speaker": "Dev",
+          "utterance": "Fair point. That one is on us. I\u2019m tightening approvals internally so we stop paying premium fees for our own chaos.",
+          "importance": "High",
+          "tool": "Reminder - tighten internal artwork approval process"
+        },
+        {
+          "index": 7,
+          "speaker": "Supplier",
+          "utterance": "If you can lock approvals five business days earlier, I can probably improve turnaround too.",
+          "importance": "High",
+          "tool": "Notes - earlier approval may improve supplier turnaround"
+        },
+        {
+          "index": 8,
+          "speaker": "Dev",
+          "utterance": "That is useful. I\u2019ll make earlier approval an internal rule before the next run.",
+          "importance": "High",
+          "tool": "Reminder - set earlier artwork approval rule before next run"
+        },
+        {
+          "index": 9,
+          "speaker": "Supplier",
+          "utterance": "Do you still want the eco-material option priced separately?",
+          "importance": "Medium",
+          "tool": "Reminder - review eco-material option pricing"
+        },
+        {
+          "index": 10,
+          "speaker": "Dev",
+          "utterance": "Yes. Not for this run, but I want it in the decision set for Q3.",
+          "importance": "Medium",
+          "tool": "Notes - eco-material option for Q3 decision set"
+        },
+        {
+          "index": 11,
+          "speaker": "Supplier",
+          "utterance": "Then I\u2019ll quote both standard and eco side by side.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 12,
+          "speaker": "Dev",
+          "utterance": "Great. Send both to me and finance. If it looks reasonable, we can test it with the premium line.",
+          "importance": "High",
+          "tool": "Reminder - review standard vs eco quote with finance"
+        },
+        {
+          "index": 13,
+          "speaker": "Supplier",
+          "utterance": "Anything else you need?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 14,
+          "speaker": "Dev",
+          "utterance": "Yes. Add a note on rush-fee triggers. I want my team to see exactly how delay turns into cost.",
+          "importance": "High",
+          "tool": "Reminder - request rush-fee trigger note from supplier"
+        },
+        {
+          "index": 15,
+          "speaker": "Supplier",
+          "utterance": "Done. I\u2019ll send the full summary tonight.",
+          "importance": "High",
+          "tool": "Alarm - check supplier summary tonight"
+        },
+        {
+          "index": 16,
+          "speaker": "Dev",
+          "utterance": "Perfect. That email is worth more than motivational leadership content on LinkedIn.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Today, 9:00-10:30 AM | Office / Desk | Deep-work block for Patel proposal | Priority: High",
+          "Today, 12:00-12:45 PM | Office conference room / video | Hiring interview shifted by 30 minutes | Priority: Medium",
+          "Today, 1:50-2:00 PM | Office | Quiet buffer before 2:00 PM client call | Priority: Medium",
+          "Today, 6:30 PM | Office to Cedar House/Mehta home | Leave for dinner with the Mehtas | Priority: High",
+          "Tomorrow, 9:15-9:35 AM | Video call with Patel ops team | Discovery call with Priyanka to tighten rollout timeline | Priority: High",
+          "Tomorrow, 11:00-11:40 AM | Ops room / hybrid | Engineering + ops meeting on returns automation with owners and deadlines | Priority: High",
+          "Tomorrow, 11:45 AM-12:00 PM | Warehouse / ops floor | Dev visible support check-in with ops team | Priority: High",
+          "Friday, 6:45-8:00 PM | Aarav's school auditorium | Attend Aarav's school showcase | Priority: Very High",
+          "Friday, 6:00-8:30 PM | Family / school | No work block before and during Aarav's showcase | Priority: Very High",
+          "Sunday, 5:00-5:20 PM | Phone call | Call dad to confirm Monday checkup | Priority: High",
+          "Tomorrow, 7:15-7:35 PM | Home | Listen to Aarav practice his showcase lines | Priority: High",
+          "Sunday, 7:00-9:00 AM | Riverside Cafe start point | Cycling ride with Kabir and coffee after | Priority: Medium"
+        ],
+        "reminders": [
+          "Approve packaging vendor advance after proposal block | Priority: High",
+          "Confirm dinner location with the Mehtas | Priority: High",
+          "Buy flowers if dinner is at the Mehtas' home | Priority: Medium",
+          "Call mom before dinner | Priority: Medium",
+          "Update investor folder with latest sales dashboard this afternoon | Priority: High",
+          "Deliver revised Patel proposal by tomorrow noon | Priority: Very High",
+          "Send Patel legal/data-handling clarification note today | Priority: High",
+          "Prepare 6-month and 12-month pricing options for Patel | Priority: High",
+          "Send updated Patel deck after ops call tomorrow | Priority: Very High",
+          "Align engineering and ops on returns automation | Priority: High",
+          "Approve temporary workaround plan for this week | Priority: High",
+          "Confirm shorter intake template goes live tomorrow morning | Priority: High",
+          "Review lost-hours estimate from Maya by end of day | Priority: High",
+          "Decide on contractor help for parser after estimate | Priority: Medium",
+          "Thank Jenna for manual returns patching | Priority: Medium",
+          "Get one-paragraph warehouse brief tonight | Priority: High",
+          "Attend Aarav's school showcase Friday | Priority: Very High",
+          "Reply to sister about next weekend lunch | Priority: Medium",
+          "Decide midweek whether to host family lunch | Priority: Medium",
+          "Order replacement filter for kitchen tap | Priority: Medium",
+          "Buy milk tonight | Priority: Low",
+          "Prepare cohort retention view for Monday investor check-in | Priority: Very High",
+          "Simplify Monday investor deck language to the two core priorities | Priority: High",
+          "Send updated investor deck Sunday night | Priority: Very High",
+          "Add hiring slide to investor deck | Priority: High",
+          "Confirm and show up for Sunday morning ride | Priority: Medium",
+          "Follow up next week on agency founder introductions from Kabir | Priority: Medium",
+          "Get written packaging threshold terms from supplier | Priority: High",
+          "Tighten internal artwork approval process | Priority: High",
+          "Set earlier artwork approval rule before next packaging run | Priority: High",
+          "Review eco-material option pricing with finance | Priority: Medium",
+          "Request and save rush-fee trigger note from supplier | Priority: Medium"
+        ],
+        "alarms": [
+          "Today, 6:00 PM | Call mom before leaving for dinner | Priority: Medium",
+          "Today, 6:20 PM | Leave for dinner on time | Priority: High",
+          "Today, 8:15 PM | Check for Maya's warehouse brief | Priority: High",
+          "Friday, 6:15 PM | Leave for Aarav's school showcase on time | Priority: Very High",
+          "Today, 9:30 PM | Order kitchen tap filter | Priority: Medium",
+          "Tomorrow, 6:45 PM | Wrap up and head home for Aarav's practice | Priority: High",
+          "Sunday, 8:00 PM | Final check before sending investor deck by 8:30 PM | Priority: Very High",
+          "Sunday, 7:00 AM | No phone for the first hour of the ride | Priority: Medium",
+          "Today, 9:00 PM | Check supplier summary email with pricing thresholds and rush-fee triggers | Priority: High"
+        ],
+        "notes": [
+          "Day Priorities",
+          "Proposal -> vendor advance -> client call -> investor folder -> mom call -> dinner",
+          "Operations & Finance",
+          "Packaging vendor advance waiting for Dev approval",
+          "Relationships",
+          "Dinner with the Mehtas may require flowers if hosted at their home",
+          "Patel Deal",
+          "Clarify rollout timeline: kickoff, migration, success metrics",
+          "Add phased rollout with owner names, weekly checkpoints, and training schedule",
+          "Include written escalation path for implementation slips",
+          "Legal note: temporary implementation artifacts only; no production customer data",
+          "Consider phased entry pricing option for easier internal approval",
+          "Operations",
+          "Returns tagging issue is creating silent margin drag",
+          "Automation path: parser from engineering + standardized ops intake form",
+          "Track error rate before/after template change",
+          "Returns automation outranks referral dashboard this week",
+          "Ops morale is strained; in-person support matters",
+          "Family Logistics",
+          "School showcase address and correct entry gate saved",
+          "Friday evening protected for Aarav",
+          "Investor Prep",
+          "Investor wants a cleaner retention story using cohorts, not just aggregate revenue",
+          "Deck should show three cohorts, expansion revenue, and where churn concentrated",
+          "Two next-quarter priorities: operational consistency and enterprise conversion",
+          "Frame warehouse fix as margin recovery",
+          "Add hiring discipline slide: needed roles, unnecessary roles, where headcount is being resisted",
+          "Growth Learning",
+          "Kabir can introduce two agency founders who solved outbound efficiently",
+          "Ask about metrics they watched and what they stopped doing",
+          "Packaging & Supplier Terms",
+          "Current packaging rate can be held one more quarter if volume stays within band",
+          "Volume threshold: 85,000 units across the quarter before repricing",
+          "Late artwork approvals compressed production window",
+          "Earlier approvals may improve turnaround and reduce premium/rush costs",
+          "Eco-material option to be evaluated for Q3 / premium line"
+        ]
+      }
+    },
+    {
+      "number": 8,
+      "title": "Dev and the building manager",
+      "context": {
+        "counterpart": "Landlord / Building Manager",
+        "setting": "Facilities logistics"
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Building Manager",
+          "utterance": "Dev, the upstairs AC unit in your office suite needs a full servicing window next Tuesday morning.",
+          "importance": "Medium",
+          "tool": "Calendar event - office maintenance window Tuesday morning"
+        },
+        {
+          "index": 2,
+          "speaker": "Dev",
+          "utterance": "How disruptive are we talking? Mild inconvenience or everyone pretending to work in a sauna?",
+          "importance": "Medium",
+          "tool": "Notes - assess AC servicing impact"
+        },
+        {
+          "index": 3,
+          "speaker": "Building Manager",
+          "utterance": "Likely three hours with intermittent shutdowns in the front area.",
+          "importance": "Medium",
+          "tool": "Notes - front area may be uncomfortable for three hours"
+        },
+        {
+          "index": 4,
+          "speaker": "Dev",
+          "utterance": "Fine. I\u2019ll move the team remote for the morning and keep only warehouse-side staff onsite.",
+          "importance": "High",
+          "tool": "Calendar event - remote work block next Tuesday morning"
+        },
+        {
+          "index": 5,
+          "speaker": "Building Manager",
+          "utterance": "That would make it easier for the technicians.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 6,
+          "speaker": "Dev",
+          "utterance": "Please send me the exact technician arrival window. I need something more precise than 'sometime after sunrise.'",
+          "importance": "Medium",
+          "tool": "Reminder - get exact AC technician arrival window"
+        },
+        {
+          "index": 7,
+          "speaker": "Building Manager",
+          "utterance": "They estimate 8:30 to 11:30.",
+          "importance": "Medium",
+          "tool": "Calendar event - AC servicing 8:30-11:30 AM Tuesday"
+        },
+        {
+          "index": 8,
+          "speaker": "Dev",
+          "utterance": "Great. I\u2019ll notify the team today so nobody shows up dressed for productivity and gets punished by thermodynamics.",
+          "importance": "High",
+          "tool": "Reminder - notify team about remote Tuesday morning"
+        },
+        {
+          "index": 9,
+          "speaker": "Building Manager",
+          "utterance": "Also, parking lot sealing is planned next Saturday. Tenant parking will shift to the back entrance.",
+          "importance": "Medium",
+          "tool": "Reminder - note temporary parking change next Saturday"
+        },
+        {
+          "index": 10,
+          "speaker": "Dev",
+          "utterance": "That one will matter for the warehouse pickup window. Send me the map.",
+          "importance": "Medium",
+          "tool": "Notes - Saturday parking shift may affect warehouse pickups"
+        },
+        {
+          "index": 11,
+          "speaker": "Building Manager",
+          "utterance": "Will do.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 12,
+          "speaker": "Dev",
+          "utterance": "And if there\u2019s any chance the AC runs late, call me before 10:30. I have two client meetings that afternoon and I do not want chaos drifting forward.",
+          "importance": "High",
+          "tool": "Reminder - ask building manager to alert Dev if servicing runs late"
+        },
+        {
+          "index": 13,
+          "speaker": "Building Manager",
+          "utterance": "Understood.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 14,
+          "speaker": "Dev",
+          "utterance": "Thanks. I like predictable buildings almost as much as predictable revenue.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Today, 9:00-10:30 AM | Office / Desk | Deep-work block for Patel proposal | Priority: High",
+          "Today, 12:00-12:45 PM | Office conference room / video | Hiring interview shifted by 30 minutes | Priority: Medium",
+          "Today, 1:50-2:00 PM | Office | Quiet buffer before 2:00 PM client call | Priority: Medium",
+          "Today, 6:30 PM | Office to Cedar House/Mehta home | Leave for dinner with the Mehtas | Priority: High",
+          "Tomorrow, 9:15-9:35 AM | Video call with Patel ops team | Discovery call with Priyanka to tighten rollout timeline | Priority: High",
+          "Tomorrow, 11:00-11:40 AM | Ops room / hybrid | Engineering + ops meeting on returns automation with owners and deadlines | Priority: High",
+          "Tomorrow, 11:45 AM-12:00 PM | Warehouse / ops floor | Dev visible support check-in with ops team | Priority: High",
+          "Friday, 6:45-8:00 PM | Aarav's school auditorium | Attend Aarav's school showcase | Priority: Very High",
+          "Friday, 6:00-8:30 PM | Family / school | No work block before and during Aarav's showcase | Priority: Very High",
+          "Sunday, 5:00-5:20 PM | Phone call | Call dad to confirm Monday checkup | Priority: High",
+          "Tomorrow, 7:15-7:35 PM | Home | Listen to Aarav practice his showcase lines | Priority: High",
+          "Sunday, 7:00-9:00 AM | Riverside Cafe start point | Cycling ride with Kabir and coffee after | Priority: Medium",
+          "Next Tuesday, 8:30-11:30 AM | Office suite front area | AC servicing window; team remote in the morning | Priority: Medium"
+        ],
+        "reminders": [
+          "Approve packaging vendor advance after proposal block | Priority: High",
+          "Confirm dinner location with the Mehtas | Priority: High",
+          "Buy flowers if dinner is at the Mehtas' home | Priority: Medium",
+          "Call mom before dinner | Priority: Medium",
+          "Update investor folder with latest sales dashboard this afternoon | Priority: High",
+          "Deliver revised Patel proposal by tomorrow noon | Priority: Very High",
+          "Send Patel legal/data-handling clarification note today | Priority: High",
+          "Prepare 6-month and 12-month pricing options for Patel | Priority: High",
+          "Send updated Patel deck after ops call tomorrow | Priority: Very High",
+          "Align engineering and ops on returns automation | Priority: High",
+          "Approve temporary workaround plan for this week | Priority: High",
+          "Confirm shorter intake template goes live tomorrow morning | Priority: High",
+          "Review lost-hours estimate from Maya by end of day | Priority: High",
+          "Decide on contractor help for parser after estimate | Priority: Medium",
+          "Thank Jenna for manual returns patching | Priority: Medium",
+          "Get one-paragraph warehouse brief tonight | Priority: High",
+          "Attend Aarav's school showcase Friday | Priority: Very High",
+          "Reply to sister about next weekend lunch | Priority: Medium",
+          "Decide midweek whether to host family lunch | Priority: Medium",
+          "Order replacement filter for kitchen tap | Priority: Medium",
+          "Buy milk tonight | Priority: Low",
+          "Prepare cohort retention view for Monday investor check-in | Priority: Very High",
+          "Simplify Monday investor deck language to the two core priorities | Priority: High",
+          "Send updated investor deck Sunday night | Priority: Very High",
+          "Add hiring slide to investor deck | Priority: High",
+          "Confirm and show up for Sunday morning ride | Priority: Medium",
+          "Follow up next week on agency founder introductions from Kabir | Priority: Medium",
+          "Get written packaging threshold terms from supplier | Priority: High",
+          "Tighten internal artwork approval process | Priority: High",
+          "Set earlier artwork approval rule before next packaging run | Priority: High",
+          "Review eco-material option pricing with finance | Priority: Medium",
+          "Request and save rush-fee trigger note from supplier | Priority: Medium",
+          "Get exact AC technician arrival window confirmation | Priority: Medium",
+          "Notify team about remote work next Tuesday morning | Priority: High",
+          "Remember temporary parking change next Saturday | Priority: Low",
+          "Ensure building manager alerts Dev if AC servicing runs past 10:30 AM | Priority: Medium"
+        ],
+        "alarms": [
+          "Today, 6:00 PM | Call mom before leaving for dinner | Priority: Medium",
+          "Today, 6:20 PM | Leave for dinner on time | Priority: High",
+          "Today, 8:15 PM | Check for Maya's warehouse brief | Priority: High",
+          "Friday, 6:15 PM | Leave for Aarav's school showcase on time | Priority: Very High",
+          "Today, 9:30 PM | Order kitchen tap filter | Priority: Medium",
+          "Tomorrow, 6:45 PM | Wrap up and head home for Aarav's practice | Priority: High",
+          "Sunday, 8:00 PM | Final check before sending investor deck by 8:30 PM | Priority: Very High",
+          "Sunday, 7:00 AM | No phone for the first hour of the ride | Priority: Medium",
+          "Today, 9:00 PM | Check supplier summary email with pricing thresholds and rush-fee triggers | Priority: High"
+        ],
+        "notes": [
+          "Day Priorities",
+          "Proposal -> vendor advance -> client call -> investor folder -> mom call -> dinner",
+          "Operations & Finance",
+          "Packaging vendor advance waiting for Dev approval",
+          "Relationships",
+          "Dinner with the Mehtas may require flowers if hosted at their home",
+          "Patel Deal",
+          "Clarify rollout timeline: kickoff, migration, success metrics",
+          "Add phased rollout with owner names, weekly checkpoints, and training schedule",
+          "Include written escalation path for implementation slips",
+          "Legal note: temporary implementation artifacts only; no production customer data",
+          "Consider phased entry pricing option for easier internal approval",
+          "Operations",
+          "Returns tagging issue is creating silent margin drag",
+          "Automation path: parser from engineering + standardized ops intake form",
+          "Track error rate before/after template change",
+          "Returns automation outranks referral dashboard this week",
+          "Ops morale is strained; in-person support matters",
+          "Family Logistics",
+          "School showcase address and correct entry gate saved",
+          "Friday evening protected for Aarav",
+          "Investor Prep",
+          "Investor wants a cleaner retention story using cohorts, not just aggregate revenue",
+          "Deck should show three cohorts, expansion revenue, and where churn concentrated",
+          "Two next-quarter priorities: operational consistency and enterprise conversion",
+          "Frame warehouse fix as margin recovery",
+          "Add hiring discipline slide: needed roles, unnecessary roles, where headcount is being resisted",
+          "Growth Learning",
+          "Kabir can introduce two agency founders who solved outbound efficiently",
+          "Ask about metrics they watched and what they stopped doing",
+          "Packaging & Supplier Terms",
+          "Current packaging rate can be held one more quarter if volume stays within band",
+          "Volume threshold: 85,000 units across the quarter before repricing",
+          "Late artwork approvals compressed production window",
+          "Earlier approvals may improve turnaround and reduce premium/rush costs",
+          "Eco-material option to be evaluated for Q3 / premium line",
+          "Office Logistics",
+          "AC servicing next Tuesday affects front office area for roughly three hours",
+          "Team should work remote Tuesday morning; warehouse-side staff can stay onsite",
+          "Temporary parking shift next Saturday may affect warehouse pickup flow"
+        ]
+      }
+    },
+    {
+      "number": 9,
+      "title": "Dev and a strategic partner",
+      "context": {
+        "counterpart": "Colleague / Partner",
+        "setting": "Growth collaboration call"
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Strategic Partner",
+          "utterance": "Dev, the webinar brought in decent leads, but the handoff after signup was messy.",
+          "importance": "High",
+          "tool": "Notes - webinar lead handoff was messy"
+        },
+        {
+          "index": 2,
+          "speaker": "Dev",
+          "utterance": "That\u2019s on us then. Good lead gen with bad handoff is just expensive confusion.",
+          "importance": "High",
+          "tool": "Notes - webinar lead generation needs cleaner handoff"
+        },
+        {
+          "index": 3,
+          "speaker": "Partner",
+          "utterance": "Exactly. Registrants didn\u2019t know whether they were getting a demo, a case study, or a generic follow-up email.",
+          "importance": "High",
+          "tool": "Notes - clarify post-webinar follow-up path"
+        },
+        {
+          "index": 4,
+          "speaker": "Dev",
+          "utterance": "We fix that before the next one. One CTA, one owner, one sequence.",
+          "importance": "High",
+          "tool": "Reminder - redesign webinar follow-up flow"
+        },
+        {
+          "index": 5,
+          "speaker": "Partner",
+          "utterance": "Can your team draft a cleaner sequence by Thursday?",
+          "importance": "High",
+          "tool": "Reminder - draft webinar follow-up sequence by Thursday"
+        },
+        {
+          "index": 6,
+          "speaker": "Dev",
+          "utterance": "Yes. Thursday noon for a draft, Friday for final copy if legal doesn\u2019t suddenly discover feelings.",
+          "importance": "High",
+          "tool": "Calendar event - webinar sequence review Thursday noon"
+        },
+        {
+          "index": 7,
+          "speaker": "Partner",
+          "utterance": "Good. I also want the next webinar date locked sooner. We lose momentum when we wait too long.",
+          "importance": "High",
+          "tool": "Calendar event - lock next webinar date"
+        },
+        {
+          "index": 8,
+          "speaker": "Dev",
+          "utterance": "Agreed. Let\u2019s hold the second Thursday next month at 1:00 unless your side has conflict.",
+          "importance": "High",
+          "tool": "Calendar event - tentative next webinar second Thursday next month 1:00 PM"
+        },
+        {
+          "index": 9,
+          "speaker": "Partner",
+          "utterance": "That works for us.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 10,
+          "speaker": "Dev",
+          "utterance": "Then it\u2019s real. I\u2019ll have my assistant circulate the hold today.",
+          "importance": "High",
+          "tool": "Reminder - circulate next webinar calendar hold"
+        },
+        {
+          "index": 11,
+          "speaker": "Partner",
+          "utterance": "One more thing: can you send me the high-intent lead list separately? Sales wants those first.",
+          "importance": "High",
+          "tool": "Reminder - send high-intent webinar lead list separately"
+        },
+        {
+          "index": 12,
+          "speaker": "Dev",
+          "utterance": "Yes. I\u2019d rather score them once and route them properly than make three teams rediscover the same lead quality.",
+          "importance": "High",
+          "tool": "Notes - high-intent leads should be routed separately"
+        },
+        {
+          "index": 13,
+          "speaker": "Partner",
+          "utterance": "Exactly.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 14,
+          "speaker": "Dev",
+          "utterance": "Also, for the next webinar, I want one customer story and fewer framework slides. We got polite engagement, not hungry engagement.",
+          "importance": "High",
+          "tool": "Notes - next webinar should include one customer story and fewer framework slides"
+        },
+        {
+          "index": 15,
+          "speaker": "Partner",
+          "utterance": "I agree. Case studies convert better than elegant abstractions.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 16,
+          "speaker": "Dev",
+          "utterance": "Painfully true.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Today, 9:00-10:30 AM | Office / Desk | Deep-work block for Patel proposal | Priority: High",
+          "Today, 12:00-12:45 PM | Office conference room / video | Hiring interview shifted by 30 minutes | Priority: Medium",
+          "Today, 1:50-2:00 PM | Office | Quiet buffer before 2:00 PM client call | Priority: Medium",
+          "Today, 6:30 PM | Office to Cedar House/Mehta home | Leave for dinner with the Mehtas | Priority: High",
+          "Tomorrow, 9:15-9:35 AM | Video call with Patel ops team | Discovery call with Priyanka to tighten rollout timeline | Priority: High",
+          "Tomorrow, 11:00-11:40 AM | Ops room / hybrid | Engineering + ops meeting on returns automation with owners and deadlines | Priority: High",
+          "Tomorrow, 11:45 AM-12:00 PM | Warehouse / ops floor | Dev visible support check-in with ops team | Priority: High",
+          "Friday, 6:45-8:00 PM | Aarav's school auditorium | Attend Aarav's school showcase | Priority: Very High",
+          "Friday, 6:00-8:30 PM | Family / school | No work block before and during Aarav's showcase | Priority: Very High",
+          "Sunday, 5:00-5:20 PM | Phone call | Call dad to confirm Monday checkup | Priority: High",
+          "Tomorrow, 7:15-7:35 PM | Home | Listen to Aarav practice his showcase lines | Priority: High",
+          "Sunday, 7:00-9:00 AM | Riverside Cafe start point | Cycling ride with Kabir and coffee after | Priority: Medium",
+          "Next Tuesday, 8:30-11:30 AM | Office suite front area | AC servicing window; team remote in the morning | Priority: Medium",
+          "Thursday, 12:00-12:30 PM | Video call / office | Review webinar follow-up sequence draft | Priority: High",
+          "Second Thursday next month, 1:00-2:00 PM | Virtual webinar | Tentative next webinar date hold | Priority: Medium"
+        ],
+        "reminders": [
+          "Approve packaging vendor advance after proposal block | Priority: High",
+          "Confirm dinner location with the Mehtas | Priority: High",
+          "Buy flowers if dinner is at the Mehtas' home | Priority: Medium",
+          "Call mom before dinner | Priority: Medium",
+          "Update investor folder with latest sales dashboard this afternoon | Priority: High",
+          "Deliver revised Patel proposal by tomorrow noon | Priority: Very High",
+          "Send Patel legal/data-handling clarification note today | Priority: High",
+          "Prepare 6-month and 12-month pricing options for Patel | Priority: High",
+          "Send updated Patel deck after ops call tomorrow | Priority: Very High",
+          "Align engineering and ops on returns automation | Priority: High",
+          "Approve temporary workaround plan for this week | Priority: High",
+          "Confirm shorter intake template goes live tomorrow morning | Priority: High",
+          "Review lost-hours estimate from Maya by end of day | Priority: High",
+          "Decide on contractor help for parser after estimate | Priority: Medium",
+          "Thank Jenna for manual returns patching | Priority: Medium",
+          "Get one-paragraph warehouse brief tonight | Priority: High",
+          "Attend Aarav's school showcase Friday | Priority: Very High",
+          "Reply to sister about next weekend lunch | Priority: Medium",
+          "Decide midweek whether to host family lunch | Priority: Medium",
+          "Order replacement filter for kitchen tap | Priority: Medium",
+          "Buy milk tonight | Priority: Low",
+          "Prepare cohort retention view for Monday investor check-in | Priority: Very High",
+          "Simplify Monday investor deck language to the two core priorities | Priority: High",
+          "Send updated investor deck Sunday night | Priority: Very High",
+          "Add hiring slide to investor deck | Priority: High",
+          "Confirm and show up for Sunday morning ride | Priority: Medium",
+          "Follow up next week on agency founder introductions from Kabir | Priority: Medium",
+          "Get written packaging threshold terms from supplier | Priority: High",
+          "Tighten internal artwork approval process | Priority: High",
+          "Set earlier artwork approval rule before next packaging run | Priority: High",
+          "Review eco-material option pricing with finance | Priority: Medium",
+          "Request and save rush-fee trigger note from supplier | Priority: Medium",
+          "Get exact AC technician arrival window confirmation | Priority: Medium",
+          "Notify team about remote work next Tuesday morning | Priority: High",
+          "Remember temporary parking change next Saturday | Priority: Low",
+          "Ensure building manager alerts Dev if AC servicing runs past 10:30 AM | Priority: Medium",
+          "Redesign webinar follow-up flow with one CTA, one owner, one sequence | Priority: High",
+          "Draft webinar follow-up sequence by Thursday noon | Priority: High",
+          "Circulate next webinar calendar hold today | Priority: Medium",
+          "Send high-intent webinar lead list separately | Priority: High"
+        ],
+        "alarms": [
+          "Today, 6:00 PM | Call mom before leaving for dinner | Priority: Medium",
+          "Today, 6:20 PM | Leave for dinner on time | Priority: High",
+          "Today, 8:15 PM | Check for Maya's warehouse brief | Priority: High",
+          "Friday, 6:15 PM | Leave for Aarav's school showcase on time | Priority: Very High",
+          "Today, 9:30 PM | Order kitchen tap filter | Priority: Medium",
+          "Tomorrow, 6:45 PM | Wrap up and head home for Aarav's practice | Priority: High",
+          "Sunday, 8:00 PM | Final check before sending investor deck by 8:30 PM | Priority: Very High",
+          "Sunday, 7:00 AM | No phone for the first hour of the ride | Priority: Medium",
+          "Today, 9:00 PM | Check supplier summary email with pricing thresholds and rush-fee triggers | Priority: High"
+        ],
+        "notes": [
+          "Day Priorities",
+          "Proposal -> vendor advance -> client call -> investor folder -> mom call -> dinner",
+          "Operations & Finance",
+          "Packaging vendor advance waiting for Dev approval",
+          "Relationships",
+          "Dinner with the Mehtas may require flowers if hosted at their home",
+          "Patel Deal",
+          "Clarify rollout timeline: kickoff, migration, success metrics",
+          "Add phased rollout with owner names, weekly checkpoints, and training schedule",
+          "Include written escalation path for implementation slips",
+          "Legal note: temporary implementation artifacts only; no production customer data",
+          "Consider phased entry pricing option for easier internal approval",
+          "Operations",
+          "Returns tagging issue is creating silent margin drag",
+          "Automation path: parser from engineering + standardized ops intake form",
+          "Track error rate before/after template change",
+          "Returns automation outranks referral dashboard this week",
+          "Ops morale is strained; in-person support matters",
+          "Family Logistics",
+          "School showcase address and correct entry gate saved",
+          "Friday evening protected for Aarav",
+          "Investor Prep",
+          "Investor wants a cleaner retention story using cohorts, not just aggregate revenue",
+          "Deck should show three cohorts, expansion revenue, and where churn concentrated",
+          "Two next-quarter priorities: operational consistency and enterprise conversion",
+          "Frame warehouse fix as margin recovery",
+          "Add hiring discipline slide: needed roles, unnecessary roles, where headcount is being resisted",
+          "Growth Learning",
+          "Kabir can introduce two agency founders who solved outbound efficiently",
+          "Ask about metrics they watched and what they stopped doing",
+          "Packaging & Supplier Terms",
+          "Current packaging rate can be held one more quarter if volume stays within band",
+          "Volume threshold: 85,000 units across the quarter before repricing",
+          "Late artwork approvals compressed production window",
+          "Earlier approvals may improve turnaround and reduce premium/rush costs",
+          "Eco-material option to be evaluated for Q3 / premium line",
+          "Office Logistics",
+          "AC servicing next Tuesday affects front office area for roughly three hours",
+          "Team should work remote Tuesday morning; warehouse-side staff can stay onsite",
+          "Temporary parking shift next Saturday may affect warehouse pickup flow",
+          "Growth Marketing",
+          "Post-webinar handoff was messy; registrants were unclear on next step",
+          "Next webinar follow-up should have one CTA, one owner, one sequence",
+          "Route high-intent leads separately for sales",
+          "Next webinar should include one customer story and fewer framework slides"
+        ]
+      }
+    },
+    {
+      "number": 10,
+      "title": "Dev and his mother",
+      "context": {
+        "counterpart": "Mother",
+        "setting": "Late-night family check-in"
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Mother",
+          "utterance": "You sound tired. Are you eating properly or building a company on coffee and optimism again?",
+          "importance": "Medium",
+          "tool": "Reminder - eat before late meetings"
+        },
+        {
+          "index": 2,
+          "speaker": "Dev",
+          "utterance": "Rude opening, but not inaccurate.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 3,
+          "speaker": "Mother",
+          "utterance": "I\u2019m your mother. Accuracy is part of the service.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 4,
+          "speaker": "Dev",
+          "utterance": "Fair. I am eating, just not always on schedule.",
+          "importance": "Medium",
+          "tool": "Notes - meals slip when schedule compresses"
+        },
+        {
+          "index": 5,
+          "speaker": "Mother",
+          "utterance": "Then schedule it. You people schedule investors and forget lunch like it\u2019s a personality trait.",
+          "importance": "Medium",
+          "tool": "Calendar event - protected lunch blocks on heavy days"
+        },
+        {
+          "index": 6,
+          "speaker": "Dev",
+          "utterance": "You and my assistant would get along disturbingly well.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 7,
+          "speaker": "Mother",
+          "utterance": "Also, your cousin\u2019s engagement is next month. Have you booked travel yet?",
+          "importance": "High",
+          "tool": "Reminder - book travel for cousin's engagement"
+        },
+        {
+          "index": 8,
+          "speaker": "Dev",
+          "utterance": "Not yet. Send me the exact date again and I\u2019ll lock it tonight.",
+          "importance": "High",
+          "tool": "Reminder - confirm date and book travel tonight"
+        },
+        {
+          "index": 9,
+          "speaker": "Mother",
+          "utterance": "I sent it this morning. Check properly.",
+          "importance": "Medium",
+          "tool": "Alarm - 9:45 PM book travel after checking family message"
+        },
+        {
+          "index": 10,
+          "speaker": "Dev",
+          "utterance": "Understood. Anything else while we are auditing my adulthood?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 11,
+          "speaker": "Mother",
+          "utterance": "Yes. Your father said the Monday checkup is at 10:30, not 11:00, so don\u2019t confuse him when you call Sunday.",
+          "importance": "High",
+          "tool": "Notes - dad checkup is Monday 10:30 AM"
+        },
+        {
+          "index": 12,
+          "speaker": "Dev",
+          "utterance": "Good catch. I\u2019ll update it.",
+          "importance": "High",
+          "tool": "Calendar event - update dad checkup confirmation note"
+        },
+        {
+          "index": 13,
+          "speaker": "Mother",
+          "utterance": "And please keep one evening free next week. Family is not a side quest.",
+          "importance": "High",
+          "tool": "Calendar event - family dinner next week hold"
+        },
+        {
+          "index": 14,
+          "speaker": "Dev",
+          "utterance": "I know. Hold Wednesday evening. If I don\u2019t reserve it now, work will expand like a gas and occupy everything.",
+          "importance": "High",
+          "tool": "Calendar event - Wednesday family dinner hold"
+        },
+        {
+          "index": 15,
+          "speaker": "Mother",
+          "utterance": "That is the first sensible thing you\u2019ve said in this call.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 16,
+          "speaker": "Dev",
+          "utterance": "I\u2019m growing.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 17,
+          "speaker": "Mother",
+          "utterance": "Slowly, but yes.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 18,
+          "speaker": "Dev",
+          "utterance": "Love you too, Ma.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Today, 9:00-10:30 AM | Office / Desk | Deep-work block for Patel proposal | Priority: High",
+          "Today, 12:00-12:45 PM | Office conference room / video | Hiring interview shifted by 30 minutes | Priority: Medium",
+          "Today, 1:50-2:00 PM | Office | Quiet buffer before 2:00 PM client call | Priority: Medium",
+          "Today, 6:30 PM | Office to Cedar House/Mehta home | Leave for dinner with the Mehtas | Priority: High",
+          "Tomorrow, 9:15-9:35 AM | Video call with Patel ops team | Discovery call with Priyanka to tighten rollout timeline | Priority: High",
+          "Tomorrow, 11:00-11:40 AM | Ops room / hybrid | Engineering + ops meeting on returns automation with owners and deadlines | Priority: High",
+          "Tomorrow, 11:45 AM-12:00 PM | Warehouse / ops floor | Dev visible support check-in with ops team | Priority: High",
+          "Friday, 6:45-8:00 PM | Aarav's school auditorium | Attend Aarav's school showcase | Priority: Very High",
+          "Friday, 6:00-8:30 PM | Family / school | No work block before and during Aarav's showcase | Priority: Very High",
+          "Sunday, 5:00-5:20 PM | Phone call | Call dad to confirm Monday checkup | Priority: High",
+          "Tomorrow, 7:15-7:35 PM | Home | Listen to Aarav practice his showcase lines | Priority: High",
+          "Sunday, 7:00-9:00 AM | Riverside Cafe start point | Cycling ride with Kabir and coffee after | Priority: Medium",
+          "Next Tuesday, 8:30-11:30 AM | Office suite front area | AC servicing window; team remote in the morning | Priority: Medium",
+          "Thursday, 12:00-12:30 PM | Video call / office | Review webinar follow-up sequence draft | Priority: High",
+          "Second Thursday next month, 1:00-2:00 PM | Virtual webinar | Tentative next webinar date hold | Priority: Medium",
+          "Recurring on heavy workdays, 1:00-1:30 PM | Wherever Dev is working | Protected lunch block to avoid skipping meals | Priority: Medium",
+          "Next Wednesday, 7:30-9:00 PM | Family dinner / TBD | Protected family evening | Priority: High"
+        ],
+        "reminders": [
+          "Approve packaging vendor advance after proposal block | Priority: High",
+          "Confirm dinner location with the Mehtas | Priority: High",
+          "Buy flowers if dinner is at the Mehtas' home | Priority: Medium",
+          "Call mom before dinner | Priority: Medium",
+          "Update investor folder with latest sales dashboard this afternoon | Priority: High",
+          "Deliver revised Patel proposal by tomorrow noon | Priority: Very High",
+          "Send Patel legal/data-handling clarification note today | Priority: High",
+          "Prepare 6-month and 12-month pricing options for Patel | Priority: High",
+          "Send updated Patel deck after ops call tomorrow | Priority: Very High",
+          "Align engineering and ops on returns automation | Priority: High",
+          "Approve temporary workaround plan for this week | Priority: High",
+          "Confirm shorter intake template goes live tomorrow morning | Priority: High",
+          "Review lost-hours estimate from Maya by end of day | Priority: High",
+          "Decide on contractor help for parser after estimate | Priority: Medium",
+          "Thank Jenna for manual returns patching | Priority: Medium",
+          "Get one-paragraph warehouse brief tonight | Priority: High",
+          "Attend Aarav's school showcase Friday | Priority: Very High",
+          "Reply to sister about next weekend lunch | Priority: Medium",
+          "Decide midweek whether to host family lunch | Priority: Medium",
+          "Order replacement filter for kitchen tap | Priority: Medium",
+          "Buy milk tonight | Priority: Low",
+          "Prepare cohort retention view for Monday investor check-in | Priority: Very High",
+          "Simplify Monday investor deck language to the two core priorities | Priority: High",
+          "Send updated investor deck Sunday night | Priority: Very High",
+          "Add hiring slide to investor deck | Priority: High",
+          "Confirm and show up for Sunday morning ride | Priority: Medium",
+          "Follow up next week on agency founder introductions from Kabir | Priority: Medium",
+          "Get written packaging threshold terms from supplier | Priority: High",
+          "Tighten internal artwork approval process | Priority: High",
+          "Set earlier artwork approval rule before next packaging run | Priority: High",
+          "Review eco-material option pricing with finance | Priority: Medium",
+          "Request and save rush-fee trigger note from supplier | Priority: Medium",
+          "Get exact AC technician arrival window confirmation | Priority: Medium",
+          "Notify team about remote work next Tuesday morning | Priority: High",
+          "Remember temporary parking change next Saturday | Priority: Low",
+          "Ensure building manager alerts Dev if AC servicing runs past 10:30 AM | Priority: Medium",
+          "Redesign webinar follow-up flow with one CTA, one owner, one sequence | Priority: High",
+          "Draft webinar follow-up sequence by Thursday noon | Priority: High",
+          "Circulate next webinar calendar hold today | Priority: Medium",
+          "Send high-intent webinar lead list separately | Priority: High",
+          "Eat before late meetings and avoid skipping meals | Priority: Medium",
+          "Book travel for cousin's engagement after confirming date | Priority: High"
+        ],
+        "alarms": [
+          "Today, 6:00 PM | Call mom before leaving for dinner | Priority: Medium",
+          "Today, 6:20 PM | Leave for dinner on time | Priority: High",
+          "Today, 8:15 PM | Check for Maya's warehouse brief | Priority: High",
+          "Friday, 6:15 PM | Leave for Aarav's school showcase on time | Priority: Very High",
+          "Today, 9:30 PM | Order kitchen tap filter | Priority: Medium",
+          "Tomorrow, 6:45 PM | Wrap up and head home for Aarav's practice | Priority: High",
+          "Sunday, 8:00 PM | Final check before sending investor deck by 8:30 PM | Priority: Very High",
+          "Sunday, 7:00 AM | No phone for the first hour of the ride | Priority: Medium",
+          "Today, 9:00 PM | Check supplier summary email with pricing thresholds and rush-fee triggers | Priority: High",
+          "Today, 9:45 PM | Book travel for cousin's engagement after checking family message | Priority: High"
+        ],
+        "notes": [
+          "Day Priorities",
+          "Proposal -> vendor advance -> client call -> investor folder -> mom call -> dinner",
+          "Operations & Finance",
+          "Packaging vendor advance waiting for Dev approval",
+          "Relationships",
+          "Dinner with the Mehtas may require flowers if hosted at their home",
+          "Patel Deal",
+          "Clarify rollout timeline: kickoff, migration, success metrics",
+          "Add phased rollout with owner names, weekly checkpoints, and training schedule",
+          "Include written escalation path for implementation slips",
+          "Legal note: temporary implementation artifacts only; no production customer data",
+          "Consider phased entry pricing option for easier internal approval",
+          "Operations",
+          "Returns tagging issue is creating silent margin drag",
+          "Automation path: parser from engineering + standardized ops intake form",
+          "Track error rate before/after template change",
+          "Returns automation outranks referral dashboard this week",
+          "Ops morale is strained; in-person support matters",
+          "Family Logistics",
+          "School showcase address and correct entry gate saved",
+          "Friday evening protected for Aarav",
+          "Dad's Monday checkup is at 10:30 AM",
+          "Keep one evening free next week for family",
+          "Investor Prep",
+          "Investor wants a cleaner retention story using cohorts, not just aggregate revenue",
+          "Deck should show three cohorts, expansion revenue, and where churn concentrated",
+          "Two next-quarter priorities: operational consistency and enterprise conversion",
+          "Frame warehouse fix as margin recovery",
+          "Add hiring discipline slide: needed roles, unnecessary roles, where headcount is being resisted",
+          "Growth Learning",
+          "Kabir can introduce two agency founders who solved outbound efficiently",
+          "Ask about metrics they watched and what they stopped doing",
+          "Packaging & Supplier Terms",
+          "Current packaging rate can be held one more quarter if volume stays within band",
+          "Volume threshold: 85,000 units across the quarter before repricing",
+          "Late artwork approvals compressed production window",
+          "Earlier approvals may improve turnaround and reduce premium/rush costs",
+          "Eco-material option to be evaluated for Q3 / premium line",
+          "Office Logistics",
+          "AC servicing next Tuesday affects front office area for roughly three hours",
+          "Team should work remote Tuesday morning; warehouse-side staff can stay onsite",
+          "Temporary parking shift next Saturday may affect warehouse pickup flow",
+          "Growth Marketing",
+          "Post-webinar handoff was messy; registrants were unclear on next step",
+          "Next webinar follow-up should have one CTA, one owner, one sequence",
+          "Route high-intent leads separately for sales",
+          "Next webinar should include one customer story and fewer framework slides",
+          "Personal Habits",
+          "Meals slip when schedule compresses; lunch needs protection on heavy days"
+        ]
+      }
+    },
+    {
+      "number": 11,
+      "title": "Dev Revises A Busy Operating Day",
+      "context": {
+        "counterpart": "Assistant",
+        "setting": "Morning reschedule while juggling client, investor, and ops priorities"
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Assistant",
+          "utterance": "Patel can only do the rollout review at 3:30 now, not 2.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 move Patel rollout review from 2:00 PM to 3:30 PM"
+        },
+        {
+          "index": 2,
+          "speaker": "Dev",
+          "utterance": "Update it, and keep the prep block before it. I do not want to walk in with startup jazz hands.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 keep Patel prep block before revised 3:30 review"
+        },
+        {
+          "index": 3,
+          "speaker": "Assistant",
+          "utterance": "Your investor deck reminder says send by 9 PM, but Priya asked for it by 7.",
+          "importance": "High",
+          "tool": "Reminder update \u2014 change investor deck send deadline from 9 PM to 7 PM"
+        },
+        {
+          "index": 4,
+          "speaker": "Dev",
+          "utterance": "Move the reminder to 6:30 and make the alarm 6:45. I need a real shove, not a polite suggestion.",
+          "importance": "High",
+          "tool": "Alarm update \u2014 change investor deck alarm to 6:45 PM"
+        },
+        {
+          "index": 5,
+          "speaker": "Assistant",
+          "utterance": "The supplier note should include the new rush-fee threshold: anything under five business days triggers a premium.",
+          "importance": "Medium",
+          "tool": "Notes update \u2014 add supplier rush-fee threshold under five business days"
+        },
+        {
+          "index": 6,
+          "speaker": "Dev",
+          "utterance": "Add that. That is exactly the kind of tiny margin leak that later wears a costume called strategy.",
+          "importance": "Medium",
+          "tool": "Notes update \u2014 update supplier terms note with rush-fee risk"
+        },
+        {
+          "index": 7,
+          "speaker": "Assistant",
+          "utterance": "The AC service moved from Tuesday morning to Wednesday morning.",
+          "importance": "Medium",
+          "tool": "Calendar event update \u2014 move AC service from Tuesday morning to Wednesday morning"
+        },
+        {
+          "index": 8,
+          "speaker": "Dev",
+          "utterance": "Update the remote-work note too so the front office does not show up into mechanical theater.",
+          "importance": "Medium",
+          "tool": "Notes update \u2014 update office logistics note for Wednesday morning AC service"
+        },
+        {
+          "index": 9,
+          "speaker": "Assistant",
+          "utterance": "Maybe the dinner shifts too, but they have not confirmed.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 10,
+          "speaker": "Dev",
+          "utterance": "No update until they confirm. My calendar is not a rumor board.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Updated Patel rollout review to 3:30 PM with prep block preserved.",
+          "Updated AC service from Tuesday morning to Wednesday morning."
+        ],
+        "reminders": [
+          "Updated investor deck send deadline from 9 PM to 7 PM."
+        ],
+        "alarms": [
+          "Updated investor deck alarm to 6:45 PM."
+        ],
+        "notes": [
+          "Added supplier rush-fee threshold: under five business days triggers premium.",
+          "Updated office logistics note for Wednesday morning AC service."
+        ]
+      }
+    },
+    {
+      "number": 12,
+      "title": "Dev Cancels Stale Startup Tasks",
+      "context": {
+        "counterpart": "Chief of Staff",
+        "setting": "End-of-day cleanup to prevent stale tools and duplicate work"
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Chief of Staff",
+          "utterance": "The Mehta dinner is canceled. Their kid is sick, so we are rescheduling next week.",
+          "importance": "High",
+          "tool": "Calendar event delete \u2014 cancel Mehta dinner tonight"
+        },
+        {
+          "index": 2,
+          "speaker": "Dev",
+          "utterance": "Delete the dinner and the flowers reminder. No one needs efficiency flowers for a canceled dinner.",
+          "importance": "High",
+          "tool": "Reminder delete \u2014 remove flowers reminder for canceled Mehta dinner"
+        },
+        {
+          "index": 3,
+          "speaker": "Chief of Staff",
+          "utterance": "The warehouse intake form is no longer temporary. Ops adopted the new template.",
+          "importance": "Medium",
+          "tool": "Notes update \u2014 mark warehouse intake template as adopted by ops"
+        },
+        {
+          "index": 4,
+          "speaker": "Dev",
+          "utterance": "Good. Delete the temporary workaround reminder, but keep the note about tracking error rate.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 remove temporary warehouse workaround reminder"
+        },
+        {
+          "index": 5,
+          "speaker": "Chief of Staff",
+          "utterance": "The noon investor prep alarm is stale because Priya moved the call to next week.",
+          "importance": "Medium",
+          "tool": "Alarm delete \u2014 remove stale noon investor prep alarm"
+        },
+        {
+          "index": 6,
+          "speaker": "Dev",
+          "utterance": "Delete it. Phantom alarms are how a calendar develops trust issues.",
+          "importance": "Medium",
+          "tool": "Alarm delete \u2014 delete stale investor prep alarm"
+        },
+        {
+          "index": 7,
+          "speaker": "Chief of Staff",
+          "utterance": "Should I delete the retention story notes too?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 8,
+          "speaker": "Dev",
+          "utterance": "No, keep those. The meeting moved, the story still matters.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 keep retention story notes despite meeting move"
+        },
+        {
+          "index": 9,
+          "speaker": "Chief of Staff",
+          "utterance": "The referral dashboard sync is canceled because it lost priority this week.",
+          "importance": "Medium",
+          "tool": "Calendar event delete \u2014 cancel referral dashboard sync"
+        },
+        {
+          "index": 10,
+          "speaker": "Dev",
+          "utterance": "Delete the sync. Returns automation is the actual fire.",
+          "importance": "High",
+          "tool": "Calendar event delete \u2014 delete referral dashboard sync"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Deleted Mehta dinner.",
+          "Deleted referral dashboard sync."
+        ],
+        "reminders": [
+          "Deleted flowers reminder for canceled Mehta dinner.",
+          "Deleted temporary warehouse workaround reminder."
+        ],
+        "alarms": [
+          "Deleted stale investor prep alarm."
+        ],
+        "notes": [
+          "Marked warehouse intake template as adopted by ops.",
+          "Kept retention story notes despite meeting move."
+        ]
+      }
+    },
+    {
+      "number": 13,
+      "title": "Dev Investor Prep And Alarm Boundaries",
+      "context": {
+        "counterpart": "Chief of Staff",
+        "setting": "Investor prep under deadline pressure"
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Chief of Staff",
+          "utterance": "Priya wants the revised retention slide by 6 PM, not end of day.",
+          "importance": "High",
+          "tool": "Reminder update \u2014 change retention slide deadline to 6 PM"
+        },
+        {
+          "index": 2,
+          "speaker": "Dev",
+          "utterance": "Update that reminder and set a 5:40 alarm. I need the deck sent before inbox gravity wins.",
+          "importance": "High",
+          "tool": "Alarm \u2014 send revised retention slide at 5:40 PM"
+        },
+        {
+          "index": 3,
+          "speaker": "Chief of Staff",
+          "utterance": "The cohort chart is useful, but the enterprise churn note should be shorter.",
+          "importance": "Medium",
+          "tool": "Notes update \u2014 shorten enterprise churn note in investor deck"
+        },
+        {
+          "index": 4,
+          "speaker": "Dev",
+          "utterance": "Add that. Keep the point, lose the essay.",
+          "importance": "Medium",
+          "tool": "Notes update \u2014 keep enterprise churn point concise"
+        },
+        {
+          "index": 5,
+          "speaker": "Chief of Staff",
+          "utterance": "Do you want to block 4:30 to 5:30 for investor edits?",
+          "importance": "High",
+          "tool": "Calendar event \u2014 investor deck edit block 4:30-5:30 PM"
+        },
+        {
+          "index": 6,
+          "speaker": "Dev",
+          "utterance": "Yes, protect that hour. Everything else can form a respectful line outside.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 protect investor edit hour"
+        },
+        {
+          "index": 7,
+          "speaker": "Chief of Staff",
+          "utterance": "Maybe Kabir calls later with founder intros, but he has not confirmed.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 8,
+          "speaker": "Dev",
+          "utterance": "No calendar entry for maybe. Confirmed commitments only.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 9,
+          "speaker": "Chief of Staff",
+          "utterance": "If Priya confirms tomorrow instead, we can move the prep.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 10,
+          "speaker": "Dev",
+          "utterance": "Right, wait for the actual confirmation before changing anything.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {}
+    },
+    {
+      "number": 14,
+      "title": "Dev Client Reschedule And Duplicate Prevention",
+      "context": {
+        "counterpart": "Client Success Lead",
+        "setting": "Client rollout logistics"
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Client Success Lead",
+          "utterance": "Patel moved the rollout training from Thursday morning to Thursday at 4.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 move Patel rollout training to Thursday 4 PM"
+        },
+        {
+          "index": 2,
+          "speaker": "Dev",
+          "utterance": "Update the event instead of making a second one. Duplicate calendar blocks are how teams invent confusion.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 update existing Patel rollout training event"
+        },
+        {
+          "index": 3,
+          "speaker": "Client Success Lead",
+          "utterance": "The reminder still says send training agenda Wednesday morning. Should that be Wednesday noon?",
+          "importance": "Medium",
+          "tool": "Reminder update \u2014 move training agenda reminder to Wednesday noon"
+        },
+        {
+          "index": 4,
+          "speaker": "Dev",
+          "utterance": "Yes, update it to noon and add owner names to the agenda note.",
+          "importance": "High",
+          "tool": "Notes update \u2014 add owner names to Patel training agenda note"
+        },
+        {
+          "index": 5,
+          "speaker": "Client Success Lead",
+          "utterance": "The old migration-risk note is stale now that legal approved temporary artifacts.",
+          "importance": "Medium",
+          "tool": "Notes delete \u2014 remove stale migration-risk note"
+        },
+        {
+          "index": 6,
+          "speaker": "Dev",
+          "utterance": "Delete the stale note, keep the legal approval note. That distinction matters.",
+          "importance": "Medium",
+          "tool": "Notes delete \u2014 delete stale migration-risk note but keep legal approval note"
+        },
+        {
+          "index": 7,
+          "speaker": "Client Success Lead",
+          "utterance": "Should I delete the whole Patel prep folder?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 8,
+          "speaker": "Dev",
+          "utterance": "Absolutely not. One stale note is not a house fire.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 9,
+          "speaker": "Client Success Lead",
+          "utterance": "Training could maybe move again if their ops lead travels.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 10,
+          "speaker": "Dev",
+          "utterance": "Maybe is not an update. We wait.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {}
+    },
+    {
+      "number": 15,
+      "title": "Dev Ops Fire And Canceled Work",
+      "context": {
+        "counterpart": "Maya",
+        "setting": "Warehouse operations prioritization"
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Maya",
+          "utterance": "The temporary returns workaround is no longer needed because engineering shipped the parser.",
+          "importance": "High",
+          "tool": "Reminder delete \u2014 remove temporary returns workaround reminder"
+        },
+        {
+          "index": 2,
+          "speaker": "Dev",
+          "utterance": "Delete that reminder. We should not keep nudging people to do obsolete duct tape.",
+          "importance": "High",
+          "tool": "Reminder delete \u2014 delete obsolete returns workaround reminder"
+        },
+        {
+          "index": 3,
+          "speaker": "Maya",
+          "utterance": "The error-rate review should move from Friday to Monday after we have a full weekend of data.",
+          "importance": "Medium",
+          "tool": "Calendar event update \u2014 move returns error-rate review from Friday to Monday"
+        },
+        {
+          "index": 4,
+          "speaker": "Dev",
+          "utterance": "Update the review. A full weekend of data beats a decorative Friday meeting.",
+          "importance": "Medium",
+          "tool": "Calendar event update \u2014 update returns error-rate review to Monday"
+        },
+        {
+          "index": 5,
+          "speaker": "Maya",
+          "utterance": "Set a Monday 9 AM alarm to check whether error rate actually improved.",
+          "importance": "High",
+          "tool": "Alarm \u2014 check returns error rate Monday 9 AM"
+        },
+        {
+          "index": 6,
+          "speaker": "Dev",
+          "utterance": "Do it. If margin is leaking, I want the dashboard yelling early.",
+          "importance": "High",
+          "tool": "Alarm \u2014 Monday morning margin/error-rate check"
+        },
+        {
+          "index": 7,
+          "speaker": "Maya",
+          "utterance": "The referral dashboard is still deprioritized, right?",
+          "importance": "Medium",
+          "tool": "Notes \u2014 referral dashboard remains deprioritized behind returns automation"
+        },
+        {
+          "index": 8,
+          "speaker": "Dev",
+          "utterance": "Yes, keep that note. Not deleted, just not first in line.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 keep referral dashboard deprioritized note"
+        },
+        {
+          "index": 9,
+          "speaker": "Maya",
+          "utterance": "Maybe we revisit referral next month.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 10,
+          "speaker": "Dev",
+          "utterance": "Maybe next month gets no tool call until it becomes an actual plan.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {}
+    },
+    {
+      "number": 16,
+      "title": "Dev Family And Founder Boundaries",
+      "context": {
+        "counterpart": "Assistant",
+        "setting": "Personal commitments competing with work"
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Assistant",
+          "utterance": "Aarav\u2019s school showcase moved from Friday at 6 to Friday at 5:30.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 move Aarav school showcase to Friday 5:30 PM"
+        },
+        {
+          "index": 2,
+          "speaker": "Dev",
+          "utterance": "Update it and move the leave-office alarm earlier. I am not being the dad who arrives during applause.",
+          "importance": "High",
+          "tool": "Alarm update \u2014 move school showcase leave-office alarm earlier"
+        },
+        {
+          "index": 3,
+          "speaker": "Assistant",
+          "utterance": "Your reminder says buy flowers for the Mehtas, but dinner is now at a restaurant.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 remove flowers reminder for Mehta restaurant dinner"
+        },
+        {
+          "index": 4,
+          "speaker": "Dev",
+          "utterance": "Delete the flowers reminder. Bringing flowers to a restaurant feels like founder theater.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 delete Mehta flowers reminder"
+        },
+        {
+          "index": 5,
+          "speaker": "Assistant",
+          "utterance": "Keep the note that they care about family businesses?",
+          "importance": "Medium",
+          "tool": "Notes \u2014 keep Mehta family-business relationship note"
+        },
+        {
+          "index": 6,
+          "speaker": "Dev",
+          "utterance": "Yes, keep that. Relationship context is useful even when logistics change.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 keep relationship context despite dinner change"
+        },
+        {
+          "index": 7,
+          "speaker": "Assistant",
+          "utterance": "Maybe keep one evening open next week?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 8,
+          "speaker": "Dev",
+          "utterance": "That is a preference, not a calendar event yet.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 9,
+          "speaker": "Assistant",
+          "utterance": "Your mom asked whether Sunday lunch might work sometime soon.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 10,
+          "speaker": "Dev",
+          "utterance": "When she gives a day and time, I will protect it.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {}
+    },
+    {
+      "number": 17,
+      "title": "Dev Supplier Terms And Travel Cleanup",
+      "context": {
+        "counterpart": "Operations Lead",
+        "setting": "Supplier and travel logistics"
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Operations Lead",
+          "utterance": "Supplier call is confirmed for Tuesday at 11 to discuss the volume threshold.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 supplier terms call Tuesday 11 AM"
+        },
+        {
+          "index": 2,
+          "speaker": "Dev",
+          "utterance": "Block it. That threshold is small print with a profit-and-loss accent.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 reserve supplier terms call"
+        },
+        {
+          "index": 3,
+          "speaker": "Operations Lead",
+          "utterance": "Add the 85,000-unit threshold to the supplier note.",
+          "importance": "High",
+          "tool": "Notes update \u2014 add 85,000-unit threshold to supplier note"
+        },
+        {
+          "index": 4,
+          "speaker": "Dev",
+          "utterance": "Update the note and remind me to ask about eco-material pricing.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 ask about eco-material pricing during supplier call"
+        },
+        {
+          "index": 5,
+          "speaker": "Operations Lead",
+          "utterance": "The cousin engagement travel reminder is stale because your family moved the date.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 remove stale cousin engagement travel reminder"
+        },
+        {
+          "index": 6,
+          "speaker": "Dev",
+          "utterance": "Delete it until there is a real date. I do not need calendar confetti.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 delete stale family travel reminder"
+        },
+        {
+          "index": 7,
+          "speaker": "Operations Lead",
+          "utterance": "Set a 10:45 alarm before the supplier call?",
+          "importance": "High",
+          "tool": "Alarm \u2014 supplier call prep at 10:45 Tuesday"
+        },
+        {
+          "index": 8,
+          "speaker": "Dev",
+          "utterance": "Yes, I need the pricing thresholds in front of me before I talk.",
+          "importance": "High",
+          "tool": "Alarm \u2014 review pricing thresholds before supplier call"
+        },
+        {
+          "index": 9,
+          "speaker": "Operations Lead",
+          "utterance": "Maybe packaging volume changes if the new campaign spikes.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 10,
+          "speaker": "Dev",
+          "utterance": "Maybe is a note only after data exists. For now, no action.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "speaker": "Operations Lead",
+          "utterance": "Can you push that investor follow-up to later?",
+          "importance": "High",
+          "tool": "Clarification - Ask which investor follow-up and what later means before changing the reminder or calendar."
+        }
+      ],
+      "cumulative_tool_summary": {}
+    },
+    {
+      "number": 18,
+      "title": "Dev Stateful Founder Follow Through",
+      "context": {
+        "why_this_fits": "Dev needs clean operational state across reminders, calendar blocks, notes, alarms, and ambiguous edits."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Maya",
+          "utterance": "Investor prep is Wednesday from 9 to 10.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 investor prep Wednesday 9 AM"
+        },
+        {
+          "index": 2,
+          "speaker": "Dev",
+          "utterance": "Block it and remind me Tuesday night to send the traction summary.",
+          "importance": "High",
+          "tool": "Reminder \u2014 send traction summary Tuesday night"
+        },
+        {
+          "index": 3,
+          "speaker": "Maya",
+          "utterance": "Set an 8:30 alarm Wednesday so you are not entering the call mid-sentence.",
+          "importance": "High",
+          "tool": "Alarm \u2014 prep for investor call Wednesday 8:30 AM"
+        },
+        {
+          "index": 4,
+          "speaker": "Dev",
+          "utterance": "Note that they care most about retention by cohort, not vanity growth.",
+          "importance": "High",
+          "tool": "Notes \u2014 investor priority: retention by cohort"
+        },
+        {
+          "index": 5,
+          "speaker": "Maya",
+          "utterance": "They moved prep to 9:30.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 move investor prep to Wednesday 9:30 AM"
+        },
+        {
+          "index": 6,
+          "speaker": "Dev",
+          "utterance": "Update the calendar and move the traction reminder to Tuesday at 6.",
+          "importance": "High",
+          "tool": "Reminder update \u2014 move traction summary reminder to Tuesday 6 PM"
+        },
+        {
+          "index": 7,
+          "speaker": "Maya",
+          "utterance": "Make the alarm 9 instead of 8:30.",
+          "importance": "High",
+          "tool": "Alarm update \u2014 move investor prep alarm to Wednesday 9 AM"
+        },
+        {
+          "index": 8,
+          "speaker": "Dev",
+          "utterance": "Update the note: add churn risk in small accounts.",
+          "importance": "High",
+          "tool": "Notes update \u2014 add churn risk in small accounts to investor note"
+        },
+        {
+          "index": 9,
+          "speaker": "Maya",
+          "utterance": "The old returns workaround reminder is obsolete now.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 remove old returns workaround reminder"
+        },
+        {
+          "index": 10,
+          "speaker": "Dev",
+          "utterance": "Delete it, and cancel the vendor sync if legal already signed.",
+          "importance": "Medium",
+          "tool": "Calendar event delete \u2014 cancel vendor sync if legal already signed"
+        },
+        {
+          "index": 11,
+          "speaker": "Maya",
+          "utterance": "There is also an old alarm for the beta launch dry run.",
+          "importance": "Medium",
+          "tool": "Alarm delete \u2014 remove old beta launch dry run alarm"
+        },
+        {
+          "index": 12,
+          "speaker": "Dev",
+          "utterance": "Delete the note about manual invoices too; finance automated it.",
+          "importance": "Medium",
+          "tool": "Notes delete \u2014 remove manual invoice note"
+        },
+        {
+          "index": 13,
+          "speaker": "Maya",
+          "utterance": "Push that to Friday.",
+          "importance": "Low",
+          "tool": "Clarification \u2014 ask what item should be moved to Friday"
+        },
+        {
+          "index": 14,
+          "speaker": "Dev",
+          "utterance": "Ask which one. I have six Fridays hiding in this week already.",
+          "importance": "Low",
+          "tool": "Clarification \u2014 ask which item to move before updating anything"
+        }
+      ]
+    }
+  ],
+  "paragraph_count": 1668
+}

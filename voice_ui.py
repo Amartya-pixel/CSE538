@@ -3,9 +3,9 @@ Web UI for the persona-aware listening agent — lightweight version.
 
 Pipeline:
     mic  -> faster-whisper -> Ollama (your fine-tuned model)
-         -> decide YES / NO  -> append to actions_log.txt + speak "yes" / "no"
+         -> decide JSON action -> append to actions_log.txt + UI notification
 
-No MCP, no AppleScript subprocess — purely log-and-confirm. Round trip is
+No MCP, no TTS subprocess — purely log-and-confirm. Round trip is
 just transcribe + generate, typically <1s end-to-end on a warm Ollama.
 
 Run:
@@ -19,10 +19,10 @@ Then open http://127.0.0.1:5050 and watch actions_log.txt:
 import datetime as dt
 import json
 import os
-import subprocess
 import sys
 import threading
 import time
+from collections import deque
 from typing import Optional
 
 import numpy as np
@@ -31,13 +31,13 @@ import ollama
 from faster_whisper import WhisperModel
 from flask import Flask
 from flask_socketio import SocketIO
+from json_decision import decide_with_json_guardrails
 
 # ---------------- Config ----------------
 PERSONA          = os.environ.get("PERSONA", "dev")
 MODEL_NAME       = os.environ.get("OLLAMA_MODEL", f"{PERSONA}-assistant")
 WHISPER_SIZE     = os.environ.get("WHISPER_SIZE", "base")   # tiny / base / small
 SAMPLE_RATE      = 16_000
-TTS_VOICE        = os.environ.get("TTS_VOICE", "Samantha")
 
 CHUNK_DUR        = 0.1
 SILENCE_DBFS     = float(os.environ.get("SILENCE_DBFS", "0.006"))
@@ -53,6 +53,8 @@ app = Flask(__name__)
 app.config["SECRET_KEY"] = "dev"
 socketio = SocketIO(app, async_mode="threading", cors_allowed_origins="*")
 _state = {"running": False}
+_recent_turns = deque(maxlen=2)
+_saved_items = []
 
 
 # ---------------- System prompt --------
@@ -62,7 +64,9 @@ def load_system_prompt() -> str:
             return json.loads(f.readline())["system"]
     return (
         f"You are {PERSONA}'s personal assistant. For each spoken line return a "
-        'single JSON object: {"importance":"...","tool":"...","detail":"..."}.'
+        'single valid JSON object: '
+        '{"importance":"Low|Medium|High","tool":"allowed tool or null",'
+        '"detail":"string"}.'
     )
 
 
@@ -70,26 +74,59 @@ SYSTEM_PROMPT = load_system_prompt()
 
 
 # ---------------- Helpers --------------
-def speak(word: str) -> None:
-    subprocess.Popen(["say", "-v", TTS_VOICE, word])
+def state_label(tool_name: str) -> str:
+    if "reminder" in tool_name:
+        return "Reminder"
+    if "calendar_event" in tool_name:
+        return "Calendar"
+    if "alarm" in tool_name:
+        return "Alarm"
+    if "note" in tool_name:
+        return "Note"
+    return ""
 
 
-def parse_decision(raw: str) -> Optional[dict]:
-    raw = raw.strip()
-    start = raw.find("{")
-    if start < 0:
-        return None
-    depth = 0
-    for i, ch in enumerate(raw[start:], start=start):
-        if ch == "{":   depth += 1
-        elif ch == "}":
-            depth -= 1
-            if depth == 0:
-                try:
-                    return json.loads(raw[start:i + 1])
-                except Exception:
-                    return None
-    return None
+def format_model_input(current_text: str) -> str:
+    parts = []
+    if _recent_turns:
+        context_lines = "\n".join(
+            f"{turn['speaker']}: {turn['text']}" for turn in _recent_turns
+        )
+        parts.append(f"Recent conversation:\n{context_lines}")
+    if _saved_items:
+        state_lines = "\n".join(
+            f"- {item['type']}: {item['detail']}" for item in _saved_items
+        )
+        parts.append(f"Existing saved items:\n{state_lines}")
+    speaker = PERSONA.capitalize()
+    parts.append(f"Current utterance:\n{speaker}: {current_text}")
+    return "\n\n".join(parts)
+
+
+def remember_turn(text: str) -> None:
+    _recent_turns.append({"speaker": PERSONA.capitalize(), "text": text})
+
+
+def apply_state_update(decision: dict) -> None:
+    tool = decision.get("tool")
+    detail = (decision.get("detail") or "").strip()
+    if tool in (None, "null", "", "ask_clarification") or not detail:
+        return
+    label = state_label(tool)
+    if not label:
+        return
+    if tool.startswith("delete_"):
+        for i, item in enumerate(_saved_items):
+            if item["type"] == label:
+                del _saved_items[i]
+                return
+        return
+    if tool.startswith("update_"):
+        for item in reversed(_saved_items):
+            if item["type"] == label:
+                item["detail"] = detail
+                return
+    _saved_items.append({"type": label, "detail": detail})
 
 
 def decide_yes_no(decision: dict) -> tuple[bool, str]:
@@ -199,27 +236,33 @@ def listen_loop():
         socketio.emit("transcribed", {"text": text, "ms": t_asr_ms})
 
         t0 = time.perf_counter()
-        resp = ollama.chat(
+        model_input = format_model_input(text)
+        decision, raw, parse_status = decide_with_json_guardrails(
+            ollama,
             model=MODEL_NAME,
-            messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user",   "content": f"You: {text}"},
-            ],
+            system_prompt=SYSTEM_PROMPT,
+            user_text=model_input,
             options={"temperature": 0.0, "num_predict": 80, "num_ctx": 1024},
             keep_alive="30m",
         )
         t_llm_ms = int((time.perf_counter() - t0) * 1000)
-        raw = resp["message"]["content"]
-        decision = parse_decision(raw) or {"importance": "Low", "tool": None, "detail": ""}
+        decision["_json_guardrail"] = parse_status
 
         yes, reason = decide_yes_no(decision)
+        if yes:
+            apply_state_update(decision)
+        remember_turn(text)
         log_action(text, raw, decision, yes, reason, t_asr_ms, t_llm_ms)
 
         decision["_timing"] = {"asr_ms": t_asr_ms, "llm_ms": t_llm_ms}
         decision["_raw"]    = raw
+        decision["_state_items"] = list(_saved_items)
         socketio.emit("decision", decision)
         socketio.emit("verdict", {"yes": yes, "reason": reason})
-        speak("yes" if yes else "no")
+        socketio.emit("notification", {
+            "message": "Action logged" if yes else "No action logged",
+            "reason": reason,
+        })
 
     socketio.emit("status", {"state": "stopped"})
 
@@ -235,6 +278,8 @@ def on_start():
     if _state["running"]:
         return
     _state["running"] = True
+    _recent_turns.clear()
+    _saved_items.clear()
     threading.Thread(target=listen_loop, daemon=True).start()
 
 

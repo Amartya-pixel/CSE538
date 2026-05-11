@@ -1,10 +1,11 @@
 """
-Stage 1 — Supervised Fine-Tuning, persona-aware.
+Stage 1C - Supervised Fine-Tuning with previous-2-turn context plus state.
 
-Reads PERSONA from environment (default 'dev'). Outputs:
-  ./{persona}-sft-merged   (full HF checkpoint)
+Reads PERSONA from environment (default 'dev'). Inputs:
+  ./{persona}_state_ctx2_sft.jsonl
 
-Tested with: trl>=0.20, transformers>=4.56, peft>=0.18, unsloth>=2026.4.
+Outputs:
+  ./{persona}-state-ctx2-sft-merged
 """
 
 # Unsloth must be imported before trl/transformers/peft.
@@ -18,15 +19,15 @@ from trl import SFTConfig, SFTTrainer
 
 PERSONA    = os.environ.get("PERSONA", "dev")
 BASE_MODEL = "unsloth/Qwen2.5-1.5B-Instruct-bnb-4bit"
-DATA_PATH  = f"{PERSONA}_sft.jsonl"
-OUT_DIR    = f"{PERSONA}-sft"
+DATA_PATH  = f"{PERSONA}_state_ctx2_sft.jsonl"
+OUT_DIR    = f"{PERSONA}-state-ctx2-sft"
 MAX_SEQ    = 2048
 
-print(f"[train_sft] persona={PERSONA}  data={DATA_PATH}  out={OUT_DIR}")
+print(f"[train_sft_state_ctx2] persona={PERSONA}  data={DATA_PATH}  out={OUT_DIR}")
 
 USE_BF16 = torch.cuda.is_available() and torch.cuda.is_bf16_supported()
 USE_FP16 = torch.cuda.is_available() and not USE_BF16
-print(f"[train_sft] precision: bf16={USE_BF16} fp16={USE_FP16}")
+print(f"[train_sft_state_ctx2] precision: bf16={USE_BF16} fp16={USE_FP16}")
 
 model, tokenizer = FastLanguageModel.from_pretrained(
     BASE_MODEL,
@@ -61,7 +62,7 @@ trainer = SFTTrainer(
         output_dir=OUT_DIR,
         per_device_train_batch_size=2,
         gradient_accumulation_steps=4,
-        num_train_epochs=10,          # bumped further — small data, more passes
+        num_train_epochs=10,
         learning_rate=2e-4,
         warmup_ratio=0.05,
         bf16=USE_BF16,
@@ -76,4 +77,4 @@ trainer.train()
 
 model.save_pretrained_merged(f"{OUT_DIR}-merged", tokenizer,
                               save_method="merged_16bit")
-print(f"SFT model saved -> {OUT_DIR}-merged")
+print(f"State+context SFT model saved -> {OUT_DIR}-merged")

@@ -8,3 +8,9 @@ build/
 .env
 .idea/
 .vscode/
+
+# Project caches and environments
+.cache/
+.hf_cache/
+.venv-voice/
+results_*/

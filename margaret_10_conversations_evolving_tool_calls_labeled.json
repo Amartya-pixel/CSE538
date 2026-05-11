@@ -1,0 +1,2060 @@
+{
+  "source_file": "margaret_10_conversations_evolving_tool_calls_labeled.docx",
+  "title": "Margaret: 10 Daily-Life Conversations with Evolving Tool Call Summaries",
+  "assumptions": [
+    "Margaret is an older woman in her 70s who values independence and likes staying on top of appointments and medications.",
+    "She is warm, social, and family-oriented, so family and friend plans matter to her even when they are not urgent.",
+    "She is health-conscious and careful, so medical follow-ups, refills, exercise, and recovery-related tasks get higher priority.",
+    "She can forget time-specific details, so reminders and alarms are used sparingly for deadlines, medications, rides, and appointments.",
+    "Calendar events are used only when time needs to be reserved. Notes are used as grouped reference material."
+  ],
+  "tool_rules": "Format: each dialogue line is labeled with Importance and Tool. Tool rules: Reminder = don\u2019t forget; Reminder update/delete = change or remove an existing reminder; Calendar event = reserve time; Calendar event update/delete = change or cancel an existing calendar block; Alarm = urgent prompt at a specific moment; Alarm update/delete = change or remove an urgent prompt; Notes = reference material; Notes update/delete = change or remove saved reference material. After every conversation, the cumulative tool state is updated for Margaret.",
+  "conversations": [
+    {
+      "number": 1,
+      "title": "Margaret with her doctor",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Dr. Chen",
+          "utterance": "Good morning, Margaret. How have you been feeling since your last visit?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 2,
+          "speaker": "Margaret",
+          "utterance": "Better overall, but I still get a little dizzy when I stand up too fast.",
+          "importance": "High",
+          "tool": "Notes \u2014 dizziness when standing too fast"
+        },
+        {
+          "index": 3,
+          "speaker": "Dr. Chen",
+          "utterance": "All right. I want you to keep checking your blood pressure at home for the next two weeks.",
+          "importance": "High",
+          "tool": "Reminder \u2014 check blood pressure at home for two weeks"
+        },
+        {
+          "index": 4,
+          "speaker": "Margaret",
+          "utterance": "I can do that. Morning and evening?",
+          "importance": "High",
+          "tool": "Reminder \u2014 check blood pressure morning and evening"
+        },
+        {
+          "index": 5,
+          "speaker": "Dr. Chen",
+          "utterance": "Yes, morning and evening, and write the readings down.",
+          "importance": "High",
+          "tool": "Notes \u2014 blood pressure log instructions"
+        },
+        {
+          "index": 6,
+          "speaker": "Margaret",
+          "utterance": "All right, I\u2019ll keep it by the kitchen phone so I don\u2019t misplace it.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 keep blood pressure log by kitchen phone"
+        },
+        {
+          "index": 7,
+          "speaker": "Dr. Chen",
+          "utterance": "I\u2019m also adjusting your blood pressure medication slightly. Start the new dose tomorrow.",
+          "importance": "High",
+          "tool": "Reminder \u2014 start new dose tomorrow"
+        },
+        {
+          "index": 8,
+          "speaker": "Margaret",
+          "utterance": "Tomorrow, got it. Will the pharmacy have it ready today?",
+          "importance": "High",
+          "tool": "Reminder \u2014 pick up updated prescription"
+        },
+        {
+          "index": 9,
+          "speaker": "Dr. Chen",
+          "utterance": "Yes. I\u2019ve sent it in already.",
+          "importance": "High",
+          "tool": "Notes \u2014 new prescription has been sent in"
+        },
+        {
+          "index": 10,
+          "speaker": "Dr. Chen",
+          "utterance": "And I want bloodwork done next Tuesday before breakfast.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 bloodwork next Tuesday before breakfast"
+        },
+        {
+          "index": 11,
+          "speaker": "Margaret",
+          "utterance": "Before breakfast means no coffee either, right?",
+          "importance": "High",
+          "tool": "Reminder \u2014 fasting before bloodwork"
+        },
+        {
+          "index": 12,
+          "speaker": "Dr. Chen",
+          "utterance": "Right, only water.",
+          "importance": "High",
+          "tool": "Notes \u2014 bloodwork fasting rule: water only"
+        },
+        {
+          "index": 13,
+          "speaker": "Dr. Chen",
+          "utterance": "Then let\u2019s schedule a follow-up with me the Friday after that.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 follow-up appointment Friday after bloodwork"
+        },
+        {
+          "index": 14,
+          "speaker": "Margaret",
+          "utterance": "Please write that down for me. Mornings are better than afternoons.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 morning preference for follow-up"
+        },
+        {
+          "index": 15,
+          "speaker": "Dr. Chen",
+          "utterance": "We have 10:30 a.m. available.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 follow-up Friday at 10:30 AM"
+        },
+        {
+          "index": 16,
+          "speaker": "Margaret",
+          "utterance": "That works. My daughter can drive me if needed.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 ask daughter about ride if needed"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Time: Next Tuesday, 8:00 AM | Location: Stony Brook Lab | Description: Fasting bloodwork before breakfast. | Priority: Very High",
+          "Time: Friday after bloodwork, 10:30 AM | Location: Dr. Chen's office | Description: Follow-up appointment with Dr. Chen. | Priority: Very High"
+        ],
+        "reminders": [
+          "Check blood pressure morning and evening for two weeks. | Priority: High",
+          "Start new blood pressure dose tomorrow. | Priority: Very High",
+          "Pick up updated prescription from pharmacy. | Priority: High",
+          "Do not eat or drink coffee before bloodwork; water only. | Priority: Very High",
+          "Ask daughter about a ride to the follow-up if needed. | Priority: Medium"
+        ],
+        "alarms": [
+          "None."
+        ],
+        "notes": [
+          "Health monitoring",
+          "Log blood pressure morning and evening for two weeks. | Priority: High",
+          "Medication",
+          "New blood pressure dose starts tomorrow. | Priority: High",
+          "Lab instructions",
+          "Bloodwork is fasting; water only, no coffee. | Priority: High"
+        ]
+      }
+    },
+    {
+      "number": 2,
+      "title": "Margaret with her daughter Lena",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Lena",
+          "utterance": "Hi Mom, I just saw Dr. Chen\u2019s office called. Everything okay?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 2,
+          "speaker": "Margaret",
+          "utterance": "Yes, nothing scary. He changed one pill and wants bloodwork next Tuesday.",
+          "importance": "High",
+          "tool": "Notes \u2014 one pill changed and bloodwork is next Tuesday"
+        },
+        {
+          "index": 3,
+          "speaker": "Lena",
+          "utterance": "Okay. Do you want me to drive you to the lab?",
+          "importance": "High",
+          "tool": "Notes \u2014 Lena may drive Margaret to lab"
+        },
+        {
+          "index": 4,
+          "speaker": "Margaret",
+          "utterance": "The lab is early, so yes, that would help.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 ride coordination for Tuesday lab"
+        },
+        {
+          "index": 5,
+          "speaker": "Lena",
+          "utterance": "I can pick you up at 7:30.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 Tuesday 7:30 AM pickup"
+        },
+        {
+          "index": 6,
+          "speaker": "Margaret",
+          "utterance": "That\u2019s wonderful. And I have a follow-up the Friday after at 10:30.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 follow-up appointment Friday after bloodwork at 10:30"
+        },
+        {
+          "index": 7,
+          "speaker": "Lena",
+          "utterance": "I may be in a meeting then, but I can probably move things around.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 confirm Friday ride"
+        },
+        {
+          "index": 8,
+          "speaker": "Margaret",
+          "utterance": "Only if it\u2019s not too much trouble. I can always take a car service.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 arrange backup ride if daughter unavailable"
+        },
+        {
+          "index": 9,
+          "speaker": "Lena",
+          "utterance": "Let me confirm tonight. Also, did you eat today?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 10,
+          "speaker": "Margaret",
+          "utterance": "Yes, I had toast and tea, and before you ask, I did not skip lunch yesterday either.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 11,
+          "speaker": "Lena",
+          "utterance": "I ask because you forget when you\u2019re worried.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 eat lunch on appointment days"
+        },
+        {
+          "index": 12,
+          "speaker": "Margaret",
+          "utterance": "Fair enough. Could you also help me set out the new pills when you come by?",
+          "importance": "High",
+          "tool": "Reminder \u2014 set out new pills with Lena"
+        },
+        {
+          "index": 13,
+          "speaker": "Lena",
+          "utterance": "Of course. I\u2019ll stop by after work tomorrow.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 Lena visit tomorrow after work"
+        },
+        {
+          "index": 14,
+          "speaker": "Margaret",
+          "utterance": "Good. I also need more decaf tea and bananas this week.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 grocery list: decaf tea, bananas"
+        },
+        {
+          "index": 15,
+          "speaker": "Lena",
+          "utterance": "Text me the grocery list before tomorrow evening so I don\u2019t forget.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 text grocery list before Lena visits"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Time: Next Tuesday, 8:00 AM | Location: Stony Brook Lab | Description: Fasting bloodwork before breakfast. | Priority: Very High",
+          "Time: Friday after bloodwork, 10:30 AM | Location: Dr. Chen's office | Description: Follow-up appointment with Dr. Chen. | Priority: Very High",
+          "Time: Next Tuesday, 7:30 AM | Location: Margaret's house \u2192 Stony Brook Lab | Description: Lena picks Margaret up for bloodwork. | Priority: Very High",
+          "Time: Tomorrow, 5:30 PM | Location: Margaret's house | Description: Lena stops by after work to help with pills. | Priority: High"
+        ],
+        "reminders": [
+          "Check blood pressure morning and evening for two weeks. | Priority: High",
+          "Start new blood pressure dose tomorrow. | Priority: Very High",
+          "Pick up updated prescription from pharmacy. | Priority: High",
+          "Do not eat or drink coffee before bloodwork; water only. | Priority: Very High",
+          "Ask daughter about a ride to the follow-up if needed. | Priority: Medium",
+          "Confirm whether Lena can drive to Friday follow-up. | Priority: High",
+          "Arrange backup ride for Friday if Lena cannot drive. | Priority: Medium",
+          "Eat lunch on appointment days after fasting labs are done. | Priority: Medium",
+          "Set out new pills with Lena tomorrow evening. | Priority: High",
+          "Text Lena the grocery list before tomorrow evening. | Priority: Medium"
+        ],
+        "alarms": [
+          "None."
+        ],
+        "notes": [
+          "Health monitoring",
+          "Log blood pressure morning and evening for two weeks. | Priority: High",
+          "Medication",
+          "New blood pressure dose starts tomorrow. | Priority: High",
+          "Lab instructions",
+          "Bloodwork is fasting; water only, no coffee. | Priority: High",
+          "Groceries",
+          "Decaf tea | Priority: Low",
+          "Bananas | Priority: Low"
+        ]
+      }
+    },
+    {
+      "number": 3,
+      "title": "Margaret with the dentist's office",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Dental Office",
+          "utterance": "Hello, Margaret. This is River Smile Dental calling to confirm your cleaning next Wednesday.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 confirm dental cleaning next Wednesday"
+        },
+        {
+          "index": 2,
+          "speaker": "Margaret",
+          "utterance": "Thank you. What time did you say it was?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 3,
+          "speaker": "Dental Office",
+          "utterance": "2:00 p.m.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 dental cleaning next Wednesday at 2:00 PM"
+        },
+        {
+          "index": 4,
+          "speaker": "Margaret",
+          "utterance": "All right. I\u2019ll be there.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 confirm appointment attendance"
+        },
+        {
+          "index": 5,
+          "speaker": "Dental Office",
+          "utterance": "Also, the dentist wants to look again at that sore spot near your lower denture.",
+          "importance": "High",
+          "tool": "Notes \u2014 dentist to recheck sore spot near lower denture"
+        },
+        {
+          "index": 6,
+          "speaker": "Margaret",
+          "utterance": "Yes, it still rubs when I eat anything crunchy.",
+          "importance": "High",
+          "tool": "Notes \u2014 denture sore spot worsens with crunchy foods"
+        },
+        {
+          "index": 7,
+          "speaker": "Dental Office",
+          "utterance": "Please bring your current denture adhesive with you.",
+          "importance": "High",
+          "tool": "Reminder \u2014 bring denture adhesive to dental visit"
+        },
+        {
+          "index": 8,
+          "speaker": "Margaret",
+          "utterance": "I would have forgotten that, so thank you.",
+          "importance": "High",
+          "tool": "Reminder \u2014 bring current denture adhesive"
+        },
+        {
+          "index": 9,
+          "speaker": "Dental Office",
+          "utterance": "No problem. And please arrive 15 minutes early for updated paperwork.",
+          "importance": "High",
+          "tool": "Alarm \u2014 leave early / arrive 15 minutes early"
+        },
+        {
+          "index": 10,
+          "speaker": "Margaret",
+          "utterance": "That\u2019s a little harder in the afternoon traffic, but I\u2019ll manage.",
+          "importance": "Medium",
+          "tool": "Calendar event \u2014 leave buffer for dental visit"
+        },
+        {
+          "index": 11,
+          "speaker": "Dental Office",
+          "utterance": "If you need to reschedule, call at least 24 hours before.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 12,
+          "speaker": "Margaret",
+          "utterance": "No, I\u2019ll keep it. I want that sore spot fixed.",
+          "importance": "High",
+          "tool": "Notes \u2014 keep dental appointment to fix sore spot"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Time: Next Tuesday, 8:00 AM | Location: Stony Brook Lab | Description: Fasting bloodwork before breakfast. | Priority: Very High",
+          "Time: Friday after bloodwork, 10:30 AM | Location: Dr. Chen's office | Description: Follow-up appointment with Dr. Chen. | Priority: Very High",
+          "Time: Next Tuesday, 7:30 AM | Location: Margaret's house \u2192 Stony Brook Lab | Description: Lena picks Margaret up for bloodwork. | Priority: Very High",
+          "Time: Tomorrow, 5:30 PM | Location: Margaret's house | Description: Lena stops by after work to help with pills. | Priority: High",
+          "Time: Next Wednesday, 2:00 PM | Location: River Smile Dental | Description: Dental cleaning and denture sore-spot recheck. | Priority: High"
+        ],
+        "reminders": [
+          "Check blood pressure morning and evening for two weeks. | Priority: High",
+          "Start new blood pressure dose tomorrow. | Priority: Very High",
+          "Pick up updated prescription from pharmacy. | Priority: High",
+          "Do not eat or drink coffee before bloodwork; water only. | Priority: Very High",
+          "Ask daughter about a ride to the follow-up if needed. | Priority: Medium",
+          "Confirm whether Lena can drive to Friday follow-up. | Priority: High",
+          "Arrange backup ride for Friday if Lena cannot drive. | Priority: Medium",
+          "Eat lunch on appointment days after fasting labs are done. | Priority: Medium",
+          "Set out new pills with Lena tomorrow evening. | Priority: High",
+          "Text Lena the grocery list before tomorrow evening. | Priority: Medium",
+          "Bring current denture adhesive to the dental visit. | Priority: High"
+        ],
+        "alarms": [
+          "Time: Next Wednesday, 1:15 PM | Description: Leave early and arrive 15 minutes before dental cleaning. | Priority: High"
+        ],
+        "notes": [
+          "Health monitoring",
+          "Log blood pressure morning and evening for two weeks. | Priority: High",
+          "Medication",
+          "New blood pressure dose starts tomorrow. | Priority: High",
+          "Lab instructions",
+          "Bloodwork is fasting; water only, no coffee. | Priority: High",
+          "Groceries",
+          "Decaf tea | Priority: Low",
+          "Bananas | Priority: Low",
+          "Dental",
+          "Dentist will recheck sore spot near lower denture. | Priority: High",
+          "Sore spot rubs more when eating crunchy foods. | Priority: Medium"
+        ]
+      }
+    },
+    {
+      "number": 4,
+      "title": "Margaret with her friend Ruth",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Ruth",
+          "utterance": "Margaret, are we still on for bridge on Thursday?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 2,
+          "speaker": "Margaret",
+          "utterance": "Yes, unless one of my appointments shifts again.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 3,
+          "speaker": "Ruth",
+          "utterance": "We\u2019re meeting at my place at 1:00, and I\u2019m making chicken salad.",
+          "importance": "Medium",
+          "tool": "Calendar event \u2014 Thursday bridge at Ruth\u2019s"
+        },
+        {
+          "index": 4,
+          "speaker": "Margaret",
+          "utterance": "That sounds lovely. I\u2019ll bring the lemon cookies you like.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 bring lemon cookies to Ruth\u2019s"
+        },
+        {
+          "index": 5,
+          "speaker": "Ruth",
+          "utterance": "Only if it\u2019s not too much work.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 6,
+          "speaker": "Margaret",
+          "utterance": "It\u2019s no trouble. I just need to buy lemons.",
+          "importance": "Low",
+          "tool": "Notes \u2014 grocery list: lemons"
+        },
+        {
+          "index": 7,
+          "speaker": "Ruth",
+          "utterance": "By the way, you sounded tired at church on Sunday. Are you resting enough?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 8,
+          "speaker": "Margaret",
+          "utterance": "I\u2019m all right. Just juggling doctor things this week.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 9,
+          "speaker": "Ruth",
+          "utterance": "Then don\u2019t overdo it. If you\u2019re tired, come late or skip the cookies entirely.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 rest before social plans if tired"
+        },
+        {
+          "index": 10,
+          "speaker": "Margaret",
+          "utterance": "I\u2019ll see how I feel that morning.",
+          "importance": "Medium",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Time: Next Tuesday, 8:00 AM | Location: Stony Brook Lab | Description: Fasting bloodwork before breakfast. | Priority: Very High",
+          "Time: Friday after bloodwork, 10:30 AM | Location: Dr. Chen's office | Description: Follow-up appointment with Dr. Chen. | Priority: Very High",
+          "Time: Next Tuesday, 7:30 AM | Location: Margaret's house \u2192 Stony Brook Lab | Description: Lena picks Margaret up for bloodwork. | Priority: Very High",
+          "Time: Tomorrow, 5:30 PM | Location: Margaret's house | Description: Lena stops by after work to help with pills. | Priority: High",
+          "Time: Next Wednesday, 2:00 PM | Location: River Smile Dental | Description: Dental cleaning and denture sore-spot recheck. | Priority: High",
+          "Time: Thursday, 1:00 PM | Location: Ruth's house | Description: Bridge afternoon with Ruth. | Priority: Medium"
+        ],
+        "reminders": [
+          "Check blood pressure morning and evening for two weeks. | Priority: High",
+          "Start new blood pressure dose tomorrow. | Priority: Very High",
+          "Pick up updated prescription from pharmacy. | Priority: High",
+          "Do not eat or drink coffee before bloodwork; water only. | Priority: Very High",
+          "Ask daughter about a ride to the follow-up if needed. | Priority: Medium",
+          "Confirm whether Lena can drive to Friday follow-up. | Priority: High",
+          "Arrange backup ride for Friday if Lena cannot drive. | Priority: Medium",
+          "Eat lunch on appointment days after fasting labs are done. | Priority: Medium",
+          "Set out new pills with Lena tomorrow evening. | Priority: High",
+          "Text Lena the grocery list before tomorrow evening. | Priority: Medium",
+          "Bring current denture adhesive to the dental visit. | Priority: High",
+          "Bring lemon cookies to Ruth's bridge afternoon. | Priority: Low",
+          "Rest before social plans if feeling tired that morning. | Priority: Low"
+        ],
+        "alarms": [
+          "Time: Next Wednesday, 1:15 PM | Description: Leave early and arrive 15 minutes before dental cleaning. | Priority: High"
+        ],
+        "notes": [
+          "Health monitoring",
+          "Log blood pressure morning and evening for two weeks. | Priority: High",
+          "Medication",
+          "New blood pressure dose starts tomorrow. | Priority: High",
+          "Lab instructions",
+          "Bloodwork is fasting; water only, no coffee. | Priority: High",
+          "Groceries",
+          "Decaf tea | Priority: Low",
+          "Bananas | Priority: Low",
+          "Lemons | Priority: Low",
+          "Dental",
+          "Dentist will recheck sore spot near lower denture. | Priority: High",
+          "Sore spot rubs more when eating crunchy foods. | Priority: Medium"
+        ]
+      }
+    },
+    {
+      "number": 5,
+      "title": "Margaret with her pharmacist",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Pharmacist",
+          "utterance": "Hi Margaret, your new blood pressure prescription is ready.",
+          "importance": "High",
+          "tool": "Reminder \u2014 pick up updated prescription"
+        },
+        {
+          "index": 2,
+          "speaker": "Margaret",
+          "utterance": "Good, I was hoping to get it before dinner.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 3,
+          "speaker": "Pharmacist",
+          "utterance": "You can. Also, your calcium refill is due in three days. Want us to fill that too?",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 refill calcium in three days"
+        },
+        {
+          "index": 4,
+          "speaker": "Margaret",
+          "utterance": "Yes, please do. I\u2019m trying not to make two trips.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 5,
+          "speaker": "Pharmacist",
+          "utterance": "No problem. The new blood pressure dose may make you a little lightheaded the first few days.",
+          "importance": "High",
+          "tool": "Notes \u2014 monitor lightheadedness after medication change"
+        },
+        {
+          "index": 6,
+          "speaker": "Margaret",
+          "utterance": "Then I\u2019ll be extra careful on the stairs.",
+          "importance": "High",
+          "tool": "Reminder \u2014 move slowly on stairs first few days"
+        },
+        {
+          "index": 7,
+          "speaker": "Pharmacist",
+          "utterance": "Good idea. And make sure you don\u2019t take the old bottle by mistake.",
+          "importance": "High",
+          "tool": "Reminder \u2014 remove old bottle after starting new dose"
+        },
+        {
+          "index": 8,
+          "speaker": "Margaret",
+          "utterance": "Please put a bright sticker on the new one. That helps me.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 9,
+          "speaker": "Pharmacist",
+          "utterance": "Done. We close at 7 tonight.",
+          "importance": "High",
+          "tool": "Alarm \u2014 pickup before pharmacy closes"
+        },
+        {
+          "index": 10,
+          "speaker": "Margaret",
+          "utterance": "All right, I\u2019ll come this afternoon.",
+          "importance": "High",
+          "tool": "Reminder \u2014 pick up prescriptions this afternoon"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Time: Next Tuesday, 8:00 AM | Location: Stony Brook Lab | Description: Fasting bloodwork before breakfast. | Priority: Very High",
+          "Time: Friday after bloodwork, 10:30 AM | Location: Dr. Chen's office | Description: Follow-up appointment with Dr. Chen. | Priority: Very High",
+          "Time: Next Tuesday, 7:30 AM | Location: Margaret's house \u2192 Stony Brook Lab | Description: Lena picks Margaret up for bloodwork. | Priority: Very High",
+          "Time: Tomorrow, 5:30 PM | Location: Margaret's house | Description: Lena stops by after work to help with pills. | Priority: High",
+          "Time: Next Wednesday, 2:00 PM | Location: River Smile Dental | Description: Dental cleaning and denture sore-spot recheck. | Priority: High",
+          "Time: Thursday, 1:00 PM | Location: Ruth's house | Description: Bridge afternoon with Ruth. | Priority: Medium"
+        ],
+        "reminders": [
+          "Check blood pressure morning and evening for two weeks. | Priority: High",
+          "Start new blood pressure dose tomorrow. | Priority: Very High",
+          "Pick up updated prescription from pharmacy. | Priority: High",
+          "Do not eat or drink coffee before bloodwork; water only. | Priority: Very High",
+          "Ask daughter about a ride to the follow-up if needed. | Priority: Medium",
+          "Confirm whether Lena can drive to Friday follow-up. | Priority: High",
+          "Arrange backup ride for Friday if Lena cannot drive. | Priority: Medium",
+          "Eat lunch on appointment days after fasting labs are done. | Priority: Medium",
+          "Set out new pills with Lena tomorrow evening. | Priority: High",
+          "Text Lena the grocery list before tomorrow evening. | Priority: Medium",
+          "Bring current denture adhesive to the dental visit. | Priority: High",
+          "Bring lemon cookies to Ruth's bridge afternoon. | Priority: Low",
+          "Rest before social plans if feeling tired that morning. | Priority: Low",
+          "Pick up calcium refill in three days. | Priority: Medium",
+          "Move slowly on the stairs during the first few days on the new dose. | Priority: High",
+          "Remove old blood pressure bottle after starting the new dose. | Priority: High"
+        ],
+        "alarms": [
+          "Time: Next Wednesday, 1:15 PM | Description: Leave early and arrive 15 minutes before dental cleaning. | Priority: High",
+          "Time: Today, 6:00 PM | Description: Pick up prescriptions before the pharmacy closes at 7. | Priority: High"
+        ],
+        "notes": [
+          "Health monitoring",
+          "Log blood pressure morning and evening for two weeks. | Priority: High",
+          "Medication",
+          "New blood pressure dose starts tomorrow. | Priority: High",
+          "Monitor lightheadedness during the first few days on the new dose. | Priority: High",
+          "Lab instructions",
+          "Bloodwork is fasting; water only, no coffee. | Priority: High",
+          "Groceries",
+          "Decaf tea | Priority: Low",
+          "Bananas | Priority: Low",
+          "Lemons | Priority: Low",
+          "Dental",
+          "Dentist will recheck sore spot near lower denture. | Priority: High",
+          "Sore spot rubs more when eating crunchy foods. | Priority: Medium"
+        ]
+      }
+    },
+    {
+      "number": 6,
+      "title": "Margaret with her son David",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "David",
+          "utterance": "Hi Mom, Lena said you\u2019ve got half the county driving you around this week.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 2,
+          "speaker": "Margaret",
+          "utterance": "Very funny. It\u2019s only the doctor, the lab, and the dentist.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 3,
+          "speaker": "David",
+          "utterance": "Do you want me to take care of the dentist one instead?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 4,
+          "speaker": "Margaret",
+          "utterance": "Actually, yes. Afternoon driving bothers me more now.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 David drives Margaret to dentist"
+        },
+        {
+          "index": 5,
+          "speaker": "David",
+          "utterance": "Okay, I\u2019ll pick you up at 1:15 next Wednesday.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 dentist ride pickup next Wednesday 1:15 PM"
+        },
+        {
+          "index": 6,
+          "speaker": "Margaret",
+          "utterance": "Thank you. That saves me a headache.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 7,
+          "speaker": "David",
+          "utterance": "Any chance you still need that hall light bulb changed?",
+          "importance": "Low",
+          "tool": "Reminder \u2014 ask David to change hall bulb"
+        },
+        {
+          "index": 8,
+          "speaker": "Margaret",
+          "utterance": "Yes, and I\u2019ve been meaning to tell someone for a week.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 9,
+          "speaker": "David",
+          "utterance": "I\u2019ll do it when I drop you back home.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 hall bulb gets changed after dentist"
+        },
+        {
+          "index": 10,
+          "speaker": "Margaret",
+          "utterance": "Good. And don\u2019t let me forget to give you the insurance envelope for the car.",
+          "importance": "High",
+          "tool": "Reminder \u2014 give insurance envelope to David"
+        },
+        {
+          "index": 11,
+          "speaker": "David",
+          "utterance": "Leave it by the front door now.",
+          "importance": "High",
+          "tool": "Notes \u2014 put insurance envelope by front door"
+        },
+        {
+          "index": 12,
+          "speaker": "Margaret",
+          "utterance": "That is exactly the sort of instruction I need.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Time: Next Tuesday, 8:00 AM | Location: Stony Brook Lab | Description: Fasting bloodwork before breakfast. | Priority: Very High",
+          "Time: Friday after bloodwork, 10:30 AM | Location: Dr. Chen's office | Description: Follow-up appointment with Dr. Chen. | Priority: Very High",
+          "Time: Next Tuesday, 7:30 AM | Location: Margaret's house \u2192 Stony Brook Lab | Description: Lena picks Margaret up for bloodwork. | Priority: Very High",
+          "Time: Tomorrow, 5:30 PM | Location: Margaret's house | Description: Lena stops by after work to help with pills. | Priority: High",
+          "Time: Next Wednesday, 2:00 PM | Location: River Smile Dental | Description: Dental cleaning and denture sore-spot recheck. | Priority: High",
+          "Time: Thursday, 1:00 PM | Location: Ruth's house | Description: Bridge afternoon with Ruth. | Priority: Medium",
+          "Time: Next Wednesday, 1:15 PM | Location: Margaret's house \u2192 River Smile Dental | Description: David picks Margaret up for the dental visit. | Priority: High"
+        ],
+        "reminders": [
+          "Check blood pressure morning and evening for two weeks. | Priority: High",
+          "Start new blood pressure dose tomorrow. | Priority: Very High",
+          "Pick up updated prescription from pharmacy. | Priority: High",
+          "Do not eat or drink coffee before bloodwork; water only. | Priority: Very High",
+          "Ask daughter about a ride to the follow-up if needed. | Priority: Medium",
+          "Confirm whether Lena can drive to Friday follow-up. | Priority: High",
+          "Arrange backup ride for Friday if Lena cannot drive. | Priority: Medium",
+          "Eat lunch on appointment days after fasting labs are done. | Priority: Medium",
+          "Set out new pills with Lena tomorrow evening. | Priority: High",
+          "Text Lena the grocery list before tomorrow evening. | Priority: Medium",
+          "Bring current denture adhesive to the dental visit. | Priority: High",
+          "Bring lemon cookies to Ruth's bridge afternoon. | Priority: Low",
+          "Rest before social plans if feeling tired that morning. | Priority: Low",
+          "Pick up calcium refill in three days. | Priority: Medium",
+          "Move slowly on the stairs during the first few days on the new dose. | Priority: High",
+          "Remove old blood pressure bottle after starting the new dose. | Priority: High",
+          "Ask David to change the hall light bulb after the dentist visit. | Priority: Low",
+          "Give the insurance envelope to David. | Priority: High"
+        ],
+        "alarms": [
+          "Time: Today, 6:00 PM | Description: Pick up prescriptions before the pharmacy closes at 7. | Priority: High"
+        ],
+        "notes": [
+          "Health monitoring",
+          "Log blood pressure morning and evening for two weeks. | Priority: High",
+          "Medication",
+          "New blood pressure dose starts tomorrow. | Priority: High",
+          "Monitor lightheadedness during the first few days on the new dose. | Priority: High",
+          "Lab instructions",
+          "Bloodwork is fasting; water only, no coffee. | Priority: High",
+          "Groceries",
+          "Decaf tea | Priority: Low",
+          "Bananas | Priority: Low",
+          "Lemons | Priority: Low",
+          "Dental",
+          "Dentist will recheck sore spot near lower denture. | Priority: High",
+          "Sore spot rubs more when eating crunchy foods. | Priority: Medium",
+          "Household",
+          "Put insurance envelope by the front door for David. | Priority: Medium"
+        ]
+      }
+    },
+    {
+      "number": 7,
+      "title": "Margaret with her neighbor Nora",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Nora",
+          "utterance": "Margaret, the community center posted the tai chi class schedule for next month.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 2,
+          "speaker": "Margaret",
+          "utterance": "Oh good. Is the Tuesday morning one still there?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 3,
+          "speaker": "Nora",
+          "utterance": "Yes, 9:00 a.m., and registration opens Friday.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 register for Tuesday tai chi on Friday"
+        },
+        {
+          "index": 4,
+          "speaker": "Margaret",
+          "utterance": "I want that one. The later class cuts into lunch too much.",
+          "importance": "Medium",
+          "tool": "Calendar event \u2014 Tuesday 9:00 AM tai chi class next month"
+        },
+        {
+          "index": 5,
+          "speaker": "Nora",
+          "utterance": "I can register us both online if you want.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 tell Nora yes/no on tai chi registration"
+        },
+        {
+          "index": 6,
+          "speaker": "Margaret",
+          "utterance": "Please do. I\u2019ll pay you back at coffee.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 7,
+          "speaker": "Nora",
+          "utterance": "Speaking of coffee, a few of us are meeting after church this Sunday.",
+          "importance": "Medium",
+          "tool": "Calendar event \u2014 Sunday coffee after church"
+        },
+        {
+          "index": 8,
+          "speaker": "Margaret",
+          "utterance": "I\u2019d like that if I\u2019m not worn out.",
+          "importance": "Low",
+          "tool": "Reminder \u2014 decide Sunday morning whether to go for coffee"
+        },
+        {
+          "index": 9,
+          "speaker": "Nora",
+          "utterance": "No pressure. Just let me know.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Time: Next Tuesday, 8:00 AM | Location: Stony Brook Lab | Description: Fasting bloodwork before breakfast. | Priority: Very High",
+          "Time: Friday after bloodwork, 10:30 AM | Location: Dr. Chen's office | Description: Follow-up appointment with Dr. Chen. | Priority: Very High",
+          "Time: Next Tuesday, 7:30 AM | Location: Margaret's house \u2192 Stony Brook Lab | Description: Lena picks Margaret up for bloodwork. | Priority: Very High",
+          "Time: Tomorrow, 5:30 PM | Location: Margaret's house | Description: Lena stops by after work to help with pills. | Priority: High",
+          "Time: Next Wednesday, 2:00 PM | Location: River Smile Dental | Description: Dental cleaning and denture sore-spot recheck. | Priority: High",
+          "Time: Thursday, 1:00 PM | Location: Ruth's house | Description: Bridge afternoon with Ruth. | Priority: Medium",
+          "Time: Next Wednesday, 1:15 PM | Location: Margaret's house \u2192 River Smile Dental | Description: David picks Margaret up for the dental visit. | Priority: High",
+          "Time: Starts next month, Tuesdays at 9:00 AM | Location: Community Center | Description: Weekly tai chi class. | Priority: Medium",
+          "Time: Sunday, 12:15 PM | Location: Church caf\u00e9 | Description: Coffee with neighbors after church. | Priority: Low"
+        ],
+        "reminders": [
+          "Check blood pressure morning and evening for two weeks. | Priority: High",
+          "Start new blood pressure dose tomorrow. | Priority: Very High",
+          "Pick up updated prescription from pharmacy. | Priority: High",
+          "Do not eat or drink coffee before bloodwork; water only. | Priority: Very High",
+          "Ask daughter about a ride to the follow-up if needed. | Priority: Medium",
+          "Confirm whether Lena can drive to Friday follow-up. | Priority: High",
+          "Arrange backup ride for Friday if Lena cannot drive. | Priority: Medium",
+          "Eat lunch on appointment days after fasting labs are done. | Priority: Medium",
+          "Set out new pills with Lena tomorrow evening. | Priority: High",
+          "Text Lena the grocery list before tomorrow evening. | Priority: Medium",
+          "Bring current denture adhesive to the dental visit. | Priority: High",
+          "Bring lemon cookies to Ruth's bridge afternoon. | Priority: Low",
+          "Rest before social plans if feeling tired that morning. | Priority: Low",
+          "Pick up calcium refill in three days. | Priority: Medium",
+          "Move slowly on the stairs during the first few days on the new dose. | Priority: High",
+          "Remove old blood pressure bottle after starting the new dose. | Priority: High",
+          "Ask David to change the hall light bulb after the dentist visit. | Priority: Low",
+          "Give the insurance envelope to David. | Priority: High",
+          "Register for Tuesday 9:00 AM tai chi when registration opens Friday. | Priority: Medium",
+          "Tell Nora to register her for tai chi. | Priority: Medium",
+          "Decide Sunday morning whether energy is good enough for coffee after church. | Priority: Low"
+        ],
+        "alarms": [
+          "Time: Today, 6:00 PM | Description: Pick up prescriptions before the pharmacy closes at 7. | Priority: High"
+        ],
+        "notes": [
+          "Health monitoring",
+          "Log blood pressure morning and evening for two weeks. | Priority: High",
+          "Medication",
+          "New blood pressure dose starts tomorrow. | Priority: High",
+          "Monitor lightheadedness during the first few days on the new dose. | Priority: High",
+          "Lab instructions",
+          "Bloodwork is fasting; water only, no coffee. | Priority: High",
+          "Groceries",
+          "Decaf tea | Priority: Low",
+          "Bananas | Priority: Low",
+          "Lemons | Priority: Low",
+          "Dental",
+          "Dentist will recheck sore spot near lower denture. | Priority: High",
+          "Sore spot rubs more when eating crunchy foods. | Priority: Medium",
+          "Household",
+          "Put insurance envelope by the front door for David. | Priority: Medium"
+        ]
+      }
+    },
+    {
+      "number": 8,
+      "title": "Margaret with her physical therapist",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "PT Maria",
+          "utterance": "Hi Margaret, how did your knee feel after the last session?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 2,
+          "speaker": "Margaret",
+          "utterance": "Sore the same evening, but better the next morning.",
+          "importance": "High",
+          "tool": "Notes \u2014 knee sore same evening but better next morning"
+        },
+        {
+          "index": 3,
+          "speaker": "PT Maria",
+          "utterance": "That\u2019s okay. Keep doing the seated leg raises and the ankle stretches every day.",
+          "importance": "High",
+          "tool": "Reminder \u2014 do PT exercises daily"
+        },
+        {
+          "index": 4,
+          "speaker": "Margaret",
+          "utterance": "Every day, I know. I do better if I tie it to breakfast.",
+          "importance": "High",
+          "tool": "Notes \u2014 do PT exercises after breakfast"
+        },
+        {
+          "index": 5,
+          "speaker": "PT Maria",
+          "utterance": "Good. And use the heating pad for 15 minutes after exercises if the knee feels tight.",
+          "importance": "High",
+          "tool": "Reminder \u2014 heating pad after exercises if knee is tight"
+        },
+        {
+          "index": 6,
+          "speaker": "Margaret",
+          "utterance": "All right.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 7,
+          "speaker": "PT Maria",
+          "utterance": "I\u2019d also like to see you next Monday at 11:00 instead of Wednesday, if that works.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 PT rescheduled to Monday 11:00 AM"
+        },
+        {
+          "index": 8,
+          "speaker": "Margaret",
+          "utterance": "Monday is fine. Wednesday was getting crowded anyway.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 remove old Wednesday PT slot"
+        },
+        {
+          "index": 9,
+          "speaker": "PT Maria",
+          "utterance": "Perfect. Bring the exercise band with you next time.",
+          "importance": "High",
+          "tool": "Reminder \u2014 bring exercise band to PT"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Time: Next Tuesday, 8:00 AM | Location: Stony Brook Lab | Description: Fasting bloodwork before breakfast. | Priority: Very High",
+          "Time: Friday after bloodwork, 10:30 AM | Location: Dr. Chen's office | Description: Follow-up appointment with Dr. Chen. | Priority: Very High",
+          "Time: Next Tuesday, 7:30 AM | Location: Margaret's house \u2192 Stony Brook Lab | Description: Lena picks Margaret up for bloodwork. | Priority: Very High",
+          "Time: Tomorrow, 5:30 PM | Location: Margaret's house | Description: Lena stops by after work to help with pills. | Priority: High",
+          "Time: Next Wednesday, 2:00 PM | Location: River Smile Dental | Description: Dental cleaning and denture sore-spot recheck. | Priority: High",
+          "Time: Thursday, 1:00 PM | Location: Ruth's house | Description: Bridge afternoon with Ruth. | Priority: Medium",
+          "Time: Next Wednesday, 1:15 PM | Location: Margaret's house \u2192 River Smile Dental | Description: David picks Margaret up for the dental visit. | Priority: High",
+          "Time: Starts next month, Tuesdays at 9:00 AM | Location: Community Center | Description: Weekly tai chi class. | Priority: Medium",
+          "Time: Sunday, 12:15 PM | Location: Church caf\u00e9 | Description: Coffee with neighbors after church. | Priority: Low",
+          "Time: Next Monday, 11:00 AM | Location: PT clinic | Description: Physical therapy session with Maria. | Priority: High"
+        ],
+        "reminders": [
+          "Check blood pressure morning and evening for two weeks. | Priority: High",
+          "Start new blood pressure dose tomorrow. | Priority: Very High",
+          "Pick up updated prescription from pharmacy. | Priority: High",
+          "Do not eat or drink coffee before bloodwork; water only. | Priority: Very High",
+          "Ask daughter about a ride to the follow-up if needed. | Priority: Medium",
+          "Confirm whether Lena can drive to Friday follow-up. | Priority: High",
+          "Arrange backup ride for Friday if Lena cannot drive. | Priority: Medium",
+          "Eat lunch on appointment days after fasting labs are done. | Priority: Medium",
+          "Set out new pills with Lena tomorrow evening. | Priority: High",
+          "Text Lena the grocery list before tomorrow evening. | Priority: Medium",
+          "Bring current denture adhesive to the dental visit. | Priority: High",
+          "Bring lemon cookies to Ruth's bridge afternoon. | Priority: Low",
+          "Rest before social plans if feeling tired that morning. | Priority: Low",
+          "Pick up calcium refill in three days. | Priority: Medium",
+          "Move slowly on the stairs during the first few days on the new dose. | Priority: High",
+          "Remove old blood pressure bottle after starting the new dose. | Priority: High",
+          "Ask David to change the hall light bulb after the dentist visit. | Priority: Low",
+          "Give the insurance envelope to David. | Priority: High",
+          "Register for Tuesday 9:00 AM tai chi when registration opens Friday. | Priority: Medium",
+          "Tell Nora to register her for tai chi. | Priority: Medium",
+          "Decide Sunday morning whether energy is good enough for coffee after church. | Priority: Low",
+          "Do seated leg raises and ankle stretches daily. | Priority: High",
+          "Use heating pad for 15 minutes after exercises if the knee feels tight. | Priority: Medium",
+          "Bring exercise band to PT. | Priority: High"
+        ],
+        "alarms": [
+          "Time: Today, 6:00 PM | Description: Pick up prescriptions before the pharmacy closes at 7. | Priority: High"
+        ],
+        "notes": [
+          "Health monitoring",
+          "Log blood pressure morning and evening for two weeks. | Priority: High",
+          "Medication",
+          "New blood pressure dose starts tomorrow. | Priority: High",
+          "Monitor lightheadedness during the first few days on the new dose. | Priority: High",
+          "Lab instructions",
+          "Bloodwork is fasting; water only, no coffee. | Priority: High",
+          "Groceries",
+          "Decaf tea | Priority: Low",
+          "Bananas | Priority: Low",
+          "Lemons | Priority: Low",
+          "Dental",
+          "Dentist will recheck sore spot near lower denture. | Priority: High",
+          "Sore spot rubs more when eating crunchy foods. | Priority: Medium",
+          "Household",
+          "Put insurance envelope by the front door for David. | Priority: Medium",
+          "Physical therapy",
+          "Do PT exercises after breakfast. | Priority: Medium"
+        ]
+      }
+    },
+    {
+      "number": 9,
+      "title": "Margaret with her sister Evelyn",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Evelyn",
+          "utterance": "Margaret, are you still coming to my house for lunch on Saturday?",
+          "importance": "Medium",
+          "tool": "Calendar event \u2014 Saturday lunch at Evelyn's"
+        },
+        {
+          "index": 2,
+          "speaker": "Margaret",
+          "utterance": "Yes, unless this medication makes me too wobbly.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 assess how steady she feels Saturday morning"
+        },
+        {
+          "index": 3,
+          "speaker": "Evelyn",
+          "utterance": "Then don\u2019t drive. I can come get you.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 confirm ride with Evelyn if needed"
+        },
+        {
+          "index": 4,
+          "speaker": "Margaret",
+          "utterance": "Let\u2019s decide Friday evening.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 decide Friday evening about Saturday ride"
+        },
+        {
+          "index": 5,
+          "speaker": "Evelyn",
+          "utterance": "Fine by me. Bring those old family photos if you find them.",
+          "importance": "Low",
+          "tool": "Reminder \u2014 bring family photos to Evelyn's"
+        },
+        {
+          "index": 6,
+          "speaker": "Margaret",
+          "utterance": "Oh, I know exactly where they are \u2014 top hall closet, blue box.",
+          "importance": "Low",
+          "tool": "Notes \u2014 family photos are in top hall closet blue box"
+        },
+        {
+          "index": 7,
+          "speaker": "Evelyn",
+          "utterance": "Good. I want to label the people on the back before we forget who\u2019s who.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 label family photos at Saturday lunch"
+        },
+        {
+          "index": 8,
+          "speaker": "Margaret",
+          "utterance": "That\u2019s smart. Half those cousins look alike in black and white.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Time: Next Tuesday, 8:00 AM | Location: Stony Brook Lab | Description: Fasting bloodwork before breakfast. | Priority: Very High",
+          "Time: Friday after bloodwork, 10:30 AM | Location: Dr. Chen's office | Description: Follow-up appointment with Dr. Chen. | Priority: Very High",
+          "Time: Next Tuesday, 7:30 AM | Location: Margaret's house \u2192 Stony Brook Lab | Description: Lena picks Margaret up for bloodwork. | Priority: Very High",
+          "Time: Tomorrow, 5:30 PM | Location: Margaret's house | Description: Lena stops by after work to help with pills. | Priority: High",
+          "Time: Next Wednesday, 2:00 PM | Location: River Smile Dental | Description: Dental cleaning and denture sore-spot recheck. | Priority: High",
+          "Time: Thursday, 1:00 PM | Location: Ruth's house | Description: Bridge afternoon with Ruth. | Priority: Medium",
+          "Time: Next Wednesday, 1:15 PM | Location: Margaret's house \u2192 River Smile Dental | Description: David picks Margaret up for the dental visit. | Priority: High",
+          "Time: Starts next month, Tuesdays at 9:00 AM | Location: Community Center | Description: Weekly tai chi class. | Priority: Medium",
+          "Time: Sunday, 12:15 PM | Location: Church caf\u00e9 | Description: Coffee with neighbors after church. | Priority: Low",
+          "Time: Next Monday, 11:00 AM | Location: PT clinic | Description: Physical therapy session with Maria. | Priority: High",
+          "Time: Saturday, 12:30 PM | Location: Evelyn's house | Description: Lunch with Evelyn and review family photos. | Priority: Medium"
+        ],
+        "reminders": [
+          "Check blood pressure morning and evening for two weeks. | Priority: High",
+          "Start new blood pressure dose tomorrow. | Priority: Very High",
+          "Pick up updated prescription from pharmacy. | Priority: High",
+          "Do not eat or drink coffee before bloodwork; water only. | Priority: Very High",
+          "Ask daughter about a ride to the follow-up if needed. | Priority: Medium",
+          "Confirm whether Lena can drive to Friday follow-up. | Priority: High",
+          "Arrange backup ride for Friday if Lena cannot drive. | Priority: Medium",
+          "Eat lunch on appointment days after fasting labs are done. | Priority: Medium",
+          "Set out new pills with Lena tomorrow evening. | Priority: High",
+          "Text Lena the grocery list before tomorrow evening. | Priority: Medium",
+          "Bring current denture adhesive to the dental visit. | Priority: High",
+          "Bring lemon cookies to Ruth's bridge afternoon. | Priority: Low",
+          "Rest before social plans if feeling tired that morning. | Priority: Low",
+          "Pick up calcium refill in three days. | Priority: Medium",
+          "Move slowly on the stairs during the first few days on the new dose. | Priority: High",
+          "Remove old blood pressure bottle after starting the new dose. | Priority: High",
+          "Ask David to change the hall light bulb after the dentist visit. | Priority: Low",
+          "Give the insurance envelope to David. | Priority: High",
+          "Register for Tuesday 9:00 AM tai chi when registration opens Friday. | Priority: Medium",
+          "Tell Nora to register her for tai chi. | Priority: Medium",
+          "Decide Sunday morning whether energy is good enough for coffee after church. | Priority: Low",
+          "Do seated leg raises and ankle stretches daily. | Priority: High",
+          "Use heating pad for 15 minutes after exercises if the knee feels tight. | Priority: Medium",
+          "Bring exercise band to PT. | Priority: High",
+          "Assess balance/steadiness Saturday morning before going out. | Priority: Medium",
+          "Confirm ride with Evelyn if Margaret should not drive. | Priority: Medium",
+          "Decide Friday evening whether Evelyn should pick Margaret up. | Priority: Medium",
+          "Bring family photos to Evelyn's lunch. | Priority: Low"
+        ],
+        "alarms": [
+          "Time: Today, 6:00 PM | Description: Pick up prescriptions before the pharmacy closes at 7. | Priority: High"
+        ],
+        "notes": [
+          "Health monitoring",
+          "Log blood pressure morning and evening for two weeks. | Priority: High",
+          "Medication",
+          "New blood pressure dose starts tomorrow. | Priority: High",
+          "Monitor lightheadedness during the first few days on the new dose. | Priority: High",
+          "Lab instructions",
+          "Bloodwork is fasting; water only, no coffee. | Priority: High",
+          "Groceries",
+          "Decaf tea | Priority: Low",
+          "Bananas | Priority: Low",
+          "Lemons | Priority: Low",
+          "Dental",
+          "Dentist will recheck sore spot near lower denture. | Priority: High",
+          "Sore spot rubs more when eating crunchy foods. | Priority: Medium",
+          "Household",
+          "Put insurance envelope by the front door for David. | Priority: Medium",
+          "Physical therapy",
+          "Do PT exercises after breakfast. | Priority: Medium",
+          "Family",
+          "Family photos are in the top hall closet in the blue box. | Priority: Medium",
+          "Label people on the backs of old photos during Saturday lunch. | Priority: Medium"
+        ]
+      }
+    },
+    {
+      "number": 10,
+      "title": "Margaret with her church friend Grace",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Grace",
+          "utterance": "Margaret, we missed you at choir practice. Are you still up for helping with the spring luncheon?",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 2,
+          "speaker": "Margaret",
+          "utterance": "Yes, but I need something seated this year. My knee still complains.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 choose seated volunteer role for spring luncheon"
+        },
+        {
+          "index": 3,
+          "speaker": "Grace",
+          "utterance": "Then could you handle name tags at the check-in table?",
+          "importance": "Medium",
+          "tool": "Calendar event \u2014 spring luncheon volunteer shift"
+        },
+        {
+          "index": 4,
+          "speaker": "Margaret",
+          "utterance": "That I can do.",
+          "importance": "Medium",
+          "tool": "None"
+        },
+        {
+          "index": 5,
+          "speaker": "Grace",
+          "utterance": "We\u2019ll need you there by 10:00 next Friday.",
+          "importance": "Medium",
+          "tool": "Calendar event \u2014 volunteer next Friday at 10:00 AM"
+        },
+        {
+          "index": 6,
+          "speaker": "Margaret",
+          "utterance": "Please remind me the day before. Next week is crowded already.",
+          "importance": "High",
+          "tool": "Reminder \u2014 spring luncheon volunteer next Friday"
+        },
+        {
+          "index": 7,
+          "speaker": "Grace",
+          "utterance": "Of course. Also, can you call Joan? She hasn\u2019t been feeling well.",
+          "importance": "Medium",
+          "tool": "Reminder \u2014 call Joan"
+        },
+        {
+          "index": 8,
+          "speaker": "Margaret",
+          "utterance": "I should do that this evening before it gets too late.",
+          "importance": "Medium",
+          "tool": "Alarm \u2014 call Joan this evening"
+        },
+        {
+          "index": 9,
+          "speaker": "Grace",
+          "utterance": "She\u2019d appreciate it.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 10,
+          "speaker": "Margaret",
+          "utterance": "All right, name tags and a phone call \u2014 that is enough good citizenship for one week.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Time: Next Tuesday, 8:00 AM | Location: Stony Brook Lab | Description: Fasting bloodwork before breakfast. | Priority: Very High",
+          "Time: Friday after bloodwork, 10:30 AM | Location: Dr. Chen's office | Description: Follow-up appointment with Dr. Chen. | Priority: Very High",
+          "Time: Next Tuesday, 7:30 AM | Location: Margaret's house \u2192 Stony Brook Lab | Description: Lena picks Margaret up for bloodwork. | Priority: Very High",
+          "Time: Tomorrow, 5:30 PM | Location: Margaret's house | Description: Lena stops by after work to help with pills. | Priority: High",
+          "Time: Next Wednesday, 2:00 PM | Location: River Smile Dental | Description: Dental cleaning and denture sore-spot recheck. | Priority: High",
+          "Time: Thursday, 1:00 PM | Location: Ruth's house | Description: Bridge afternoon with Ruth. | Priority: Medium",
+          "Time: Next Wednesday, 1:15 PM | Location: Margaret's house \u2192 River Smile Dental | Description: David picks Margaret up for the dental visit. | Priority: High",
+          "Time: Starts next month, Tuesdays at 9:00 AM | Location: Community Center | Description: Weekly tai chi class. | Priority: Medium",
+          "Time: Sunday, 12:15 PM | Location: Church caf\u00e9 | Description: Coffee with neighbors after church. | Priority: Low",
+          "Time: Next Monday, 11:00 AM | Location: PT clinic | Description: Physical therapy session with Maria. | Priority: High",
+          "Time: Saturday, 12:30 PM | Location: Evelyn's house | Description: Lunch with Evelyn and review family photos. | Priority: Medium",
+          "Time: Next Friday, 10:00 AM | Location: Church hall | Description: Volunteer at check-in table for the spring luncheon. | Priority: Medium"
+        ],
+        "reminders": [
+          "Check blood pressure morning and evening for two weeks. | Priority: High",
+          "Start new blood pressure dose tomorrow. | Priority: Very High",
+          "Pick up updated prescription from pharmacy. | Priority: High",
+          "Do not eat or drink coffee before bloodwork; water only. | Priority: Very High",
+          "Ask daughter about a ride to the follow-up if needed. | Priority: Medium",
+          "Confirm whether Lena can drive to Friday follow-up. | Priority: High",
+          "Arrange backup ride for Friday if Lena cannot drive. | Priority: Medium",
+          "Eat lunch on appointment days after fasting labs are done. | Priority: Medium",
+          "Set out new pills with Lena tomorrow evening. | Priority: High",
+          "Text Lena the grocery list before tomorrow evening. | Priority: Medium",
+          "Bring current denture adhesive to the dental visit. | Priority: High",
+          "Bring lemon cookies to Ruth's bridge afternoon. | Priority: Low",
+          "Rest before social plans if feeling tired that morning. | Priority: Low",
+          "Pick up calcium refill in three days. | Priority: Medium",
+          "Move slowly on the stairs during the first few days on the new dose. | Priority: High",
+          "Remove old blood pressure bottle after starting the new dose. | Priority: High",
+          "Ask David to change the hall light bulb after the dentist visit. | Priority: Low",
+          "Give the insurance envelope to David. | Priority: High",
+          "Register for Tuesday 9:00 AM tai chi when registration opens Friday. | Priority: Medium",
+          "Tell Nora to register her for tai chi. | Priority: Medium",
+          "Decide Sunday morning whether energy is good enough for coffee after church. | Priority: Low",
+          "Do seated leg raises and ankle stretches daily. | Priority: High",
+          "Use heating pad for 15 minutes after exercises if the knee feels tight. | Priority: Medium",
+          "Bring exercise band to PT. | Priority: High",
+          "Assess balance/steadiness Saturday morning before going out. | Priority: Medium",
+          "Confirm ride with Evelyn if Margaret should not drive. | Priority: Medium",
+          "Decide Friday evening whether Evelyn should pick Margaret up. | Priority: Medium",
+          "Bring family photos to Evelyn's lunch. | Priority: Low",
+          "Remember spring luncheon volunteer shift next Friday. | Priority: Medium",
+          "Call Joan to check on her. | Priority: Medium"
+        ],
+        "alarms": [
+          "Time: Today, 6:00 PM | Description: Pick up prescriptions before the pharmacy closes at 7. | Priority: High",
+          "Time: Today, 7:00 PM | Description: Call Joan before it gets too late. | Priority: Medium"
+        ],
+        "notes": [
+          "Health monitoring",
+          "Log blood pressure morning and evening for two weeks. | Priority: High",
+          "Medication",
+          "New blood pressure dose starts tomorrow. | Priority: High",
+          "Monitor lightheadedness during the first few days on the new dose. | Priority: High",
+          "Lab instructions",
+          "Bloodwork is fasting; water only, no coffee. | Priority: High",
+          "Groceries",
+          "Decaf tea | Priority: Low",
+          "Bananas | Priority: Low",
+          "Lemons | Priority: Low",
+          "Dental",
+          "Dentist will recheck sore spot near lower denture. | Priority: High",
+          "Sore spot rubs more when eating crunchy foods. | Priority: Medium",
+          "Household",
+          "Put insurance envelope by the front door for David. | Priority: Medium",
+          "Physical therapy",
+          "Do PT exercises after breakfast. | Priority: Medium",
+          "Family",
+          "Family photos are in the top hall closet in the blue box. | Priority: Medium",
+          "Label people on the backs of old photos during Saturday lunch. | Priority: Medium",
+          "Church",
+          "Choose seated volunteer role for the spring luncheon. | Priority: Medium"
+        ]
+      }
+    },
+    {
+      "number": 11,
+      "title": "Margaret Adjusts Medication And Ride Plans",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Lena",
+          "utterance": "Mom, the pharmacy called. Your calcium refill will be ready tomorrow afternoon instead of today.",
+          "importance": "Medium",
+          "tool": "Reminder update \u2014 move calcium refill pickup from today to tomorrow afternoon"
+        },
+        {
+          "index": 2,
+          "speaker": "Margaret",
+          "utterance": "Please change that reminder. I do not want to make a trip for an empty shelf.",
+          "importance": "Medium",
+          "tool": "Reminder update \u2014 update calcium pickup reminder to tomorrow afternoon"
+        },
+        {
+          "index": 3,
+          "speaker": "Lena",
+          "utterance": "Also, your Friday follow-up moved from 10:30 to 11:15.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 move Friday follow-up from 10:30 to 11:15"
+        },
+        {
+          "index": 4,
+          "speaker": "Margaret",
+          "utterance": "Then change the ride reminder too. I should ask David to come a little later.",
+          "importance": "High",
+          "tool": "Reminder update \u2014 ask David to drive later for 11:15 Friday follow-up"
+        },
+        {
+          "index": 5,
+          "speaker": "Lena",
+          "utterance": "Set the pill alarm for 8 instead of 7:30 while you are adjusting to the new dose.",
+          "importance": "High",
+          "tool": "Alarm update \u2014 change new pill alarm from 7:30 to 8:00"
+        },
+        {
+          "index": 6,
+          "speaker": "Margaret",
+          "utterance": "Yes, eight is better. I can take it after breakfast instead of rushing.",
+          "importance": "High",
+          "tool": "Alarm update \u2014 take new blood pressure pill at 8 after breakfast"
+        },
+        {
+          "index": 7,
+          "speaker": "Lena",
+          "utterance": "The grocery note should add low-salt crackers too.",
+          "importance": "Low",
+          "tool": "Notes update \u2014 add low-salt crackers to grocery note"
+        },
+        {
+          "index": 8,
+          "speaker": "Margaret",
+          "utterance": "Add that to the list. The regular ones make me thirsty at night.",
+          "importance": "Medium",
+          "tool": "Notes update \u2014 grocery list should include low-salt crackers"
+        },
+        {
+          "index": 9,
+          "speaker": "Lena",
+          "utterance": "Maybe Evelyn can drive if David cannot, but I have not asked her yet.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 10,
+          "speaker": "Margaret",
+          "utterance": "Let us not change the plan until she says yes.",
+          "importance": "Low",
+          "tool": "None"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Updated Friday follow-up from 10:30 AM to 11:15 AM."
+        ],
+        "reminders": [
+          "Updated calcium refill pickup to tomorrow afternoon.",
+          "Updated David ride reminder for later Friday follow-up."
+        ],
+        "alarms": [
+          "Updated new blood pressure pill alarm to 8:00 AM."
+        ],
+        "notes": [
+          "Added low-salt crackers to grocery list."
+        ]
+      }
+    },
+    {
+      "number": 12,
+      "title": "Margaret Cancels Obsolete Health And Social Items",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "David",
+          "utterance": "Mom, the dentist office canceled tomorrow because the hygienist is sick.",
+          "importance": "High",
+          "tool": "Calendar event delete \u2014 cancel tomorrow dental visit"
+        },
+        {
+          "index": 2,
+          "speaker": "Margaret",
+          "utterance": "Then remove the reminder about bringing the denture adhesive.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 remove denture adhesive reminder for canceled dental visit"
+        },
+        {
+          "index": 3,
+          "speaker": "David",
+          "utterance": "And delete the alarm to leave early for that appointment.",
+          "importance": "Medium",
+          "tool": "Alarm delete \u2014 remove leave-early alarm for canceled dental visit"
+        },
+        {
+          "index": 4,
+          "speaker": "Margaret",
+          "utterance": "Yes, no sense being reminded to go nowhere.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 5,
+          "speaker": "Lena",
+          "utterance": "Dr. Chen said to stop using the old blood pressure bottle once the new one starts.",
+          "importance": "High",
+          "tool": "Reminder delete \u2014 remove old blood pressure bottle after starting new dose"
+        },
+        {
+          "index": 6,
+          "speaker": "Margaret",
+          "utterance": "Delete the old-bottle note after we set out the new pills.",
+          "importance": "High",
+          "tool": "Notes delete \u2014 remove old blood pressure bottle note after new pills are set out"
+        },
+        {
+          "index": 7,
+          "speaker": "Nora",
+          "utterance": "Bridge afternoon is canceled this week because Ruth is traveling.",
+          "importance": "Medium",
+          "tool": "Calendar event delete \u2014 cancel Ruth bridge afternoon this week"
+        },
+        {
+          "index": 8,
+          "speaker": "Margaret",
+          "utterance": "Take it off the calendar, and delete the lemon cookies reminder.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 remove lemon cookies reminder for canceled bridge afternoon"
+        },
+        {
+          "index": 9,
+          "speaker": "Nora",
+          "utterance": "Should I delete the family photo note too?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 10,
+          "speaker": "Margaret",
+          "utterance": "No, keep that. I still want to label the old photos with Evelyn later.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 keep family photo note for later"
+        }
+      ],
+      "cumulative_tool_summary": {
+        "calendar_events": [
+          "Deleted tomorrow dental visit.",
+          "Deleted Ruth bridge afternoon this week."
+        ],
+        "reminders": [
+          "Deleted denture adhesive reminder for canceled dental visit.",
+          "Deleted old blood pressure bottle reminder after new dose starts.",
+          "Deleted lemon cookies reminder for canceled bridge afternoon."
+        ],
+        "alarms": [
+          "Deleted leave-early alarm for canceled dental visit."
+        ],
+        "notes": [
+          "Deleted old blood pressure bottle note after new pills are set out.",
+          "Kept family photo note for later."
+        ]
+      }
+    },
+    {
+      "number": 13,
+      "title": "Margaret Medication Routine Boundaries",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Lena",
+          "utterance": "Mom, the new blood pressure pill should be taken after breakfast, not before.",
+          "importance": "High",
+          "tool": "Reminder update \u2014 take new blood pressure pill after breakfast"
+        },
+        {
+          "index": 2,
+          "speaker": "Margaret",
+          "utterance": "Please change the reminder. I do better when the medicine fits the morning I actually have.",
+          "importance": "High",
+          "tool": "Reminder update \u2014 update blood pressure pill reminder to after breakfast"
+        },
+        {
+          "index": 3,
+          "speaker": "Lena",
+          "utterance": "Set the alarm for 8:15 instead of 8 so you have time to eat first.",
+          "importance": "High",
+          "tool": "Alarm update \u2014 change pill alarm from 8:00 to 8:15"
+        },
+        {
+          "index": 4,
+          "speaker": "Margaret",
+          "utterance": "Yes, that feels safer than rushing.",
+          "importance": "High",
+          "tool": "Alarm update \u2014 take pill at 8:15 after breakfast"
+        },
+        {
+          "index": 5,
+          "speaker": "Lena",
+          "utterance": "Add lightheadedness after standing to the health note.",
+          "importance": "High",
+          "tool": "Notes update \u2014 add lightheadedness after standing to health note"
+        },
+        {
+          "index": 6,
+          "speaker": "Margaret",
+          "utterance": "Add that, but do not make it sound dramatic. It is just something to watch.",
+          "importance": "Medium",
+          "tool": "Notes update \u2014 monitor lightheadedness without overstatement"
+        },
+        {
+          "index": 7,
+          "speaker": "Lena",
+          "utterance": "Maybe we should change all your morning reminders.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 8,
+          "speaker": "Margaret",
+          "utterance": "No, let us change only the one the doctor mentioned.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 9,
+          "speaker": "Lena",
+          "utterance": "Should I delete the blood pressure log reminder?",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 10,
+          "speaker": "Margaret",
+          "utterance": "No, keep that. Dr. Chen asked for two weeks.",
+          "importance": "High",
+          "tool": "Reminder \u2014 keep blood pressure log for two weeks"
+        }
+      ],
+      "cumulative_tool_summary": {}
+    },
+    {
+      "number": 14,
+      "title": "Margaret Appointment And Ride Changes",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "David",
+          "utterance": "The lab appointment moved from Tuesday morning to Tuesday at 1.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 move lab appointment to Tuesday 1 PM"
+        },
+        {
+          "index": 2,
+          "speaker": "Margaret",
+          "utterance": "Please update it, and change the fasting reminder so I do not skip coffee for longer than needed.",
+          "importance": "High",
+          "tool": "Reminder update \u2014 update fasting reminder for Tuesday 1 PM lab"
+        },
+        {
+          "index": 3,
+          "speaker": "David",
+          "utterance": "Lena can drive you at 12:30.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 Lena drives Margaret to lab Tuesday 12:30 PM"
+        },
+        {
+          "index": 4,
+          "speaker": "Margaret",
+          "utterance": "Put that on the calendar. I like knowing who is coming.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 reserve ride with Lena for lab"
+        },
+        {
+          "index": 5,
+          "speaker": "David",
+          "utterance": "Delete the old reminder to ask Evelyn for a ride.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 remove old Evelyn ride reminder"
+        },
+        {
+          "index": 6,
+          "speaker": "Margaret",
+          "utterance": "Yes, delete that so I do not call two people for one ride.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 delete duplicate ride reminder"
+        },
+        {
+          "index": 7,
+          "speaker": "David",
+          "utterance": "Maybe I can stop by afterward, but I am not sure.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 8,
+          "speaker": "Margaret",
+          "utterance": "Then do not put it anywhere yet. We will see.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 9,
+          "speaker": "David",
+          "utterance": "Bring your insurance card too.",
+          "importance": "High",
+          "tool": "Reminder \u2014 bring insurance card to lab appointment"
+        },
+        {
+          "index": 10,
+          "speaker": "Margaret",
+          "utterance": "Add that. I always feel better when the envelope is ready by the door.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 put insurance card envelope by front door"
+        }
+      ],
+      "cumulative_tool_summary": {}
+    },
+    {
+      "number": 15,
+      "title": "Margaret Social Plans And Useful Notes",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Nora",
+          "utterance": "Bridge moved from Thursday afternoon to Friday at 2.",
+          "importance": "Medium",
+          "tool": "Calendar event update \u2014 move bridge from Thursday afternoon to Friday 2 PM"
+        },
+        {
+          "index": 2,
+          "speaker": "Margaret",
+          "utterance": "Change it, please. I do not want to arrive with cookies on the wrong day.",
+          "importance": "Medium",
+          "tool": "Calendar event update \u2014 update bridge afternoon to Friday 2 PM"
+        },
+        {
+          "index": 3,
+          "speaker": "Nora",
+          "utterance": "Actually Ruth said not to bring lemon cookies this time. Joan is bringing dessert.",
+          "importance": "Low",
+          "tool": "Reminder delete \u2014 remove lemon cookies reminder"
+        },
+        {
+          "index": 4,
+          "speaker": "Margaret",
+          "utterance": "Delete that reminder. I will not compete with Joan\u2019s pie.",
+          "importance": "Low",
+          "tool": "Reminder delete \u2014 delete lemon cookies reminder"
+        },
+        {
+          "index": 5,
+          "speaker": "Nora",
+          "utterance": "Keep the note about seated volunteer work for the luncheon.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 keep seated volunteer role for luncheon"
+        },
+        {
+          "index": 6,
+          "speaker": "Margaret",
+          "utterance": "Yes, keep that. I want to help without overdoing my knee.",
+          "importance": "Medium",
+          "tool": "Notes \u2014 seated volunteer role protects knee"
+        },
+        {
+          "index": 7,
+          "speaker": "Nora",
+          "utterance": "Maybe coffee after church, depending how you feel.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 8,
+          "speaker": "Margaret",
+          "utterance": "That is a morning decision, not a calendar promise.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 9,
+          "speaker": "Nora",
+          "utterance": "Call Joan before it gets too late tonight.",
+          "importance": "Medium",
+          "tool": "Alarm \u2014 call Joan at 7 PM tonight"
+        },
+        {
+          "index": 10,
+          "speaker": "Margaret",
+          "utterance": "Set the alarm. If I wait until after my show, I will forget.",
+          "importance": "Medium",
+          "tool": "Alarm \u2014 call Joan before evening gets late"
+        }
+      ],
+      "cumulative_tool_summary": {}
+    },
+    {
+      "number": 16,
+      "title": "Margaret Household And Safety Cleanup",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "David",
+          "utterance": "I fixed the hall light, so you can remove that reminder.",
+          "importance": "Low",
+          "tool": "Reminder delete \u2014 remove hall light bulb reminder"
+        },
+        {
+          "index": 2,
+          "speaker": "Margaret",
+          "utterance": "Delete it, thank you. The stairs already feel less gloomy.",
+          "importance": "Low",
+          "tool": "Reminder delete \u2014 delete hall light reminder"
+        },
+        {
+          "index": 3,
+          "speaker": "David",
+          "utterance": "Add to your safety note that the top step still feels slippery in socks.",
+          "importance": "High",
+          "tool": "Notes update \u2014 top step feels slippery in socks"
+        },
+        {
+          "index": 4,
+          "speaker": "Margaret",
+          "utterance": "Yes, add that. I will wear slippers with grips.",
+          "importance": "High",
+          "tool": "Reminder \u2014 wear grippy slippers on stairs"
+        },
+        {
+          "index": 5,
+          "speaker": "David",
+          "utterance": "Do you want an alarm for the heating pad after exercises?",
+          "importance": "Medium",
+          "tool": "Alarm \u2014 use heating pad after exercises"
+        },
+        {
+          "index": 6,
+          "speaker": "Margaret",
+          "utterance": "Only at 10 in the morning after breakfast exercises.",
+          "importance": "Medium",
+          "tool": "Alarm \u2014 heating pad at 10 AM after exercises"
+        },
+        {
+          "index": 7,
+          "speaker": "David",
+          "utterance": "Maybe we replace the stair mat sometime.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 8,
+          "speaker": "Margaret",
+          "utterance": "Sometime is not a plan, dear.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 9,
+          "speaker": "David",
+          "utterance": "The insurance envelope reminder is done because I picked it up.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 remove insurance envelope reminder"
+        },
+        {
+          "index": 10,
+          "speaker": "Margaret",
+          "utterance": "Delete it, then. One less thing by the door.",
+          "importance": "Medium",
+          "tool": "Reminder delete \u2014 delete insurance envelope reminder"
+        }
+      ],
+      "cumulative_tool_summary": {}
+    },
+    {
+      "number": 17,
+      "title": "Margaret PT And Errand Balance",
+      "context": {},
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "PT Maria",
+          "utterance": "Move your home exercises to after lunch on appointment days. Mornings are too crowded.",
+          "importance": "Medium",
+          "tool": "Reminder update \u2014 do PT exercises after lunch on appointment days"
+        },
+        {
+          "index": 2,
+          "speaker": "Margaret",
+          "utterance": "Change the reminder. I do not want exercises competing with pills and breakfast.",
+          "importance": "Medium",
+          "tool": "Reminder update \u2014 update PT exercise reminder to after lunch"
+        },
+        {
+          "index": 3,
+          "speaker": "PT Maria",
+          "utterance": "Bring the exercise band to PT next Wednesday at 11.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 PT appointment next Wednesday 11 AM"
+        },
+        {
+          "index": 4,
+          "speaker": "Margaret",
+          "utterance": "Put that on the calendar and remind me to put the band by my purse.",
+          "importance": "High",
+          "tool": "Reminder \u2014 put exercise band by purse before PT"
+        },
+        {
+          "index": 5,
+          "speaker": "PT Maria",
+          "utterance": "If the knee is sharp, skip the extra walk. If it is just stiff, go slowly.",
+          "importance": "High",
+          "tool": "Notes \u2014 knee rule: skip walk for sharp pain, go slowly for stiffness"
+        },
+        {
+          "index": 6,
+          "speaker": "Margaret",
+          "utterance": "Please save that. It helps me not argue with my own knee.",
+          "importance": "High",
+          "tool": "Notes \u2014 save knee walk rule"
+        },
+        {
+          "index": 7,
+          "speaker": "PT Maria",
+          "utterance": "Maybe add another walk next month.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 8,
+          "speaker": "Margaret",
+          "utterance": "Not yet. Let us see how this week goes.",
+          "importance": "Low",
+          "tool": "None"
+        },
+        {
+          "index": 9,
+          "speaker": "PT Maria",
+          "utterance": "Delete the old seated-leg-raise note if it says twice a day. We changed it to once.",
+          "importance": "Medium",
+          "tool": "Notes update \u2014 change seated leg raises from twice daily to once daily"
+        },
+        {
+          "index": 10,
+          "speaker": "Margaret",
+          "utterance": "Update it, do not delete it. I still need the exercise.",
+          "importance": "Medium",
+          "tool": "Notes update \u2014 keep seated leg raise note with once-daily frequency"
+        },
+        {
+          "speaker": "PT Maria",
+          "utterance": "Could you remind yourself about that before you leave?",
+          "importance": "Medium",
+          "tool": "Clarification - Ask what should be remembered and the exact leaving time before creating a reminder."
+        }
+      ],
+      "cumulative_tool_summary": {}
+    },
+    {
+      "number": 18,
+      "title": "Margaret Stateful Appointments And Home Notes",
+      "context": {
+        "why_this_fits": "Margaret benefits from careful stateful handling of appointments, health reminders, household notes, and ambiguous requests."
+      },
+      "dialogues": [
+        {
+          "index": 1,
+          "speaker": "Nora",
+          "utterance": "Your pharmacy pickup is Thursday at 11.",
+          "importance": "High",
+          "tool": "Calendar event \u2014 pharmacy pickup Thursday 11 AM"
+        },
+        {
+          "index": 2,
+          "speaker": "Margaret",
+          "utterance": "Put it on the calendar and remind me Wednesday evening to check the refill slip.",
+          "importance": "High",
+          "tool": "Reminder \u2014 check refill slip Wednesday evening"
+        },
+        {
+          "index": 3,
+          "speaker": "Nora",
+          "utterance": "Set a 10:15 alarm Thursday so you have time to get ready.",
+          "importance": "High",
+          "tool": "Alarm \u2014 get ready for pharmacy pickup Thursday 10:15 AM"
+        },
+        {
+          "index": 4,
+          "speaker": "Margaret",
+          "utterance": "Make a note that the blue bottle is the morning one.",
+          "importance": "High",
+          "tool": "Notes \u2014 blue bottle is morning medication"
+        },
+        {
+          "index": 5,
+          "speaker": "Nora",
+          "utterance": "Pharmacy moved pickup to noon.",
+          "importance": "High",
+          "tool": "Calendar event update \u2014 move pharmacy pickup to Thursday noon"
+        },
+        {
+          "index": 6,
+          "speaker": "Margaret",
+          "utterance": "Change the calendar and move the refill-slip reminder to Thursday morning.",
+          "importance": "High",
+          "tool": "Reminder update \u2014 move refill slip reminder to Thursday morning"
+        },
+        {
+          "index": 7,
+          "speaker": "Nora",
+          "utterance": "Then set the getting-ready alarm to 11:15.",
+          "importance": "High",
+          "tool": "Alarm update \u2014 move pharmacy pickup alarm to Thursday 11:15 AM"
+        },
+        {
+          "index": 8,
+          "speaker": "Margaret",
+          "utterance": "Update the note: blue bottle with breakfast, not before tea.",
+          "importance": "High",
+          "tool": "Notes update \u2014 blue bottle with breakfast not before tea"
+        },
+        {
+          "index": 9,
+          "speaker": "Nora",
+          "utterance": "The old hall-light reminder can go now that David fixed it.",
+          "importance": "Low",
+          "tool": "Reminder delete \u2014 remove hall light reminder"
+        },
+        {
+          "index": 10,
+          "speaker": "Margaret",
+          "utterance": "Delete it, and cancel the old grocery delivery block for Saturday.",
+          "importance": "Medium",
+          "tool": "Calendar event delete \u2014 cancel old Saturday grocery delivery block"
+        },
+        {
+          "index": 11,
+          "speaker": "Nora",
+          "utterance": "There is still an alarm for the canceled bridge ride.",
+          "importance": "Medium",
+          "tool": "Alarm delete \u2014 remove canceled bridge ride alarm"
+        },
+        {
+          "index": 12,
+          "speaker": "Margaret",
+          "utterance": "Delete the note about the broken lamp as well.",
+          "importance": "Low",
+          "tool": "Notes delete \u2014 remove broken lamp note"
+        },
+        {
+          "index": 13,
+          "speaker": "Nora",
+          "utterance": "Move that to Monday.",
+          "importance": "Low",
+          "tool": "Clarification \u2014 ask which item should move to Monday"
+        },
+        {
+          "index": 14,
+          "speaker": "Margaret",
+          "utterance": "Please ask which one first. I do not want the pharmacy wandering to Monday by mistake.",
+          "importance": "Low",
+          "tool": "Clarification \u2014 ask which item to move before changing it"
+        }
+      ]
+    }
+  ],
+  "paragraph_count": 1189
+}

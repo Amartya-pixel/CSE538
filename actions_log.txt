@@ -61,3 +61,75 @@
   parsed:    importance=Low  tool=None  detail=''
   reason:    no actionable intent — model returned no tool
 
+[2026-05-09 19:05:57]  NO   (21571 ms total: asr 310 + llm 21261)
+  heard:     "Hello, what's up? How are you?"
+  raw_model: '{"importance": "Low", "tool": null, "detail": ""}'
+  parsed:    importance=Low  tool=None  detail=''
+  reason:    no actionable intent — model returned no tool
+
+[2026-05-09 19:07:59]  NO   (2527 ms total: asr 363 + llm 2164)
+  heard:     'Hello, hi, how are you?'
+  raw_model: '{"importance": "Low", "tool": null, "detail": ""}'
+  parsed:    importance=Low  tool=None  detail=''
+  reason:    no actionable intent — model returned no tool
+
+[2026-05-09 19:08:03]  NO   (1378 ms total: asr 266 + llm 1112)
+  heard:     'No.'
+  raw_model: '{"importance": "Low", "tool": null, "detail": ""}'
+  parsed:    importance=Low  tool=None  detail=''
+  reason:    no actionable intent — model returned no tool
+
+[2026-05-09 19:08:06]  NO   (1085 ms total: asr 270 + llm 815)
+  heard:     'No.'
+  raw_model: '{"importance": "Low", "tool": null, "detail": ""}'
+  parsed:    importance=Low  tool=None  detail=''
+  reason:    no actionable intent — model returned no tool
+
+[2026-05-09 19:08:10]  NO   (1532 ms total: asr 680 + llm 852)
+  heard:     'Bement.'
+  raw_model: '{"importance": "Low", "tool": null, "detail": ""}'
+  parsed:    importance=Low  tool=None  detail=''
+  reason:    no actionable intent — model returned no tool
+
+[2026-05-09 19:08:19]  YES  (2981 ms total: asr 332 + llm 2649)
+  heard:     'tonight. What do you say?'
+  raw_model: '{"importance": "Medium", "tool": "create_reminder", "detail": "Dad call is tonight at 8"}'
+  parsed:    importance=Medium  tool=create_reminder  detail='Dad call is tonight at 8'
+  reason:    importance Medium with concrete create_reminder: Dad call is tonight at 8
+
+[2026-05-09 19:08:24]  NO   (2302 ms total: asr 242 + llm 2060)
+  heard:     'Yes.'
+  raw_model: '{"importance": "Low", "tool": null, "detail": ""}'
+  parsed:    importance=Low  tool=None  detail=''
+  reason:    no actionable intent — model returned no tool
+
+[2026-05-09 19:08:27]  NO   (1067 ms total: asr 247 + llm 820)
+  heard:     'No.'
+  raw_model: '{"importance": "Low", "tool": null, "detail": ""}'
+  parsed:    importance=Low  tool=None  detail=''
+  reason:    no actionable intent — model returned no tool
+
+[2026-05-09 19:08:32]  NO   (1421 ms total: asr 311 + llm 1110)
+  heard:     'baby baby baby'
+  raw_model: '{"importance": "Low", "tool": null, "detail": ""}'
+  parsed:    importance=Low  tool=None  detail=''
+  reason:    no actionable intent — model returned no tool
+
+[2026-05-09 19:09:16]  YES  (3059 ms total: asr 408 + llm 2651)
+  heard:     'Here I was thinking to play Badminton tonight. Which time do you save? 7PM ok? Yeah, 7PM works.'
+  raw_model: '{"importance": "Medium", "tool": "create_calendar_event", "detail": "Badminton practice Sunday 7 PM"}'
+  parsed:    importance=Medium  tool=create_calendar_event  detail='Badminton practice Sunday 7 PM'
+  reason:    importance Medium with concrete create_calendar_event: Badminton practice Sunday 7 PM
+
+[2026-05-09 19:09:20]  NO   (1158 ms total: asr 261 + llm 897)
+  heard:     'Yes.'
+  raw_model: '{"importance": "Low", "tool": null, "detail": ""}'
+  parsed:    importance=Low  tool=None  detail=''
+  reason:    no actionable intent — model returned no tool
+
+[2026-05-09 19:09:26]  YES  (1749 ms total: asr 308 + llm 1441)
+  heard:     'Reminder added, bad men in practice tonight.'
+  raw_model: '{"importance": "High", "tool": "create_reminder", "detail": "badminton players will enter court after mine"}'
+  parsed:    importance=High  tool=create_reminder  detail='badminton players will enter court after mine'
+  reason:    importance High with concrete create_reminder: badminton players will enter court after mine
+
